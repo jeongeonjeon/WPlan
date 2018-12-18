@@ -89,33 +89,20 @@ header .fa {
     margin-left: 15px;
 }
 
-.col-sm-4.align-self-center.text-right{
-	position: relative;
-    top: -60px;
-}
-.text-right .loginMenu span{
-	font-size: 15px
-} 
-.text-right .loginMenu .logout{
-	display: none;
-}
-
 .navbar-dark .navbar-nav .nav-link:hover,
 
 .navbar-dark .navbar-nav .active > .nav-link {
     font-weight: 600;
     color: rgb(0, 0, 0);
 }
-.navbar-dark .navbar-nav .nav-item {
-	margin : 0 6.3%;
-}
+
 .navbar-dark .navbar-nav .nav-link {
     color: #6d6d6d;
-    font-size: 17px;
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 15px 0px;
+    padding: 15px 25px;
 }
 
 .navbar-nav {
@@ -267,7 +254,8 @@ header .fa {
 
 .section-2 .box-1,
 .section-2 .box-2,
-.section-2 .box-3 {
+.section-2 .box-3,
+.section-2 .box-4 {
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -280,7 +268,7 @@ header .fa {
 
 .section-2 .box {
     box-shadow: 0 0 25px rgba(0, 0, 0, .15) !important;
-    padding: 30px 20px;
+    padding: 10px 10px;
 }
 
 /*=============================
@@ -818,21 +806,6 @@ header .fa {
 }
 
 /*===============================
-		   aside style
-===============================*/
-
-.aside01 {
-	width:100px;
-	height:100%;
-	background-color : #474a48;
-	position: fixed;
-	top:0;
-	right:0;
-	z-index: 999;
-}
-
-
-/*===============================
            About-Page
 ===============================*/
 
@@ -1321,8 +1294,8 @@ textarea.form-control {
 }
 
 .blog .bt .active {
-    background-color: #b4dc2d;
-    border: 1px solid #b4dc2d;
+    background-color: #ffb9b2;
+    border: 1px solid #ffb9b2;
     color: white;
     border-radius: 100px;
 }
@@ -1331,8 +1304,8 @@ textarea.form-control {
     color: #fff;
     font-size: 18px;
     padding: 5px 20px;
-    background-color: #b4dc2d;
-    border-color: #b4dc2d;
+    background-color: #ffb9b2;
+    border-color: #ffb9b2;
     border-radius: 100px;
 }
 
@@ -1343,8 +1316,8 @@ textarea.form-control {
 }
 
 .blog .bt a:hover {
-    background-color: #b4dc2d;
-    border: 1px solid #b4dc2d;
+    background-color: #ffb9b2;
+    border: 1px solid #ffb9b2;
     color: white;
     border-radius: 100px;
 }
@@ -1844,14 +1817,10 @@ textarea.form-control {
     header {
         padding: 30px 0;
     }
-    .navbar-dark .navbar-nav .nav-item{
-    	margin : 0 5%;
-    }
-    
     .navbar-dark .navbar-nav .nav-link,
     .navbar-dark .navbar-nav .active > .nav-link {
-        font-size: 14px;
-        padding: 10px 0px;
+        font-size: 12px;
+        padding: 10px 10px;
     }
     header .navbar-brand img {
         width: 75%;
