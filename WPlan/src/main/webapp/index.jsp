@@ -17,14 +17,17 @@
 	<header class="header bg">
 		<jsp:include page="/jsp/include/topLogo.jsp" />
 	</header>
+	<span class="position-absolute trigger">
+		<!-- hidden trigger to apply 'stuck' styles -->
+	</span>
 	<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
 		<jsp:include page="/jsp/include/topMenu.jsp" />
 	</nav>
 	<!--Section-1-->
 	<section class="section-1">
 		<div class="jumbotron d-flex align-items-center">
-<!-- 			<div class="gradient"></div> -->
-<%-- 			<div class="container-fluid content">
+			<div class="gradient"></div>
+			<div class="container-fluid content">
 				<h1 data-aos="fade-up" data-aos-delay="100">Welcome to more.</h1>
 				<h2 data-aos="fade-up" data-aos-delay="300">the multipurpose
 					psd wordrpess theme</h2>
@@ -33,7 +36,7 @@
 				<p data-aos="fade-up" data-aos-delay="700">
 					<a href="${ pageContext.request.contextPath }/jsp/about.jsp" class="btn btn-success">Get Started</a>
 				</p>
-			</div> --%>
+			</div>
 			<!--container-fluid end-->
 		</div>
 	</section>
@@ -354,9 +357,7 @@
 		</footer>
 		<!-- Footer -->
 	</section>
-	<aside class="aside01">
-		
-	</aside>
+
 </body>
 
 </html>
