@@ -6,17 +6,16 @@
 		</div>
 		<div class="col-sm-4 col-12 align-self-center box-1 text-center">
 			<a class="navbar-brand" href="${ pageContext.request.contextPath }/index.jsp">
-				<img src="${ pageContext.request.contextPath }/resources/images/header-logo.png" width="150px"  alt="logo">
+				<img src="${ pageContext.request.contextPath }/resources/images/header-logo.png" alt="logo">
 			</a>
 		</div>
 		<div class="col-sm-4 align-self-center text-right">
-			<div class="logMenu">
-				<a href="#"><span>로그인</span></a>
-				<a href="#"><span>로그아웃</span></a> 
-				<a href="#"><span>마이페이지</span></a>
+			<div class="loginMenu">
+				<a href="#"><span class="login">login</span></a>
+				<a href="#"><span class="logout">logout</span></a> 
+				<a href="#"><span class="mypage">mypage</span></a>
 			</div>
 		</div>
 	</div>
 	<!--/row-->
 </div>
-<!--container-->
