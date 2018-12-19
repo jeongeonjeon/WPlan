@@ -5,6 +5,14 @@
 	<link	href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800"	rel="stylesheet">
 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/animate.css">
 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/main.css">
+	<style>
+		.col-lg-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 25%;
+}
+	</style>
 	
 	<title>more</title>
 	<!-- Optional JavaScript -->
@@ -15,9 +23,30 @@
 	<script	src="${ pageContext.request.contextPath }/resources/js/animate.js"></script>
 	<script	src="${ pageContext.request.contextPath }/resources/js/custom.js"></script>
 	<script>
-	        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-	            event.preventDefault();
-	            $(this).ekkoLightbox();
-	        });
+
+	    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+	        event.preventDefault();
+	        $(this).ekkoLightbox();
+	    });
+	    
+		$(document).ready(function(){
+			var toggle = false;
+			
+			$('.arrowBtn').click(function(){
+	
+			    if(toggle){
+		    		$('.aside01').css('width','0');
+		    		$('.aside01').css('min-width','0');
+		    		$('#wrapper').css('width','100%');
+		    		toggle = false;
+		    	}else{
+		    		$('.aside01').css('width','20%');
+		    		$('.aside01').css('min-width','250px');
+		    		$('#wrapper').css('width','80%');
+		    		toggle = true;
+		    	}
+	
+			});
+	    });
 	
 	</script>

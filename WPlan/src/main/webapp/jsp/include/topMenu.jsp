@@ -6,19 +6,19 @@
      <div class="collapse navbar-collapse" id="navbar1">
          <ul class="navbar-nav">
              <li class="nav-item">
-                 <a class="nav-link" href="${ pageContext.request.contextPath }/jsp/product.jsp">드레스</a>
+                 <a class="nav-link" href="${ pageContext.request.contextPath }/jsp/dress.jsp">드레스</a>
              </li>
              <li class="nav-item">
-                 <a class="nav-link" href="${ pageContext.request.contextPath }/jsp/product.jsp">턱시도</a>
+                 <a class="nav-link" href="${ pageContext.request.contextPath }/jsp/tuxedo.jsp">턱시도</a>
              </li>
              <li class="nav-item">
-                 <a class="nav-link" href="${ pageContext.request.contextPath }/jsp/product.jsp">장소</a>
+                 <a class="nav-link" href="${ pageContext.request.contextPath }/jsp/location.jsp">장소</a>
              </li>
              <li class="nav-item">
-                 <a class="nav-link" href="${ pageContext.request.contextPath }/jsp/product.jsp">음식</a>
+                 <a class="nav-link" href="${ pageContext.request.contextPath }/jsp/food.jsp">음식</a>
              </li>
              <li class="nav-item">
-                 <a class="nav-link" href="${ pageContext.request.contextPath }/jsp/product.jsp">데코</a>
+                 <a class="nav-link" href="${ pageContext.request.contextPath }/jsp/deco.jsp">데코</a>
              </li>
          </ul>
      </div>

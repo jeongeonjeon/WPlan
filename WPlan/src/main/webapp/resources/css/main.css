@@ -1,5 +1,5 @@
 html {
-    background: #e6e9e9;
+    background: #fff;
     background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
     -webkit-font-smoothing: antialiased;
 }
@@ -54,6 +54,14 @@ ul > li {
 .btn-primary:not(:disabled):not(.disabled):active:focus {
     box-shadow: none;
 }
+/*===============
+	wrapper
+================*/
+
+#wrapper{
+	width:100%;
+	float: left;
+}
 
 /*======
     Nav-bar
@@ -91,7 +99,7 @@ header .fa {
 
 .col-sm-4.align-self-center.text-right{
 	position: relative;
-    top: -60px;
+    top: -55px;
 }
 .text-right .loginMenu span{
 	font-size: 15px
@@ -106,12 +114,14 @@ header .fa {
     font-weight: 600;
     color: rgb(0, 0, 0);
 }
+
 .navbar-dark .navbar-nav .nav-item {
-	margin : 0 6.3%;
+ 	margin : 0 7%;
 }
+
 .navbar-dark .navbar-nav .nav-link {
     color: #6d6d6d;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -253,11 +263,13 @@ header .fa {
     text-align: center;
 }
 
-.section-2 h3 {
-    font-size: 34px;
+.section-2 h4 {
+	
+    font-size: 20px;
     text-transform: uppercase;
     margin-top: -10px;
     font-weight: 600;
+    margin : 0px;
 }
 
 .section-2 p {
@@ -267,9 +279,11 @@ header .fa {
 
 .section-2 .box-1,
 .section-2 .box-2,
-.section-2 .box-3 {
+.section-2 .box-3,
+.section-2 .box-4 {
     padding-left: 30px;
     padding-right: 30px;
+    
 }
 
 .section-2 p a {
@@ -280,7 +294,13 @@ header .fa {
 
 .section-2 .box {
     box-shadow: 0 0 25px rgba(0, 0, 0, .15) !important;
-    padding: 30px 20px;
+    padding: 10px 10px;
+  
+}
+
+.section-2 img {
+	height : 200px;
+	width : 250px;
 }
 
 /*=============================
@@ -822,13 +842,29 @@ header .fa {
 ===============================*/
 
 .aside01 {
-	width:100px;
-	height:100%;
-	background-color : #474a48;
-	position: fixed;
-	top:0;
-	right:0;
-	z-index: 999;
+    width: 0;
+    height: -webkit-fill-available;
+    background-color: #F3EFE4;
+    position: fixed;
+    top: 0;
+    right: 0;
+    float: left;
+    z-index: 1999;
+    opacity: 0.9;
+}
+
+.aside01 .arrow {
+    position: fixed;
+    top: 8.1%;
+}
+.aside01 .arrow .arrowBtn{
+    width: 30px;
+    height: 150px;
+    position: relative;
+    left: -30px;
+    background-color: #F3EFE4;
+    border-radius: 20px 0 0 20px;
+    padding: 10px 0 0 5px;
 }
 
 
@@ -1321,8 +1357,8 @@ textarea.form-control {
 }
 
 .blog .bt .active {
-    background-color: #b4dc2d;
-    border: 1px solid #b4dc2d;
+    background-color: #ffb9b2;
+    border: 1px solid #ffb9b2;
     color: white;
     border-radius: 100px;
 }
@@ -1331,8 +1367,8 @@ textarea.form-control {
     color: #fff;
     font-size: 18px;
     padding: 5px 20px;
-    background-color: #b4dc2d;
-    border-color: #b4dc2d;
+    background-color: #ffb9b2;
+    border-color: #ffb9b2;
     border-radius: 100px;
 }
 
@@ -1343,8 +1379,8 @@ textarea.form-control {
 }
 
 .blog .bt a:hover {
-    background-color: #b4dc2d;
-    border: 1px solid #b4dc2d;
+    background-color: #ffb9b2;
+    border: 1px solid #ffb9b2;
     color: white;
     border-radius: 100px;
 }
@@ -1844,14 +1880,18 @@ textarea.form-control {
     header {
         padding: 30px 0;
     }
+    .col-sm-4.align-self-center.text-right{
+    	top : -40px;
+    }
     .navbar-dark .navbar-nav .nav-item{
     	margin : 0 5%;
     }
     
+
     .navbar-dark .navbar-nav .nav-link,
     .navbar-dark .navbar-nav .active > .nav-link {
         font-size: 14px;
-        padding: 10px 0px;
+        padding: 10px 0;
     }
     header .navbar-brand img {
         width: 75%;
