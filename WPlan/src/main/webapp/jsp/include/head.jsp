@@ -5,6 +5,14 @@
 	<link	href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800"	rel="stylesheet">
 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/animate.css">
 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/main.css">
+	<style>
+		.col-lg-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 25%;
+}
+	</style>
 	
 	<title>more</title>
 	<!-- Optional JavaScript -->
