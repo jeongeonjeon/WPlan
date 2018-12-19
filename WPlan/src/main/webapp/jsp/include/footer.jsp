@@ -11,7 +11,7 @@
 
 			<!-- Content -->
 			<a href="index.jsp"><img
-				src="${ pageContext.request.contextPath }/resources/images/footer-logo.png"
+				src="${ pageContext.request.contextPath }/resources/images/header-logo.png"
 				alt="footer-logo"></a>
 			<p>Lorem Ipsum is simply dummy text of the printing and
 				typesetting industry. Lorem Ipsum has been the industry's printer
