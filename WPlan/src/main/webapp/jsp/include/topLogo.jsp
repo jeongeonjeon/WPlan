@@ -6,7 +6,7 @@
 		</div>
 		<div class="col-sm-4 col-12 align-self-center box-1 text-center">
 			<a class="navbar-brand" href="${ pageContext.request.contextPath }/index.jsp">
-				<img src="${ pageContext.request.contextPath }/resources/images/header-logo.png" width="150px" alt="logo">
+				<img src="${ pageContext.request.contextPath }/resources/images/header-logo.png" width="250px" alt="logo">
 			</a>
 		</div>
 		<div class="col-sm-4 align-self-center text-right">

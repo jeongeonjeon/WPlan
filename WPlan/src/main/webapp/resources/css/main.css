@@ -97,11 +97,26 @@ header .fa {
     margin-left: 15px;
 }
 
+.col-sm-4.align-self-center.text-right{
+	position: relative;
+    top: -55px;
+}
+.text-right .loginMenu span{
+	font-size: 15px
+} 
+.text-right .loginMenu .logout{
+	display: none;
+}
+
 .navbar-dark .navbar-nav .nav-link:hover,
 
 .navbar-dark .navbar-nav .active > .nav-link {
     font-weight: 600;
     color: rgb(0, 0, 0);
+}
+
+.navbar-dark .navbar-nav .nav-item {
+ 	margin : 0 6.3%;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -110,7 +125,7 @@ header .fa {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 15px 25px;
+    padding: 15px 0px;
 }
 
 .navbar-nav {
@@ -823,7 +838,6 @@ header .fa {
 }
 
 /*===============================
-<<<<<<< HEAD
 		   aside style
 ===============================*/
 
@@ -855,8 +869,6 @@ header .fa {
 
 
 /*===============================
-=======
->>>>>>> branch 'woon' of https://github.com/jeongeonjeon/WPlan.git
            About-Page
 ===============================*/
 
@@ -1868,7 +1880,6 @@ textarea.form-control {
     header {
         padding: 30px 0;
     }
-<<<<<<< HEAD
     .col-sm-4.align-self-center.text-right{
     	top : -40px;
     }
@@ -1876,12 +1887,11 @@ textarea.form-control {
     	margin : 0 5%;
     }
     
-=======
->>>>>>> branch 'woon' of https://github.com/jeongeonjeon/WPlan.git
+
     .navbar-dark .navbar-nav .nav-link,
     .navbar-dark .navbar-nav .active > .nav-link {
         font-size: 12px;
-        padding: 10px 10px;
+        padding: 10px 0;
     }
     header .navbar-brand img {
         width: 75%;
