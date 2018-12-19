@@ -116,12 +116,12 @@ header .fa {
 }
 
 .navbar-dark .navbar-nav .nav-item {
- 	margin : 0 6.3%;
+ 	margin : 0 7%;
 }
 
 .navbar-dark .navbar-nav .nav-link {
     color: #6d6d6d;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1890,7 +1890,7 @@ textarea.form-control {
 
     .navbar-dark .navbar-nav .nav-link,
     .navbar-dark .navbar-nav .active > .nav-link {
-        font-size: 12px;
+        font-size: 14px;
         padding: 10px 0;
     }
     header .navbar-brand img {
