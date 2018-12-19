@@ -92,7 +92,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-12 col-12 box-1">
-					<div class="row box" data-aos="fade-left" data-aos-delay="700">
+					<div class="row box" data-aos="fade-left" data-aos-delay="900">
 						<a href="${pageContext.request.contextPath }"> <img
 							src="${ pageContext.request.contextPath }/resources/images/dress1.jpg"
 							class="figure-img img-fluid" alt="blog">

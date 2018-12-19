@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="${ pageContext.request.contextPath }/resources/css/login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="ctnr-modal login_close" id="login_module" style="display: block;">
@@ -71,7 +72,7 @@
                         </div>
                     </div>
                     <div class="section-separator">
-                        <div class="section-text">아직 <span class="strong-color">웨딧</span> 계정이 없으세요?</div>
+                        <div class="section-text">아직 <span class="strong-color">더블유 플랜</span> 계정이 없으세요?</div>
                         <div class="section-line"></div>
                     </div>
                     <div class="group-btn-login">
