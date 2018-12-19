@@ -15,9 +15,10 @@
 	<script	src="${ pageContext.request.contextPath }/resources/js/animate.js"></script>
 	<script	src="${ pageContext.request.contextPath }/resources/js/custom.js"></script>
 	<script>
-	        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-	            event.preventDefault();
-	            $(this).ekkoLightbox();
-	        });
+
+	    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+	        event.preventDefault();
+	        $(this).ekkoLightbox();
+	    });
 	
 	</script>

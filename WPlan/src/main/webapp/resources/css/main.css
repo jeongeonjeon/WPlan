@@ -1,5 +1,5 @@
 html {
-    background: #e6e9e9;
+    background: #fff;
     background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
     -webkit-font-smoothing: antialiased;
 }
@@ -53,6 +53,14 @@ ul > li {
 
 .btn-primary:not(:disabled):not(.disabled):active:focus {
     box-shadow: none;
+}
+/*===============
+	wrapper
+================*/
+
+#wrapper{
+	width:100%;
+	float: left;
 }
 
 /*======
@@ -822,13 +830,29 @@ header .fa {
 ===============================*/
 
 .aside01 {
-	width:100px;
-	height:100%;
-	background-color : #474a48;
-	position: fixed;
-	top:0;
-	right:0;
-	z-index: 999;
+    width: 0;
+    height: -webkit-fill-available;
+    background-color: #F3EFE4;
+    position: fixed;
+    top: 0;
+    right: 0;
+    float: left;
+    z-index: 1999;
+    opacity: 0.9;
+}
+
+.aside01 .arrow {
+    position: fixed;
+    top: 8.1%;
+}
+.aside01 .arrow .arrowBtn{
+    width: 30px;
+    height: 150px;
+    position: relative;
+    left: -30px;
+    background-color: #F3EFE4;
+    border-radius: 20px 0 0 20px;
+    padding: 10px 0 0 5px;
 }
 
 
@@ -1843,6 +1867,9 @@ textarea.form-control {
 @media(max-width:1024px) {
     header {
         padding: 30px 0;
+    }
+    .col-sm-4.align-self-center.text-right{
+    	top : -40px;
     }
     .navbar-dark .navbar-nav .nav-item{
     	margin : 0 5%;
