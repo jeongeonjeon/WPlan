@@ -12,7 +12,8 @@
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 25%;
-}
+	}
+
 	</style>
 	
 	<title>more</title>

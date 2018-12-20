@@ -68,7 +68,7 @@ $(document).ready(function(){
 	                        <div class="box3-login">
 	                            <div class="text1-login">
 	                                아이디나 비밀번호가 기억나지 않으세요?
-	                            </div><div class="text2-login"><a href="https://wedit.kr/app/user/find.php">아이디/비밀번호 찾기</a></div>
+	                            </div><div class="text2-login"><a href="#">아이디/비밀번호 찾기</a></div>
 	                        </div>
 	                    </div>
 	                    <div class="section-separator">
@@ -76,10 +76,10 @@ $(document).ready(function(){
 	                        <div class="section-line"></div>
 	                    </div>
 	                    <div class="group-btn-login">
-	                        <a href="https://wedit.kr/app/registration/partner_entry.php">
+	                        <a href="#">
 	                            <button class="white">업체등록</button>
 	                        </a>
-	                        <a href="https://wedit.kr/app/registration/user.php">
+	                        <a href="#">
 	                            <button class="white">회원가입하기</button>
 	                        </a>
 	                        <div class="clearfix"></div>

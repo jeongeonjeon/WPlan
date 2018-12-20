@@ -1894,7 +1894,7 @@ textarea.form-control {
         padding: 10px 0;
     }
     header .navbar-brand img {
-        width: 75%;
+        width: 120%;
     }
     header .fa {
         font-size: 18px;
@@ -2484,7 +2484,7 @@ textarea.form-control {
     }
 }
 
-@media(max-width:425px) {
+@media(max-width:576px) {
     .navbar-dark .navbar-toggler {
         position: absolute;
         right: 20px;
