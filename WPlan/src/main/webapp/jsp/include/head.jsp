@@ -12,7 +12,21 @@
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 25%;
-}
+    }
+
+   /*  .col-sm-12 {
+    max-width : 80%;
+    }
+    
+    .col-sm-6 {
+    max-width : 45%;
+    }
+    
+    .col-sm-88 {
+    max-width : 55%;
+   	padding : 0px 10px 10px 10px;
+    } */
+    
 	</style>
 	
 	<title>more</title>
