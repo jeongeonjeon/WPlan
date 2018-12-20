@@ -127,84 +127,86 @@
 
 		<div class="container detail section-2">
 			<div class="box">
-				<div class="shopInfo">
-					<h3>WOON</h3>
-					<p>주소 : 서울 강남구 역삼동 </p>
+				<div class="innerBox">
+					<div class="shopInfo">
+						<h3>WOON</h3>
+						<p>주소 : 서울 강남구 역삼동 </p>
+						
+					</div>
 					
-				</div>
-				
-				<div class="slider">
-					<div id="jssor_1"
-						style="position: relative; margin: 0px auto 50 auto; top: 0px; left: 0px; width: 950px; height: 535px; overflow: hidden; visibility: hidden;">
-						<!-- Loading Screen -->
-						<div data-u="loading" class="jssorl-009-spin"
-							style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.7);">
-							<img
-								style="margin-top: -19px; position: relative; top: 50%; width: 38px; height: 38px;"
-								src="${ pageContext.request.contextPath }/resources/images/spin.svg" />
-						</div>
-						<div data-u="slides"
-							style="cursor: default; position: relative; top: 0px; left: 0px; width: 950px; height: 430px; overflow: hidden;">
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/deco1.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/deco1.jpg">
+					<div class="slider">
+						<div id="jssor_1"
+							style="position: relative; margin: 0px auto 50 auto; top: 0px; left: 0px; width: 950px; height: 535px; overflow: hidden; visibility: hidden;">
+							<!-- Loading Screen -->
+							<div data-u="loading" class="jssorl-009-spin"
+								style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.7);">
+								<img
+									style="margin-top: -19px; position: relative; top: 50%; width: 38px; height: 38px;"
+									src="${ pageContext.request.contextPath }/resources/images/spin.svg" />
 							</div>
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/deco2.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/deco2.jpg" />
+							<div data-u="slides"
+								style="cursor: default; position: relative; top: 0px; left: 0px; width: 950px; height: 430px; overflow: hidden;">
+								<div>
+									<img data-u="image"
+										src="${ pageContext.request.contextPath }/resources/images/deco1.jpg" />
+									<img data-u="thumb"
+										src="${ pageContext.request.contextPath }/resources/images/deco1.jpg">
+								</div>
+								<div>
+									<img data-u="image"
+										src="${ pageContext.request.contextPath }/resources/images/deco2.jpg" />
+									<img data-u="thumb"
+										src="${ pageContext.request.contextPath }/resources/images/deco2.jpg" />
+								</div>
+								<div>
+									<img data-u="image"
+										src="${ pageContext.request.contextPath }/resources/images/deco3.jpg" />
+									<img data-u="thumb"
+										src="${ pageContext.request.contextPath }/resources/images/deco3.jpg" />
+								</div>
+								<div>
+									<img data-u="image"
+										src="${ pageContext.request.contextPath }/resources/images/deco4.jpg" />
+									<img data-u="thumb"
+										src="${ pageContext.request.contextPath }/resources/images/deco4.jpg" />
+								</div>
+								<div>
+									<img data-u="image"
+										src="${ pageContext.request.contextPath }/resources/images/food1.jpg" />
+									<img data-u="thumb"
+										src="${ pageContext.request.contextPath }/resources/images/food1.jpg" />
+								</div>
+								<div>
+									<img data-u="image"
+										src="${ pageContext.request.contextPath }/resources/images/food2.jpg" />
+									<img data-u="thumb"
+										src="${ pageContext.request.contextPath }/resources/images/food2.jpg" />
+								</div>
 							</div>
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/deco3.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/deco3.jpg" />
-							</div>
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/deco4.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/deco4.jpg" />
-							</div>
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/food1.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/food1.jpg" />
-							</div>
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/food2.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/food2.jpg" />
-							</div>
-						</div>
-						<!-- Thumbnail Navigator -->
-						<div data-u="thumbnavigator" class="jssort101"
-							style="position: absolute; left: 0px; bottom: 0px; width: 950px; height: 100px; background-color: #000;"
-							data-autocenter="1" data-scale-bottom="0.75">
-							<div data-u="slides">
-								<div data-u="prototype" class="p"
-									style="width: 185px; height: 100px;">
-									<div data-u="thumbnailtemplate" class="t"></div>
-									<svg viewbox="0 0 16000 16000" class="cv">
-				                        <circle class="a" cx="8000" cy="8000"
-											r="3238.1"></circle>
-				                        <line class="a" x1="6190.5" y1="8000"
-											x2="9809.5" y2="8000"></line>
-				                        <line class="a" x1="8000" y1="9809.5"
-											x2="8000" y2="6190.5"></line>
-				                    </svg>
+							<!-- Thumbnail Navigator -->
+							<div data-u="thumbnavigator" class="jssort101"
+								style="position: absolute; left: 0px; bottom: 0px; width: 950px; height: 100px; background-color: #000;"
+								data-autocenter="1" data-scale-bottom="0.75">
+								<div data-u="slides">
+									<div data-u="prototype" class="p"
+										style="width: 185px; height: 100px;">
+										<div data-u="thumbnailtemplate" class="t"></div>
+										<svg viewbox="0 0 16000 16000" class="cv">
+					                        <circle class="a" cx="8000" cy="8000"
+												r="3238.1"></circle>
+					                        <line class="a" x1="6190.5" y1="8000"
+												x2="9809.5" y2="8000"></line>
+					                        <line class="a" x1="8000" y1="9809.5"
+												x2="8000" y2="6190.5"></line>
+					                    </svg>
+									</div>
 								</div>
 							</div>
 						</div>
+						<script type="text/javascript">jssor_1_slider_init();</script>
+						<!-- #endregion Jssor Slider End -->
+			
 					</div>
-					<script type="text/javascript">jssor_1_slider_init();</script>
-					<!-- #endregion Jssor Slider End -->
-		
 				</div>
 			</div>
 		</div>
