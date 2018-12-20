@@ -15,7 +15,14 @@
         .jumbotron h2 {padding-bottom: 0;}
        
     </style>
-
+    <script>
+     $(document).ready(function(){
+    	 $('#listRow').click(function(){
+    		 location.href="${ pageContext.request.contextPath }";
+    	 });
+     });
+    
+    </script>
 </head>
 
 <body>
@@ -44,20 +51,20 @@
 		<table class="rList">
 			<thead>
 				<tr>
-					<td>예약번호</td>
+					<td>카테고리</td>
+					<td>업체명</td>
 					<td>예약날짜</td>
-					<td>예약자</td>
-					<td>결혼날짜</td>
 					<td>예약내역</td>
+					<td>예약여부</td>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>1</td>
+				<tr id="listRow">
+					<td>드레스</td>
+					<td>EON</td>
 					<td>2018.12.20</td>
-					<td>홍길동</td>
-					<td>2018.12.24</td>
-					<td>레드홀</td>
+					<td>eon style dress</td>
+					<td>예약완료</td>
 				</tr>
 			</tbody>
 		</table>

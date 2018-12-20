@@ -15,7 +15,7 @@
         .jumbotron h2 {padding-bottom: 0;}
        
     </style>
-
+    
 </head>
 
 <body>
@@ -25,7 +25,7 @@
     <span class="position-absolute trigger"><!-- hidden trigger to apply 'stuck' styles --></span>
     <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
        	<jsp:include page="/jsp/include/topMenu.jsp" />
-    </nav>
+    </nav>	
     
    <aside class="rAside">
    	<div>
@@ -39,28 +39,24 @@
    </aside>
    <section class="rSection">
    <br>
-   <h4>예약리스트</h4>
+   <h4>예약정보</h4>
    <br>
-		<table class="rList">
-			<thead>
-				<tr>
-					<td>예약번호</td>
-					<td>예약날짜</td>
-					<td>예약자</td>
-					<td>결혼날짜</td>
-					<td>예약내역</td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td>2018.12.20</td>
-					<td>홍길동</td>
-					<td>2018.12.24</td>
-					<td>레드홀</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="rDetail">
+			<div class="rDetailTitle"><p>EON</p></div>
+			<div class="rDetailImgSec">
+				<img class="rDetailImg" src="${ pageContext.request.contextPath }/resources/images/dress1.jpg">
+			</div>
+			<div class="rDetailInfo">
+				<p>예약내역  eon style dress</p>
+				<p>예약날짜  2018.12.20</p>
+				<p>결혼날짜  2018.12.24</p>
+				<p>비용  	  500,000원</p>
+			</div>
+			<div class="rBtn">
+				<button class="fBtn">예약취소</button>
+				<button class="fBtn">예약수정</button>
+			</div>
+		</div>
    </section>
     <section class="section-7">
 			<%@ include file="/jsp/include/footer.jsp" %>

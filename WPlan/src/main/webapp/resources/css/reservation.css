@@ -3,12 +3,136 @@
   aside.rAside {
  	width : 20%;
  	height : 600px;
- 	background-color: blue;
  	float : left;
+ }
+ 
+ .rSection .rList {
+ 	width : 85%;
+ 	margin : auto;
+ 	 border-collapse: separate;
+    border-spacing: 1px;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+  
+ 
+ }
+ 
+ .rSection .rList .rListDetail {
+ 	width : 80% !important;
+ 
+ }
+ 
+
+ .rDetail {
+ 	
+ 	width : 80%;
+ 	height : 500px;
+ 	margin : auto;
+ 	overflow : hidden;
+ }
+ 
+  .rDetail .rDetailTitle {
+ 	
+ 	height : 10%;
+ 	margin-bottom : 3%;
+ 	border-bottom : 1px solid;
+ 	
+ }
+ 
+ .rDetail .rDetailTitle p {
+ 	padding : 9px 0 0 5%;
+ 	font-size : 20px;
+ 	font-weight : 600;
+ }
+ 
+ .rDetail .rDetailImgSec {
+ 	height : 80%;
+ 	width : 40%;
+ 	float : left;
+ }
+ 
+ .rDetail .rDetailImgSec .rDetailImg {
+ 	height : 100%;
+ 	width : 100%;
+ }
+ 
+ .rDetail .rDetailInfo {
+ 	width : 60%;
+ 	height : 80%;
+ 	float :left;
+ 	font-weight : 500;
+ }
+ 
+ .rDetail .rDetailInfo p {
+ 	margin-left : 15%;
+ 	margin-top : 5%;
+ }
+ 
+ .rAside .rMenu  {
+ 	margin-top : 10%;
+ }
+ 
+ .rBtn {
+ 	height : 10%;
+ 
+ }
+ 
+ .fBtn {
+    
+    font-family: "Playfair Display"; 
+    font-weight : 600;
+    border-radius: 0px;
+    border-width: 1px;
+    border-color: rgba(233, 196, 176, 0.5);
+    border-style: solid;
+    background: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    height : 60px;
+   
+}	
+	.fBtn:hover {
+	
+	background : rgba(233, 196, 176, 0.1);
+	}
+ 
+ 
+ 
+  ul.rMenu li{
+ 	font-size : 18px !important;
+ 	font-weight : 600;
+ 	text-align : center;
+ 	padding: 5px 0px 5px 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #efefef;
+    font-size: 12px;
+ 
+ }
+ 
+ .rSection .rList td {
+ 	width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+ }
+ 
+ .rSection h4 {
+ 	margin : 0 0 0 10%;
+ }
+ 
+ .rSection .rList tr td {
+ 	
+ 	text-align : center;
+ 
  }
  
  section.rSection {
  	width : 80%;
- 	clear : both;
+ 	height : 600px;
+ 	float : left;
+ }
  
+ section.section-7 {
+ 	clear : both;
  }
