@@ -1,0 +1,14 @@
+
+
+  aside.rAside {
+ 	width : 20%;
+ 	height : 600px;
+ 	background-color: blue;
+ 	float : left;
+ }
+ 
+ section.rSection {
+ 	width : 80%;
+ 	clear : both;
+ 
+ }
