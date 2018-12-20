@@ -15,7 +15,8 @@
 	<style>
 	
 	#scrape {
-	width : 150px;
+	width : 100%;
+	border : 1px solide #ffbab5;
 	}
 	
 	</style>
@@ -378,8 +379,8 @@
 			</div>
 		</div>
 		
-		<div>
-		<img src="${ pageContext.request.contextPath }/resources/images/scrap.png" id="scrape">
+		<div id="scrape">
+		<img src="${ pageContext.request.contextPath }/resources/images/scrape.png" id="scrape">
 		</div>
 	</aside>
 
