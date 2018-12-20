@@ -12,6 +12,13 @@
 
 	<link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 	<script	src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+	<style>
+	
+	#scrape {
+	width : 150px;
+	}
+	
+	</style>
 
 </head>
 <body>
@@ -368,6 +375,10 @@
 		<div class="arrow">
 			<div class="arrowBtn">
 			</div>
+		</div>
+		
+		<div>
+		<img src="${ pageContext.request.contextPath }/resources/images/scrap.png" id="scrape">
 		</div>
 	</aside>
 
