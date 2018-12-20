@@ -5,13 +5,28 @@
 	<link	href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800"	rel="stylesheet">
 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/animate.css">
 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/main.css">
+	<link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/login.css" type="text/css" />
 	<style>
 		.col-lg-4 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 25%;
-}
+    }
+
+   /*  .col-sm-12 {
+    max-width : 80%;
+    }
+    
+    .col-sm-6 {
+    max-width : 45%;
+    }
+    
+    .col-sm-88 {
+    max-width : 55%;
+   	padding : 0px 10px 10px 10px;
+    } */
+    
 	</style>
 	
 	<title>more</title>
