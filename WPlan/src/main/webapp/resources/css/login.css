@@ -4,6 +4,7 @@
     background: unset;
     position: fixed;
     z-index: 9990;
+    display: none;
 }
 .login_background{
     position: fixed;

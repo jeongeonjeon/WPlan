@@ -2,11 +2,12 @@
     pageEncoding="UTF-8"%>
 <script>
 $(document).ready(function(){
+
 	$('.login_background').click(function(){
-		$('.login_area').hide();
+		$('.login_area').css("display","none");
 	});
 	$('.loginMenu span.login').click(function(){
-		$('.login_area').show();
+		$('.login_area').css("display","block");
 	})
 });
 
