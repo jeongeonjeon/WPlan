@@ -8,10 +8,19 @@
 	<link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/login.css" type="text/css" />
 	<style>
 		.col-lg-4 {
-		    -webkit-box-flex: 0;
-		    -ms-flex: 0 0 33.333333%;
-		    flex: 0 0 33.333333%;
-		    max-width: 25%;
+			-webkit-box-flex: 0;
+			-ms-flex: 0 0 33.333333%;
+			flex: 0 0 33.333333%;
+			max-width: 25%;
+		}
+		
+		.product .jumbotron {
+			width: 100%;
+			height: 250px;
+		}
+		
+		.product .jumbotron h2 {
+			padding-bottom: 0;
 		}
 	</style>
 	

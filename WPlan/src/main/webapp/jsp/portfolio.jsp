@@ -9,17 +9,12 @@
 
     <title>more</title>
     <jsp:include page="/jsp/include/head.jsp" />
-    <style>
-    .jumbotron {width: 100%;height: 250px;}
-        .jumbotron h2 {padding-bottom: 0;}
-    </style>
 
 </head>
 <body>
     <header class="header bg">
         <jsp:include page="/jsp/include/topLogo.jsp" />
     </header>
-    <span class="position-absolute trigger"><!-- hidden trigger to apply 'stuck' styles --></span>
     <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
        	<jsp:include page="/jsp/include/topMenu.jsp" />
     </nav>

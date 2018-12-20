@@ -9,56 +9,7 @@
 
     <title>more</title>
     <jsp:include page="/jsp/include/head.jsp" />
-    <style>
-    .jumbotron {width: 100%;height: 250px;}
-        .jumbotron h2 {padding-bottom: 0;}
-     
-   
-     .fBtn {
-    
-    font-family: "Playfair Display"; 
-    font-weight : 600;
-    border-radius: 0px;
-    border-width: 1px;
-    border-color: rgba(233, 196, 176, 0.5);
-    border-style: solid;
-    background: rgb(255, 255, 255);
-    color: rgb(34, 34, 34);
-    height : 60px;
-   
-}	
-	.fBtn:hover {
-	
-	background : rgba(233, 196, 176, 0.1);
-	}
-	
-	.inputArea {
-	
-	width : 60%;
-	margin : 0 15px;
-	outline : none;
-	}
-	
-	.title {
-	width : 20%;
-	}
-	
-	h4{
-	padding : 15px;
-	}
-	
-	.pws{
-	position : relative;
-	left : 20%;
-	}
-	
-	.submit {
-	width : 50%;
-	}
-	
 
-	
-    </style>
 
 </head>
 <body>
@@ -87,7 +38,7 @@
   <h3>회원가입</h3>
  
     </div>
-     <div class="container py-5">
+     <div class="container py-5 joinForm">
       <div class="row" data-aos="fade-up" data-aos-delay="300">
           <div class="col-md-12">
               <form>

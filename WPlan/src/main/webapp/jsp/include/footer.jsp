@@ -3,7 +3,6 @@
 <!-- Footer Links -->
 <div class="container text-center text-md-left">
 
-<br><br><br><br><br><br><br><br>
 </div>
 <!-- Footer Links -->
 
