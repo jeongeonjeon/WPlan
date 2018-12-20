@@ -8,12 +8,11 @@
 	<link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/login.css" type="text/css" />
 	<style>
 		.col-lg-4 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 25%;
-	}
-
+		    -webkit-box-flex: 0;
+		    -ms-flex: 0 0 33.333333%;
+		    flex: 0 0 33.333333%;
+		    max-width: 25%;
+		}
 	</style>
 	
 	<title>more</title>
