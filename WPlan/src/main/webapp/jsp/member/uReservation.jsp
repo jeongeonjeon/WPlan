@@ -10,67 +10,59 @@
     <title>more</title>
     <link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/member.css">
     <jsp:include page="/jsp/include/head.jsp" />
-    <style>
-    .jumbotron {width: 100%;height: 250px;}
-        .jumbotron h2 {padding-bottom: 0;}
-       
-    </style>
-    <script>
-     $(document).ready(function(){
-    	 $('#listRow').click(function(){
-    		 location.href="${ pageContext.request.contextPath }";
-    	 });
-     });
-    
-    </script>
+
 </head>
 
 <body>
-    <header class="header bg">
-        <jsp:include page="/jsp/include/topLogo.jsp" />
-    </header>
-    <span class="position-absolute trigger"><!-- hidden trigger to apply 'stuck' styles --></span>
-    <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
-       	<jsp:include page="/jsp/include/topMenu.jsp" />
-    </nav>
-    
-   <aside class="rAside">
-   	<div>
-   		<ul class= "rMenu">
-   			<li><a href="#">캘린더</a></li>
-   			<li><a href="#">예약리스트</a></li>
-   			<li><a href="#">내 정보</a></li>
-   		</ul>
-   	</div>
-   </aside>
-   <section class="rSection">
-   <br>
-   <h4>예약리스트</h4>
-   <br>
-		<table class="rList">
-			<thead>
-				<tr>
-					<td>카테고리</td>
-					<td>업체명</td>
-					<td>예약날짜</td>
-					<td>예약내역</td>
-					<td>예약여부</td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr id="listRow">
-					<td>드레스</td>
-					<td>EON</td>
-					<td>2018.12.20</td>
-					<td>eon style dress</td>
-					<td>예약완료</td>
-				</tr>
-			</tbody>
-		</table>
-   </section>
-    <section class="section-7">
-			<%@ include file="/jsp/include/footer.jsp" %>
-    </section>
+	<div id="wrapper">
+		<jsp:include page="/jsp/login/loginForm.jsp" />
+	    <header class="header bg">
+	        <jsp:include page="/jsp/include/topLogo.jsp" />
+	    </header>
+	    <span class="position-absolute trigger"><!-- hidden trigger to apply 'stuck' styles --></span>
+	    <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
+	       	<jsp:include page="/jsp/include/topMenu.jsp" />
+	    </nav>
+	    
+	   <aside class="rAside">
+	   	<div>
+	   		<ul class= "rMenu">
+	   			<li class="calendar"><a href="#">캘린더</a></li>
+	   			<li class="rList"   ><a href="#">예약리스트</a></li>
+	   			<li class="myInfo"  ><a href="#">내 정보</a></li>
+	   		</ul>
+	   	</div>
+	   </aside>
+	   <section class="rSection">
+	   <br>
+	   <h4>예약리스트</h4>
+	   <br>
+			<table class="rList">
+				<thead>
+					<tr>
+						<td>카테고리</td>
+						<td>업체명</td>
+						<td>예약날짜</td>
+						<td>예약내역</td>
+						<td>예약여부</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="listRow">
+						<td>드레스</td>
+						<td>EON</td>
+						<td>2018.12.20</td>
+						<td>eon style dress</td>
+						<td>예약완료</td>
+					</tr>
+				</tbody>
+			</table>
+	   </section>
+	    <section class="section-7">
+				<%@ include file="/jsp/include/footer.jsp" %>
+	    </section>
+     	</div>
+	<%@ include file="/jsp/include/sideSlider.jsp" %>
 
 </body>
 

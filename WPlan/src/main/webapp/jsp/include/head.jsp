@@ -85,5 +85,28 @@
 	
 			});
 	    });
+		
+	    $(document).ready(function(){
+	    	$('.rDetailBtn #cancel').click(function(){
+	    		alert('예약이 취소되었습니다.');
+	    	});
+    		$('#updateBtn.fBtn update').click(function(){
+    			alert('수정되었습니다.');
+    			location.href="${ pageContext.request.contextPath }/jsp/member/myPage.jsp";
+    		});
+	    });
+	    
+	    $(document).ready(function(){
+	    	$('.rMenu .calendar').click(function(){
+	    		location.href="${ pageContext.request.contextPath }/jsp/calendar.jsp";
+	    	});
+	    	$('.rMenu .myInfo').click(function(){
+	    		location.href="${ pageContext.request.contextPath }/jsp/member/myPage.jsp";
+	    	});
+	    	$('.rMenu .rList').click(function(){
+	    		location.href="${ pageContext.request.contextPath }/jsp/member/uReservation.jsp";
+	    	});
+	    });
+	    
 	
 	</script>
