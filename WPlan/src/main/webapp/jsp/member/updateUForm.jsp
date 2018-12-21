@@ -20,6 +20,15 @@
 
 	
     </style>
+    <script>
+    	$(document).ready(function(){
+    		$('#updateBtn').click(function(){
+    			alert('수정되었습니다.');
+    			location.href="${ pageContext.request.contextPath }/jsp/member/myPage.jsp";
+    		});
+    	});
+    
+    </script>
 
 </head>
 <body>
@@ -45,7 +54,7 @@
 <!-- Contact section Start -->
 <div id="contact">
   <div class="container">
-  <h3>회원정보수정</h3>
+  <h4>회원정보수정</h4>
  
     </div>
      <div class="container py-5">
@@ -56,36 +65,36 @@
 						</div>
 						
 						<div class="row">
-							<label class="title"><h4>아이디</h4></label> <!-- hidden으로 나중에 변경 -->
+							<label class="label-title"><h4>아이디</h4></label> <!-- hidden으로 나중에 변경 -->
 							<input type="text" class="inputArea" placeholder="이름을 입력해주세요" required readonly="readonly">
 							
 						</div>
 						<div class="row">
-							<label class="title"><h4>기존 비밀번호</h4></label>
+							<label class="label-title"><h4>기존 비밀번호</h4></label>
 							<input type="text" class="inputArea" placeholder="비밀번호를 입력해주세요" required>
 						
 						</div>
 						<div class="row">
-							<label class="title"><h4>새 비밀번호</h4></label>
+							<label class="label-title"><h4>새 비밀번호</h4></label>
 							<input type="text" class="inputArea" placeholder="비밀번호를 입력해주세요" required>
 						
 						</div>
 						<div class="row">
 							
-							<input type="text" class="inputArea pws" placeholder="비밀번호를 확인해주세요" required>
+							<input type="label-text" class="inputArea pws" placeholder="비밀번호를 확인해주세요" required>
 						
 						</div>
 						
 						<div class="row">
-							<label class="title"><h4>전화번호</h4></label>
+							<label class="label-title"><h4>전화번호</h4></label>
 							<input type="text" class="inputArea" placeholder="010-xxxx-xxxx" required>
 						</div>
 						<div class="row">
-							<label class="title"><h4>이메일</h4></label>
+							<label class="label-title"><h4>이메일</h4></label>
 							<input type="email" class="inputArea" placeholder="이메일형식으로 입력해주세요" required>
 						</div>
-						<button class="fBtn submit">수정</button>
-						<button class="fBtn submit">취소</button>
+						<button class="fBtn update" id="updateBtn">수정</button>
+						<button class="fBtn update" >취소</button>
 						
 						
                   
