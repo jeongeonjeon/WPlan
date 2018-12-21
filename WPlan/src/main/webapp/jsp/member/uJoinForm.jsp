@@ -27,7 +27,7 @@
 			<jsp:include page="/jsp/include/topMenu.jsp" />
 		</nav>
 		<!--Section-1-->
-		<section class="section-1">
+		<section class="section-1 product">
 			<div class="jumbotron d-flex align-items-center">
 				<div class="gradient"></div>
 				<div class="container-fluid content">

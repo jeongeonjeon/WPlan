@@ -10,20 +10,7 @@
     <title>more</title>
     <link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/member.css">
     <jsp:include page="/jsp/include/head.jsp" />
-    <style>
-    .jumbotron {width: 100%;height: 250px;}
-        .jumbotron h2 {padding-bottom: 0;}
-       
-    </style>
-    <script>
-    	
-    $(document).ready(function(){
-    	$('#cancel').click(function(){
-    		alert('예약이 취소되었습니다.');
-    	});
-    });
-    
-    </script>
+
     
 </head>
 
@@ -41,9 +28,9 @@
 	   <aside class="rAside">
 	   	<div>
 	   		<ul class= "rMenu">
-	   			<li><a href="#">캘린더</a></li>
-	   			<li><a href="#">예약리스트</a></li>
-	   			<li><a href="#">내 정보</a></li>
+	   			<li class="calendar"><a href="#">캘린더</a></li>
+	   			<li class="rList"   ><a href="#">예약리스트</a></li>
+	   			<li class="myInfo"  ><a href="#">내 정보</a></li>
 	   		</ul>
 	   	</div>
 	   </aside>
