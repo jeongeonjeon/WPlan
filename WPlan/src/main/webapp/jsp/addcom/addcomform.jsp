@@ -30,9 +30,11 @@
 </head>
 <body>
 	<div>
-		이미지<br>
+		이미지 등록<br>
 		<form id="form" runat="server">
-			<img id="image_section" src="${ pageContext.request.contextPath }/resources/images/hall2.jpg" />
+			<div>
+				<img id="image_section" src="${ pageContext.request.contextPath }/resources/images/hall2.jpg" />
+			</div>
 			<br> 
 			<input type='file' id="imgInput" />
 		</form>

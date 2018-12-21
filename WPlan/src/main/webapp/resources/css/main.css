@@ -119,6 +119,12 @@ header .fa {
  	margin : 0 7%;
 }
 
+
+.navbar-dark .navbar-toggler-icon{
+	background-image : url(../images/line-menu.png);
+	margin:4px;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     color: #6d6d6d;
     font-size: 18px;
@@ -911,7 +917,19 @@ header .fa {
     border-radius: 20px 0 0 20px;
     padding: 10px 0 0 5px;
 }
+.aside01 .aside {
+	width : 80%;
+	font-weight : bold;
+	
+}
 
+div#ui-datepicker-div{
+	width:12%!important;
+	min-width:13.5em!important;
+	right: 0.5%!important;
+    left: unset!important;
+	
+}
 
 /*===============================
            About-Page
@@ -2565,7 +2583,7 @@ textarea.form-control {
     .navbar-dark .navbar-toggler {
         color: rgb(0, 0, 0);
         border-color: rgba(255, 255, 255, 0.1);
-        background: #b4dc2d;
+        background: #FFF;
     }
     .navbar-toggler {
         padding: .15rem .25rem;

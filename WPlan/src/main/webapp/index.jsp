@@ -12,50 +12,7 @@
 
 	<link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 	<script	src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-	<style>
-	
-	.aside01 .aside {
-	width : 80%;
-	font-weight : 600;
-	
-	}
-	
-	.aside01 .calander {
-		position : relative;
-		top : 30%;
-		margin : auto;
-		
-	}
-	
-	.aside01 hr.aside{
-	position : relative;
-	top : 40%;
-	border : 0.5px solid;
-	
-	}
-	
-	.aside01 div.scrape {
-	position : relative;
-	top : 38%;
-	margin : auto;
-	
-	}
-	
-	.aside01 span.scrape  {
-	 margin : 10%;
-	 position : relative;
-	}
-	
-	.aside01 .scrape img {
-	
-	width : 25%;
-	position : relative;
-	left : 40%;
-	
-	}
-	
-	
-	</style>
+
 
 </head>
 <body>
@@ -409,24 +366,8 @@
 			<!-- Footer -->
 		</section>
  	</div>
-	<aside class="aside01">
-		<div class="arrow">
-			<div class="arrowBtn">
-			</div>
-		</div>
-		<hr class = "aside">
-		<div class="aside calander">
-		결혼 예정일 <br>
-		<input type="text" id="datepicker1" >
-		</div>
-		<div class="aside scrape">
-			<img src="${ pageContext.request.contextPath }/resources/images/scrape.png">
-			<span class="aside scrape text">스크랩북</span>
-		</div>
-		<div class="aside myPage">
-			<span >마이페이지</span>
-		</div>
-	</aside>
+	<%@ include file="/jsp/include/sideSlider.jsp" %>
+
 
 </body>
 
