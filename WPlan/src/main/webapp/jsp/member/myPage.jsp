@@ -15,6 +15,14 @@
         .jumbotron h2 {padding-bottom: 0;}
        
     </style>
+    <script>
+    	$(document).ready(function(){
+    		$('#update').click(function(){
+    			location.href="${ pageContext.request.contextPath }/jsp/member/updateUForm.jsp";
+    		});
+    	});
+    
+    </script>
 
 </head>
 
