@@ -8,54 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>more</title>
+    <link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/member.css">
     <jsp:include page="/jsp/include/head.jsp" />
     <style>
     .jumbotron {width: 100%;height: 250px;}
         .jumbotron h2 {padding-bottom: 0;}
      
    
-     .fBtn {
-    
-    font-family: "Playfair Display"; 
-    font-weight : 600;
-    border-radius: 0px;
-    border-width: 1px;
-    border-color: rgba(233, 196, 176, 0.5);
-    border-style: solid;
-    background: rgb(255, 255, 255);
-    color: rgb(34, 34, 34);
-    height : 60px;
-   
-}	
-	.fBtn:hover {
-	
-	background : rgba(233, 196, 176, 0.1);
-	}
-	
-	.inputArea {
-	
-	width : 60%;
-	margin : 0 15px;
-	outline : none;
-	}
-	
-	.title {
-	width : 25%;
-	}
-	
-	h4{
-	padding : 15px;
-	}
-	
-	.pws{
-	position : relative;
-	left : 25%;
-	}
-	
-	.submit {
-	width : 50%;
-	margin : 0 0 0 10%;
-	}
+  
 	
 
 	
@@ -124,7 +84,8 @@
 							<label class="title"><h4>이메일</h4></label>
 							<input type="email" class="inputArea" placeholder="이메일형식으로 입력해주세요" required>
 						</div>
-						<button class="fBtn submit">수정하기</button>
+						<button class="fBtn submit">수정</button>
+						<button class="fBtn submit">취소</button>
 						
 						
                   
