@@ -111,9 +111,7 @@
 					</ul>
 				</div>
 			</div>
-	
 		</section>
-	
 		<section class="section-7">
 			<!-- Footer -->
 			<footer class="page-footer font-small stylish-color-dark">
@@ -122,6 +120,7 @@
 			<!-- Footer -->
 		</section>
 	</div>
+	<%@ include file="/jsp/include/sideSlider.jsp" %>
 </body>
 
 </html>

@@ -1,0 +1,205 @@
+
+/* Aside */
+
+  aside.rAside {
+ 	width : 20%;
+ 	height : 800px;
+ 	float : left;
+ }
+ 
+ .rAside .rMenu  {
+ 	margin-top : 10%;
+ }
+ 
+  ul.rMenu li{
+ 	font-size : 18px !important;
+ 	font-weight : 600;
+ 	text-align : center;
+ 	padding: 5px 0px 5px 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #efefef;
+    font-size: 12px;
+ 
+ }
+ 
+ 
+ /* rSection rList */
+ 
+ .rSection .rList {
+ 	width : 85%;
+ 	margin : auto;
+ 	 border-collapse: separate;
+    border-spacing: 1px;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+  
+ 
+ }
+ .rSection .rList tr td {
+ 	
+ 	text-align : center;
+ 
+ }
+ 
+ .rSection .rList td {
+ 	width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+ }
+ 
+ .rSection .rList .rListDetail {
+ 	width : 80% !important;
+ 
+ }
+ 
+ 
+ /* rSection rDetail */
+ 
+
+ .rDetail {
+ 	
+ 	width : 80%;
+ 	height : 500px;
+ 	margin : auto;
+ 	overflow : hidden;
+ }
+ 
+  .rDetail .rDetailTitle {
+ 	
+ 	min-height : 100px;
+ 	height : auto;
+ 	margin-bottom : 3%;
+ 	border-bottom : 1px solid;
+ 	
+ }
+ 
+ .rDetail .rDetailTitle p {
+ 	padding : 50px 0 0 5%;
+ 	font-size : 20px;
+ 	font-weight : 600;
+ }
+ 
+ .rDetail .rDetailImgSec {
+ 	min-height : 400px;
+ 	height : auto;
+ 	width : 40%;
+ 	float : left;
+ }
+ 
+ .rDetail .rDetailImgSec .rDetailImg {
+ 	max-height : 400px;
+ 	width : 100%;
+ }
+ 
+ .rDetail .rDetailInfo {
+ 	width : 60%;
+ 	min-height : 400px;
+ 	height : auto;
+ 	float :left;
+ 	font-weight : 500;
+ }
+ 
+ .rDetail .rDetailInfo p {
+ 	margin-left : 15%;
+ 	margin-top : 5%;
+ }
+ 
+ .rBtn {
+ 	height : 10%;
+ 
+ }
+ 
+ .rDetailBtn{
+  	min-height : 100px;
+  	height : auto;
+  	clear:both;
+  	text-align : center;
+  	margin-top : 30px;
+ 
+ }
+ 
+ .btn  {
+ 
+ 	display : inline-block;
+ 	
+ }
+ 
+ .btn .fBtn {
+ 	
+ 	height : 30px;
+ 
+ }
+ 
+ .fBtn {
+    
+    font-family: "Playfair Display"; 
+    font-weight : 600;
+    border-radius: 0px;
+    border-width: 1px;
+    border-color: rgba(233, 196, 176, 0.5);
+    border-style: solid;
+    background: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    height : 60px;
+   	outline : none !important;
+}	
+	.fBtn:hover {
+	
+	background : rgba(233, 196, 176, 0.1);
+	}
+ 
+ 
+ 
+ 
+ .rSection h4 {
+ 	margin : 0 0 0 10%;
+ }
+ 
+ 
+ section.rSection {
+ 	width : 80%;
+ 	height : auto;
+ 	min-height : 800px;
+ 	float : left;
+ }
+ 
+ section.section-7 {
+ 	clear : both;
+ }
+ 
+ /* 내 정보 */
+ 
+ 
+ /* 내 정보 수정 */
+ 
+ 
+	.container .row .inputArea {
+	
+	width : 60%;
+	margin : 0 15px;
+	outline : none;
+	}
+	
+	labe .title {
+	width : 25%;
+	}
+	
+	h4{
+	padding : 15px;
+	}
+	
+	.pws{
+	position : relative;
+	left : 25%;
+	}
+	
+	.submit {
+	width : 50%;
+	margin : 0 0 0 10%;
+	}
+ 
+ 
+ 

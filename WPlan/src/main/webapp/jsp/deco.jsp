@@ -147,6 +147,7 @@
 			<!-- Footer -->
 		</section>
 	</div>
+	<%@ include file="/jsp/include/sideSlider.jsp" %>
 </body>
 
 </html>

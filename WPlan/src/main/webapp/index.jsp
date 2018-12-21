@@ -12,14 +12,7 @@
 
 	<link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 	<script	src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-	<style>
-	
-	#scrape {
-	width : 100%;
-	border : 1px solide #ffbab5;
-	}
-	
-	</style>
+
 
 </head>
 <body>
@@ -373,16 +366,8 @@
 			<!-- Footer -->
 		</section>
  	</div>
-	<aside class="aside01">
-		<div class="arrow">
-			<div class="arrowBtn">
-			</div>
-		</div>
-		
-		<div id="scrape">
-		<img src="${ pageContext.request.contextPath }/resources/images/scrape.png" id="scrape">
-		</div>
-	</aside>
+	<%@ include file="/jsp/include/sideSlider.jsp" %>
+
 
 </body>
 

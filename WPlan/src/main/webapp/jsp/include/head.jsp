@@ -5,7 +5,11 @@
 	<link	href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800"	rel="stylesheet">
 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/animate.css">
 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/main.css">
+	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/fullcalendar.css">
+	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/fullcalendar.min.css">
 	<link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/login.css" type="text/css" />
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
+	
 	<style>
 		.col-lg-4 {
 			-webkit-box-flex: 0;
@@ -22,7 +26,8 @@
 		.product .jumbotron h2 {
 			padding-bottom: 0;
 		}
-	</style>
+    
+  	</style>
 	
 	<title>more</title>
 	<!-- Optional JavaScript -->
@@ -32,7 +37,26 @@
 	<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"	crossorigin="anonymous"></script>
 	<script	src="${ pageContext.request.contextPath }/resources/js/animate.js"></script>
 	<script	src="${ pageContext.request.contextPath }/resources/js/custom.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+
 	<script>
+	 $.datepicker.setDefaults({
+	        dateFormat: 'yy-mm-dd',
+	        prevText: '이전 달',
+	        nextText: '다음 달',
+	        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+	        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+	        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+	        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+	        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+	        showMonthAfterYear: true,
+	        yearSuffix: '년'
+	    });
+
+	    $(function() {
+	        $("#datepicker1").datepicker();
+	    });
 
 	    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
 	        event.preventDefault();
@@ -42,6 +66,9 @@
 		$(document).ready(function(){
 			var toggle = false;
 			
+	    		$('.aside01').css('width','14%');
+	    		$('.aside01').css('min-width','250px');
+	    		$('#wrapper').css('width','86%');
 			$('.arrowBtn').click(function(){
 	
 			    if(toggle){
@@ -50,9 +77,9 @@
 		    		$('#wrapper').css('width','100%');
 		    		toggle = false;
 		    	}else{
-		    		$('.aside01').css('width','20%');
+		    		$('.aside01').css('width','14%');
 		    		$('.aside01').css('min-width','250px');
-		    		$('#wrapper').css('width','80%');
+		    		$('#wrapper').css('width','86%');
 		    		toggle = true;
 		    	}
 	
