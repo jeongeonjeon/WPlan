@@ -8,13 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>more</title>
-    <link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/reservation.css">
+    <link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/member.css">
     <jsp:include page="/jsp/include/head.jsp" />
     <style>
     .jumbotron {width: 100%;height: 250px;}
         .jumbotron h2 {padding-bottom: 0;}
        
     </style>
+    <script>
+    	
+    $(document).ready(function(){
+    	$('#cancel').click(function(){
+    		alert('예약이 취소되었습니다.');
+    	});
+    });
+    
+    </script>
     
 </head>
 
@@ -32,8 +41,7 @@
    		<ul class= "rMenu">
    			<li><a href="#">캘린더</a></li>
    			<li><a href="#">예약리스트</a></li>
-   			<li></li>
-   			<li></li>
+   			<li><a href="#">내 정보</a></li>
    		</ul>
    	</div>
    </aside>
@@ -52,11 +60,14 @@
 				<p>결혼날짜  2018.12.24</p>
 				<p>비용  	  500,000원</p>
 			</div>
-			<div class="rBtn">
-				<button class="fBtn">예약취소</button>
-				<button class="fBtn">예약수정</button>
-			</div>
+			<br>
 		</div>
+			<div class="rDetailBtn">
+				<div class="Btn">
+				<button class="fBtn" id ="cancel">예약취소</button>
+				<button class="fBtn" id="update">예약수정</button>
+				</div>
+			</div>
    </section>
     <section class="section-7">
 			<%@ include file="/jsp/include/footer.jsp" %>

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>more</title>
-    <link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/reservation.css">
+    <link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/member.css">
     <jsp:include page="/jsp/include/head.jsp" />
     <style>
     .jumbotron {width: 100%;height: 250px;}
@@ -39,8 +39,7 @@
    		<ul class= "rMenu">
    			<li><a href="#">캘린더</a></li>
    			<li><a href="#">예약리스트</a></li>
-   			<li></li>
-   			<li></li>
+   			<li><a href="#">내 정보</a></li>
    		</ul>
    	</div>
    </aside>
