@@ -119,6 +119,12 @@ header .fa {
  	margin : 0 7%;
 }
 
+
+.navbar-dark .navbar-toggler-icon{
+	background-image : url(../images/line-menu.png);
+	margin:4px;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     color: #6d6d6d;
     font-size: 18px;
@@ -240,8 +246,9 @@ header .fa {
     border-radius: 0px;
     text-align: center;
 }
-
-
+.col-lg-4.col-sm-12 {
+    margin: 30px 0;
+}
 
 /*=============================
      section-2 Styles
@@ -767,6 +774,50 @@ header .fa {
     font-family: 'Montserrat', sans-serif;
 }
 
+
+/*==============================
+      //join Styles //
+==============================*/
+
+.joinForm .fBtn {
+	font-family: "Playfair Display";
+	font-weight: 600;
+	border-radius: 0px;
+	border-width: 1px;
+	border-color: rgba(233, 196, 176, 0.5);
+	border-style: solid;
+	background: rgb(255, 255, 255);
+	color: rgb(34, 34, 34);
+	height: 60px;
+}
+
+.joinForm .fBtn:hover {
+	background: rgba(233, 196, 176, 0.1);
+}
+
+.joinForm .inputArea {
+	width: 60%;
+	margin: 0 15px;
+	outline: none;
+}
+
+.joinForm .title {
+	width: 20%;
+}
+
+.joinForm h4 {
+	padding: 15px;
+}
+
+.joinForm .pws {
+	position: relative;
+	left: 20%;
+}
+
+.joinForm .submit {
+	width: 50%;
+}
+
 /*==============================
       //footer Styles //
 ==============================*/
@@ -866,7 +917,19 @@ header .fa {
     border-radius: 20px 0 0 20px;
     padding: 10px 0 0 5px;
 }
+.aside01 .aside {
+	width : 80%;
+	font-weight : bold;
+	
+}
 
+div#ui-datepicker-div{
+	width:12%!important;
+	min-width:13.5em!important;
+	right: 0.5%!important;
+    left: unset!important;
+	
+}
 
 /*===============================
            About-Page
@@ -1078,14 +1141,14 @@ textarea.form-control {
 .portfolio {
     width: 100%;
     height: auto;
-    padding-top: 30px;
-    padding-bottom: 100px;
+    padding-top: 40px;
+    padding-bottom: 50px;
 }
 
 .portfolio h3 {
     color: #737373;
     font-size: 33px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     text-transform: capitalize;
     font-weight: 600;
 }
@@ -1258,14 +1321,26 @@ textarea.form-control {
 }
 
 .portfolio .load-more {
-    text-align: center;
-    padding-top: 50px;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.portfolio .wrap {
+	width: 85%;
+	height: 40%;
+	white-space: nowrap;
+	overflow-x: scroll;
+	margin: 0 auto;
+}
+
+.portfolio .wrap img {
+	width: 33.3%;
+	height: 100%;
 }
 
 /*=============================
      Blog Styles
 =============================*/
-
 .blog {
     width: 100%;
     height: auto;
@@ -1894,7 +1969,7 @@ textarea.form-control {
         padding: 10px 0;
     }
     header .navbar-brand img {
-        width: 75%;
+        width: 120%;
     }
     header .fa {
         font-size: 18px;
@@ -2127,6 +2202,9 @@ textarea.form-control {
     .portfolio .img-fluid {
         height: 250px;
     }
+    .portfolio .wrap img{
+		width: 50%;
+	}
     .blog h3 {
         font-size: 32px;
         line-height: 40px;
@@ -2484,7 +2562,7 @@ textarea.form-control {
     }
 }
 
-@media(max-width:425px) {
+@media(max-width:576px) {
     .navbar-dark .navbar-toggler {
         position: absolute;
         right: 20px;
@@ -2505,7 +2583,7 @@ textarea.form-control {
     .navbar-dark .navbar-toggler {
         color: rgb(0, 0, 0);
         border-color: rgba(255, 255, 255, 0.1);
-        background: #b4dc2d;
+        background: #FFF;
     }
     .navbar-toggler {
         padding: .15rem .25rem;
@@ -2628,8 +2706,11 @@ textarea.form-control {
     .blog .btn-success {
         font-size: 12px;
         padding: 5px 15px;
-    }
-    .section-4 h3 {
+	}
+	.portfolio .wrap img {
+		width: 100%;
+	}
+	.section-4 h3 {
         font-size: 21px;
         line-height: 25px;
     }

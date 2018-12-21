@@ -24,9 +24,10 @@
     transform: translate3D(-50%,-50%,0);
     background: #fff;
     z-index: 9999;
+    border-radius: 8px;
 }
 .login-modal {
-	width: 500px;
+	width: 450px;
 	margin: 0 auto;
 }
 .login-modal h3 {
@@ -35,15 +36,53 @@
 	font-weight: bold;
 	font-size: 17px;
 }
+
+.box-checkbox {
+    float: left;
+    width: 25%;
+    font-size: 14px;
+    position: relative;
+    top:12px;
+}
+
+.box-checkbox #auto_login, .box-checkbox #remember_id{
+	position: relative;
+    top: 3px;
+}
 .login-body button {	
 	width: 100%;
-    height: 58px;
+    height: 42px;
     background-color: #FFF;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 2px solid #ffb9b2;
 }
 .login-body button:hover{
-	background-color: #F8F2E6;
+	background-color: #ffb9b2;
+	color: #FFF;
+	font-weight: bolder;
+}
+
+.login-body .fill-orange{
+    background-color: #FFB9B2;
+    color: #FFF;
+    font-weight: bolder;
+    float: right;
+    width: 48.5%;
+}
+
+.login-body .fill-orange:hover{
+	background-color: #FFF;
+	color: #545454;
+	font-weight: normal;
+}
+.login-body .ctnr_login_btn.row {
+    margin: 0;
+}
+.login-body .ctnr_login_btn.row>div{
+	width:48%;
+}
+.login-body .ctnr_login_btn.row>div:first-child{
+	margin-right: 4%;
 }
 
 .login-body .ctnr_login_btn .btn_sns {
@@ -53,7 +92,7 @@
     text-decoration: none;
     padding: 11px 6px 6px 40px;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 8px;
     text-align: center;
 }
 .btn_sns.sns_kakao {
@@ -80,13 +119,17 @@
 }
 
 .input-group-addon > span {
-    width: 90px;
-    display: inline-block;
-    padding: 8px;
+    width: 20%;
+    position: relative;
+    top:6px;
+}
+span#sizing-addon1, span#sizing-addon2 {
+    width: 20%;
 }
 .input-group .eac-input-wrap, .input-group input#login_pw{
 	
-    width: 370px;
+    width: 80%;
+    border-radius: 0.25rem;
 }
 
 .input-group .form-control {
@@ -103,7 +146,7 @@
 		 padding-left: 15px !important; 
 	}
 	.login-body .ctnr_login_btn .col-sm-6:nth-child(2) {
-	 margin-top: 10px; 
+		 margin-top: 10px; 
 	 }
 	.login-modal {
 		width: 100%;
@@ -111,13 +154,16 @@
 	}
 }
 .mobile-login-header {
-	display : none;
 	background-color: #ffb9b2;
 	text-align: left;
 	padding: 10px 20px;
+	border-radius: 8px 8px 0 0;
+}
+.mobile-login-header i.fa {
+    float: right;
 }
 .login-body {
-	padding: 20px;
+	padding: 40px;
 }
 .section-separator {
 	position: relative;
@@ -172,7 +218,7 @@
 .section2-login {
 	display: inline-block;
 	vertical-align: middle;
-	width:60%;
+	width:100%;
 }
 .group-btn-login {width:100%; }
 .group-btn-login button {
@@ -187,7 +233,6 @@
 	display: inline-block;
 	font-size: 12px;
 	color: #707070;
-	width:60%;
 }
 .text2-login{
 	display: inline-block;
