@@ -66,9 +66,6 @@
 		$(document).ready(function(){
 			var toggle = false;
 			
-	    		$('.aside01').css('width','14%');
-	    		$('.aside01').css('min-width','250px');
-	    		$('#wrapper').css('width','86%');
 			$('.arrowBtn').click(function(){
 	
 			    if(toggle){
