@@ -91,10 +91,27 @@
 </script>
 <script>
      $(document).ready(function(){
-    	 $('.detailMenu .tab').click(function(){
+		$('.review.content').css('display','none');
+		$('.q_a.content').css('display','none');
+		$('.storeInfo.content').css('display','block');
+		$('.detailMenu .tab').click(function(){
 			$('.detailMenu .tab').css("background-color","#474a48");    	 	
     		$(this).css("background-color","#FFB9B2");
     		
+    		
+    		if($(this).hasClass('storeInfo')){
+    			$('.review.content').css('display','none');
+    			$('.q_a.content').css('display','none');
+    			$('.storeInfo.content').css('display','block');
+    		}else if($(this).hasClass('review')){
+    			$('.storeInfo.content').css('display','none');
+    			$('.q_a.content').css('display','none');
+    			$('.review.content').css('display','block');
+    		}else if($(this).hasClass('q_a')){
+    			$('.storeInfo.content').css('display','none');
+    			$('.review.content').css('display','none');
+    			$('.q_a.content').css('display','block');
+    		}
 
     	 });
      });
@@ -104,6 +121,7 @@
 	width: 193px !important;
 	height: 100px !important;
 }
+
 
 .container.section-2{
 	padding:0px;
@@ -117,14 +135,26 @@
 .container.section-2 .box .shopInfo{
 	padding: 0 30px;
 }
+
+.shopInfo > *{
+	width:50%;
+}
+
+img.scrapeImg.detail{
+	width:10%;
+	height:10%;
+	float:right;
+}
+
 .detailMenu{
-	margin : 20px 0 0 0 ;
+	padding : 0 ;
+	margin : 0;
 	overflow: hidden;
 }
 
 .detailMenu .tab{
 	float:left;
-	width:33.3%;
+	width:33.33%;
 	background-color: #474a48;
 }
 .detailMenu .tab.storeInfo {
@@ -161,9 +191,9 @@
 		<div class="container detail section-2">
 			<div class="box">
 				<div class="shopInfo">
+					<img class="scrapeImg detail" src="/WPlan/resources/images/scrape.png">
 					<h3>WOON</h3>
-					<p>주소 : 서울 강남구 역삼동 </p>
-					
+					<p>서울 강남구 역삼동 </p>
 				</div>
 				
 				<div class="slider">
@@ -240,18 +270,17 @@
 				</div>
 				
 				
-				<div class="detailMenu">
-					<div class="storeInfo tab">
+				<ul class="detailMenu">
+					<li class="storeInfo tab">
 						<p>상세정보</p>
-					</div>
-					<div class="review tab">
+					</li>
+					<li class="review tab">
 						<p>후기</p>
-					</div>
-					<div class="Q&A tab">
+					</li>
+					<li class="q_a tab">
 						<p>Q&A</p>
-					</div>
-					
-				</div>
+					</li>
+				</ul>
 				<div class="storeInfo content">
 					<span>상세정보</span>
 				
@@ -260,7 +289,7 @@
 					<span>후기</span>
 				
 				</div>
-				<div class="Q&A content">
+				<div class="q_a content">
 					<span>Q&A</span>
 				</div>
 		
@@ -276,6 +305,7 @@
 			<!-- Footer -->
 		</section>
 	</div>
+	<%@ include file="/jsp/include/sideSlider.jsp"%>
 </body>
 
 </html>

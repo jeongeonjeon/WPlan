@@ -68,7 +68,7 @@
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
 	
 							<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">
-							<img src="${ pageContext.request.contextPath }/resources/images/food3.jpg" class="figure-img img-fluid" alt="blog">
+							<img src="${ pageContext.request.contextPath }/resources/images/food2.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>

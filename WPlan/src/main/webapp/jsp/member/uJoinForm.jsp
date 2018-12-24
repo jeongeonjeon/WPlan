@@ -20,14 +20,11 @@
 		<header class="header bg">
 			<jsp:include page="/jsp/include/topLogo.jsp" />
 		</header>
-		<span class="position-absolute trigger">
-			<!-- hidden trigger to apply 'stuck' styles -->
-		</span>
 		<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
 			<jsp:include page="/jsp/include/topMenu.jsp" />
 		</nav>
 		<!--Section-1-->
-		<section class="section-1">
+		<section class="section-1 product">
 			<div class="jumbotron d-flex align-items-center">
 				<div class="gradient"></div>
 				<div class="container-fluid content">
