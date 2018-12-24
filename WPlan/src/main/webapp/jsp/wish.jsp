@@ -50,7 +50,7 @@
 		        <div class="wrap">
 			        <img src="../resources/images/food1.jpg"/>
 			        <img src="../resources/images/food2.jpg"/>
-			        <img src="../resources/images/food3.JPG" />
+			        <img src="../resources/images/food2.jpg" />
 			        <img src="../resources/images/food1.jpg" />
 		    	</div>
 	        </div>
@@ -61,7 +61,7 @@
 		        <div class="wrap">
 			        <img src="../resources/images/food1.jpg"/>
 			        <img src="../resources/images/food2.jpg"/>
-			        <img src="../resources/images/food3.JPG" />
+			        <img src="../resources/images/food2.jpg"/>
 			        <img src="../resources/images/food1.jpg" />
 		    	</div>
 	        </div>

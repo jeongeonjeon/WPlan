@@ -29,9 +29,17 @@
 </script>
 </head>
 <body>
+	<div id="wrapper">
+		<jsp:include page="/jsp/login/loginForm.jsp" />
+	    <header class="header bg">
+	        <jsp:include page="/jsp/include/topLogo.jsp" />
+	    </header>
+	    <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
+	       	<jsp:include page="/jsp/include/topMenu.jsp" />
+	    </nav>
 	<div>
 		이미지 등록<br>
-		<form id="form" runat="server">
+		<form id="form">
 			<div>
 				<img id="image_section" src="${ pageContext.request.contextPath }/resources/images/hall2.jpg" />
 			</div>
@@ -84,6 +92,8 @@
 	위치(지도)
 	<br>
 	<div id="map" style="width: 500px; height: 400px;"></div>
+		</div>
+	<%@ include file="/jsp/include/sideSlider.jsp"%>
 	<script type="text/javascript"
 		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d6b5849297b66eb073f197fef410d84a"></script>
 	<script>

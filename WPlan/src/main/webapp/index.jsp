@@ -13,7 +13,6 @@
 	<link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 	<script	src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
 
-
 </head>
 <body>
 	
@@ -30,7 +29,7 @@
 		</nav>
 		<!--Section-1-->
 		<section class="section-1">
-			<div class="jumbotron d-flex align-items-center">
+			<div class="jumbotron d-flex align-items-center"> 
 <%-- 				<div class="gradient"></div>
 				<div class="container-fluid content">
 					<h1 data-aos="fade-up" data-aos-delay="100">Welcome to more.</h1>
