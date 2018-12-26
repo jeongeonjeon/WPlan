@@ -12,7 +12,6 @@
 	<title>more</title>
 	<jsp:include page="/jsp/include/head.jsp" />
 	
-
 </head>
 <body>
 	<div id="wrapper">
@@ -31,6 +30,7 @@
 					<h1 data-aos="fade-right" data-aos-delay="300">DRESS</h1>
 					<h2 data-aos="fade-left" data-aos-delay="300">You can get everything you want</h2>
 				</div>
+				
 				<!--container-fluid end-->
 			</div>
 		</section>
@@ -81,7 +81,6 @@
 					</div>
 					<div class="col-lg-4 col-sm-12 col-12 box-4">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-	
 							<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">
 							<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
@@ -122,5 +121,4 @@
 	</div>
 	<%@ include file="/jsp/include/sideSlider.jsp" %>
 </body>
-
 </html>

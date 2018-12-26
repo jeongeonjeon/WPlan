@@ -53,8 +53,6 @@ ul > li {
 .btn-primary:not(:disabled):not(.disabled):active:focus {
     box-shadow: none;
 }
-
-
 /*===============
 	wrapper
 ================*/
@@ -288,7 +286,8 @@ header .fa {
 .section-2 .box-1,
 .section-2 .box-2,
 .section-2 .box-3,
-.section-2 .box-4 {
+.section-2 .box-4,
+.section-2 .box-5 {
     padding-left: 30px;
     padding-right: 30px;
     
@@ -348,6 +347,15 @@ header .fa {
 .section-2 .textBox p {
 	margin-top : 10px;
 }
+
+.section-2 .cart {
+	max-width : 20% !important;	
+}
+.img-fluid-3 {
+	height : 500px;
+	width : 800px;
+}
+
 /*=============================
      section-3 Styles
 =============================*/
