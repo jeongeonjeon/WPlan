@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>more</title>
-	<jsp:include page="/jsp/include/head.jsp" />
+	<jsp:include page="${ pageContext.request.contextPath }/jsp/include/head.jsp" />
     <style>
     .jumbotron {width: 100%;height: 250px;}
         .jumbotron h2 {padding-bottom: 0;}
@@ -17,11 +17,11 @@
 </head>
 <body>
     <header class="header bg">
-       <jsp:include page="/jsp/include/topLogo.jsp" />
+       <jsp:include page="${ pageContext.request.contextPath }/jsp/include/topLogo.jsp" />
     </header>
     <span class="position-absolute trigger"><!-- hidden trigger to apply 'stuck' styles --></span>
     <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
-       	<jsp:include page="/jsp/include/topMenu.jsp" />
+       	<jsp:include page="${ pageContext.request.contextPath }/jsp/include/topMenu.jsp" />
     </nav>
     <!--Section-1-->
     <section class="section-1">
@@ -114,7 +114,7 @@
     <section class="section-7">
         <!-- Footer -->
         <footer class="page-footer font-small stylish-color-dark">
-			<%@ include file="/jsp/include/footer.jsp" %>
+			<%@ include file="/WEB-INF/jsp/include/footer.jsp" %>
         </footer>
         <!-- Footer -->
     </section>
