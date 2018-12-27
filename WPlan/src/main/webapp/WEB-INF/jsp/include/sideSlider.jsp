@@ -58,7 +58,7 @@
 			<span>바로가기</span>
 		</li>
 		<li class="aside myPage">
-			<a href="${ pageContext.request.contextPath }/jsp/member/myPage.jsp">
+			<a href="${ pageContext.request.contextPath }/jsp/member/myPage">
 				<span >마이페이지</span>
 			</a>
 		</li>

@@ -10,19 +10,19 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <title>more</title>
-<jsp:include page="${pageContext.request.contextPath}/jsp/include/head.jsp" />
+<jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 
 </head>
 <body>
 	<div id="wrapper">
-		<jsp:include page="${pageContext.request.contextPath }/jsp/login/loginForm.jsp" />
+		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
 		<header class="header bg">
-			<jsp:include page="${pageContext.request.contextPath }/jsp/include/topLogo.jsp" />
+			<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" />
 		</header>
 		<span class="position-absolute trigger"> <!-- hidden trigger to apply 'stuck' styles -->
 		</span>
 		<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
-			<jsp:include page="${pageContext.request.contextPath }/jsp/include/topMenu.jsp" />
+			<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 		</nav>
 		<!--Section-1-->
 		<section class="section-1 product">
