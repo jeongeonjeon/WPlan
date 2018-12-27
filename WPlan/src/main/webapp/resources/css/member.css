@@ -172,38 +172,6 @@
  
  /* 내 정보 */
  
-  
- section.mSection {
- 	width : 60%;
- 	height : auto;
- 	min-height : 800px;
- 	float : left;
- }
- 
- .mSection h4 {
- 	margin : 0 0 0 10%;
- 
- }
- 
- .mSection div {
- 	min-height : 80px;
- 	height : auto;
- 	
- 
- }
- 
-
- 
- .mBtn {
-  text-align : center;
-	margin-top : 20px;
- }
- 
- .mSection .fBtn {
- 	width : 80px;
- 	height : 40px;
- }
- 
  
  /* 내 정보 수정 */
  
@@ -215,7 +183,7 @@
 	outline : none;
 	}
 	
-	.label-title {
+	labe .title {
 	width : 25%;
 	}
 	
@@ -228,10 +196,10 @@
 	left : 25%;
 	}
 	
-	.container .update {
-	 	min-width : 70px !important;
-	 	width : auto;
+	.submit {
+	width : 50%;
+	margin : 0 0 0 10%;
 	}
-	
+ 
  
  

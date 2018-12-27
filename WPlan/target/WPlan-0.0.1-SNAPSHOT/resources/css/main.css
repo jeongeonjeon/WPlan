@@ -94,8 +94,7 @@ header .fa {
     top: -60px;
 }
 .text-right .loginMenu span{
-	font-size: 15px;
-	color:#6d6d6d;
+	font-size: 15px
 } 
 .text-right .loginMenu .logout{
 	display: none;
