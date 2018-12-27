@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<jsp:include page="/jsp/include/head.jsp" />
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
 	function readURL(input) {

@@ -1,6 +1,5 @@
 html {
     background: #fff;
-    background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
     -webkit-font-smoothing: antialiased;
 }
 
@@ -20,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #222;
+    color: #545454;
     font-weight: 600;
     line-height: 1.3;
 }
@@ -309,6 +308,44 @@ header .fa {
 .section-2 img {
 	height : 200px;
 	width : 250px;
+}
+
+.section-2 .mainText {
+	text-align : center;
+}
+
+.section-2 .mainText p{
+	padding-top : 10px;
+}
+.section-2 .main {
+	text-align : center;
+	padding-top : 100px;
+}
+
+.section-2 .main h4{
+	padding-top : 10px;
+}
+.section-2 .container .mainDress {
+	width : 600px;
+	
+	
+}
+
+.section-2 .dressType{
+	min-width : 100% !important;
+}
+
+
+.section-2 .textBox {
+	max-width : 70%;
+}
+
+.section-2 .textBox h4 {
+	margin-top : 30px;
+}
+
+.section-2 .textBox p {
+	margin-top : 10px;
 }
 
 .section-2 .cart {
@@ -930,23 +967,6 @@ header .fa {
 	width : 80%;
 	font-weight : bold;
 	
-}
-
-.row-in {
-    display :table-cell;
-    vertical-align: middle;
-    text-align: center;
-
-}
-.row-out {
-	width:100%;
-	height:100%;	
-    display: table;
-}
-
-.row-div {
-	box-shadow: 0 0 25px rgba(0, 0, 0, .15) !important;
-    padding: 10px 10px;
 }
 
 div#ui-datepicker-div{

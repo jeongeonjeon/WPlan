@@ -68,6 +68,11 @@
 				<span class="scrape">스크랩북</span>
 			</a>
 		</li>
+		<li class="aside make_wedding">
+			<a href="${ pageContext.request.contextPath }/jsp/makeWedding.jsp">
+				<span class="scrape">나의 결혼식 만들기</span>
+			</a>
+		</li>
 	</ul>
 	<ul class="asideWrap">
 		<li class="subMenu">

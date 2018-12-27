@@ -11,8 +11,9 @@
 		</div>
 		<div class="col-sm-4 align-self-center text-right">
 			<div class="loginMenu">
-				<a href="#"><span class="login">로그인</span></a>
-				<a href="#"><span class="logout">로그아웃</span></a> 
+				<a href="#"><span class="login">login</span></a>
+				<a href="#"><span class="logout">logout</span></a> 
+				<a href="#"><span class="mypage">mypage</span></a>
 			</div>
 		</div>
 	</div>

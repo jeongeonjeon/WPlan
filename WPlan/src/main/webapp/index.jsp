@@ -30,6 +30,7 @@
 		<!--Section-1-->
 		<section class="section-1">
 			<div class="jumbotron d-flex align-items-center"> 
+			
 <%-- 				<div class="gradient"></div>
 				<div class="container-fluid content">
 					<h1 data-aos="fade-up" data-aos-delay="100">Welcome to more.</h1>
@@ -45,31 +46,28 @@
  --%>
 			</div>
 		</section>
-<%-- 		
+		
 		<!--Section-2-->
 		<section class="section-2">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-sm-12 col-12 box-1">
-						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-							<div class="col-lg-2 col-sm-12">
-								<i class="fa fa-desktop" aria-hidden="true"></i>
-							</div>
-							<div class="col-lg-10 col-sm-12">
-								<h3>
-									<a href="${ pageContext.request.contextPath }/jsp/services.jsp">design.</a>
-								</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry. Lorem Ipsum has been the industry's
-									printer took a galley of type and</p>
-								<p>
-									<a href="${ pageContext.request.contextPath }/jsp/services.jsp"><img
-										src="${ pageContext.request.contextPath }/resources/images/plus.png"
-										alt="plus"></a>
-								</p>
-							</div>
-						</div>
-					</div>
+		
+				<div class="mainText">
+					<h4>W:PLAN과 함께 하나뿐인 당신의 결혼식을 만들어보세요</h4>
+					<p> 스몰 웨딩 플랜 W:PLAN과 함께라면 어렵지 않습니다. <br>
+					다양한 선택지와 시뮬레이션으로 그 자리에서 직접 당신의 결혼식을 미리 보여드립니다.</p>
+									
+				</div>
+		
+		<div class="container main" id="dress">
+			<a href="${ pageContext.request.contextPath }/jsp/dressType.jsp">
+			<img class="mainDress" src="${ pageContext.request.contextPath }/resources/images/main-dress.png" >
+				<h4>드레스 타입별 카테고리로 당신의 드레스를 쉽게 골라보세요</h4>
+				
+			</a>	
+			</div>
+			<!--container-->
+		</section>
+				
+					<%--
 					<div class="col-lg-4 col-sm-12 col-12 box-2">
 						<div class="row box" data-aos="fade-left" data-aos-delay="500">
 							<div class="col-lg-2 col-sm-12">
@@ -331,9 +329,10 @@
 					</a>
 				</div>
 				<!--/row-->
-			</div>
-			<!--container-->
-		</section>
+				
+				--%>
+		
+		<%--
 		<section class="section-6" data-aos="fade-up">
 			<div class="container">
 				<!-- Grid row-->
