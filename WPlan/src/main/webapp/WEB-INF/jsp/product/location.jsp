@@ -4,30 +4,30 @@
 <html lang="en">
 
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<title>more</title>
-	<jsp:include page="${ pageContext.request.contextPath }/jsp/include/head.jsp" />
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>more</title>
+<jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 
 </head>
 <body>
 	<div id="wrapper">
-		<jsp:include page="${ pageContext.request.contextPath }/jsp/login/loginForm.jsp" />
+		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
 		<header class="header bg">
-			<jsp:include page="${ pageContext.request.contextPath }/jsp/include/topLogo.jsp" />
+			<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" />
 		</header>
 		<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
-			<jsp:include page="${ pageContext.request.contextPath }/jsp/include/topMenu.jsp" />
+			<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 		</nav>
 		<!--Section-1-->
 		<section class="section-1  product">
 			<div class="jumbotron d-flex align-items-center">
 				<div class="gradient"></div>
 				<div class="container-fluid content">
-					<h1 data-aos="fade-right" data-aos-delay="300">FOOD</h1>
+					<h1 data-aos="fade-right" data-aos-delay="300">LOCATION</h1>
 					<h2 data-aos="fade-left" data-aos-delay="300">You can get everything you want</h2>
 				</div>
 				<!--container-fluid end-->
@@ -40,12 +40,12 @@
 				<div class="row">
 					<div class="col-lg-4 col-sm-12 col-12 box-1">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-							<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">
+							<a href="/WEB-INF/jsp/detail.jsp">
 							<img src="${ pageContext.request.contextPath }/resources/images/food1.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">eon</a>
+									<a href="/WEB-INF/jsp/detail.jsp">eon</a>
 								</h4>
 							</div>
 						</div>
@@ -53,12 +53,12 @@
 					<div class="col-lg-4 col-sm-12 col-12 box-2">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
 	
-							<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">
+							<a href="/WEB-INF/jsp/detail.jsp">
 							<img src="${ pageContext.request.contextPath }/resources/images/food2.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">woon</a>
+									<a href="/WEB-INF/jsp/detail.jsp">woon</a>
 								</h4>
 	
 							</div>
@@ -67,12 +67,12 @@
 					<div class="col-lg-4 col-sm-12 col-12 box-3">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
 	
-							<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">
+							<a href="/WEB-INF/jsp/detail.jsp">
 							<img src="${ pageContext.request.contextPath }/resources/images/food2.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">JH SHOP</a>
+									<a href="/WEB-INF/jsp/detail.jsp">JH SHOP</a>
 								</h4>
 	
 							</div>
@@ -81,12 +81,12 @@
 					<div class="col-lg-4 col-sm-12 col-12 box-4">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
 	
-							<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">
+							<a href="/WEB-INF/jsp/detail.jsp">
 							<img src="${ pageContext.request.contextPath }/resources/images/food1.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">JEE</a>
+									<a href="/WEB-INF/jsp/detail.jsp">JEE</a>
 								</h4>
 	
 							</div>

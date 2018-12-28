@@ -530,19 +530,19 @@
 }
 </style>
 
-<jsp:include page="${ pageContext.request.contextPath }/jsp/include/head.jsp" />
+<jsp:include page="/jsp/include/head.jsp" />
 
 </head>
 <body>
 
 
 	<div id="wrapper">
-		<jsp:include page="${ pageContext.request.contextPath }/jsp/login/loginForm.jsp" />
+		<jsp:include page="/jsp/login/loginForm.jsp" />
 		<header class="header bg">
-			<jsp:include page="${ pageContext.request.contextPath }/jsp/include/topLogo.jsp" />
+			<jsp:include page="/jsp/include/topLogo.jsp" />
 		</header>
 		<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
-			<jsp:include page="${ pageContext.request.contextPath }/jsp/include/topMenu.jsp" />
+			<jsp:include page="/jsp/include/topMenu.jsp" />
 		</nav>
 
 		<div class="container detail section-2">
@@ -787,12 +787,12 @@
 		<section class="section-7">
 			<!-- Footer -->
 			<footer class="page-footer font-small stylish-color-dark">
-				<%@ include file="/WEB-INF/jsp/include/footer.jsp"%>
+				<%@ include file="/jsp/include/footer.jsp"%>
 			</footer>
 			<!-- Footer -->
 		</section>
 	</div>
-	<%@ include file="/WEB-INF/jsp/include/sideSlider.jsp"%>
+	<%@ include file="/jsp/include/sideSlider.jsp"%>
 </body>
 
 </html>
