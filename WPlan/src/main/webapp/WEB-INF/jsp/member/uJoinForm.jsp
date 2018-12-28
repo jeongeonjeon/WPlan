@@ -50,8 +50,10 @@
 							<div class="form-group row"></div>
 
 							<div class="row">
-								<label class="title"><h4>아이디</h4></label> <input type="text"
-									class="inputArea" placeholder="이름을 입력해주세요" required>
+								<label class="title">
+								<h4>아이디</h4>
+								</label> 
+								<input type="text" class="inputArea" placeholder="이름을 입력해주세요" required>
 								<button class="fBtn">중복확인</button>
 							</div>
 							<div class="row">
