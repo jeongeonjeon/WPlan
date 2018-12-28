@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport"	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<jsp:include page="/jsp/include/head.jsp" />
+	<jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 
 	<link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 	<script	src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
@@ -17,15 +17,15 @@
 <body>
 	
 	<div id="wrapper">
-		<jsp:include page="/jsp/login/loginForm.jsp" />
+		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
 		<header class="header bg">
-			<jsp:include page="/jsp/include/topLogo.jsp" />
+			<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" />
 		</header>
 		<span class="position-absolute trigger">
 			<!-- hidden trigger to apply 'stuck' styles -->
 		</span>
 		<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
-			<jsp:include page="/jsp/include/topMenu.jsp" />
+			<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 		</nav>
 		<!--Section-1-->
 		<section class="section-1">
@@ -359,12 +359,12 @@
 		<section class="section-7">
 			<!-- Footer -->
 			<footer class="page-footer font-small stylish-color-dark">
-				<%@ include file="/jsp/include/footer.jsp" %>
+				<%@ include file="/WEB-INF/jsp/include/footer.jsp" %>
 			</footer>
 			<!-- Footer -->
 		</section>
  	</div>
-	<%@ include file="/jsp/include/sideSlider.jsp" %>
+	<%@ include file="/WEB-INF/jsp/include/sideSlider.jsp" %>
 
 
 </body>
