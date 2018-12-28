@@ -5,7 +5,7 @@
 	<link	href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800"	rel="stylesheet">
 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/animate.css">
 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/main.css">
-	<%-- <link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/fullcalendar.css"> --%>
+<%-- 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/calendar/fullcalendar.css"> --%>
 	<link rel="stylesheet"	href="${ pageContext.request.contextPath }/resources/css/calendar/fullcalendar.min.css">
 	<link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/login.css" type="text/css" />
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
@@ -65,10 +65,7 @@
 	    
 		$(document).ready(function(){
 			var toggle = false;
-			
-	    		$('.aside01').css('width','14%');
-	    		$('.aside01').css('min-width','250px');
-	    		$('#wrapper').css('width','86%');
+
 			$('.arrowBtn').click(function(){
 	
 			    if(toggle){
