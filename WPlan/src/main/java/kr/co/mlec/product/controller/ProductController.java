@@ -35,4 +35,8 @@ public class ProductController {
    public String detail() {
 	   return "/detail";
    }
+   @GetMapping("/jsp/makeWedding")
+   public String makeWedding() {
+	   return "/makeWedding";
+   }
 }
