@@ -69,7 +69,7 @@
 			</a>
 		</li>
 		<li class="aside make_wedding">
-			<a href="${ pageContext.request.contextPath }/jsp/makeWedding.jsp">
+			<a href="${ pageContext.request.contextPath }/jsp/makeWedding">
 				<span class="scrape">나의 결혼식 만들기</span>
 			</a>
 		</li>

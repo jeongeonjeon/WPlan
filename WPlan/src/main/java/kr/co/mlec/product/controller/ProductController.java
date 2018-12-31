@@ -31,8 +31,12 @@ public class ProductController {
 	   return "/product/location";
    }
    
-   @GetMapping("/JSP/PRODUCT/detail")
+   @GetMapping("/jsp/detail")
    public String detail() {
-	   return "/pruduct/detail";
+	   return "/detail";
+   }
+   @GetMapping("/jsp/makeWedding")
+   public String makeWedding() {
+	   return "/makeWedding";
    }
 }

@@ -12,10 +12,8 @@
 
 	<link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 	<script	src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-
 </head>
 <body>
-	
 	<div id="wrapper">
 		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
 		<header class="header bg">
@@ -58,7 +56,7 @@
 				</div>
 		
 		<div class="container main" id="dress">
-			<a href="${ pageContext.request.contextPath }/jsp/dressType.jsp">
+			<a href="${ pageContext.request.contextPath }/jsp/product/dressType">
 			<img class="mainDress" src="${ pageContext.request.contextPath }/resources/images/main-dress.png" >
 				<h4>드레스 타입별 카테고리로 당신의 드레스를 쉽게 골라보세요</h4>
 				
