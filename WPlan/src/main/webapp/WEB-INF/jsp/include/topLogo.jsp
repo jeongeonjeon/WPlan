@@ -13,7 +13,6 @@
 			<div class="loginMenu">
 				<a href="#"><span class="login">login</span></a>
 				<a href="#"><span class="logout">logout</span></a> 
-				<a href="#"><span class="mypage">mypage</span></a>
 			</div>
 		</div>
 	</div>

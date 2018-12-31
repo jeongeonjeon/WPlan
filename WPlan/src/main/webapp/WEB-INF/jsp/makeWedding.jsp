@@ -247,8 +247,9 @@ p,ul,li{
 
 		</aside>
 		<section class="section-1 product">
-			<div class="making"></div>
+		
 			<button class="addBtn">My wedding 추가</button>
+			<div class="making"></div>
 
 		</section>
 
