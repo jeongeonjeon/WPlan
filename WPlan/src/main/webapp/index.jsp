@@ -12,10 +12,8 @@
 
 	<link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 	<script	src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-
 </head>
 <body>
-	
 	<div id="wrapper">
 		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
 		<header class="header bg">
