@@ -17,7 +17,7 @@
 <body>
 	
 	<div id="wrapper">
-	    <jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" /> 
+		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
 		<header class="header bg">
 			<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" />
 		</header>
