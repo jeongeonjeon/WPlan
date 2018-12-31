@@ -64,6 +64,29 @@ public class UmemberVO {
 	public void setRegDate(String regDate) {
 		this.regDate = regDate;
 	}
+
+	@Override
+	public String toString() {
+		return "UmemberVO [id=" + id + ", name=" + name + ", password=" + password + ", tel=" + tel + ", email=" + email
+				+ ", type=" + type + ", regDate=" + regDate + "]";
+	}
+
+	public UmemberVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public UmemberVO(String id, String name, String password, String tel, String email, String type, String regDate) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.password = password;
+		this.tel = tel;
+		this.email = email;
+		this.type = type;
+		this.regDate = regDate;
+	}
+	
 	
 	
 
