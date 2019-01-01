@@ -1,4 +1,4 @@
-package kr.co.mlec.umember.dao;
+ package kr.co.mlec.umember.dao;
 
 import kr.co.mlec.umember.vo.UmemberVO;
 
