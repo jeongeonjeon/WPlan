@@ -16,12 +16,12 @@
 </head>
 <body>
 	<div id="wrapper">
-		<jsp:include page="${ pageContext.request.contextPath }/jsp/login/loginForm.jsp" />
+		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
 		<header class="header bg">
-			<jsp:include page="${ pageContext.request.contextPath }/jsp/include/topLogo.jsp" />
+			<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" />
 		</header>
 		<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
-			<jsp:include page="${ pageContext.request.contextPath }/jsp/include/topMenu.jsp" />
+			<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 		</nav>
 		<!--Section-1-->
 

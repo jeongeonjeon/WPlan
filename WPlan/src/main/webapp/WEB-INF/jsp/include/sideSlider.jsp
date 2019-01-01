@@ -58,18 +58,18 @@
 			<span>바로가기</span>
 		</li>
 		<li class="aside myPage">
-			<a href="${ pageContext.request.contextPath }/jsp/member/myPage">
+			<a href="${ pageContext.request.contextPath }/member/myPage">
 				<span >마이페이지</span>
 			</a>
 		</li>
 		<li class="aside scrape">
-			<a href="${ pageContext.request.contextPath }/jsp/wish.jsp">
+			<a href="${ pageContext.request.contextPath }/wish">
 				<img class="scrapeImg" src="${ pageContext.request.contextPath }/resources/images/scrape.png">
 				<span class="scrape">스크랩북</span>
 			</a>
 		</li>
 		<li class="aside make_wedding">
-			<a href="${ pageContext.request.contextPath }/jsp/makeWedding.jsp">
+			<a href="${ pageContext.request.contextPath }/makeWedding">
 				<span class="scrape">나의 결혼식 만들기</span>
 			</a>
 		</li>

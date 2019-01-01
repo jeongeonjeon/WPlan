@@ -1,4 +1,4 @@
-package kr.co.mlec.login.controller;
+package kr.co.mlec.member.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.co.mlec.umember.service.LoginService;
 import kr.co.mlec.umember.vo.UmemberVO;
 
 

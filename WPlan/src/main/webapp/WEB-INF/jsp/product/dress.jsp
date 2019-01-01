@@ -10,17 +10,17 @@
 		content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 	<title>more</title>
-	<jsp:include page="${ pageContext.request.contextPath }/jsp/include/head.jsp" />
+	<jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 	
 </head>
 <body>
 	<div id="wrapper">
-		<jsp:include page="${ pageContext.request.contextPath }/jsp/login/loginForm.jsp" />
+		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
 		<header class="header bg">
-			<jsp:include page="${ pageContext.request.contextPath }/jsp/include/topLogo.jsp" />
+			<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" />
 		</header>
 		<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
-			<jsp:include page="${ pageContext.request.contextPath }/jsp/include/topMenu.jsp" />
+			<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 		</nav>
 		<!--Section-1-->
 		<section class="section-1  product">
@@ -41,12 +41,12 @@
 				<div class="row">
 					<div class="col-lg-4 col-sm-12 col-12 box-1">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-							<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">
+							<a href="${ pageContext.request.contextPath }/detail">
 							<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">eon</a>
+									<a href="${ pageContext.request.contextPath }/detail">eon</a>
 								</h4>
 							</div>
 						</div>
@@ -54,12 +54,12 @@
 					<div class="col-lg-4 col-sm-12 col-12 box-2">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
 	
-							<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">
+							<a href="${ pageContext.request.contextPath }/detail">
 							<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">woon</a>
+									<a href="${ pageContext.request.contextPath }/detail">woon</a>
 								</h4>
 	
 							</div>
@@ -68,12 +68,12 @@
 					<div class="col-lg-4 col-sm-12 col-12 box-3">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
 	
-							<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">
+							<a href="${ pageContext.request.contextPath }/detail">
 							<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">JH SHOP</a>
+									<a href="${ pageContext.request.contextPath }/detail">JH SHOP</a>
 								</h4>
 	
 							</div>
@@ -81,12 +81,12 @@
 					</div>
 					<div class="col-lg-4 col-sm-12 col-12 box-4">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-							<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">
+							<a href="${ pageContext.request.contextPath }/detail">
 							<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/jsp/detail.jsp">JEE</a>
+									<a href="${ pageContext.request.contextPath }/detail">JEE</a>
 								</h4>
 	
 							</div>

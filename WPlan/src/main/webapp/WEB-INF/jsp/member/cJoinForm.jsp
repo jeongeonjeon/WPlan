@@ -50,23 +50,20 @@
 
 							<div class="row">
 								<label class="title"><h4>아이디</h4></label> <input type="text"
-									class="inputArea" placeholder="이름을 입력해주세요" required>
+									class="inputArea" placeholder="아이디를 입력해주세요" required>
 								<button class="fBtn">중복확인</button>
+							</div>
+							<div class="row">
+								<label class="title"><h4>이름</h4></label> <input type="text"
+									class="inputArea" placeholder="이름을 입력해주세요" required>
 							</div>
 							<div class="row">
 								<label class="title"><h4>비밀번호</h4></label> <input type="text"
 									class="inputArea" placeholder="비밀번호를 입력해주세요" required>
-
 							</div>
 							<div class="row">
-
 								<input type="text" class="inputArea pws"
 									placeholder="비밀번호를 확인해주세요" required>
-
-							</div>
-							<div class="row">
-								<label class="title"><h4>업체명</h4></label> <input type="text"
-									class="inputArea" placeholder="이름을 입력해주세요" required>
 							</div>
 							<div class="row">
 								<label class="title"><h4>전화번호</h4></label> <input type="text"
@@ -76,10 +73,19 @@
 								<label class="title"><h4>이메일</h4></label> <input type="email"
 									class="inputArea" placeholder="이메일형식으로 입력해주세요" required>
 							</div>
+							<div class="row">
+								<label class="title"><h4>업체명</h4></label> <input type="text"
+									class="inputArea" placeholder="업체명을 입력해주세요" required>
+							</div>
+							<div class="row">
+								<label class="title"><h4>사업자번호</h4></label> <input type="text"
+									class="inputArea" placeholder="사업자번호를 입력해주세요" required>
+							</div>
+							<div class="row">
+								<label class="title"><h4>업체주소</h4></label> <input type="text"
+									class="inputArea" placeholder="업체주소 입력해주세요" required>
+							</div>
 							<button class="fBtn submit">가입하기</button>
-
-
-
 						</form>
 					</div>
 				</div>

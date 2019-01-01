@@ -19,14 +19,4 @@ public class LoginServiceImpl implements LoginService {
 		
 		return userVO;
 	}
-
 }
-
-
-
-
-
-
-
-
-

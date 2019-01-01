@@ -37,7 +37,7 @@
 					<h4 data-aos="fade-up" data-aos-delay="500">Getup and rise, for
 						the new chapter of your life</h4>
 					<p data-aos="fade-up" data-aos-delay="700">
-						<a href="${ pageContext.request.contextPath }/jsp/about.jsp" class="btn btn-success">Get Started</a>
+						<a href="${ pageContext.request.contextPath }/about.jsp" class="btn btn-success">Get Started</a>
 					</p>
 				</div>
 				<!--container-fluid end-->
@@ -56,7 +56,7 @@
 				</div>
 		
 		<div class="container main" id="dress">
-			<a href="${ pageContext.request.contextPath }/jsp/dressType.jsp">
+			<a href="${ pageContext.request.contextPath }/product/dressType">
 			<img class="mainDress" src="${ pageContext.request.contextPath }/resources/images/main-dress.png" >
 				<h4>드레스 타입별 카테고리로 당신의 드레스를 쉽게 골라보세요</h4>
 				
@@ -73,13 +73,13 @@
 							</div>
 							<div class="col-lg-10 col-sm-12">
 								<h3>
-									<a href="${ pageContext.request.contextPath }/jsp/services.jsp">coding.</a>
+									<a href="${ pageContext.request.contextPath }/services.jsp">coding.</a>
 								</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and
 									typesetting industry. Lorem Ipsum has been the industry's
 									printer took a galley of type and</p>
 								<p>
-									<a href="${ pageContext.request.contextPath }/jsp/services.jsp"><img
+									<a href="${ pageContext.request.contextPath }/services.jsp"><img
 										src="${ pageContext.request.contextPath }/resources/images/plus.png"
 										alt="plus"></a>
 								</p>
@@ -93,13 +93,13 @@
 							</div>
 							<div class="col-lg-10 col-sm-12">
 								<h3>
-									<a href="${ pageContext.request.contextPath }/jsp/services.jsp">support.</a>
+									<a href="${ pageContext.request.contextPath }/services.jsp">support.</a>
 								</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and
 									typesetting industry. Lorem Ipsum has been the industry's
 									printer took a galley of type and</p>
 								<p>
-									<a href="${ pageContext.request.contextPath }/jsp/services.jsp"><img
+									<a href="${ pageContext.request.contextPath }/services.jsp"><img
 										src="${ pageContext.request.contextPath }/resources/images/plus.png"
 										alt="plus"></a>
 								</p>
@@ -118,17 +118,17 @@
 							What we do <span>And why select us?</span>
 						</h2>
 						<ul>
-							<li><a href="${ pageContext.request.contextPath }/jsp/services.jsp"><i class="fa fa-angle-right"
+							<li><a href="${ pageContext.request.contextPath }/services.jsp"><i class="fa fa-angle-right"
 									aria-hidden="true"></i>Web Designing</a></li>
-							<li><a href="${ pageContext.request.contextPath }/jsp/services.jsp"><i class="fa fa-angle-right"
+							<li><a href="${ pageContext.request.contextPath }/services.jsp"><i class="fa fa-angle-right"
 									aria-hidden="true"></i>Corporate Identity</a></li>
-							<li><a href="${ pageContext.request.contextPath }/jsp/services.jsp"><i class="fa fa-angle-right"
+							<li><a href="${ pageContext.request.contextPath }/services.jsp"><i class="fa fa-angle-right"
 									aria-hidden="true"></i>Domain Names</a></li>
-							<li><a href="${ pageContext.request.contextPath }/jsp/services.jsp"><i class="fa fa-angle-right"
+							<li><a href="${ pageContext.request.contextPath }/services.jsp"><i class="fa fa-angle-right"
 									aria-hidden="true"></i>Wordpress Development</a></li>
-							<li><a href="${ pageContext.request.contextPath }/jsp/services.jsp"><i class="fa fa-angle-right"
+							<li><a href="${ pageContext.request.contextPath }/services.jsp"><i class="fa fa-angle-right"
 									aria-hidden="true"></i>Logo Design</a></li>
-							<li><a href="${ pageContext.request.contextPath }/jsp/services.jsp"><i class="fa fa-angle-right"
+							<li><a href="${ pageContext.request.contextPath }/services.jsp"><i class="fa fa-angle-right"
 									aria-hidden="true"></i>Photography</a></li>
 						</ul>
 					</div>
@@ -155,7 +155,7 @@
 						</h3>
 					</div>
 					<div class="col-sm-6 col-12">
-						<a href="${ pageContext.request.contextPath }/jsp/blog.jsp" class="btn btn-success">Read our full blog</a>
+						<a href="${ pageContext.request.contextPath }/blog.jsp" class="btn btn-success">Read our full blog</a>
 					</div>
 				</div>
 				<!--/row-->
@@ -163,19 +163,19 @@
 					<div class="col-lg-4 col-sm-12 col-12 box-1" data-aos="fade-right"
 						data-aos-delay="300">
 						<figure class="figure">
-							<a href="${ pageContext.request.contextPath }/jsp/blog.jsp"><img
+							<a href="${ pageContext.request.contextPath }/blog.jsp"><img
 								src="${ pageContext.request.contextPath }/resources/images/blog-1.jpg"
 								class="figure-img img-fluid" alt="blog"></a>
 							<figcaption class="figure-caption">
 								<h2>
-									<a href="${ pageContext.request.contextPath }/jsp/blog.jsp">Beautiful girl holding her camera in neck
+									<a href="${ pageContext.request.contextPath }/blog.jsp">Beautiful girl holding her camera in neck
 										for a photo shoot</a>
 								</h2>
 								<p>Lorem Ipsum is simply dummy text of the printing and
 									typesetting industry. Lorem Ipsum has been the industry's
 									printer took a galley of type and scrambled it to make a type
 									specimen book. It has survived not only five</p>
-								<a href="${ pageContext.request.contextPath }/jsp/blog_single.jsp" class="btn btn-success">+ more</a>
+								<a href="${ pageContext.request.contextPath }/blog_single.jsp" class="btn btn-success">+ more</a>
 							</figcaption>
 						</figure>
 					</div>
@@ -184,58 +184,58 @@
 						<div class="row">
 							<div class="col-sm-6 col-12 box-2">
 								<figure class="figure">
-									<a href="${ pageContext.request.contextPath }/jsp/blog.jsp"><img
+									<a href="${ pageContext.request.contextPath }/blog.jsp"><img
 										src="${ pageContext.request.contextPath }/resources/images/blog-2.jpg"
 										class="figure-img img-fluid" alt="blog"></a>
 								</figure>
 							</div>
 							<div class="col-sm-6 col-12 box-3">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/jsp/blog.jsp">Girl working seriously on laptop in
+									<a href="${ pageContext.request.contextPath }/blog.jsp">Girl working seriously on laptop in
 										office hours</a>
 								</h4>
 								<h5>Lorem Ipsum is simply dummy text of the printing and
 									typesetting industry. specimen book. It has survived not only
 									five</h5>
-								<a href="${ pageContext.request.contextPath }/jsp/blog_single.jsp" class="btn btn-success">+ more</a>
+								<a href="${ pageContext.request.contextPath }/blog_single.jsp" class="btn btn-success">+ more</a>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-6 col-12 box-4">
 								<figure class="figure">
-									<a href="${ pageContext.request.contextPath }/jsp/blog.jsp"><img
+									<a href="${ pageContext.request.contextPath }/blog.jsp"><img
 										src="${ pageContext.request.contextPath }/resources/images/blog-3.jpg"
 										class="figure-img img-fluid" alt="blog"></a>
 								</figure>
 							</div>
 							<div class="col-sm-6 col-12 box-5">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/jsp/blog.jsp">Girl working seriously on laptop in
+									<a href="${ pageContext.request.contextPath }/blog.jsp">Girl working seriously on laptop in
 										office hours </a>
 								</h4>
 								<h5>Lorem Ipsum is simply dummy text of the printing and
 									typesetting industry. specimen book. It has survived not only
 									five</h5>
-								<a href="${ pageContext.request.contextPath }/jsp/blog_single.jsp" class="btn btn-success">+ more</a>
+								<a href="${ pageContext.request.contextPath }/blog_single.jsp" class="btn btn-success">+ more</a>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-6 col-12 box-6">
 								<figure class="figure">
-									<a href="${ pageContext.request.contextPath }/jsp/blog.jsp"><img
+									<a href="${ pageContext.request.contextPath }/blog.jsp"><img
 										src="${ pageContext.request.contextPath }/resources/images/blog-1.jpg"
 										class="figure-img img-fluid" alt="blog"></a>
 								</figure>
 							</div>
 							<div class="col-sm-6 col-12 box-7">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/jsp/blog.jsp">Girl working seriously on laptop in
+									<a href="${ pageContext.request.contextPath }/blog.jsp">Girl working seriously on laptop in
 										office hours </a>
 								</h4>
 								<h5>Lorem Ipsum is simply dummy text of the printing and
 									typesetting industry. specimen book. It has survived not only
 									five</h5>
-								<a href="${ pageContext.request.contextPath }/jsp/blog_single.jsp" class="btn btn-success">+ more</a>
+								<a href="${ pageContext.request.contextPath }/blog_single.jsp" class="btn btn-success">+ more</a>
 							</div>
 						</div>
 					</div>
