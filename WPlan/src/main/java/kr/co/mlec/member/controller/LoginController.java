@@ -1,4 +1,4 @@
-package kr.co.mlec.login.controller;
+package kr.co.mlec.member.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.co.mlec.umember.service.LoginService;
 import kr.co.mlec.umember.vo.UmemberVO;
 
 
@@ -35,16 +36,16 @@ public class LoginController {
 		ModelAndView mav = new ModelAndView();
 		
 		if(userVO == null) {
-			mav.addObject("msg", "아이디 또는 패스워드를 잘못 입력했습니다");
+			mav.addObject("msg", "d");
 			mav.setViewName("redirect:/login");
 		} else {
 			String dest = (String)session.getAttribute("dest");
 			
 			if(dest != null) {
-				// interceptor에 의해 /login 접속한 경우
+				// interceptor
 				mav.setViewName("redirect:" + dest);
 			} else {
-				// <a> 이용한 /login 접속한 경우
+				// <a> 
 				mav.setViewName("redirect:/");
 			}
 			mav.addObject("userVO", userVO);

@@ -13,8 +13,7 @@
     http://www.springframework.org/schema/mvc
     http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<context:component-scan
-		base-package="kr.co.mlec" />
+	<context:component-scan base-package="kr.co.mlec" />
 	<mvc:default-servlet-handler />
 	<mvc:annotation-driven />
 	<tx:annotation-driven />
