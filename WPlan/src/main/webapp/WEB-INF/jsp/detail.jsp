@@ -371,7 +371,7 @@
 		});
 		
 		$('.shop_btn.scrap').click(function(){
-			location.href="${ pageContext.request.contextPath }/jsp/wish";
+			location.href="${ pageContext.request.contextPath }/wish";
 		});
 		
 	});

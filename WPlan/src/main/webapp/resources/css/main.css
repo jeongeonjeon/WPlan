@@ -326,15 +326,13 @@ header .fa {
 	padding-top : 10px;
 }
 .section-2 .container .mainDress {
-	width : 600px;
-	
-	
+    width: 90%;
+	max-width: 600px;
 }
 
 .section-2 .dressType{
 	min-width : 100% !important;
 }
-
 
 .section-2 .textBox {
 	max-width : 70%;
@@ -2379,6 +2377,11 @@ textarea.form-control {
         line-height: 25px;
         font-size: 14px;
     }
+}
+@media(max-width:992px) {
+	.section-2 .textBox {
+	    max-width: 95%;
+	}
 }
 
 @media(max-width:768px) {
