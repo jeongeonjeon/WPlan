@@ -6,3 +6,4 @@ public interface LoginDAO {
 
 	public UmemberVO login(UmemberVO member);
 }
+ 

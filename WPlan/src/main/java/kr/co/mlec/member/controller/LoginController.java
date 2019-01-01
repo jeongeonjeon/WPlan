@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.co.mlec.umember.vo.UmemberVO;
+
 
 
 @SessionAttributes("userVO")
@@ -27,9 +29,9 @@ public class LoginController {
 	}
 	
 	@PostMapping("/login")
-	public ModelAndView login(MemberVO member, HttpSession session) {
+	public ModelAndView login(UmemberVO member, HttpSession session) {
 
-		MemberVO userVO = loginService.login(member);
+		UmemberVO userVO = loginService.login(member);
 		ModelAndView mav = new ModelAndView();
 		
 		if(userVO == null) {
