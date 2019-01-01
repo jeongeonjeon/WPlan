@@ -15,7 +15,7 @@ public class LoginServiceImpl implements LoginService {
 	@Override
 	public UmemberVO login(UmemberVO member) {
 
-		UmemberVO userVO = LoginDAO.login(member);
+		UmemberVO userVO = loginDao.login(member);
 		
 		return userVO;
 	}
