@@ -1,6 +1,5 @@
 package kr.co.mlec.umember.service;
 
-import org.apache.ibatis.javassist.bytecode.annotation.MemberValueVisitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,21 +12,11 @@ public class LoginServiceImpl implements LoginService {
 	@Autowired
 	private LoginDAO loginDao;
 	
+	@Override
 	public UmemberVO login(UmemberVO member) {
 
-		UmemberVO userVO = loginDao.login(member);
+		UmemberVO userVO = LoginDAO.login(member);
 		
 		return userVO;
 	}
-
-
 }
-
-
-
-
-
-
-
-
-
