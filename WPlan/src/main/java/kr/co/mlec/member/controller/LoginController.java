@@ -36,16 +36,16 @@ public class LoginController {
 		ModelAndView mav = new ModelAndView();
 		
 		if(userVO == null) {
-			mav.addObject("msg", "d");
+			mav.addObject("msg", "���̵� �Ǵ� �н����带 �߸� �Է��߽��ϴ�");
 			mav.setViewName("redirect:/login");
 		} else {
 			String dest = (String)session.getAttribute("dest");
 			
 			if(dest != null) {
-				// interceptor
+				// interceptor�� ���� /login ������ ���
 				mav.setViewName("redirect:" + dest);
 			} else {
-				// <a> 
+				// <a> �̿��� /login ������ ���
 				mav.setViewName("redirect:/");
 			}
 			mav.addObject("userVO", userVO);

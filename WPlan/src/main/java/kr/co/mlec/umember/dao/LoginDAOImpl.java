@@ -13,7 +13,7 @@ public class LoginDAOImpl implements LoginDAO {
 	private SqlSessionTemplate sqlSession;
 
 	
-	@Override 
+	
 	public UmemberVO login(UmemberVO member) {
 		
 		UmemberVO userVO = sqlSession.selectOne("kr.co.mlec.member.login", member);

@@ -10,7 +10,6 @@ public class UmemberServiceImpI implements UmemberService {
 	@Autowired
 	private UmemberDAO umemberDao;
 	
-	@Override
 	public void insertUmember(UmemberVO umemberVO) {
 		umemberDao.insertUmember(umemberVO);
 	}
