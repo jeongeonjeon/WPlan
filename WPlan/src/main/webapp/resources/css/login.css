@@ -1,0 +1,288 @@
+/* Login */
+.login_area{
+
+    background: unset;
+    position: fixed;
+    z-index: 9990;
+    display: none;
+}
+.login_background{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.5;
+    z-index: 9990;
+}
+
+#login_module{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3D(-50%,-50%,0);
+    background: #fff;
+    z-index: 9999;
+    border-radius: 8px;
+}
+.login-modal {
+	width: 450px;
+	margin: 0 auto;
+}
+.login-modal h3 {
+	margin: 0;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.box-checkbox {
+    float: left;
+    width: 25%;
+    font-size: 14px;
+    position: relative;
+    top:12px;
+}
+
+.box-checkbox #auto_login, .box-checkbox #remember_id{
+	position: relative;
+    top: 3px;
+}
+.login-body button {	
+	width: 100%;
+    height: 42px;
+    background-color: #FFF;
+    border-radius: 8px;
+    border: 2px solid #ffb9b2;
+}
+.login-body button:hover{
+	background-color: #ffb9b2;
+	color: #FFF;
+	font-weight: bolder;
+}
+
+.login-body .fill-orange{
+    background-color: #FFB9B2;
+    color: #FFF;
+    font-weight: bolder;
+    float: right;
+    width: 48.5%;
+}
+
+.login-body .fill-orange:hover{
+	background-color: #FFF;
+	color: #545454;
+	font-weight: normal;
+}
+.login-body .ctnr_login_btn.row {
+    margin: 0;
+}
+.login-body .ctnr_login_btn.row>div{
+	width:48%;
+}
+.login-body .ctnr_login_btn.row>div:first-child{
+	margin-right: 4%;
+}
+
+.login-body .ctnr_login_btn .btn_sns {
+	display: block;
+    width: 100%;
+    height: 42px;
+    text-decoration: none;
+    padding: 11px 6px 6px 40px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+}
+.btn_sns.sns_kakao {
+	background:#FFDE00 url(https://wedityourself.cdn3.cafe24.com/layout/login/kakao.png) no-repeat 12px 11px;
+    background-size: 22px 22px;
+	color: #3C1E1E;
+}
+
+.btn_sns.sns_naver {
+	background:#1EC800 url(https://wedityourself.cdn3.cafe24.com/layout/login/naver.png) no-repeat 13px 12px;
+    background-size: 18px 18px;
+	color: #FFF;
+}
+
+.btn_sns:hover {
+	opacity: 0.9;
+}
+.login-body .ctnr_login_btn .col-sm-6 {
+	margin-top: 10px;
+}
+.login-body .ctnr_login_btn .col-sm-6:nth-child(1),
+.login-body .ctnr_login_btn .col-sm-6:nth-child(2) {
+	margin-top: 0;
+}
+
+.input-group-addon > span {
+    width: 20%;
+    position: relative;
+    top:6px;
+}
+span#sizing-addon1, span#sizing-addon2 {
+    width: 20%;
+}
+.input-group .eac-input-wrap, .input-group input#login_pw{
+	
+    width: 80%;
+    border-radius: 0.25rem;
+}
+
+.input-group .form-control {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+	.login-body .ctnr_login_btn .col-sm-6.padding-right-5 {
+	 	padding-right: 15px !important; 
+	 }
+	.login-body .ctnr_login_btn .col-sm-6.padding-left-5 {
+		 padding-left: 15px !important; 
+	}
+	.login-body .ctnr_login_btn .col-sm-6:nth-child(2) {
+		 margin-top: 10px; 
+	 }
+	.login-modal {
+		width: 100%;
+		height: 100%;
+	}
+}
+.mobile-login-header {
+	background-color: #ffb9b2;
+	text-align: left;
+	padding: 10px 20px;
+	border-radius: 8px 8px 0 0;
+}
+.mobile-login-header i.fa {
+    float: right;
+}
+.login-body {
+	padding: 40px;
+}
+.section-separator {
+	position: relative;
+	margin: 20px 0 31px;
+	text-align: center;
+}
+.section-text {
+	position: relative;
+	display: inline-block;
+	padding: 0 15px;
+	font-size: 15px;
+	color: #707070;
+	background-color: #FFF;
+	z-index: 10;
+}
+.section-line {
+	position: relative;
+	border-top: 1px solid #DDD;
+	margin-top: -13px;
+	z-index: 9;
+}
+
+.ctnr1-login {
+	width:100%;
+}
+
+.title-moblie-login {
+	display: inline-block;
+	vertical-align: middle;
+	width:100%;
+	font-size:15px;
+	color: #FFF;
+}
+
+.box1-login { width: 100%; }
+.box2-login {
+	width: 100%;
+	margin-top: 12px;
+}
+.box3-login {
+	width: 100%;
+	margin-top: 3px;
+}
+
+.section1-login {
+	display: inline-block;
+	vertical-align: middle;
+	width:40%;
+	padding: 10px 0 0 20px;
+	line-height: 1.2;
+}
+.section2-login {
+	display: inline-block;
+	vertical-align: middle;
+	width:100%;
+}
+.group-btn-login {width:100%; }
+.group-btn-login button {
+	display: inline-block;
+	float: left;
+	width: 48% !important;
+}
+.group-btn-login a button { margin-left: 4%; }
+.group-btn-login a:first-child button { margin-left: 0; }
+
+.text1-login{
+	display: inline-block;
+	font-size: 12px;
+	color: #707070;
+}
+.text2-login{
+	display: inline-block;
+	text-align: right;
+	width:40%;
+}
+.text2-login a {
+	font-size: 12px;
+	color: #707070;
+	padding-bottom:2px;
+	border-bottom: 1px solid #707070;
+}
+.btn.green:not(.btn-outline) {
+	border-radius: 0 !important;
+}
+
+.wedit-sub-nav { background-color: #f0f0f0; }
+.wedit-sub-nav .container { padding-top: 17px; }
+.wedit-sub-nav p {
+	color: #333;
+	font-size:15px;
+	font-weight: bold;
+	margin-top: 18px;
+}
+.wedit-sub-nav p span {
+	color: #f46629;
+}
+.wedit-sub-nav button {
+	float: left;
+	height: 58px;
+	width: calc(50% - 10px);
+	margin-left: 10px;
+}
+.select2-58 .select2-selection {
+	height: 58px;
+	padding-top: 17px;
+}
+
+.navbar-nav>li>a {
+	color: #383838;
+}
+
+@media (max-width: 767px) {
+	.wedit-sub-nav p {
+		margin-top: 10px;
+	}
+	.wedit-sub-nav .w-select {
+		margin-top: 10px;
+	}
+	.wedit-sub-nav button {
+		height: 40px;
+	}
+}
