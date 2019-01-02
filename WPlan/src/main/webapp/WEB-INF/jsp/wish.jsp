@@ -24,11 +24,11 @@
 	    	<div class="container">
 	        <h3>DRESS</h3>
 		        <div class="wrap">
-			        <img src="../resources/images/dress1.jpg"/>
-			        <img src="../resources/images/dress2.jpg"/>
-			        <img src="../resources/images/dress3.jpg" />
-			        <img src="../resources/images/dress1.jpg" />
-			        <img src="../resources/images/dress2.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 		    	</div>
 	        </div>
 	    </section>
@@ -36,11 +36,11 @@
 	    	<div class="container">
 	        <h3>TOXEDO</h3>
 		        <div class="wrap">
-			        <img src="../resources/images/dress1.jpg"/>
-			        <img src="../resources/images/dress2.jpg"/>
-			        <img src="../resources/images/dress3.jpg" />
-			        <img src="../resources/images/dress1.jpg" />
-			        <img src="../resources/images/dress2.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 		    	</div>
 	        </div>
 	    </section>
@@ -48,10 +48,10 @@
 	    	<div class="container">
 	        <h3>LOCATION</h3>
 		        <div class="wrap">
-			        <img src="../resources/images/food1.jpg"/>
-			        <img src="../resources/images/food2.jpg"/>
-			        <img src="../resources/images/food2.jpg" />
-			        <img src="../resources/images/food1.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/food1.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/food2.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/food2.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/food1.jpg" />
 		    	</div>
 	        </div>
 	    </section>
@@ -59,10 +59,10 @@
 	    	<div class="container">
 	        <h3>FOOD</h3>
 		        <div class="wrap">
-			        <img src="../resources/images/food1.jpg"/>
-			        <img src="../resources/images/food2.jpg"/>
-			        <img src="../resources/images/food2.jpg"/>
-			        <img src="../resources/images/food1.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/food1.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/food2.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/food2.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/food1.jpg" />
 		    	</div>
 	        </div>
 	    </section>
@@ -70,14 +70,14 @@
 	    	<div class="container">
 	        <h3>DECO</h3>
 		        <div class="wrap">
-			        <img src="../resources/images/deco1.jpg"/>
-			        <img src="../resources/images/deco2.jpg"/>
-			        <img src="../resources/images/deco3.jpg" />
-			        <img src="../resources/images/deco4.jpg" />
-			        <img src="../resources/images/deco1.jpg"/>
-			        <img src="../resources/images/deco2.jpg"/>
-			        <img src="../resources/images/deco3.jpg" />
-			        <img src="../resources/images/deco4.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/deco1.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/deco2.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/deco3.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/deco4.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/deco1.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/deco2.jpg"/>
+			        <img src="${ pageContext.request.contextPath }/resources/images/deco3.jpg" />
+			        <img src="${ pageContext.request.contextPath }/resources/images/deco4.jpg" />
 		    	</div>
 	        </div>
 	    </section>

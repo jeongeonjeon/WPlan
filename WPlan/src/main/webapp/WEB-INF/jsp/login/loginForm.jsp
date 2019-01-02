@@ -79,10 +79,10 @@ $(document).ready(function(){
 	                        <div class="section-line"></div>
 	                    </div>
 	                    <div class="group-btn-login">
-	                        <a href="${ pageContext.request.contextPath }/jsp/member/cJoinForm">
+	                        <a href="${ pageContext.request.contextPath }/member/cJoinForm">
 	                            <button class="white">업체등록</button>
 	                        </a>
-	                        <a href="${ pageContext.request.contextPath }/jsp/member/uJoinForm">
+	                        <a href="${ pageContext.request.contextPath }/member/uJoinForm">
 	                            <button class="white">회원가입하기</button>
 	                        </a>
 	                        <div class="clearfix"></div>

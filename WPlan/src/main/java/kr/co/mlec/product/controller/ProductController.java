@@ -6,36 +6,36 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller 
 public class ProductController { 
    
-   @GetMapping("/jsp/product/dressType")
+   @GetMapping("/product/dressType")
    public String dressType() {
       return "/product/dressType";
    }
 
-   @GetMapping("/jsp/product/deco")
+   @GetMapping("/product/deco")
    public String deco() {
 	   return "/product/deco";
    }
    
-   @GetMapping("/jsp/product/food")
+   @GetMapping("/product/food")
    public String food() {
 	   return "/product/food";
    }
    
-   @GetMapping("/jsp/product/tuxedo")
+   @GetMapping("/product/tuxedo")
    public String tuxedo() {
 	   return "/product/tuxedo";
    }
    
-   @GetMapping("/jsp/product/location")
+   @GetMapping("/product/location")
    public String location() {
 	   return "/product/location";
    }
    
-   @GetMapping("/jsp/detail")
+   @GetMapping("/detail")
    public String detail() {
 	   return "/detail";
    }
-   @GetMapping("/jsp/makeWedding")
+   @GetMapping("/makeWedding")
    public String makeWedding() {
 	   return "/makeWedding";
    }

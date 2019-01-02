@@ -213,35 +213,35 @@ p,ul,li{
 		<aside class="select_area">
 			<div class="wrap section-01 scroll">
 				<p>DRESS</p>
-				<img src="../resources/images/dress1.jpg" /> <img
-					src="../resources/images/dress2.jpg" /> <img
-					src="../resources/images/dress3.jpg" /> <img
-					src="../resources/images/dress1.jpg" /> <img
-					src="../resources/images/dress2.jpg" />
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 			</div>
 			<div class="wrap section-02 scroll">
 				<p>TOXEDO</p>
-				<img src="../resources/images/dress1.jpg" /> <img
-					src="../resources/images/dress2.jpg" /> <img
-					src="../resources/images/dress3.jpg" /> <img
-					src="../resources/images/dress1.jpg" /> <img
-					src="../resources/images/dress2.jpg" />
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 			</div>
 			<div class="wrap section-03 scroll">
 				<p>LOCATION</p>
-				<img src="../resources/images/dress1.jpg" /> <img
-					src="../resources/images/dress2.jpg" /> <img
-					src="../resources/images/dress3.jpg" /> <img
-					src="../resources/images/dress1.jpg" /> <img
-					src="../resources/images/dress2.jpg" />
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 			</div>
 			<div class="wrap section-04 scroll">
 				<p>DECO</p>
-				<img src="../resources/images/dress1.jpg" /> <img
-					src="../resources/images/dress2.jpg" /> <img
-					src="../resources/images/dress3.jpg" /> <img
-					src="../resources/images/dress1.jpg" /> <img
-					src="../resources/images/dress2.jpg" />
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
+					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 			</div>
 
 
