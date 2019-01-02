@@ -48,7 +48,6 @@
 				<h4>드레스 타입별 카테고리로 당신의 드레스를 쉽게 골라보세요</h4>
 			</a>	
 			</div>
-			<!--container-->
 		</section>
 		<section class="section-7">
 			<!-- Footer -->
