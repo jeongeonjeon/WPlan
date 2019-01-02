@@ -39,4 +39,9 @@ public class ProductController {
    public String makeWedding() {
 	   return "/makeWedding";
    }
+   
+   @GetMapping("/addcom")
+   public String addcom() {
+	   return "/addcom/addcom";
+   }
 }

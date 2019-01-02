@@ -18,7 +18,7 @@
 <style type="text/css">
 .container.section-2 {
 	padding: 0;
-	.
+	
 }
 </style>
 </head>
@@ -222,17 +222,30 @@
 							<button class="fBtn next">다음</button>
 						</div>
 						<div class="modal-form-list">
-							<div data-id="013">
-								<h4>13. 답례품은 준비하셨나요?</h4>
-								<form:radiobutton path="honeymoon" value="yes" label="네"/><br>
-								<form:radiobutton path="honeymoon" value="no" label="아니요"/><br>
-								<form:radiobutton path="honeymoon" value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="honeymoon"/>
+							<div data-id="014">
+								<h4>14. 답례품은 준비하셨나요?</h4>
+								<form:radiobutton path="represent" value="yes" label="네"/><br>
+								<form:radiobutton path="represent" value="no" label="아니요"/><br>
+								<form:radiobutton path="represent" value="noneed" label="필요없어요"/><br>
+								<form:errors pathe="represent"/>
 							</div>
 						</div>
 						<div>
 							<button class="fBtn pre">이전</button>
 							<button class="fBtn next">다음</button>
+						</div>
+						<div class="modal-form-list">
+							<div data-id="015">
+								<h4>15. 신혼집은 구하셨나요?</h4>
+								<form:radiobutton path="home" value="yes" label="네"/><br>
+								<form:radiobutton path="home" value="no" label="아니요"/><br>
+								<form:radiobutton path="home" value="noneed" label="필요없어요"/><br>
+								<form:errors pathe="home"/>
+							</div>
+						</div>
+						<div>
+							<button class="fBtn pre">이전</button>
+							<button class="fBtn next" type="submit">등록</button>
 						</div>
 					</div>
 				
