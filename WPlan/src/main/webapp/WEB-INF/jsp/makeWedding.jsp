@@ -17,6 +17,35 @@ p,ul,li{
 	padding:0;
 }
 
+.black_bg{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.5;
+    z-index: 9990;
+}
+
+.black_bg img{
+	position:fixed;
+	right:10px;
+	top:10px;
+	width:20px;
+	
+}
+.wrapper{
+	width:90%;
+	height: 90vh;    
+	position: fixed;
+    left: 5%;
+    top: 5vh;
+    background: #fff;
+	z-index: 9999;
+	overflow: hidden;
+}
+
 .section-01, .section-02, .section-03 {
 	position: relative;
 }
@@ -27,7 +56,7 @@ p,ul,li{
 	float: left;
 	z-index: 100;
 	width: 50px;
-	height:100vh;
+	height:100%;
 	background-color: #d4cecf;; /*background: url("") 0 0 no-repeat;*/
 }
 
@@ -39,7 +68,7 @@ p,ul,li{
 .floating-menu a {
 	display: block;
 	width: 50px;
-	height:25vh;
+	height: 25%;
 	padding: 10px 0;
 	color: #fff;
 	text-align: center;
@@ -53,22 +82,26 @@ p,ul,li{
 	color: #fff; /*background: url("") 0 0 no-repeat;*/
 }
 
-.floating-menu li.on a.menu-01 { /* background-position: -131px 0;*/
-	
+.floating-menu li.on a.menu-01 { 
+	/* background-position: -131px 0;*/
 }
 
 .floating-menu li.on a.menu-02 {
 	/* background-position: -131px -104px;*/
-	
 }
 
-.floating-menu li.on a.menu-03 { /*background-position: -131px -219px;*/
-	
+.floating-menu li.on a.menu-03 { 
+	/*background-position: -131px -219px;*/
+}
+
+
+.floating-menu li.on a.menu-03 { 
+	/*background-position: -131px -334px;*/
 }
 
 .select_area {
 	width: 300px;
-	height: -webkit-fill-available;
+	height: 100%;
 	position: relative;
 	overflow-y: scroll;
 	padding: 10px 50px;
@@ -88,7 +121,7 @@ p,ul,li{
 
 .section-1.product {
 	width: calc(100% - 350px);
-	height: calc(100vh - 163px);
+	height: 100%;
 	overflow: hidden;
 	float: right;
 }
@@ -112,23 +145,6 @@ p,ul,li{
 	clear: both;
 }
 
-@media ( max-width :1024px) {
-	.select_area {
-		height: calc(100vh - 112px);
-	}
-	.section-1.product {
-		height: calc(100vh - 112px);
-	}
-}
-
-@media ( max-width :576px) {
-	.select_area {
-		height: calc(100vh - 47px);
-	}
-	.section-1.product {
-		height: calc(100vh - 47px);
-	}
-}
 </style>
 <script>
 	(function (global, $) {
@@ -193,15 +209,10 @@ p,ul,li{
 </script>
 </head>
 <body>
-	<div id="wrapper">
-		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
-		<!-- 		<header class="header bg"> -->
-		<%-- 			<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" /> --%>
-		<!-- 		</header> -->
-		<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
-			<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
-		</nav>
-		<!--Section-1-->
+	<div class="black_bg">
+		<img src="${ pageContext.request.contextPath }/resources/images/cancel.png" >
+	</div>
+	<div class ="wrapper">
 		<div class="floating-menu">
 			<ul>
 				<li class="m"><a href="#section-01" class="menu-01"><span>드레스</span></a></li>
@@ -213,55 +224,46 @@ p,ul,li{
 		<aside class="select_area">
 			<div class="wrap section-01 scroll">
 				<p>DRESS</p>
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 			</div>
 			<div class="wrap section-02 scroll">
 				<p>TOXEDO</p>
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" />
+				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 			</div>
 			<div class="wrap section-03 scroll">
 				<p>LOCATION</p>
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 			</div>
 			<div class="wrap section-04 scroll">
 				<p>DECO</p>
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> <img
-					src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 			</div>
-
-
 		</aside>
 		<section class="section-1 product">
 		
-			<button class="addBtn">My wedding 추가</button>
 			<div class="making"></div>
+			<button class="addBtn">My wedding 추가</button>
 
 		</section>
 
-		<section class="section-7">
-			<!-- Footer -->
-			<footer class="page-footer font-small stylish-color-dark">
-				<%@ include file="/WEB-INF/jsp/include/footer.jsp"%>
-			</footer>
-			<!-- Footer -->
-		</section>
 	</div>
-	<%@ include file="/WEB-INF/jsp/include/sideSlider.jsp"%>
+
 </body>
 
 </html>
