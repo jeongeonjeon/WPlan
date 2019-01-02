@@ -1,4 +1,4 @@
-package kr.co.mlec.member.controller;
+package kr.co.mlec.umember.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -36,16 +36,16 @@ public class LoginController {
 		ModelAndView mav = new ModelAndView();
 		
 		if(userVO == null) {
-			mav.addObject("msg", "ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ç´ï¿½ ï¿½Ð½ï¿½ï¿½ï¿½ï¿½å¸¦ ï¿½ß¸ï¿½ ï¿½Ô·ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½");
+			mav.addObject("msg", "¾ÆÀÌµð ¶Ç´Â ÆÐ½º¿öµå¸¦ Àß¸ø ÀÔ·ÂÇß½À´Ï´Ù.");
 			mav.setViewName("redirect:/login");
 		} else {
 			String dest = (String)session.getAttribute("dest");
 			
 			if(dest != null) {
-				// interceptorï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ /login ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+				// interceptor¿¡ ÀÇÇØ /login Á¢¼ÓÇÑ °æ¿ì
 				mav.setViewName("redirect:" + dest);
 			} else {
-				// <a> ï¿½Ì¿ï¿½ï¿½ï¿½ /login ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+				// <a> ÀÌ¿ëÇÑ /login Á¢¼ÓÇÑ °æ¿ì
 				mav.setViewName("redirect:/");
 			}
 			mav.addObject("userVO", userVO);

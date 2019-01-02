@@ -6,6 +6,6 @@
  	<typeAliases>
 
  		<typeAlias type="kr.co.mlec.umember.vo.UmemberVO" alias="umemberVO"/>
-
+		<typeAlias type="kr.co.mlec.guide.vo.GuideVO" alias="guideVO"/>
  	</typeAliases>
 </configuration>

@@ -42,7 +42,8 @@
 	<mvc:view-controller path="/footer" view-name="include/footer" />
 
 	<!--  LoginInterceptor 설정 -->
-	<!--  <bean id="loginInterceptor" class="kr.co.mlec.interceptor.LoginInterceptor" />
+	<!--  
+	<bean id="loginInterceptor" class="kr.co.mlec.interceptor.LoginInterceptor" />
 
 	<mvc:interceptors>
 		<mvc:interceptor>
@@ -50,5 +51,6 @@
 			<mvc:exclude-mapping path="/login" />
 			<ref bean="LoginInterceptor" />
 		</mvc:interceptor>
-	</mvc:interceptors> -->
+	</mvc:interceptors> 
+	-->
 </beans>
