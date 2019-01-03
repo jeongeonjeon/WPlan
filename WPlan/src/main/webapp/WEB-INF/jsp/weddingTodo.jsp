@@ -52,7 +52,7 @@
 				<p>TO DO LIST</p>
 				<form:form method="post" commandName="guideVO">
 				<div>
-					<c:if test="${guideVO.premeet ne noneed} >
+					<c:if test="${guideVO.premeet ne noneed}" >
 					<form:checkbox path="premeet" />
 					</c:if>
 				</form:form>
