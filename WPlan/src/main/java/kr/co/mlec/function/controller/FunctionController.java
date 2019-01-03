@@ -10,6 +10,11 @@ public class FunctionController {
 	public String wish() {
 		return "/wish";
 	}
+	
+	@GetMapping("/calendar")
+	public String calendar() {
+		return "/calendar";
+	}
 
 	
 }

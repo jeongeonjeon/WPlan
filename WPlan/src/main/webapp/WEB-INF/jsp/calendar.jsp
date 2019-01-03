@@ -10,49 +10,50 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <title>more</title>
-<jsp:include page="${ pageContext.request.contextPath }/jsp/include/head.jsp" />
+<jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 <link rel="stylesheet"
-	href="../resources/css/calendar/bootstrap.min.css">
+	href="${ pageContext.request.contextPath }/resources/css/calendar/bootstrap.min.css">
 <!-- Font Awesome -->
 <link rel="stylesheet"
-	href="../resources/css/calendar/font-awesome.min.css">
+	href="${ pageContext.request.contextPath }/resources/css/calendar/font-awesome.min.css">
 <!-- Ionicons -->
-<link rel="stylesheet" href="../resources/css/calendar/ionicons.min.css">
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/calendar/ionicons.min.css">
 <!-- fullCalendar -->
 <link rel="stylesheet"
-	href="../resources/css/calendar/fullcalendar.min.css">
+	href="${ pageContext.request.contextPath }/resources/css/calendar/fullcalendar.min.css">
 <link rel="stylesheet"
-	href="../resources/css/calendar/fullcalendar.print.min.css"
+	href="${ pageContext.request.contextPath }/resources/css/calendar/fullcalendar.print.min.css"
 	media="print">
 <!-- Theme style -->
-<link rel="stylesheet" href="../resources/css/calendar/AdminLTE.min.css">
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/calendar/AdminLTE.min.css">
 <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
 <link rel="stylesheet"
-	href="../resources/css/calendar/_all-skins.min.css">
+	href="${ pageContext.request.contextPath }/resources/css/calendar/_all-skins.min.css">
 <style>
 .content{
-	width:80%
+	width:80%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .15) !important;
 }
 </style>
 	
 <!-- jQuery 3 -->
-<script src="../resources/js/calendar/jquery.min.js"></script>
+<script src="${ pageContext.request.contextPath }/resources/js/calendar/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="../resources/js/calendar/bootstrap.min.js"></script>
+<script src="${ pageContext.request.contextPath }/resources/js/calendar/bootstrap.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="../resources/js/calendar/jquery-ui.min.js"></script>
+<script src="${ pageContext.request.contextPath }/resources/js/calendar/jquery-ui.min.js"></script>
 <!-- Slimscroll -->
-<script src="../resources/js/calendar/jquery.slimscroll.min.js"></script>
+<script src="${ pageContext.request.contextPath }/resources/js/calendar/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="../resources/js/calendar/fastclick.js"></script>
+<script src="${ pageContext.request.contextPath }/resources/js/calendar/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="../resources/js/calendar/adminlte.min.js"></script>
+<script src="${ pageContext.request.contextPath }/resources/js/calendar/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../resources/js/calendar/demo.js"></script>
+<script src="${ pageContext.request.contextPath }/resources/js/calendar/demo.js"></script>
 <!-- fullCalendar -->
-<script src="../resources/js/calendar/moment.js"></script>
-<script src="../resources/js/calendar/fullcalendar.min.js"></script>
+<script src="${ pageContext.request.contextPath }/resources/js/calendar/moment.js"></script>
+<script src="${ pageContext.request.contextPath }/resources/js/calendar/fullcalendar.min.js"></script>
 <!-- Page specific script -->
 <script>
   $(function () {
@@ -220,14 +221,14 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<div id="wrapper">
-		<jsp:include page="${ pageContext.request.contextPath }/jsp/login/loginForm.jsp" />
+		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
 	<header class="header bg">
-		<jsp:include page="${ pageContext.request.contextPath }/jsp/include/topLogo.jsp" />
+		<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" />
 	</header>
 	<span class="position-absolute trigger"> <!-- hidden trigger to apply 'stuck' styles -->
 	</span>
 	<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
-		<jsp:include page="${ pageContext.request.contextPath }/jsp/include/topMenu.jsp" />
+		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</nav>
 	<div class="wrapper">
 
