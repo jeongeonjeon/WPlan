@@ -11,7 +11,7 @@
 
 <title>more</title>
 
-<jsp:include page="${ pageContext.request.contextPath }/jsp/include/head.jsp" />
+<jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 
 </head>
 <body>
