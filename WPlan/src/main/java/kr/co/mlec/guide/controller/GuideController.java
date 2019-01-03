@@ -1,5 +1,6 @@
 package kr.co.mlec.guide.controller;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,9 +9,11 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import kr.co.mlec.guide.service.GuideService;
 import kr.co.mlec.guide.vo.GuideVO;
+import kr.co.mlec.umember.vo.UmemberVO;
 
 @Controller
 public class GuideController {
@@ -29,13 +32,27 @@ public class GuideController {
 	}
 	
 	@PostMapping("/weddingGuide")
-	public String weddingTodo(@Valid GuideVO guideVO , BindingResult result) {
+	public ModelAndView weddingTodo(@Valid GuideVO guideVO , BindingResult result, HttpSession session, ModelAndView mav) {
 		if(result.hasErrors()) {
-			return "weddingGuide";
+			mav.setViewName("weddingGuide");
+			return mav;
 		}
+		UmemberVO userVO = (UmemberVO)session.getAttribute("userVO");
+		guideVO.setId(userVO.getId());
+		guideService.insertInfo(guideVO);
+		mav.addObject("guideVO", guideVO);
+		mav.setViewName("weddingTodo");
 		
-		return "weddingTodo";
+		return mav;
 	}
 	
+	@GetMapping("/weddingTodo")
+	public String weddingTodo(Model model, HttpSession session) {
+		UmemberVO userVO = (UmemberVO)session.getAttribute("userVO");
+		String id = userVO.getId();
+		GuideVO guideVO = guideService.getGuide(id);
+		model.addAttribute("guideVO", guideVO);
+		return "weddingTodo";
+	}
 
 }

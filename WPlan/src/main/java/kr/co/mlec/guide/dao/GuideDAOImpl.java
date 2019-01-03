@@ -19,4 +19,10 @@ public class GuideDAOImpl implements GuideDAO {
 		
 	}
 
+	@Override
+	public GuideVO getGuide(String id) {
+		GuideVO guideVO = sqlSession.selectOne("kr.co.mlec.guide.selectGuide", id);
+		return guideVO;
+	}
+
 }
