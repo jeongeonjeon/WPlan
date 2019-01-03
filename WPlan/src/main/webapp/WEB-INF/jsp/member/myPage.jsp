@@ -16,10 +16,10 @@
 
 <style type="text/css">
 	.container.section-33{
-		    width: 60%;
-    height: auto;
-    padding-bottom: 100px;
-    border-bottom: 1px solid #e5e5e5;
+	    width: 60%;
+	    height: auto;
+	    padding-bottom: 100px;
+    	border-bottom: 1px solid #e5e5e5;
 	}
 	.section-33 .box {
 	    box-shadow: 0 0 25px rgba(0, 0, 0, .15) !important;
