@@ -5,5 +5,7 @@ import kr.co.mlec.guide.vo.GuideVO;
 public interface GuideService {
 	
 	public void insertInfo(GuideVO guideVO);
+	
+	public GuideVO getGuide(String id);
 
 }
