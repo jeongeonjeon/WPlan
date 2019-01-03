@@ -1,15 +1,19 @@
 package kr.co.mlec.umember.controller;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
-import org.springframework.web.servlet.ModelAndView;
 
 import kr.co.mlec.umember.service.LoginService;
 import kr.co.mlec.umember.vo.UmemberVO;
@@ -23,37 +27,57 @@ public class LoginController {
 	@Autowired
 	private LoginService loginService;
 	
-	@GetMapping("/login")
-	public String loginForm() {
+	/*@GetMapping("/login")
+	public String loginForm(Model model) {
 		
-		return "login/login";
+		UmemberVO memberVO = new UmemberVO();
+		model.addAttribute("memberVO", memberVO);
+		
+		return "login/loginForm";
 	}
-	
+	*/
 	@PostMapping("/login")
-	public ModelAndView login(UmemberVO member, HttpSession session) {
-
-		UmemberVO userVO = loginService.login(member);
-		ModelAndView mav = new ModelAndView();
+	@ResponseBody
+	public String login(@RequestParam String id , @RequestParam String password, HttpSession session) {
+		System.out.println("login");
+		UmemberVO user = new UmemberVO();
+		user.setId(id);
+		user.setPassword(password);
+		UmemberVO userVO = loginService.login(user);
+		System.out.println(userVO);
 		
-		if(userVO == null) {
-			mav.addObject("msg", "아이디 또는 패스워드를 잘못 입력했습니다.");
-			mav.setViewName("redirect:/login");
-		} else {
-			String dest = (String)session.getAttribute("dest");
-			
-			if(dest != null) {
-				// interceptor에 의해 /login 접속한 경우
-				mav.setViewName("redirect:" + dest);
-			} else {
-				// <a> 이용한 /login 접속한 경우
-				mav.setViewName("redirect:/");
-			}
-			mav.addObject("userVO", userVO);
-			session.removeAttribute("dest");
+		if(userVO != null) {
+			session.setAttribute("userVO", userVO);
+			System.out.println("세션등록");
+			return "login";
+		}else {
+			return "fail";
 		}
-	
-		return mav;
+		
+		
 	}
+	/*public String login(@Valid @ModelAttribute("memberVO") UmemberVO memberVO,Model model, HttpSession session) {
+
+		UmemberVO userVO = loginService.login(memberVO);
+		System.out.println(userVO);
+
+		String msg = "";
+		session.invalidate();
+		if(userVO != null) {
+			// 로그인 성공
+			msg = "성공";
+			model.addAttribute("msg", msg);
+			session.setAttribute("userVO", userVO);
+			System.out.println(msg+ " : "+ userVO.toString());
+			
+			return "redirect:/";
+		} else {
+			// 로그인 실패
+			msg = "아이디 또는 패스워드를 잘못입력하셨습니다";
+			model.addAttribute("msg", msg);
+			return "redirect:/login";
+		}
+	}*/
 	
 	@RequestMapping("/logout")
 	public String logout(SessionStatus sessionStatus) {		

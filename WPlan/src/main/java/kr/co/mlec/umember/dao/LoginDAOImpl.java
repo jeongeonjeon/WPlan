@@ -17,7 +17,7 @@ public class LoginDAOImpl implements LoginDAO {
 	public UmemberVO login(UmemberVO member) {
 		
 		UmemberVO userVO = sqlSession.selectOne("kr.co.mlec.umember.login", member);
-		
+		System.out.println(userVO);
 		return userVO;
 	}
 		

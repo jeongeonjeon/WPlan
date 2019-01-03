@@ -13,8 +13,14 @@ public class UmemberDAOImpl implements UmemberDAO {
 	private SqlSessionTemplate sqlSession;
 	
 	@Override
-	public void insertUmember(UmemberVO umemberVo) {
-		sqlSession.insert("kr.co.mlec.umember.insert", umemberVo);
+	public void insertUmember(UmemberVO umemberVO) {
+		sqlSession.insert("kr.co.mlec.umember.insert", umemberVO);
+	}
+
+	@Override
+	public UmemberVO selectUmember(UmemberVO umemberVO) {
+		UmemberVO userVO = sqlSession.selectOne("kr.co.mlec.umember.select", umemberVO);
+		return userVO;
 	}
 
 }
