@@ -48,7 +48,7 @@
 
 <body>
 	<div id="wrapper">
-		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
+		<c:import url="/login" />
 		<header class="header bg">
 			<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" />
 		</header>

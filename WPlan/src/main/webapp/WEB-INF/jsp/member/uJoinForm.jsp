@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 
@@ -54,39 +55,40 @@
 								<label class="title">
 								<h4>아이디</h4>
 								</label> 
-								<form:input path="id" class="inputArea" />
+								<form:input path="id" class="inputArea" name="id" />
 								<form:errors path="id"/>
 								<button class="fBtn">중복확인</button>
 							</div>
 							<div class="row">
 								<label class="title"><h4>비밀번호</h4></label> 
-								<form:input path="password" class="inputArea" />
+								<form:input path="password" class="inputArea" name="password"/>
 								<form:errors path="password"/>
 
 							</div>
 							<div class="row">
-
-								<input type="text" class="inputArea pws"
-									placeholder="비밀번호를 확인해주세요" required>
+								<label class="title"><h4>비밀번호 확인</h4></label> 
+								<form:input path="password" class="inputArea" name="password2" placeholder="비밀번호를 확인해주세요"/>
+								<form:errors path="password" />
 
 							</div>
 							<div class="row">
-								<label class="title"><h4>이름</h4></label> <input type="text"
-									class="inputArea" placeholder="이름을 입력해주세요" required>
+								<label class="title"><h4>이름</h4></label> 
+								<form:input path="name" class="inputArea" name="name"/>
+								<form:errors path="name"/>
 							</div>
 							<div class="row">
-								<label class="title"><h4>전화번호</h4></label> <input type="text"
-									class="inputArea" placeholder="010-xxxx-xxxx" required>
+								<label class="title"><h4>전화번호</h4></label> 
+								<form:input path="tel" class="inputArea" name="tel" placeholder="010-xxxx-xxxx" />
+								<form:errors path="tel"/>
 							</div>
 							<div class="row">
-								<label class="title"><h4>이메일</h4></label> <input type="email"
-									class="inputArea" placeholder="이메일형식으로 입력해주세요" required>
+								<label class="title"><h4>이메일</h4></label> 
+								<form:input path="email" class="inputArea" name="email" placeholder="이메일형식으로 입력해주세요" />
+								<form:errors path="email"/>
 							</div>
-							   <a href="${ pageContext.request.contextPath }/">
-									<button class="fBtn submit">가입하기</button>
-								</a>
-
-				
+							 <a href="${ pageContext.request.contextPath }/">
+								<button class="fBtn submit">가입하기</button>
+							</a>
 						</form:form>
 					</div>
 				</div>
