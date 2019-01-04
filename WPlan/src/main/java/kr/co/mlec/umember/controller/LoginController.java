@@ -27,12 +27,18 @@ public class LoginController {
 	@Autowired
 	private LoginService loginService;
 	
-	@GetMapping("/login")
+	/*@GetMapping("/login")
 	public String loginForm(Model model) {
 		
 		UmemberVO memberVO = new UmemberVO();
 		model.addAttribute("memberVO", memberVO);
 		
+		return "login/loginForm";
+	}
+	*/
+	
+	@GetMapping("/login")
+	public String loginForm() {
 		return "login/loginForm";
 	}
 	
