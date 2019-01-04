@@ -27,7 +27,7 @@ public class LoginController {
 	@Autowired
 	private LoginService loginService;
 	
-	/*@GetMapping("/login")
+	@GetMapping("/login")
 	public String loginForm(Model model) {
 		
 		UmemberVO memberVO = new UmemberVO();
@@ -35,7 +35,7 @@ public class LoginController {
 		
 		return "login/loginForm";
 	}
-	*/
+	
 	@PostMapping("/login")
 	@ResponseBody
 	public String login(@RequestParam String id , @RequestParam String password, HttpSession session) {
@@ -48,7 +48,7 @@ public class LoginController {
 		
 		if(userVO != null) {
 			session.setAttribute("userVO", userVO);
-			System.out.println("¼¼¼Çµî·Ï");
+			System.out.println("ï¿½ï¿½ï¿½Çµï¿½ï¿½");
 			return "login";
 		}else {
 			return "fail";
@@ -64,16 +64,16 @@ public class LoginController {
 		String msg = "";
 		session.invalidate();
 		if(userVO != null) {
-			// ·Î±×ÀÎ ¼º°ø
-			msg = "¼º°ø";
+			// ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+			msg = "ï¿½ï¿½ï¿½ï¿½";
 			model.addAttribute("msg", msg);
 			session.setAttribute("userVO", userVO);
 			System.out.println(msg+ " : "+ userVO.toString());
 			
 			return "redirect:/";
 		} else {
-			// ·Î±×ÀÎ ½ÇÆÐ
-			msg = "¾ÆÀÌµð ¶Ç´Â ÆÐ½º¿öµå¸¦ Àß¸øÀÔ·ÂÇÏ¼Ì½À´Ï´Ù";
+			// ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+			msg = "ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ç´ï¿½ ï¿½Ð½ï¿½ï¿½ï¿½ï¿½å¸¦ ï¿½ß¸ï¿½ï¿½Ô·ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½";
 			model.addAttribute("msg", msg);
 			return "redirect:/login";
 		}
