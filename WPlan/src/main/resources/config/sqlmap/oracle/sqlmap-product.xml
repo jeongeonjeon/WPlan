@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="kr.co.mlec.product">
+  	
+  <select id="selectAll" parameterType="productVO" resultType="productVO">
+		select p_no, p_name,  c_name, c_info, category, to_char(reg_date, 'yyyy-mm-dd') as reg_date
+		  from w_product
+		 where 
+	</select>
+
+  <select id="selectCategory" parameterType="productVO" resultType="productVO">
+		select p_no, p_name,  c_name, c_info, category, to_char(reg_date, 'yyyy-mm-dd') as reg_date
+		  from w_product
+	</select>
+	
+	<insert id="insert" parameterType="productVO" >
+		insert into w_product (id, password, name, tel, email)
+		values (#{id}, #{password}, #{name}, #{tel}, #{email})
+	</insert>
+	
+	</mapper>
+  
