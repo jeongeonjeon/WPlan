@@ -39,7 +39,7 @@ public class LoginController {
 	
 	@GetMapping("/login")
 	public String loginForm() {
-		return "login/loginForm";
+		return "login/loginForm"; 
 	}
 	
 	@PostMapping("/login")
@@ -54,7 +54,7 @@ public class LoginController {
 		
 		if(userVO != null) {
 			session.setAttribute("userVO", userVO);
-			System.out.println("ï¿½ï¿½ï¿½Çµï¿½ï¿½");
+			System.out.println("·Î±×ÀÎ ÄÁÆ®·Ñ·¯");
 			return "login";
 		}else {
 			return "fail";

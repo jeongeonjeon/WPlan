@@ -816,6 +816,7 @@
 							<input class="submit_btn basic_btn" type="button"
 								id="comment_btn" value="등록">
 						</div>
+						<!-- QnA -->
 						<div class="reply_contents_wrap">
 							<div class="reply_content">
 								<p class="id">
