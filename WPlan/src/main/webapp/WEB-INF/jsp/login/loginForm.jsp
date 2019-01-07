@@ -70,7 +70,7 @@ function login() {
 	                    </h3>                        
 	                </div>
 	                <div class="login-body">
-	                    
+	                   
 	                    <div class="ctnr1-login" id="form_login">
 	                    
 	                        <div class="form-group">
@@ -102,7 +102,7 @@ function login() {
 	                                <input type="hidden" class="auto_login_on" value="1">
 	                                <input type="hidden" class="login_token" value="">
 	                           <!-- 로그인 버튼 -->
-	                                <button type="submit" class="fill-orange call_login mt-ladda-btn ladda-button" data-style="zoom-in" onclick="login()"> 로그인 </button>	                                
+	                                <button type="submit" class="fill-orange call_login mt-ladda-btn ladda-button" data-style="zoom-in" onclick="login()" > 로그인 </button>	                                
 	                            </div>
 	                        </div>
 	                      

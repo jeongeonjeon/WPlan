@@ -1,5 +1,6 @@
 package kr.co.mlec.guide.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -32,13 +33,14 @@ public class GuideController {
 	}
 	
 	@PostMapping("/weddingGuide")
-	public ModelAndView weddingTodo(@Valid GuideVO guideVO , BindingResult result, HttpSession session, ModelAndView mav) {
+	public ModelAndView weddingTodo(@Valid GuideVO guideVO , BindingResult result, HttpServletRequest request, ModelAndView mav) {
 		if(result.hasErrors()) {
 			mav.setViewName("weddingGuide");
 			return mav;
 		}
-		UmemberVO userVO = (UmemberVO)session.getAttribute("userVO");
-		guideVO.setId(userVO.getId());
+		HttpSession session = request.getSession();
+		UmemberVO user = (UmemberVO)session.getAttribute("userVO");
+		guideVO.setId(user.getId());
 		guideService.insertInfo(guideVO);
 		mav.addObject("guideVO", guideVO);
 		mav.setViewName("weddingTodo");
@@ -47,11 +49,15 @@ public class GuideController {
 	}
 	
 	@GetMapping("/weddingTodo")
-	public String weddingTodo(Model model, HttpSession session) {
-		UmemberVO userVO = (UmemberVO)session.getAttribute("userVO");
-		String id = userVO.getId();
+	public String weddingTodo(Model model, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		UmemberVO user = (UmemberVO)session.getAttribute("userVO");
+		System.out.println(user);
+		String id = user.getId();
+		System.out.println(id);
 		GuideVO guideVO = guideService.getGuide(id);
 		model.addAttribute("guideVO", guideVO);
+		System.out.println(guideVO);
 		return "weddingTodo";
 	}
 

@@ -103,9 +103,6 @@ header .fa {
 .text-right .loginMenu span{
 	font-size: 15px
 } 
-.text-right .loginMenu .logout{
-	display: none;
-}
 
 .navbar-dark .navbar-nav .nav-link:hover,
 

@@ -1,5 +1,6 @@
 package kr.co.mlec.umember.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -59,9 +60,16 @@ public class LoginController {
 		}else {
 			return "fail";
 		}
-		
-		
 	}
+	
+	@GetMapping("/logout")
+	public String logout(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		session.removeAttribute("userVO");
+		System.out.println("로그아웃 컨트롤러");
+		return "redirect:/";
+	}
+	
 	/*public String login(@Valid @ModelAttribute("memberVO") UmemberVO memberVO,Model model, HttpSession session) {
 
 		UmemberVO userVO = loginService.login(memberVO);
@@ -85,7 +93,7 @@ public class LoginController {
 		}
 	}*/
 	
-	@RequestMapping("/logout")
+	/*@RequestMapping("/logout")
 	public String logout(SessionStatus sessionStatus) {		
 		
 //		System.out.println(sessionStatus.isComplete());
@@ -93,5 +101,5 @@ public class LoginController {
 //		System.out.println(sessionStatus.isComplete());
 		
 		return "redirect:/";
-	}
+	}*/
 }

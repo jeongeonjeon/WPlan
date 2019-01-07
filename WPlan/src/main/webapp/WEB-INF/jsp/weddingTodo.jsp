@@ -52,11 +52,13 @@
 				<p>TO DO LIST</p>
 				<form:form method="post" commandName="guideVO">
 				<div>
-					<c:if test="${guideVO.premeet ne noneed}" >
-					<form:checkbox path="premeet" />
-					</c:if>
-				</form:form>
+					<c:choose>
+						<c:when test="${guideVO.premeet eq 'true'}">
+							<form:radiobutton path="premeet" checked="true"/>상견례
+						</c:when>
+					</c:choose>			
 				</div>
+				</form:form>
 				<br>
 				
 			</div>
