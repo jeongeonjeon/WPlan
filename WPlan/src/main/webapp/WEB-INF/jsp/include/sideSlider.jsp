@@ -88,4 +88,18 @@
 		</li>
 		
 	</ul>
+	
+	
+	<ul class="asideWrap">
+		<li class="aside myPage">
+			<a href="${ pageContext.request.contextPath }/weddingGuide">
+				<span >웨딩가이드</span>
+			</a>
+		</li>
+<!-- 		<li class="aside myPage"> -->
+<%-- 			<a href="${ pageContext.request.contextPath }/member/myPage"> --%>
+<!-- 				<span >사이트 이용 가이드</span> -->
+<!-- 			</a> -->
+<!-- 		</li> -->
+	</ul>
 </aside>
