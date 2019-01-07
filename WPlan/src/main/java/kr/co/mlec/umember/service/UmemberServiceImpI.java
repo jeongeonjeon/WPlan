@@ -16,4 +16,10 @@ public class UmemberServiceImpI implements UmemberService {
 	public void insertUmember(UmemberVO umemberVO) {
 		umemberDao.insertUmember(umemberVO);
 	}
+	
+	@Override
+	public UmemberVO selectUmember(UmemberVO umemberVO) {
+		UmemberVO userVO = umemberDao.selectUmember(umemberVO);
+		return userVO;
+	}
 }

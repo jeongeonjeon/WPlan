@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html>
 
@@ -15,7 +16,7 @@
 </head>
 <body>
 	<div id="wrapper">
-		<jsp:include page="/WEB-INF/jsp/login/loginForm.jsp" />
+		<c:import url="/login" />
 		<header class="header bg">
 			<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" />
 		</header>
@@ -28,7 +29,6 @@
 		<!--Section-1-->
 		<section class="section-1">
 			<div class="jumbotron d-flex align-items-center"> 
-			
 			</div>
 		</section>
 		
@@ -39,7 +39,6 @@
 					<h4>W:PLAN과 함께 하나뿐인 당신의 결혼식을 만들어보세요</h4>
 					<p> 스몰 웨딩 플랜 W:PLAN과 함께라면 어렵지 않습니다. <br>
 					다양한 선택지와 시뮬레이션으로 그 자리에서 직접 당신의 결혼식을 미리 보여드립니다.</p>
-									
 				</div>
 		
 		<div class="container main" id="dress">

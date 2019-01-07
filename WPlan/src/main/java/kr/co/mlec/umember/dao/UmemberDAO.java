@@ -6,4 +6,6 @@ public interface UmemberDAO {
 
 	public void insertUmember(UmemberVO umemberVO);
 
+	public UmemberVO selectUmember(UmemberVO umemberVO);
+
 }
