@@ -23,6 +23,13 @@
 .modal-form-list {
  	display: none;
 }
+.modal-form-list{
+	padding : 0 100px;
+}
+.modal-form-list form{
+	padding : 0 100px;
+}
+
 </style>
 <script>
 	function next(txt) {
