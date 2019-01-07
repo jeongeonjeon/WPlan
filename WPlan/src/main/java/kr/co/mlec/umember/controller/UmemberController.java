@@ -22,6 +22,10 @@ public class UmemberController {
 	public String mypage() {
 		return "member/myPage";
 	}
+	@GetMapping("/member/cmyPage")
+	public String cmypage() {
+		return "member/cmyPage";
+	}
 
 	@GetMapping("/member/cJoinForm")
 	public String cjoinform() {
@@ -43,7 +47,7 @@ public class UmemberController {
 		ModelAndView mav = new ModelAndView();
 
 		if(userVO == null) {
-			mav.addObject("msg","ºñ¾îÀÖ´Â Ç×¸ñÀ» Ã¤¿öÁÖ¼¼¿ä");
+			mav.addObject("msg","ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 			mav.setViewName("redirect:/uJoinForm");
 		} else {
 			mav.setViewName("redirect:/");
