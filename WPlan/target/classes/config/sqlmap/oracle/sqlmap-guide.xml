@@ -10,9 +10,9 @@
 			   , #{food}, #{letter}, #{mc}, #{present}, #{honeymoon}, #{represent}, #{home})
 	</insert>
 	
-	<select id="selectGuide" parameterType="String">
-		select *
+	<select id="selectGuide" parameterType="string" resultType="guideVO">
+		select u_id as id, premeet, studio, dress, tuxedo, makeup, bouquet, location, deco, food, letter, mc, present, honeymoon, represent, home
 		from w_guide
-		where id = #{id}
+		where u_id = #{id}
 	</select>
 </mapper>
