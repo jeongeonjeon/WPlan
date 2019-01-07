@@ -24,9 +24,9 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public ProductVO selectCategory(ProductVO product) {
 
-		ProductVO productvo = sqlSession.selectOne("kr.co.mlec.product.selectByNo", product);
-		
-		return productvo;
+/*		ProductVO productvo = sqlSession.selectOne("kr.co.mlec.product.selectCategory", product);
+*/		
+		return null/*productvo*/;
 	}
 	
 ////	댓글 카운트 증가

@@ -35,7 +35,7 @@ public class ProductController {
    }
    
    @GetMapping("/product/location")
-   public String location(@RequestParam("p_name") String name) {
+   public String location(/*@RequestParam("p_name")*/ String name) {
 	   ProductVO proVO = new ProductVO();
 	   
 	   proVO.setP_name(name);
