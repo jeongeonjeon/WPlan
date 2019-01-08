@@ -1,5 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<style>
+	.loginMenu span {
+		color : black!important;
+	}
+</style>
+<script>
+
+	$(document).ready(function(){
+		
+		
+		$('#logout').click(function(){
+			location.href="${pageContext.request.contextPath}/logout";
+		});
+	});
+
+
+</script>
 <div class="container text-white">
 	<div class="row">
 		<div class="col-sm-4 align-self-center text-left">
@@ -11,10 +29,16 @@
 		</div>
 		<div class="col-sm-4 align-self-center text-right">
 			<div class="loginMenu">
-				<a href="#"><span class="login">login</span></a>
-				<a href="#"><span class="logout">logout</span></a> 
+				<c:choose>
+					<c:when test="${empty userVO }">
+						<span class="login">login</span>
+					</c:when>
+					<c:otherwise>
+						<span class="logout" id="logout">logout</span>
+					</c:otherwise> 
+				</c:choose>
 			</div>
 		</div>
 	</div>
-	<!--/row-->
+	<!--/row--> 
 </div>

@@ -20,7 +20,7 @@
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="url" value="jdbc:oracle:thin:@192.168.0.32:1521:xe" />
 		<property name="username" value="hr" />
 		<property name="password" value="hr" />
 	</bean>
@@ -42,7 +42,8 @@
 	<mvc:view-controller path="/footer" view-name="include/footer" />
 
 	<!--  LoginInterceptor 설정 -->
-	<!--  <bean id="loginInterceptor" class="kr.co.mlec.interceptor.LoginInterceptor" />
+	<!--  
+	<bean id="loginInterceptor" class="kr.co.mlec.interceptor.LoginInterceptor" />
 
 	<mvc:interceptors>
 		<mvc:interceptor>
@@ -50,5 +51,6 @@
 			<mvc:exclude-mapping path="/login" />
 			<ref bean="LoginInterceptor" />
 		</mvc:interceptor>
-	</mvc:interceptors> -->
+	</mvc:interceptors> 
+	-->
 </beans>

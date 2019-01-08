@@ -95,7 +95,7 @@
 	    
 	    $(document).ready(function(){
 	    	$('.rMenu .calendar').click(function(){
-	    		location.href="${ pageContext.request.contextPath }/calendar.jsp";
+	    		location.href="${ pageContext.request.contextPath }/calendar";
 	    	});
 	    	$('.rMenu .myInfo').click(function(){
 	    		location.href="${ pageContext.request.contextPath }/member/myPage.jsp";

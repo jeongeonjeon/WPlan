@@ -56,6 +56,29 @@ public class QnaVO {
 	public void setqNo(int qNo) {
 		this.qNo = qNo;
 	}
+
+	public QnaVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public QnaVO(int no, String id, String content, String regDate, int pNo, int qNo) {
+		super();
+		this.no = no;
+		this.id = id;
+		this.content = content;
+		this.regDate = regDate;
+		this.pNo = pNo;
+		this.qNo = qNo;
+	}
+
+	@Override
+	public String toString() {
+		return "QnaVO [no=" + no + ", id=" + id + ", content=" + content + ", regDate=" + regDate + ", pNo=" + pNo
+				+ ", qNo=" + qNo + "]";
+	}
+	
+	
 	
 	
 

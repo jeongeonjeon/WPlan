@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<script src="${ pageContext.request.contextPath }/resources/js/checkForm.js"></script>
 <script>
 $(document).ready(function(){
 
@@ -9,9 +11,50 @@ $(document).ready(function(){
 	$('.loginMenu span.login').click(function(){
 		$('.login_area').css("display","block");
 	});
-
-	
 });
+
+function checkForm() {
+	var f = document.form_login;
+	
+	if(isNull(f.login_id, "아이디를 입력하세요")) {
+		return false;
+	}
+	
+	if(isNull(f.login_pw, "패스워드를 입력하세요")) {
+		return false;
+	}
+	return true;
+};
+
+function login() {
+	$.ajax({
+		url:"${pageContext.request.contextPath}/login",
+		type: "POST",
+		data : {
+			id : $('#login_id').val(),
+			password : $('#login_pw').val()
+		},
+		success : function(result){
+			console.log(result);
+			if(result != "fail"){
+				$('#login_id').val('');
+				$('#login_pw').val('');
+				$(".popup_cover").removeClass("on");
+				$(".popup_cover").addClass("off");
+				$(".login_popup").removeClass("on");
+				$(".login_popup").addClass("off");
+				location.reload();
+			}else{
+				alert('로그인에 실패하였습니다.');
+				$('#login_id').val('');
+				$('#login_pw').val('');
+			}
+				
+				
+			}
+		
+	});
+}
 
 </script>
 <div class="login_area">
@@ -27,20 +70,24 @@ $(document).ready(function(){
 	                    </h3>                        
 	                </div>
 	                <div class="login-body">
-	                    
+	                   
 	                    <div class="ctnr1-login" id="form_login">
+	                    
 	                        <div class="form-group">
 	                            <div class="input-group">
 	                                <span class="input-group-addon" id="sizing-addon1"><span>아이디</span></span>
-	                                <div class="eac-input-wrap" style="display: block; position: relative; font-size: 14px;"><input type="text" class="form-control form_input valid_email input_necessary" id="login_id" autocomplete="off" value="" aria-describedby="sizing-addon1"><span class="email-sugg" style="display: block; box-sizing: content-box; line-height: 19.992px; padding-top: 7px; padding-bottom: 7px; font-family: &quot;Noto Sans KR&quot;, &quot;Open Sans&quot;, &quot;Nanum Gothic&quot;, NanumGothic, Gulim, 굴림, Dotum, 돋움, Arial, sans-serif; font-weight: 400; letter-spacing: 0px; position: absolute; top: 0px; left: 0px;"></span><span class="eac-cval" style="visibility: hidden; position: absolute; display: inline-block; font-family: &quot;Noto Sans KR&quot;, &quot;Open Sans&quot;, &quot;Nanum Gothic&quot;, NanumGothic, Gulim, 굴림, Dotum, 돋움, Arial, sans-serif; font-weight: 400; letter-spacing: 0px;"></span></div>
+	                                <div class="eac-input-wrap" style="display: block; position: relative; font-size: 14px;">
+	                                <input type="text" class="form-control form_input valid_email input_necessary" id="login_id" name="login_id" autocomplete="off" aria-describedby="sizing-addon1" value="">
+	                                <span class="email-sugg" style="display: block; box-sizing: content-box; line-height: 19.992px; padding-top: 7px; padding-bottom: 7px; font-family: &quot;Noto Sans KR&quot;, &quot;Open Sans&quot;, &quot;Nanum Gothic&quot;, NanumGothic, Gulim, 굴림, Dotum, 돋움, Arial, sans-serif; font-weight: 400; letter-spacing: 0px; position: absolute; top: 0px; left: 0px;"></span><span class="eac-cval" style="visibility: hidden; position: absolute; display: inline-block; font-family: &quot;Noto Sans KR&quot;, &quot;Open Sans&quot;, &quot;Nanum Gothic&quot;, NanumGothic, Gulim, 굴림, Dotum, 돋움, Arial, sans-serif; font-weight: 400; letter-spacing: 0px;"></span></div>
 	                            </div>
 	                        </div>
 	                        <div class="form-group">
 	                            <div class="input-group">
 	                                <span class="input-group-addon" id="sizing-addon2"><span>비밀번호</span></span>
-	                                <input type="password" class="form-control form_input input_necessary" id="login_pw" autocomplete="off" aria-describedby="sizing-addon2">
+	                                <input type="password" class="form-control form_input input_necessary" id="login_pw" name="login_pw" autocomplete="off" aria-describedby="sizing-addon2" />
 	                            </div>
 	                        </div>
+	                    
 	                        <div class="box2-login">
 
 	                            <div class="section2-login auto_login">
@@ -54,9 +101,11 @@ $(document).ready(function(){
 	                                </div>
 	                                <input type="hidden" class="auto_login_on" value="1">
 	                                <input type="hidden" class="login_token" value="">
-	                                <button class="fill-orange call_login mt-ladda-btn ladda-button" data-style="zoom-in"> 로그인 </button>
+	                           <!-- 로그인 버튼 -->
+	                                <button type="submit" class="fill-orange call_login mt-ladda-btn ladda-button" data-style="zoom-in" onclick="login()" > 로그인 </button>	                                
 	                            </div>
 	                        </div>
+	                      
 	                        <div class="box3-login">
 	                            <div class="text1-login">
 	                               	 아이디나 비밀번호가 기억나지 않으세요?
@@ -86,10 +135,10 @@ $(document).ready(function(){
 	                            <button class="white">회원가입하기</button>
 	                        </a>
 	                        <div class="clearfix"></div>
-	                    </div>                    
+	                    </div>
 	                </div>
 	            </div>
 	        </div>
-	    </div>        
+	    </div>
 	</div>
 </div>
