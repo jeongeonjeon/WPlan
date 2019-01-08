@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+
+
 <script src="${ pageContext.request.contextPath }/resources/js/checkForm.js"></script>
 <script>
 $(document).ready(function(){
@@ -11,6 +14,8 @@ $(document).ready(function(){
 	$('.loginMenu span.login').click(function(){
 		$('.login_area').css("display","block");
 	});
+	
+
 });
 
 function checkForm() {
@@ -37,25 +42,33 @@ function login() {
 		success : function(result){
 			console.log(result);
 			if(result != "fail"){
+				if($("input:checkbox[id='auto_login']").prop("checked") == true){
+					var setCookie = function(name, value, exp) {
+					   var date = new Date();
+					   date.setTime(date.getTime() + exp*24*60*60*1000);
+					   document.cookie = $('#login_id').val() + '=' + $('#login_pw').val() + ';expires=' + date.toUTCString() + ';path=/';
+					};
+
+					setCookie($('#login_id').val(), $('#login_pw').val(), 7); /* name=Ethan, 7일 뒤 만료됨 */
+				}
 				$('#login_id').val('');
 				$('#login_pw').val('');
 				$(".popup_cover").removeClass("on");
 				$(".popup_cover").addClass("off");
 				$(".login_popup").removeClass("on");
 				$(".login_popup").addClass("off");
+				
+				
 				location.reload();
 			}else{
 				alert('로그인에 실패하였습니다.');
 				$('#login_id').val('');
 				$('#login_pw').val('');
 			}
-				
-				
-			}
-		
+		}
 	});
+	
 }
-
 </script>
 <div class="login_area">
 	<div class="login_background"></div>
@@ -96,7 +109,7 @@ function login() {
 	                                    <label for="remember_id" class="chekbox-small text1-login">ID기억하기</label>
 	                                </div>
 	                                <div class="box-checkbox">
-	                                    <input type="checkbox" id="auto_login" class="form_input skip_valid" value="1">
+	                                    <input type="checkbox" name="auto_login" id="auto_login" class="form_input skip_valid" value="1">
 	                                    <label for="auto_login" class="chekbox-small text1-login">자동로그인</label>                                   
 	                                </div>
 	                                <input type="hidden" class="auto_login_on" value="1">
