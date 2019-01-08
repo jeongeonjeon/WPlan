@@ -1,10 +1,12 @@
 package kr.co.mlec.addcom.controller;
 
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -44,4 +46,17 @@ public class AddcomController {
 		return mav;
 	}
 	
+	public void checkBox(ServletRequest request) {
+		String chkName[] = ServletRequestUtils.getStringParameters(request, "chkName");
+		String sumchkName = "";
+		
+		for(int i = 0 ; i < chkName.length ; i++) {
+			if(i == (chkName.length -1)) {
+				sumchkName=sumchkName + chkName[i];
+			} else {
+				sumchkName = sumchkName + chkName[i] + ",";
+			}
+			System.out.println(sumchkName);
+		}
+	}
 }
