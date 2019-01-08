@@ -6,7 +6,7 @@
      <div class="collapse navbar-collapse" id="navbar1">
          <ul class="navbar-nav">
              <li class="nav-item">
-                 <a class="nav-link" href="${ pageContext.request.contextPath }/product/dressType">드레스</a>
+                 <a class="nav-link" href="${ pageContext.request.contextPath }/product/dress">드레스</a>
              </li>
              <li class="nav-item">
                  <a class="nav-link" href="${ pageContext.request.contextPath }/product/tuxedo">턱시도</a>

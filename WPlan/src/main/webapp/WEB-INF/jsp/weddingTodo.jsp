@@ -12,8 +12,8 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <title>more</title>
-<link rel="stylesheet"
-	href="${ pageContext.request.contextPath }/resources/css/member.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/member.css">
 <jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 
 <style type="text/css">
@@ -48,16 +48,24 @@
 			<div class="container section-2">
 				<br>
 				<h3>결혼가이드</h3>
+<%-- 				${ todoList[0] } --%>
 				<br>
 				<p>TO DO LIST</p>
+				<c:set var="i" value="0" />
 				<form:form method="post" commandName="guideVO">
-				<div>
-					<c:choose>
-						<c:when test="${guideVO.premeet eq 'true'}">
-							<form:radiobutton path="premeet" checked="true"/>상견례
-						</c:when>
-					</c:choose>			
-				</div>
+					<c:forEach items="${ requestScope.todoList }" var="todo">
+						<c:set var="i" value="${i+1}" />
+						<div>
+							<c:choose>
+								<c:when test="${todo eq 'true'}">
+									<form:radiobutton path="${ todoListEng[i] }" checked="true"/>${todoListKor[i]}
+								</c:when>
+								<c:when test="${todo eq 'false'}">
+									<form:radiobutton path="${ todoListEng[i] }" />${todoListKor[i]}
+								</c:when>								
+							</c:choose>
+						</div>
+					</c:forEach>
 				</form:form>
 				<br>
 				
