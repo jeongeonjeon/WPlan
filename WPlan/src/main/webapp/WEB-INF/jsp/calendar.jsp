@@ -30,9 +30,11 @@
        folder instead of downloading all of them to reduce the load. -->
 <link rel="stylesheet"
 	href="${ pageContext.request.contextPath }/resources/css/calendar/_all-skins.min.css">
+	<link rel="stylesheet"
+	href="${ pageContext.request.contextPath }/resources/css/member.css">
 <style>
 .content{
-	width:80%;
+	width:95%;
     box-shadow: 0 0 25px rgba(0, 0, 0, .15) !important;
 }
 </style>
@@ -230,6 +232,16 @@
 	<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</nav>
+		<aside class="rAside">
+		<div>
+			<ul class="rMenu">
+				<li class="calendar"><a href="${ pageContext.request.contextPath }/calendar">캘린더</a></li>
+				<li class="rList"><a href="#">예약리스트</a></li>
+				<li class="myInfo"><a href="${ pageContext.request.contextPath }/member/cmypage">내 정보</a></li>
+				<li class="myInfo"><a href="${ pageContext.request.contextPath }/addcom">업체등록</a></li>
+			</ul>
+		</div>
+		</aside>
 	<div class="wrapper">
 
 		<!-- Left side column. contains the logo and sidebar -->
