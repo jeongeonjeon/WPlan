@@ -2385,6 +2385,9 @@ textarea.form-control {
 	.section-2 .textBox {
 	    max-width: 95%;
 	}
+	.section-2 .dressType .imgBox {
+		margin: 0 auto;
+	}
 }
 
 @media(max-width:768px) {

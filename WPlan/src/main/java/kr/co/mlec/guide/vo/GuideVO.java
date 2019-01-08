@@ -152,14 +152,10 @@ public class GuideVO {
 		return "GuideVO [id=" + id + ", premeet=" + premeet + ", studio=" + studio + ", dress=" + dress + ", tuxedo="
 				+ tuxedo + ", makeup=" + makeup + ", bouquet=" + bouquet + ", location=" + location + ", deco=" + deco
 				+ ", food=" + food + ", letter=" + letter + ", mc=" + mc + ", present=" + present + ", honeymoon="
-				+ honeymoon + ", represent=" + represent + ", home=" + home + ", getId()=" + getId() + ", getPremeet()="
-				+ getPremeet() + ", getStudio()=" + getStudio() + ", getDress()=" + getDress() + ", getTuxedo()="
-				+ getTuxedo() + ", getMakeup()=" + getMakeup() + ", getBouquet()=" + getBouquet() + ", getLocation()="
-				+ getLocation() + ", getDeco()=" + getDeco() + ", getFood()=" + getFood() + ", getLetter()="
-				+ getLetter() + ", getMc()=" + getMc() + ", getPresent()=" + getPresent() + ", getHoneymoon()="
-				+ getHoneymoon() + ", getRepresent()=" + getRepresent() + ", getHome()=" + getHome() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+				+ honeymoon + ", represent=" + represent + ", home=" + home + "]";
 	}
+
+
 	
 	
 	

@@ -13,7 +13,6 @@
 <title>more</title>
 <jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 
-
 </head>
 <body>
 	<div id="wrapper">
@@ -57,7 +56,7 @@
 					</div>
 					<div class="col-lg-4 col-sm-12 col-12 dressType box-2">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-							<div>
+							<div class="imgBox">
 								<img
 									src="${ pageContext.request.contextPath }/resources/images/dressType2.png"
 									class="figure-img img-fluid" alt="blog">
@@ -71,7 +70,7 @@
 					</div>
 					<div class="col-lg-4 col-sm-12 col-12 dressType box-3">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-							<div>
+							<div class="imgBox">
 								<img
 									src="${ pageContext.request.contextPath }/resources/images/dressType3.png"
 									class="figure-img img-fluid" alt="blog">
@@ -85,7 +84,7 @@
 					</div>
 					<div class="col-lg-4 col-sm-12 col-12 dressType box-4">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-							<div>
+							<div class="imgBox">
 								<img
 									src="${ pageContext.request.contextPath }/resources/images/dressType4.png"
 									class="figure-img img-fluid" alt="blog">

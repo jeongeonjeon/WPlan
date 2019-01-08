@@ -53,7 +53,6 @@ public class LoginController {
 		
 		if(userVO != null) {
 			session.setAttribute("userVO", userVO);
-			System.out.println("로그인 컨트롤러");
 			return "login";
 		}else {
 			return "fail";
@@ -64,7 +63,6 @@ public class LoginController {
 	public String logout(HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		session.removeAttribute("userVO");
-		System.out.println("로그아웃 컨트롤러");
 		return "redirect:/";
 	}
 	

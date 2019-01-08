@@ -17,6 +17,7 @@
 <body>
 	<div id="wrapper">
 		<c:import url="/login" />
+		
 		<header class="header bg">
 			<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" />
 		</header>

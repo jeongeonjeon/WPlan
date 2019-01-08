@@ -57,7 +57,14 @@ public class GuideController {
 		System.out.println(id);
 		GuideVO guideVO = guideService.getGuide(id);
 		model.addAttribute("guideVO", guideVO);
-		System.out.println(guideVO);
+		String[] todoList = {guideVO.getPremeet(),guideVO.getStudio(),guideVO.getDress(),guideVO.getTuxedo(),guideVO.getMakeup(),guideVO.getBouquet(),guideVO.getLocation()
+				, guideVO.getDeco(),guideVO.getFood(),guideVO.getLetter(),guideVO.getMc(),guideVO.getPresent(),guideVO.getHoneymoon(),guideVO.getRepresent(),guideVO.getHome()};
+		String[] todoListEng = {"premeet", "studio", "dress", "tuxedo", "makeup", "bouquet", "location", "deco", "food", "letter", "mc", "present", "honeymoon", "represent", "home"};
+		String[] todoListKor = {"상견례", "스튜디오", "드레스", "턱시도", "메이크업", "부케", "결혼식 장소","식장 데코", "음식", "청첩장","사회자 /주례", "예단/예물", "신혼여행", "답례품", "신혼집"};
+		request.setAttribute("todoList", todoList);
+		request.setAttribute("todoListEng", todoListEng);
+		request.setAttribute("todoListKor", todoListKor);
+//		System.out.println(guideVO);
 		return "weddingTodo";
 	}
 
