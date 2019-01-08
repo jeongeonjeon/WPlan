@@ -96,7 +96,7 @@ padding: 0px;
 			   			<td><input type="checkbox">&nbsp;&nbsp;주류</td>
 			   			<td><input type="checkbox">&nbsp;&nbsp;흡연</td>
 			   			<td><input type="checkbox">&nbsp;&nbsp;숙박</td>
-			   			<td><input type="checkbox">&nbsp;&nbsp;주차</td>
+
 			   		</tr>
 			   		<tr>
 			   			<td><input type="checkbox">&nbsp;&nbsp;발렛</td>
@@ -155,8 +155,10 @@ padding: 0px;
 				</form>
 				<hr>
 
-				<button type="button" style="width:100px;">등록</button>
-				<button type="button" style="width:100px; margin-left:30px;">취소</button>
+				<button type="submit" style="width:100px;">등록</button>
+				<a href="${ pageContext.request.contextPath }/member/myPage">
+				<button type="submit" style="width:100px; margin-left:30px;">취소</button>
+				</a>
 			</div>
 		</div>
 		
