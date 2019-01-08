@@ -20,8 +20,6 @@ import kr.co.mlec.umember.service.LoginService;
 import kr.co.mlec.umember.vo.UmemberVO;
 
 
-
-@SessionAttributes("userVO")
 @Controller
 public class LoginController {
 
