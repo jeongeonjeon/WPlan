@@ -51,48 +51,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-sm-12 col-12 box-2">
-						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-	
-							<a href="${ pageContext.request.contextPath }/detail">
-							<img src="${ pageContext.request.contextPath }/resources/images/food2.jpg" class="figure-img img-fluid" alt="blog">
-							</a>
-							<div class="col-lg-10 col-sm-12">
-								<h4>
-									<a href="${ pageContext.request.contextPath }/detail">woon</a>
-								</h4>
-	
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-12 col-12 box-3">
-						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-	
-							<a href="${ pageContext.request.contextPath }/detail">
-							<img src="${ pageContext.request.contextPath }/resources/images/food2.jpg" class="figure-img img-fluid" alt="blog">
-							</a>
-							<div class="col-lg-10 col-sm-12">
-								<h4>
-									<a href="${ pageContext.request.contextPath }/detail">JH SHOP</a>
-								</h4>
-	
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-12 col-12 box-4">
-						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-	
-							<a href="${ pageContext.request.contextPath }/detail">
-							<img src="${ pageContext.request.contextPath }/resources/images/food1.jpg" class="figure-img img-fluid" alt="blog">
-							</a>
-							<div class="col-lg-10 col-sm-12">
-								<h4>
-									<a href="${ pageContext.request.contextPath }/detail">JEE</a>
-								</h4>
-	
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>

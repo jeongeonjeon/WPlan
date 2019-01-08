@@ -1,5 +1,6 @@
 package kr.co.mlec.umember.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -39,7 +40,7 @@ public class LoginController {
 	
 	@GetMapping("/login")
 	public String loginForm() {
-		return "login/loginForm";
+		return "login/loginForm"; 
 	}
 	
 	@PostMapping("/login")
@@ -54,14 +55,21 @@ public class LoginController {
 		
 		if(userVO != null) {
 			session.setAttribute("userVO", userVO);
-			System.out.println("ï¿½ï¿½ï¿½Çµï¿½ï¿½");
+			System.out.println("·Î±×ÀÎ ÄÁÆ®·Ñ·¯");
 			return "login";
 		}else {
 			return "fail";
 		}
-		
-		
 	}
+	
+	@GetMapping("/logout")
+	public String logout(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		session.removeAttribute("userVO");
+		System.out.println("·Î±×¾Æ¿ô ÄÁÆ®·Ñ·¯");
+		return "redirect:/";
+	}
+	
 	/*public String login(@Valid @ModelAttribute("memberVO") UmemberVO memberVO,Model model, HttpSession session) {
 
 		UmemberVO userVO = loginService.login(memberVO);
@@ -85,7 +93,7 @@ public class LoginController {
 		}
 	}*/
 	
-	@RequestMapping("/logout")
+	/*@RequestMapping("/logout")
 	public String logout(SessionStatus sessionStatus) {		
 		
 //		System.out.println(sessionStatus.isComplete());
@@ -93,5 +101,5 @@ public class LoginController {
 //		System.out.println(sessionStatus.isComplete());
 		
 		return "redirect:/";
-	}
+	}*/
 }
