@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import kr.co.mlec.guide.dao.GuideDAO;
 import kr.co.mlec.guide.vo.GuideVO;
 
+
 @Service
 public class GuideServiceImpl implements GuideService {
 	
@@ -20,8 +21,8 @@ public class GuideServiceImpl implements GuideService {
 
 	@Override
 	public GuideVO getGuide(String id) {
-		guideDao.getGuide(id);
-		return null;
+		GuideVO guideVO = guideDao.getGuide(id);
+		return guideVO;
 	}
 
 }

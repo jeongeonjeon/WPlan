@@ -11,8 +11,7 @@
 
 
 <title>more</title>
-<link rel="stylesheet"
-	href="${ pageContext.request.contextPath }/resources/css/member.css">
+
 <jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 
 </head>
@@ -20,13 +19,12 @@
 .section-22 {
 padding: 0px;
     margin: 5px auto;
-/*     background: #FAFAFD; */
-    width:75%;
+    background: #FAFAFD;
+    width: 95%;
 }
 .section-22 .box{
-    margin-left: 10%;
-    padding: 10px calc(( 100% - 1000px) / 2 + 40px);
-     box-shadow: 0 0 25px rgba(0, 0, 0, .15) !important;
+    padding: 10px calc(( 100% - 1000px) / 2 + 10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, .15) !important;   
 
 }
 
@@ -64,16 +62,7 @@ padding: 0px;
 			<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 		</nav>
 		<!--Section-1-->
-		<aside class="rAside">
-			<div>
-				<ul class="rMenu">
-					<li class="calendar"><a href="${ pageContext.request.contextPath }/calendar">캘린더</a></li>
-					<li class="rList"><a href="#">예약리스트</a></li>
-					<li class="myInfo"><a href="${ pageContext.request.contextPath }/member/cmyPage">내 정보</a></li>
-					<li class="myInfo"><a href="${ pageContext.request.contextPath }/addcom">업체등록</a></li>
-				</ul>
-			</div>
-		</aside>
+
 
 		<div class="container detail section-22">
 			
@@ -107,7 +96,7 @@ padding: 0px;
 			   			<td><input type="checkbox">&nbsp;&nbsp;주류</td>
 			   			<td><input type="checkbox">&nbsp;&nbsp;흡연</td>
 			   			<td><input type="checkbox">&nbsp;&nbsp;숙박</td>
-			   			<td><input type="checkbox">&nbsp;&nbsp;주차</td>
+
 			   		</tr>
 			   		<tr>
 			   			<td><input type="checkbox">&nbsp;&nbsp;발렛</td>
@@ -166,8 +155,10 @@ padding: 0px;
 				</form>
 				<hr>
 
-				<button type="button" style="width:100px;">등록</button>
-				<button type="button" style="width:100px; margin-left:30px;">취소</button>
+				<button type="submit" style="width:100px;">등록</button>
+				<a href="${ pageContext.request.contextPath }/member/myPage">
+				<button type="submit" style="width:100px; margin-left:30px;">취소</button>
+				</a>
 			</div>
 		</div>
 		

@@ -7,5 +7,8 @@
 
  		<typeAlias type="kr.co.mlec.umember.vo.UmemberVO" alias="umemberVO"/>
 		<typeAlias type="kr.co.mlec.guide.vo.GuideVO" alias="guideVO"/>
+		<typeAlias type="kr.co.mlec.product.vo.ProductVO" alias="productVO"/>
+		<typeAlias type="kr.co.mlec.addcom.vo.AddcomVO" alias="addcomVO"/>
+		
  	</typeAliases>
 </configuration>
