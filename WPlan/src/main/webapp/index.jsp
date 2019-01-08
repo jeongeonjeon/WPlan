@@ -3,16 +3,50 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html>
-
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport"	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<jsp:include page="/WEB-INF/jsp/include/head.jsp" />
-
 	<link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 	<script	src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+<script>
+$(document).ready(function(){
+		if($('.loginMenu').children('.login').length === 1 && document.cookie.split('=')[1] != ''){
+			window.onload = function getCookie(name) {
+			    var cookieData = document.cookie;
+// 			    alert(cookieData);
+			    
+			    var jbString = cookieData;
+			    var jbSplit = jbString.split('=');
+			    
+			    for ( var i in jbSplit ) {
+			      jbSplit[i];
+			    }
+			    var id = jbSplit[0];
+			    var password = jbSplit[1];
+			    
+			$.ajax({
+				url:"${pageContext.request.contextPath}/login",
+				type: "POST",
+				data : {
+					id : id,
+					password : password
+				},
+				success : function(result){
+					console.log(result);
+					if(result != "fail"){
+						location.reload();
+					}else{
+						alert('로그인에 실패하였습니다.');
+					}
+				}
+			});
+		}
+	}
+});
+</script>
 </head>
 <body>
 	<div id="wrapper">
