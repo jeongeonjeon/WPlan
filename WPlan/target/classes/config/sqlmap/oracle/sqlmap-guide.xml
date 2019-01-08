@@ -4,10 +4,8 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.mlec.guide">
 	<insert id="insertInfo" parameterType="guideVO">
-		insert into w_guide (u_id , premeet, studio, dress, tuxedo, makeup, bouquet, location, deco,
-							food, letter, mc, present, honeymoon, represent, home)
-		values(#{id} , #{premeet} , #{studio}, #{dress}, #{tuxedo}, #{makeup}, #{bouquet}, #{location}, #{deco}
-			   , #{food}, #{letter}, #{mc}, #{present}, #{honeymoon}, #{represent}, #{home})
+		insert into w_guide (u_id , premeet, studio, dress, tuxedo, makeup, bouquet, location, deco, food, letter, mc, present, honeymoon, represent, home)
+		values(#{id} , #{premeet} , #{studio}, #{dress}, #{tuxedo}, #{makeup}, #{bouquet}, #{location}, #{deco} , #{food}, #{letter}, #{mc}, #{present}, #{honeymoon}, #{represent}, #{home})
 	</insert>
 	
 	<select id="selectGuide" parameterType="string" resultType="guideVO">
