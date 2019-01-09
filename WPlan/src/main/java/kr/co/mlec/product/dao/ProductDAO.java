@@ -9,19 +9,19 @@ public interface ProductDAO {
 	public List<ProductVO> selectAll();
 	
 	/**
-	 * °Ô½Ã±Û »ó¼¼Á¶È¸ ¼­ºñ½º
-	 * @param no °Ô½Ã±Û¹øÈ£
+	 * ê²Œì‹œê¸€ ìƒì„¸ì¡°íšŒ ì„œë¹„ìŠ¤
+	 * @param no ê²Œì‹œê¸€ë²ˆí˜¸
 	 */
 
 	public ProductVO selectCategory(ProductVO product);
 	
 	/**
-	 * ´ñ±ÛÄ«¿îÆ® Áõ°¡ ¼­ºñ½º
+	 * ëŒ“ê¸€ì¹´ìš´íŠ¸ ì¦ê°€ ì„œë¹„ìŠ¤
 	 */
 //	public void increaseReplyCount(int no);
 	
 	/**
-	 * ´ñ±ÛÄ«¿îÆ® °¨¼Ò ¼­ºñ½º
+	 * ëŒ“ê¸€ì¹´ìš´íŠ¸ ê°ì†Œ ì„œë¹„ìŠ¤
 	 */
 //	public void reduceReplyCount(int no);
 }

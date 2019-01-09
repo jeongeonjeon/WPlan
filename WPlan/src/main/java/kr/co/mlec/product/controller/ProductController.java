@@ -45,8 +45,4 @@ public class ProductController {
 		return "/makeWedding";
 	}
 
-	@GetMapping("/addcom")
-	public String addcom() {
-		return "/addcom/addcom";
-	}
 }

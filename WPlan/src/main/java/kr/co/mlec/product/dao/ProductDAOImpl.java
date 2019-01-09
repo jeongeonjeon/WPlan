@@ -29,14 +29,14 @@ public class ProductDAOImpl implements ProductDAO {
 		return null/*productvo*/;
 	}
 	
-////	´ñ±Û Ä«¿îÆ® Áõ°¡
+////	ëŒ“ê¸€ ì¹´ìš´íŠ¸ ì¦ê°€
 //	@Override
 //	public void increaseReplyCount(int no) {
 //		sqlSession.update("kr.co.mlec.board.incrementReplyCnt", no);
 //		
 //	}
 //
-////	´ñ±ÛÄ«¿îÆ® °¨¼Ò
+////	ëŒ“ê¸€ì¹´ìš´íŠ¸ ê°ì†Œ
 //	@Override
 //	public void reduceReplyCount(int no) {
 //		sqlSession.update("kr.co.mlec.board.decrementReplyCnt", no);
