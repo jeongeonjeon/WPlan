@@ -37,7 +37,7 @@
 			var checked = 'input[name='+ val +']:checked';
 			console.log(checked);
 			if($(checked).length == 0){  
-			      alert("선택 안됨ㅁㄴㅇ");
+				alert("항목을 선택해주세요");
 			return false;
 			}
 		}

@@ -28,7 +28,7 @@ public class AddcomController {
 		return "addcom/addcomForm";
 	}
 	
-	@PostMapping("/addcom/addcomForm") 
+/*	@PostMapping("/addcom/addcomForm") 
 	@ResponseBody
 	public ModelAndView join(AddcomVO addcomVO, HttpSession session) {
 		addcomService.insertAddcom(addcomVO);
@@ -38,7 +38,7 @@ public class AddcomController {
 		ModelAndView mav = new ModelAndView();
 
 		if(comVO == null) {
-			mav.addObject("msg","ºñ¾îÀÖ´Â Ç×¸ñÀ» Ã¤¿öÁÖ¼¼¿ä");
+			mav.addObject("msg","ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 			mav.setViewName("redirect:/addcomForm");
 		} else {
 			mav.setViewName("redirect:/");
@@ -58,5 +58,5 @@ public class AddcomController {
 			}
 			System.out.println(sumchkName);
 		}
-	}
+	}*/
 }
