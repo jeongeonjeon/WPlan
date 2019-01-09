@@ -127,8 +127,8 @@ function join() {
 							</div>
 							<div class="row">
 								<label class="title"><h4>비밀번호 확인</h4></label> 
-								<form:input path="password" class="inputArea" name="password2" id="join_pw2" placeholder="비밀번호를 확인해주세요"/>
-								<form:errors path="password" />
+								<form:input path="password_sec" class="inputArea" name="password_sec" id="join_pw2" placeholder="비밀번호를 확인해주세요"/>
+								<form:errors path="password_sec" />
 
 							</div>
 							<div class="row">

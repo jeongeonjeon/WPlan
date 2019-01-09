@@ -7,6 +7,6 @@ public interface AddcomService {
 
 	public void insertAddcom(AddcomVO addcomVO);
 
-	public AddcomVO selectAddcom(AddcomVO addcomVO);
+	public AddcomVO selectAddcom(String c_id);
 
 }
