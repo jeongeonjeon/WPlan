@@ -25,9 +25,15 @@
 			    var id = jbSplit[0];
 			    var password = jbSplit[1];
 			    
-			    document.cookie = jbSplit[0] + '=' + ''+ ';expires=' + -1 + ';path=/';
-// 			    setcookie(jbSplit[0], "", 0 , 0);
-			    
+			    if(id != 'remember_id'){
+			    	var setCookie = function(name, value, exp) {
+					   var date = new Date();
+					   date.setTime(date.getTime() + exp*24*60*60*1000);
+					   document.cookie = id + '=' + password + ';expires=' + date.toUTCString() + ';path=/';
+					};
+
+					setCookie(id, password, 0); 
+			    }
 			location.href="${pageContext.request.contextPath}/logout";
 		});
 		
