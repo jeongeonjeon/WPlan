@@ -1,19 +1,25 @@
 package kr.co.mlec.addcom.controller;
 
 import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.co.mlec.addcom.service.AddcomService;
 import kr.co.mlec.addcom.vo.AddcomVO;
+import kr.co.mlec.cmember.vo.CmemberVO;
+import kr.co.mlec.guide.vo.GuideVO;
 
 @Controller
 public class AddcomController {
@@ -29,34 +35,32 @@ public class AddcomController {
 	}
 	
 	@PostMapping("/addcom/addcomForm") 
-	@ResponseBody
-	public ModelAndView join(AddcomVO addcomVO, HttpSession session) {
-		addcomService.insertAddcom(addcomVO);
+	public ModelAndView addcom(@Valid AddcomVO addcomVO , BindingResult result, HttpServletRequest request, ModelAndView mav) {
 		
-		AddcomVO comVO = addcomService.selectAddcom(addcomVO);
-		
-		ModelAndView mav = new ModelAndView();
-
-		if(comVO == null) {
-			mav.addObject("msg","비어있는 항목을 채워주세요");
-			mav.setViewName("redirect:/addcomForm");
-		} else {
-			mav.setViewName("redirect:/");
+		if(result.hasErrors()) {
+			mav.setViewName("addcomForm");
+			return mav;
 		}
-		return mav;
+		HttpSession session = request.getSession();
+		CmemberVO cuser = (CmemberVO)session.getAttribute("CuserVO");
+	
+	addcomVO.setC_id(cuser.getId());
+	addcomService.insertAddcom(addcomVO);
+	mav.addObject("addcomVO",addcomVO);
+	mav.setViewName("addcom");
+	
+	return mav;
 	}
 	
-	public void checkBox(ServletRequest request) {
-		String chkName[] = ServletRequestUtils.getStringParameters(request, "chkName");
-		String sumchkName = "";
-		
-		for(int i = 0 ; i < chkName.length ; i++) {
-			if(i == (chkName.length -1)) {
-				sumchkName=sumchkName + chkName[i];
-			} else {
-				sumchkName = sumchkName + chkName[i] + ",";
-			}
-			System.out.println(sumchkName);
-		}
+	@GetMapping("/addcom")
+	public String addcom(Model model, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		CmemberVO cuser = (CmemberVO)session.getAttribute("CuserVO");
+		System.out.println(cuser);
+		String id = cuser.getId();
+		System.out.println(id);
+		AddcomVO addcomVO = addcomService.selectAddcom(id);
+		  
+		return "addcom";
 	}
 }
