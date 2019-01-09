@@ -9,4 +9,5 @@ public interface ProductService {
 	List<ProductVO> selectAllProduct();
 	ProductVO selectProductByNo(int no);
 	ProductVO selectName(ProductVO product);
+	
 }

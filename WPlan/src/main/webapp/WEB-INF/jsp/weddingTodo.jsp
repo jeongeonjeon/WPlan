@@ -22,21 +22,6 @@
 	
 }
 </style>
-
-<script>
-
-	$(document).ready(function() {
-
-		$('.submitBtn').on('click', function() {
-			$.ajax({
-				url : "${pageContext.request.contextPath}/weddingTodo",
-				type : "PUT",
-				data : $('#guideForm').serialize()
-			
-			});
-		});
-	});
-</script>
 </head>
 
 <body>
@@ -68,6 +53,7 @@
 				<p>TO DO LIST</p>
 				<c:set var="i" value="0" />
 				<form:form method="post" commandName="guideVO">
+					
 					<c:forEach items="${ requestScope.todoList }" var="todo">
 						<c:set var="i" value="${i+1}" />
 						<div>

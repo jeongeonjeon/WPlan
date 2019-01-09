@@ -7,7 +7,7 @@
   <select id="selectAll" parameterType="productVO" resultType="productVO">
 		select p_no, p_name,  c_name, c_info, category, to_char(reg_date, 'yyyy-mm-dd') as reg_date
 		  from w_product
-		 where 
+		 where category = #{category}
 	</select>
 
   <select id="selectCategory" parameterType="productVO" resultType="productVO">
@@ -20,5 +20,16 @@
 		values (#{id}, #{password}, #{name}, #{tel}, #{email})
 	</insert>
 	
+	<select id="selectProductByNo" parameterType="int" resultType="productVO">
+		select p_no, p_name, c_name, c_info, category, to_char(reg_date, 'yyyy-mm-dd') as reg_date
+		from w_product
+		where p_no = #{no}
+	</select>
+	
+	<select id="selectOption" parameterType="int" resultType="productOptionVO">
+		select p_no, p_option_name, p_option_value
+		from w_product_option
+		where p_no = #{no}
+	</select>
 	</mapper>
   
