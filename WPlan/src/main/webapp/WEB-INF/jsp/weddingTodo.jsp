@@ -22,6 +22,21 @@
 	
 }
 </style>
+
+<script>
+
+	$(document).ready(function() {
+
+		$('.submitBtn').on('click', function() {
+			$.ajax({
+				url : "${pageContext.request.contextPath}/weddingTodo",
+				type : "PUT",
+				data : $('#guideForm').serialize()
+			
+			});
+		});
+	});
+</script>
 </head>
 
 <body>
