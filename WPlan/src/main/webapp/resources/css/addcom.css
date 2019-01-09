@@ -7,3 +7,14 @@
 	text-align: center;
 	
 }
+.addcomForm .fBtn {
+	font-family: "Playfair Display";
+	font-weight: 600;
+	border-radius: 0px;
+	border-width: 1px;
+	border-color: rgba(233, 196, 176, 0.5);
+	border-style: solid;
+	background: rgb(255, 255, 255);
+	color: rgb(34, 34, 34);
+	height: 60px;
+}

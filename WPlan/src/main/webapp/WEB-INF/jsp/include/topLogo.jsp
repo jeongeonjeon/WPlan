@@ -12,8 +12,25 @@
 		
 		
 		$('#logout').click(function(){
+// 				alert('asdasd');
+			    var cookieData = document.cookie;
+// 			    alert(cookieData);
+			    
+			    var jbString = cookieData;
+			    var jbSplit = jbString.split('=');
+			    
+			    for ( var i in jbSplit ) {
+			      jbSplit[i];
+			    }
+			    var id = jbSplit[0];
+			    var password = jbSplit[1];
+			    
+			    document.cookie = jbSplit[0] + '=' + ''+ ';expires=' + -1 + ';path=/';
+// 			    setcookie(jbSplit[0], "", 0 , 0);
+			    
 			location.href="${pageContext.request.contextPath}/logout";
 		});
+		
 	});
 
 
@@ -31,10 +48,10 @@
 			<div class="loginMenu">
 				<c:choose>
 					<c:when test="${empty userVO }">
-						<span class="login">login</span>
+						<span class="login">로그인</span>
 					</c:when>
 					<c:otherwise>
-						<span class="logout" id="logout">logout</span>
+						<span class="logout" id="logout">로그아웃</span>
 					</c:otherwise> 
 				</c:choose>
 			</div>

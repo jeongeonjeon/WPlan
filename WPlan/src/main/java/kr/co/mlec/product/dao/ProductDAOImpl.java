@@ -28,18 +28,14 @@ public class ProductDAOImpl implements ProductDAO {
 */		
 		return null/*productvo*/;
 	}
+
+	@Override
+	public ProductVO selectProductByNo(int no) {
+		
+		ProductVO productVO = sqlSession.selectOne("kr.co.mlec.product.selectProductByNo", no);
+		return productVO;
+	}
 	
-////	댓글 카운트 증가
-//	@Override
-//	public void increaseReplyCount(int no) {
-//		sqlSession.update("kr.co.mlec.board.incrementReplyCnt", no);
-//		
-//	}
-//
-////	댓글카운트 감소
-//	@Override
-//	public void reduceReplyCount(int no) {
-//		sqlSession.update("kr.co.mlec.board.decrementReplyCnt", no);
-//	}
+
 	
 }
