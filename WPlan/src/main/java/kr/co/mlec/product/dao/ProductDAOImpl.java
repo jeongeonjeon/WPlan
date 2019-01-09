@@ -37,5 +37,17 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 	
 
+////	댓글 카운트 증가
+//	@Override
+//	public void increaseReplyCount(int no) {
+//		sqlSession.update("kr.co.mlec.board.incrementReplyCnt", no);
+//		
+//	}
+//
+////	댓글카운트 감소
+//	@Override
+//	public void reduceReplyCount(int no) {
+//		sqlSession.update("kr.co.mlec.board.decrementReplyCnt", no);
+//	}
 	
 }

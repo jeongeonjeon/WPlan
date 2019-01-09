@@ -9,24 +9,20 @@ public interface ProductDAO {
 	public List<ProductVO> selectAll();
 	
 	/**
-	 * �Խñ� ����ȸ ����
-	 * @param no �Խñ۹�ȣ
+	 * 게시글 상세조회 서비스
+	 * @param no 게시글번호
 	 */
 
 	public ProductVO selectCategory(ProductVO product);
 	
-	/**
-	 * 상세페이지의 제품정보 가져오기
-	 */
 	public ProductVO selectProductByNo(int no);
-	
 	/**
-	 * ���ī��Ʈ ���� ����
+	 * 댓글카운트 증가 서비스
 	 */
 //	public void increaseReplyCount(int no);
 	
 	/**
-	 * ���ī��Ʈ ���� ����
+	 * 댓글카운트 감소 서비스
 	 */
 //	public void reduceReplyCount(int no);
 }
