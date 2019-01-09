@@ -14,7 +14,13 @@ $(document).ready(function(){
 	$('.loginMenu span.login').click(function(){
 		$('.login_area').css("display","block");
 	});
+// 		$('#remember_id').prop('checked', false);
 	
+	if(document.cookie.split('=')[0] === 'remember_id'){
+		$('#login_id').attr('value', document.cookie.split('=')[1]);
+		$('#remember_id').prop('checked', true);
+		
+	}
 
 });
 
@@ -50,6 +56,24 @@ function login() {
 					};
 
 					setCookie($('#login_id').val(), $('#login_pw').val(), 7); /* name=Ethan, 7일 뒤 만료됨 */
+				}
+				if($("input:checkbox[id='remember_id']").prop("checked") == true){
+					var setCookie = function(name, value, exp) {
+					   var date = new Date();
+					   date.setTime(date.getTime() + exp*24*60*60*1000);
+					   document.cookie = 'remember_id' + '=' + $('#login_id').val() + ';expires=' + date.toUTCString() + ';path=/';
+					};
+
+					setCookie('remember_id', $('#login_id').val(), 7); /* name=Ethan, 7일 뒤 만료됨 */
+				}else{
+					var setCookie = function(name, value, exp) {
+					   var date = new Date();
+					   date.setTime(date.getTime() + exp*24*60*60*1000);
+					   document.cookie = 'remember_id' + '=' + $('#login_id').val() + ';expires=' + date.toUTCString() + ';path=/';
+					};
+
+					setCookie('remember_id', $('#login_id').val(), 0); /* name=Ethan, 7일 뒤 만료됨 */
+					
 				}
 				$('#login_id').val('');
 				$('#login_pw').val('');
