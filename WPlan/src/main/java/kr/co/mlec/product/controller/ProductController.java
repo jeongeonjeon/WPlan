@@ -1,5 +1,6 @@
 package kr.co.mlec.product.controller;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -64,23 +65,20 @@ public class ProductController {
 	
 	@GetMapping("/detail/{no}")
 	public ModelAndView detail(ModelAndView mav , @PathVariable("no") int no) {
-//		System.out.println("조회번호 : " + no);
+		System.out.println("조회번호 : " + no);
 		ProductVO productVO = productService.selectProductByNo(no);
 		List<ProductOptionVO> optionList = optionService.selectOption(no);
 		
 //		System.out.println(productVO);
-//		System.out.println(optionList);
-		
+
 		String name = "";
+		
+		/*
 		String[][] option = new String[10][10];
-		int j = -1;
-		int k = 0;
+		int j = -1, k = 0;
 		
 //		System.out.println(optionList.get(0).getpOptionName());
-		for(int i=0; i< optionList.size()- 1; i++) {
-			
-//			System.out.println(optionList.get(i).getpOptionName());
-//			System.out.println(optionList.get(i).getpOptionValue());
+		for(int i=0; i< optionList.size(); i++) {
 
 			if(name.equals(optionList.get(i).getpOptionName())) {
 				k++;
@@ -95,13 +93,36 @@ public class ProductController {
 			
 		}
 		for(int i=0;i<option.length;i++) {
-			for(int z=0;z<option[i].length;z++) {
-				if(option[i][z] == null)
+			for(j=0;j<option[i].length;j++) {
+				if(option[i][j] == null)
 					break;
-//				System.out.print(option[i][z]+ " ");
+//				System.out.print(option[i][j]+ " ");
 			}
 			System.out.println();
 		}
+		*/
+		
+		// 위 Array에서 List로 변경, DB연결하여 확인 할 것
+		List<ArrayList<String>> option = new ArrayList<ArrayList<String>>();
+		ArrayList<String> innerList = new ArrayList<String>();
+		
+		for(int i=0; i< optionList.size()- 1; i++) {
+			if(name.equals(optionList.get(i).getpOptionName())) {
+				innerList.add(optionList.get(i).getpOptionValue());
+			}else {
+				option.add(innerList);
+				innerList = new ArrayList<String>();		//innerList 초기화
+			}
+		}
+		
+		for(int i = 0; i < option.size(); i++) {
+			for(int j = 0; j < option.get(i).size(); j++) {
+				System.out.print(option.get(i).get(j) + " ");
+			}
+			System.out.println();
+		}
+		
+		
 		mav.addObject("productVO", productVO);
 		mav.addObject("optionList", optionList);
 		mav.setViewName("product/detail");
