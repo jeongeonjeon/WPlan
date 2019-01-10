@@ -54,6 +54,7 @@ public class LoginController {
 		
 		if(userVO != null) {
 			session.setAttribute("userVO", userVO);
+			System.out.println(userVO);
 			return "login";
 		}else {
 			return "fail";

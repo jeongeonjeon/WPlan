@@ -19,8 +19,8 @@ public class AddcomServiceImpl implements AddcomService {
 	}
 
 	@Override
-	public AddcomVO selectAddcom(String c_id) {
-		// TODO Auto-generated method stub
-		return null;
+	public AddcomVO selectAddcom(String id) {
+		AddcomVO addcomVO = addcomDao.selectAddcom(id);
+		return addcomVO;
 	}
 }

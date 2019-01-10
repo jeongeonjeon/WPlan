@@ -6,4 +6,5 @@ public interface AddcomDAO {
 
 	public void insertAddcom(AddcomVO addcomVO);
 	
+	public AddcomVO selectAddcom(String id);
 }

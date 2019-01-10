@@ -18,4 +18,10 @@ public class AddcomDAOImpl implements AddcomDAO {
 		sqlSession.insert("kr.co.mlec.addcom.insert", addcomVO);
 	}
 
+	@Override
+	public AddcomVO selectAddcom(String id) {
+		AddcomVO addcomVO = sqlSession.selectOne("kr.co.mlec.addcom.select", id);
+		return null;
+	}
+
 }
