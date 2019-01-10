@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 
@@ -548,7 +549,7 @@
 		<div class="container detail section-2">
 			<div class="box">
 				<div class="shopInfo">
-					<h3>WOON</h3>
+					<h3>${productVO.c_name }</h3>
 					<p>서울 강남구 역삼동</p>
 					
 				</div>
@@ -633,33 +634,39 @@
 							<tr class="">
 								<th scope="row">상품명</th>
 								<td>
-									<b> rom#109</b>
-								</td>
-							</tr>
-							<tr class="">
-								<th scope="row"></th>
-								<td>
-									<b>| 대여 : 90,000 | 구매 : 168,000 |</b>
+									<b>${productVO.p_name }</b>
 								</td>
 							</tr>
 							<tr class="displaynone">
 								<th scope="row">상품가</th>
-								<td></td>
+								<td>${productVO.p_price }</td>
 							</tr>
 							<tr class="">
 								<th scope="row">*</th>
-								<td>깜짝할인 이벤트 168000-&gt;129000</td>
+								<td>${productVO.p_event }</td>
 							</tr>
 							<tr class="displaynone">
 								<th scope="row">공급사</th>
-								<td></td>
+								<td>${productVO.c_name }</td>
 							</tr>
 							<tr class="">
 								<th scope="row">*</th>
-								<td>할인판매가 129000</td>
+								<td></td>
 							</tr>
 						</tbody>
 						<tbody>
+							<c:forEach var="option" items="${optionList}">
+								<tr>
+								
+									<th>${option.pOptionName}</th>
+									 <c:forEach var="value" items="${option.pOptionName }">
+										<td><select>
+<%-- 											<option value="${value.pOptionValue }">${value.pOptionValue }</option> --%>
+										</select></td>
+									 </c:forEach>
+								</tr>
+								
+							</c:forEach>
 							<tr>
 								<th>구매/대여</th>
 								<td><select>
@@ -699,17 +706,17 @@
 				<div class="contentWrap">
 					<div class="storeInfo tab_content">
 						<h4>상세설명</h4>
-						<p class="title">나만의 맞춤형 웨딩드레스</p>
-						<p>이태리 로마와 밀라노 IED 디자인 스쿨에서 오랜 기간동안 공부한 윤서정, 윤수진 디자이너가 운영하는
+						<p >나만의 맞춤형 웨딩드레스
+						이태리 로마와 밀라노 IED 디자인 스쿨에서 오랜 기간동안 공부한 윤서정, 윤수진 디자이너가 운영하는
 							드레스코드 더블유는 내 몸에 꼭 맞는 맞춤형 웨딩드레스를 구매하거나 대여해 드립니다. 사이즈별로 입는 드레스가 아닌,
 							디자이너와의 상담을 거쳐 내가 원하는 디자인과 내 몸에 꼭 맞는 웨딩드레스를 입었을 때, 신부는 가장 아름답게
-							빛납니다.</p>
-						<p class="title">꼭 맞는 드레스이자 합리적인 가격</p>
-						<p>드레스코드 더블유 샵은 이대, 아현 웨딩의 거리에 위치해 있습니다. 웨딩드레스 제작 그 자체보다 부수적인
+							빛납니다.
+						꼭 맞는 드레스이자 합리적인 가격
+						드레스코드 더블유 샵은 이대, 아현 웨딩의 거리에 위치해 있습니다. 웨딩드레스 제작 그 자체보다 부수적인
 							운영 비용이 훨씬 많이 드는 청담이 아닌 곳을 선택한 덕분에, 드레스코드 더블유는 온전히 웨딩드레스 제작에 더욱
-							집중할 수 있었고, 그로 인하여 디자이너 메이드 맞춤 드레스이지만 매우 합리적인 가격에 이용이 가능해졌습니다.</p>
-						<p class="title">누구보다 빠르게 유행에 맞추고 선도해 나가는 드레스코드 더블유</p>
-						<p>드레스코드 더블유의 윤서정, 윤수진 디자이너는 매년 스페인, 일본, 이탈리아에서 열리는 드레스 박람회에
+							집중할 수 있었고, 그로 인하여 디자이너 메이드 맞춤 드레스이지만 매우 합리적인 가격에 이용이 가능해졌습니다.
+						누구보다 빠르게 유행에 맞추고 선도해 나가는 드레스코드 더블유
+						드레스코드 더블유의 윤서정, 윤수진 디자이너는 매년 스페인, 일본, 이탈리아에서 열리는 드레스 박람회에
 							매년 참가하고 공부를 게을리 하지 않습니다. 그래서 일본, 중국 심지어 유럽에서도 드레스 구입이 이어지고 있으며,
 							높은 퀄리티에 합리적인 가격으로 고객들을 만족시키고 있습니다. 지금 바로 드레스코드 더블유를 방문해보세요!</p>
 						<h4>운영정책</h4>

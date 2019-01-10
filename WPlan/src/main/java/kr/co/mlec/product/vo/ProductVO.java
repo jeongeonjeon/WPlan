@@ -8,22 +8,9 @@ public class ProductVO {
     private String c_info;
     private String category;
     private String reg_date;
+    private String p_price;
+    private String p_event;
 
-	public ProductVO() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public ProductVO(int p_no, String p_name, String c_name, String c_info, String category, String reg_date) {
-		super();
-		this.p_no = p_no;
-		this.p_name = p_name;
-		this.c_name = c_name;
-		this.c_info = c_info;
-		this.category = category;
-		this.reg_date = reg_date;
-	}
-	
 	public int getP_no() {
 		return p_no;
 	}
@@ -71,10 +58,29 @@ public class ProductVO {
 	public void setReg_date(String reg_date) {
 		this.reg_date = reg_date;
 	}
-	
-    @Override
+
+	public String getP_price() {
+		return p_price;
+	}
+
+	public void setP_price(String p_price) {
+		this.p_price = p_price;
+	}
+
+	public String getP_event() {
+		return p_event;
+	}
+
+	public void setP_event(String p_event) {
+		this.p_event = p_event;
+	}
+
+	@Override
 	public String toString() {
 		return "ProductVO [p_no=" + p_no + ", p_name=" + p_name + ", c_name=" + c_name + ", c_info=" + c_info
-				+ ", category=" + category + ", reg_date=" + reg_date + "]";
+				+ ", category=" + category + ", reg_date=" + reg_date + ", p_price=" + p_price + ", p_event=" + p_event
+				+ "]";
 	}
+    
+    
 }

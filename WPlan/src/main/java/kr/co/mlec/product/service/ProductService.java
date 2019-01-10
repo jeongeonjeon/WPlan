@@ -6,7 +6,7 @@ import kr.co.mlec.product.vo.ProductVO;
 
 public interface ProductService {
 
-	List<ProductVO> selectAllProduct();
+	List<ProductVO> selectAllProduct(String category);
 	ProductVO selectProductByNo(int no);
 	ProductVO selectName(ProductVO product);
 	
