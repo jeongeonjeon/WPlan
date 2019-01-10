@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kr.co.mlec.product.vo.ProductVO;
+import kr.co.mlec.productOption.vo.ProductOptionVO;
 
 @Repository
 public class ProductDAOImpl implements ProductDAO {
@@ -15,10 +16,10 @@ public class ProductDAOImpl implements ProductDAO {
 	private SqlSessionTemplate sqlSession;
 	
 	@Override
-	public List<ProductVO> selectAll() {
-		List<ProductVO> productlist = sqlSession.selectList("kr.co.mlec.product.selectAll");
+	public List<ProductVO> selectAll(String category) {
+		List<ProductVO> productList = sqlSession.selectList("kr.co.mlec.product.selectAll", category);
 		
-		return productlist;
+		return productList;
 	}
 
 	@Override
@@ -33,6 +34,8 @@ public class ProductDAOImpl implements ProductDAO {
 	public ProductVO selectProductByNo(int no) {
 		
 		ProductVO productVO = sqlSession.selectOne("kr.co.mlec.product.selectProductByNo", no);
+//		System.out.println("productDAO : " + productVO);
+		
 		return productVO;
 	}
 	
