@@ -120,10 +120,10 @@ p,ul,li{
 }
 
 .section-1.product {
-	width: calc(100% - 350px);
-	height: 100%;
+	width: calc(80% - 350px);
 	overflow: hidden;
 	float: right;
+	margin: 7% 10%;
 }
 
 .product .making {
@@ -131,14 +131,16 @@ p,ul,li{
 	width: 720px;
 	height: 490px;
 	position: relative;
-	top: 30px;
-	left: 10%;
 }
 
 .product .making img {
 	max-width: 100%;
 	max-height: 100%;
 	margin: auto;
+}
+.section-1.product .addBtn{
+	float : right;
+	margin: 20px 0;
 }
 
 .section-7 {
@@ -222,7 +224,7 @@ p,ul,li{
 			</ul>
 		</div>
 		<aside class="select_area">
-			<div class="wrap section-01 scroll">
+			<div class="wrap scroll" id="section-01">
 				<p>DRESS</p>
 				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
 				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
@@ -230,7 +232,7 @@ p,ul,li{
 				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
 				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 			</div>
-			<div class="wrap section-02 scroll">
+			<div class="wrap scroll" id="section-02">
 				<p>TOXEDO</p>
 				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" />
 				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
@@ -238,7 +240,7 @@ p,ul,li{
 				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
 				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 			</div>
-			<div class="wrap section-03 scroll">
+			<div class="wrap scroll" id="section-03">
 				<p>LOCATION</p>
 				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
 				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
@@ -246,7 +248,7 @@ p,ul,li{
 				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
 				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
 			</div>
-			<div class="wrap section-04 scroll">
+			<div class="wrap scroll" id="section-04">
 				<p>DECO</p>
 				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
 				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
@@ -257,8 +259,11 @@ p,ul,li{
 		</aside>
 		<section class="section-1 product">
 		
-			<div class="making"></div>
-			<button class="addBtn">My wedding 추가</button>
+			<div class="making">
+			</div>
+			<div>
+				<button class="addBtn">My wedding 추가</button>
+			</div>
 
 		</section>
 

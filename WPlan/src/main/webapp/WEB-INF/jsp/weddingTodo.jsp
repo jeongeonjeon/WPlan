@@ -78,6 +78,7 @@ $(document).ready(function(){
 				<p>TO DO LIST</p>
 				<c:set var="i" value="0" />
 				<form:form method="post" commandName="guideVO">
+					
 					<c:forEach items="${ requestScope.todoList }" var="todo">
 						<c:set var="i" value="${i+1}" />
 						<div>

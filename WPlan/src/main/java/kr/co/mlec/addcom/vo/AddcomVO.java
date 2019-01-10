@@ -2,7 +2,9 @@ package kr.co.mlec.addcom.vo;
 
 public class AddcomVO {
 
-	private int noise;
+	private int no;
+	private String c_id;
+	private String noise;
 	private String parking;
 	private String cloth;
 	private String photo;
@@ -37,24 +39,14 @@ public class AddcomVO {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public String toString() {
-		return "AddcomVO [noise=" + noise + ", parking=" + parking + ", cloth=" + cloth + ", photo=" + photo + ", prov="
-				+ prov + ", meating=" + meating + ", meal=" + meal + ", sound=" + sound + ", drink=" + drink
-				+ ", smoking=" + smoking + ", hotel=" + hotel + ", valet=" + valet + ", parking_guide=" + parking_guide
-				+ ", bus=" + bus + ", wifi=" + wifi + ", chair_table=" + chair_table + ", history=" + history
-				+ ", sale=" + sale + ", pitting_time=" + pitting_time + ", pitting_num=" + pitting_num + ", props="
-				+ props + ", type=" + type + ", use_time=" + use_time + ", recital=" + recital + ", addr=" + addr
-				+ ", addr_post=" + addr_post + ", addr_detail=" + addr_detail + ", addr_extra=" + addr_extra
-				+ ", reg_date=" + reg_date + "]";
-	}
-
-	public AddcomVO(int noise, String parking, String cloth, String photo, String prov, String meating, String meal,
-			String sound, String drink, String smoking, String hotel, String valet, String parking_guide, String bus,
-			String wifi, String chair_table, String history, String sale, String pitting_time, String pitting_num,
-			String props, String type, String use_time, String recital, String addr, String addr_post,
-			String addr_detail, String addr_extra, String reg_date) {
+	public AddcomVO(int no, String c_id, String noise, String parking, String cloth, String photo, String prov,
+			String meating, String meal, String sound, String drink, String smoking, String hotel, String valet,
+			String parking_guide, String bus, String wifi, String chair_table, String history, String sale,
+			String pitting_time, String pitting_num, String props, String type, String use_time, String recital,
+			String addr, String addr_post, String addr_detail, String addr_extra, String reg_date) {
 		super();
+		this.no = no;
+		this.c_id = c_id;
 		this.noise = noise;
 		this.parking = parking;
 		this.cloth = cloth;
@@ -86,11 +78,27 @@ public class AddcomVO {
 		this.reg_date = reg_date;
 	}
 
-	public int getNoise() {
+	public int getNo() {
+		return no;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
+	}
+
+	public String getC_id() {
+		return c_id;
+	}
+
+	public void setC_id(String c_id) {
+		this.c_id = c_id;
+	}
+
+	public String getNoise() {
 		return noise;
 	}
 
-	public void setNoise(int noise) {
+	public void setNoise(String noise) {
 		this.noise = noise;
 	}
 
@@ -318,7 +326,18 @@ public class AddcomVO {
 		this.reg_date = reg_date;
 	}
 
+	@Override
+	public String toString() {
+		return "AddcomVO [no=" + no + ", c_id=" + c_id + ", noise=" + noise + ", parking=" + parking + ", cloth="
+				+ cloth + ", photo=" + photo + ", prov=" + prov + ", meating=" + meating + ", meal=" + meal + ", sound="
+				+ sound + ", drink=" + drink + ", smoking=" + smoking + ", hotel=" + hotel + ", valet=" + valet
+				+ ", parking_guide=" + parking_guide + ", bus=" + bus + ", wifi=" + wifi + ", chair_table="
+				+ chair_table + ", history=" + history + ", sale=" + sale + ", pitting_time=" + pitting_time
+				+ ", pitting_num=" + pitting_num + ", props=" + props + ", type=" + type + ", use_time=" + use_time
+				+ ", recital=" + recital + ", addr=" + addr + ", addr_post=" + addr_post + ", addr_detail="
+				+ addr_detail + ", addr_extra=" + addr_extra + ", reg_date=" + reg_date + "]";
+	}
+
 	
-	
-	
+
 }

@@ -54,10 +54,14 @@
 			<div class="loginMenu">
 				<c:choose>
 					<c:when test="${empty userVO }">
-						<span class="login">로그인</span>
+						<a href="javascript:;">
+							<span class="login">로그인</span>
+						</a>
 					</c:when>
 					<c:otherwise>
-						<span class="logout" id="logout">로그아웃</span>
+						<a href="javascript:;">
+							<span class="logout" id="logout">로그아웃</span>
+						</a>
 					</c:otherwise> 
 				</c:choose>
 			</div>

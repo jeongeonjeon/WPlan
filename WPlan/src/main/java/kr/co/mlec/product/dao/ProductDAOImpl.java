@@ -28,15 +28,23 @@ public class ProductDAOImpl implements ProductDAO {
 */		
 		return null/*productvo*/;
 	}
+
+	@Override
+	public ProductVO selectProductByNo(int no) {
+		
+		ProductVO productVO = sqlSession.selectOne("kr.co.mlec.product.selectProductByNo", no);
+		return productVO;
+	}
 	
-////	´ñ±Û Ä«¿îÆ® Áõ°¡
+
+////	ëŒ“ê¸€ ì¹´ìš´íŠ¸ ì¦ê°€
 //	@Override
 //	public void increaseReplyCount(int no) {
 //		sqlSession.update("kr.co.mlec.board.incrementReplyCnt", no);
 //		
 //	}
 //
-////	´ñ±ÛÄ«¿îÆ® °¨¼Ò
+////	ëŒ“ê¸€ì¹´ìš´íŠ¸ ê°ì†Œ
 //	@Override
 //	public void reduceReplyCount(int no) {
 //		sqlSession.update("kr.co.mlec.board.decrementReplyCnt", no);

@@ -133,7 +133,7 @@ padding: 0px;
 			
 			<h1>업체등록</h1>
 			<hr>		
-			<form id="form">
+			<form:form commandName="addcomvo">
 				<div>
 					<button type="button">이미지 등록</button><br><br>
 					<div>
@@ -146,44 +146,28 @@ padding: 0px;
 					
 				<table>
 			   		<tr>
-			   			<td><form:checkbox path="noise" vlaue="1" />&nbsp;&nbsp;소음규제</td>
-			   			<form:errors path="noise"/>
-			   			<td><form:checkbox path="parking" vlaue="1" />&nbsp;&nbsp;주차</td>
-			   			<form:errors path="parking"/>
-			   			<td><form:checkbox path="cloth" vlaue="1" />&nbsp;&nbsp;재봉</td>
-			   			<form:errors path="cloth" />
-			   			<td><form:checkbox path="photo" vlaue="1"/>&nbsp;&nbsp;피팅사진촬영</td>
-			   			<form:errors path="photo" />
-			   			<td><form:checkbox path="prov" vlaue="1"/>&nbsp;&nbsp;제공범위</td>
-			   			<form:errors path="prov" />
-			   			<td><form:checkbox path="meeting" vlaue="1"/>&nbsp;&nbsp;사전미팅</td>
-			   			<form:errors path="meeting" />
+			   			<td><form:checkbox path="noise" vlaue="1" label="소음규제"/></td>
+			   			<td><form:checkbox path="parking" vlaue="1" label="주차" /></td>
+			   			<td><form:checkbox path="cloth" vlaue="1" label="재봉"/></td>
+			   			<td><form:checkbox path="photo" vlaue="1" label="피팅사진촬영"/></td>
+			   			<td><form:checkbox path="prov" vlaue="1" label="제공범위"/></td>
+			   			<td><form:checkbox path="meeting" vlaue="1" label="사전미팅"/></td>
+			   			
 			   		</tr>
 			   		<tr>
-			   			<td><form:checkbox path="meal" vlaue="1"/>&nbsp;&nbsp;식사</td>
-			   			<form:errors path="meal" />
-			   			<td><form:checkbox path="sound" vlaue="1"/>&nbsp;&nbsp;음향</td>
-			   			<form:errors path="sound" />
-			   			<td><form:checkbox path="drink" vlaue="1"/>&nbsp;&nbsp;주류</td>
-			   			<form:errors path="drink" />
-			   			<td><form:checkbox path="smoking" vlaue="1"/>&nbsp;&nbsp;흡연</td>
-			   			<form:errors path="smoking" />
-			   			<td><form:checkbox path="hotel" vlaue="1"/>&nbsp;&nbsp;숙박</td>
-						<form:errors path="hotel" />
-						<td><form:checkbox path="valet" vlaue="1"/>&nbsp;&nbsp;발렛</td>
-						<form:errors path="valet" />
+			   			<td><form:checkbox path="meal" vlaue="1" label="식사"/></td>
+			   			<td><form:checkbox path="sound" vlaue="1" label="음향"/></td>
+			   			<td><form:checkbox path="drink" vlaue="1" label="주류"/></td>
+			   			<td><form:checkbox path="smoking" vlaue="1" label="흡연"/></td>
+			   			<td><form:checkbox path="hotel" vlaue="1" label="숙박"/></td>
+						<td><form:checkbox path="valet" vlaue="1" label="발렛"/></td>
 			   		</tr>
 			   		<tr>
-			   			<td><form:checkbox path="parking_guide" vlaue="1" />&nbsp;&nbsp;주차안내</td>
-			   			<form:errors path="parking_guide" />
-			   			<td><form:checkbox path="bus" vlaue="1" />&nbsp;&nbsp;버스진입</td>
-			   			<form:errors path="bus" />
-			   			<td><form:checkbox path="wifi" vlaue="1" />&nbsp;&nbsp;WIFI</td>
-			   			<form:errors path="wifi" />
-			   			<td><form:checkbox path="chair_table" vlaue="1" />&nbsp;&nbsp;의자/테이블</td>
-			   			<form:errors path="chari_table" />
-			   			<td><form:checkbox path="history" vlaue="1" />&nbsp;&nbsp;웨딩진행이력</td>
-			   			<form:errors path="history" />
+			   			<td><form:checkbox path="parking_guide" vlaue="1" label="주차안내"/></td>
+			   			<td><form:checkbox path="bus" vlaue="1" label="버스진입"/></td>
+			   			<td><form:checkbox path="wifi" vlaue="1" label="WIFI"/></td>
+			   			<td><form:checkbox path="chair_table" vlaue="1" label="의자/테이블"/></td>
+			   			<td><form:checkbox path="history" vlaue="1" label="웨딩진행이력"/></td>
 			   		</tr>
 			    </table>	
 	
@@ -191,37 +175,30 @@ padding: 0px;
 					<tr>
 						<td>판매방식</td>
 						<td><form:textarea path="sale" /></td>
-						<form:errors path="sale" />
 					</tr>
 					<tr>
 						<td>피팅시간</td>
 						<td><form:textarea path="pitting_time" /></td>
-						<form:errors path="pitting_time" />
 					</tr>
 					<tr>
 						<td>피팅 가능 개수</td>
 						<td><form:textarea path="pitting_num" /></td>
-						<form:errors path="pitting_num" />
 					</tr>
 					<tr>
 						<th>제공/대여소품</th>
 						<td><form:textarea path="props" /></td>
-						<form:errors path="props" />
 					</tr>
 					<tr>
 						<td>타입</td>
 						<td><form:textarea path="type" /></td>
-						<form:errors path="type" />
 					</tr>
 					<tr>
 						<td>이용시간</td>
 						<td><form:textarea path="use_time" /></td>
-						<form:errors path="use_time" />
 					</tr>
 					<tr>
 						<td>기타</td>
 						<td><form:textarea path="recital" /></td>
-						<form:errors path="recital" />
 					</tr>	
 				</table>
 
@@ -234,21 +211,18 @@ padding: 0px;
 						</tr>
 						<tr>
 							<td><form:checkbox path="addr_post" type="text" id="sample6_postcode" placeholder="우편번호"/></td>
-							<form:errors path="addr_post" />
 							<td><input  type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"/></td>
 							</tr>
 							<tr>
 							<td>
 								<form:checkbox path="addr" type="text" id="sample6_address" placeholder="주소"/><br>
-								<form:errors path="addr" />
 								<form:checkbox path="addr_detail" type="text" id="sample6_detailAddress" placeholder="상세주소"/>
-								<form:errors path="addr_detail" />
 							<td>
 						</tr>		
 					</table>
 
 					</div>
-				</form>
+				</form:form>
 				<hr>
 
 				<button type="button" style="width:100px;">등록</button>
