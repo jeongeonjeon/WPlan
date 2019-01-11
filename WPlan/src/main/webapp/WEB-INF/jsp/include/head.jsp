@@ -55,7 +55,12 @@
 	    });
 
 	    $(function() {
-	        $("#datepicker1").datepicker();
+	        $("#datepicker1").datepicker({
+	        	 onSelect: function (dateText, inst) {
+	 	        	var nowDate = dateText.replace(/\-/g,'');
+	 	        	alert(nowDate);
+	             }
+	        });
 	    });
 
 	    $(document).on('click', '[data-toggle="lightbox"]', function(event) {

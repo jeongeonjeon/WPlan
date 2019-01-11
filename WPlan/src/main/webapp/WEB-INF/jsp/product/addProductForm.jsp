@@ -274,8 +274,8 @@ input[type=file] {
 				</div>
 				</div>
 			
-<!-- 				<a href="javascript:" class="my_button" onclick="submitAction();">업로드</a>
- -->			
+				<a href="javascript:" class="my_button" onclick="submitAction();">업로드</a>
+			
 			
 				<!-- 파일 업로드 끝 -->
 				
@@ -365,7 +365,7 @@ input[type=file] {
 
 					<hr>
 
-					<button type="submit" style="width: 100px;" onclick="submitAction();">등록</button>
+					<button type="submit" style="width: 100px;">등록</button>
 
 					<a href="${ pageContext.request.contextPath }/member/myPage">
 						<button type="button" style="width: 100px; margin-left: 30px;">취소</button>

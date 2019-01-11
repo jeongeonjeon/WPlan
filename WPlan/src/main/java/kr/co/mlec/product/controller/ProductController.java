@@ -16,6 +16,8 @@ import kr.co.mlec.product.service.ProductService;
 import kr.co.mlec.product.vo.ProductVO;
 import kr.co.mlec.productOption.service.ProductOptionService;
 import kr.co.mlec.productOption.vo.ProductOptionVO;
+import kr.co.mlec.review.service.ReviewService;
+import kr.co.mlec.review.vo.ReviewVO;
 
 @Controller
 public class ProductController {
@@ -25,6 +27,9 @@ public class ProductController {
 	
 	@Autowired
 	private ProductOptionService optionService;
+	
+	@Autowired
+	private ReviewService reviewService;
 	
 	
 
@@ -62,70 +67,62 @@ public class ProductController {
 	}
 
 	
-	
+	//상세페이지 
 	@GetMapping("/detail/{no}")
 	public ModelAndView detail(ModelAndView mav , @PathVariable("no") int no) {
-		System.out.println("조회번호 : " + no);
+		
+		//productVO 가져오기
 		ProductVO productVO = productService.selectProductByNo(no);
+		//productOptionList 가져오기
 		List<ProductOptionVO> optionList = optionService.selectOption(no);
-		
-//		System.out.println(productVO);
+		//후기리스트 가져오기
+		List<ReviewVO> reviewList = reviewService.selectAllReview(no);
 
-		String name = "";
-		
-		/*
-		String[][] option = new String[10][10];
-		int j = -1, k = 0;
-		
-//		System.out.println(optionList.get(0).getpOptionName());
-		for(int i=0; i< optionList.size(); i++) {
-
-			if(name.equals(optionList.get(i).getpOptionName())) {
-				k++;
-			}else {
-				j++;
-				k = 0;
-			}
-			name = optionList.get(i).getpOptionName();
-			option[j][k] = optionList.get(i).getpOptionValue();
-			
-			System.out.println("j : "+ j+", k : "+k+"option : "+optionList.get(i).getpOptionValue());
-			
-		}
-		for(int i=0;i<option.length;i++) {
-			for(j=0;j<option[i].length;j++) {
-				if(option[i][j] == null)
-					break;
-//				System.out.print(option[i][j]+ " ");
-			}
-			System.out.println();
-		}
-		*/
-		
 		// 위 Array에서 List로 변경, DB연결하여 확인 할 것
-		List<ArrayList<String>> option = new ArrayList<ArrayList<String>>();
-		ArrayList<String> innerList = new ArrayList<String>();
+		List<ArrayList<String>> options = new ArrayList<ArrayList<String>>(); //value 배열들의 배열
 		
-		for(int i=0; i< optionList.size()- 1; i++) {
-			if(name.equals(optionList.get(i).getpOptionName())) {
+		String name = "";  //optionName 초기화
+		name = optionList.get(0).getpOptionName(); //0번지 name값으로 name 초기화 
+		ArrayList<String> innerList = new ArrayList<>();   //하나의 옵션 name에 대한 value 배열
+		for(int i=0; i< optionList.size(); i++) {
+			
+			//name이 다를때 
+			if(!name.equals(optionList.get(i).getpOptionName()) ) {
+				options.add(innerList);
+				innerList=new ArrayList<>();
 				innerList.add(optionList.get(i).getpOptionValue());
-			}else {
-				option.add(innerList);
-				innerList = new ArrayList<String>();		//innerList 초기화
+				name = optionList.get(i).getpOptionName();
+				
+			}else {  //name이 같을 때
+				
+				innerList.add(optionList.get(i).getpOptionValue());
+				name = optionList.get(i).getpOptionName();
 			}
+			
+			if(i == optionList.size()-1) {
+				options.add(innerList);
+			}
+			
+			
 		}
 		
-		for(int i = 0; i < option.size(); i++) {
-			for(int j = 0; j < option.get(i).size(); j++) {
-				System.out.print(option.get(i).get(j) + " ");
+		
+		name = "";  //name 초기화
+		//옵션의 name만 모아놓은 리스트
+		List<String> optionNameList = new ArrayList<>();
+		for(int i= 0 ; i < optionList.size()-1; i++) {
+			if(!name.equals(optionList.get(i).getpOptionName())) {
+				name = optionList.get(i).getpOptionName();
+					optionNameList.add(name);
 			}
-			System.out.println();
 		}
 		
 		
 		mav.addObject("productVO", productVO);
-		mav.addObject("optionList", optionList);
+		mav.addObject("options", options);  //옵션 배열의 배열
+		mav.addObject("optionNameList", optionNameList); //옵션 네임의 배열
 		mav.setViewName("product/detail");
+		mav.addObject("reviewList", reviewList);
 		
 		return mav;
 	}
