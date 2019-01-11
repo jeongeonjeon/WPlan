@@ -101,7 +101,9 @@ header .fa {
     top: -68px;
 }
 .text-right .loginMenu span{
-	font-size: 15px
+	font-size: 15px;
+	font-weight: 600;
+    color: #545454;
 } 
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -956,10 +958,10 @@ header .fa {
     top: 8.1%;
 }
 .aside01 .arrow .arrowBtn{
-    width: 30px;
+    width: 32px;
     height: 150px;
     position: relative;
-    left: -30px;
+    left: -32px;
     background-color: #F3EFE4;
     border-radius: 20px 0 0 20px;
     padding: 10px 0 0 5px;
@@ -967,7 +969,12 @@ header .fa {
 .aside01 .aside {
 	width : 80%;
 	font-weight : bold;
-	
+}
+.aside01 .arrowBtn>img {
+	width: 38px;
+    left: -7px;
+    top: -17px;
+    position: relative;
 }
 
 div#ui-datepicker-div{

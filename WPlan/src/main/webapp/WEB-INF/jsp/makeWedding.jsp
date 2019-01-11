@@ -120,10 +120,10 @@ p,ul,li{
 }
 
 .section-1.product {
-	width: calc(100% - 350px);
-	height: 100%;
+	width: calc(95% - 350px);
 	overflow: hidden;
 	float: right;
+	margin: 7% 5% 7% 0;
 }
 
 .product .making {
@@ -131,8 +131,7 @@ p,ul,li{
 	width: 720px;
 	height: 490px;
 	position: relative;
-	top: 30px;
-	left: 10%;
+	margin : 0 auto;
 }
 
 .product .making img {
@@ -140,6 +139,15 @@ p,ul,li{
 	max-height: 100%;
 	margin: auto;
 }
+.section-1.product .addBtn{
+	float : right;
+	margin: 20px 0;
+}
+.section-1 .add{
+	overflow: hidden;
+    width: 720px;
+    margin: 0 auto;
+} 
 
 .section-7 {
 	clear: both;
@@ -205,63 +213,78 @@ p,ul,li{
 			$('.making').append(html);
 
 		});
+		
+		$('.black_bg .cancelBtn').click(function(){
+			var bool = confirm('My wedding이 저장되지 않았습니다.\n정말로 나가시겠습니까?');
+			if(bool){
+				alert('메인페이지로 이동합니다.');
+				location.href = "${ pageContext.request.contextPath }";
+			}
+		});
 	});
 </script>
 </head>
 <body>
-	<div class="black_bg">
-		<img src="${ pageContext.request.contextPath }/resources/images/cancel.png" >
-	</div>
-	<div class ="wrapper">
-		<div class="floating-menu">
-			<ul>
-				<li class="m"><a href="#section-01" class="menu-01"><span>드레스</span></a></li>
-				<li class="m"><a href="#section-02" class="menu-02"><span>턱시도</span></a></li>
-				<li class="m"><a href="#section-03" class="menu-03"><span>장소</span></a></li>
-				<li class="m"><a href="#section-04" class="menu-04"><span>데코</span></a></li>
-			</ul>
+	<div class="wrapper_make" >
+		<div class="black_bg">
+			<a href="javascript:;">
+				<img class="cancelBtn" src="${ pageContext.request.contextPath }/resources/images/cancel.png" >
+			</a>
 		</div>
-		<aside class="select_area">
-			<div class="wrap section-01 scroll">
-				<p>DRESS</p>
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+		<div class ="wrapper">
+			<div class="floating-menu">
+				<ul>
+					<li class="m"><a href="#section-01" class="menu-01"><span>드레스</span></a></li>
+					<li class="m"><a href="#section-02" class="menu-02"><span>턱시도</span></a></li>
+					<li class="m"><a href="#section-03" class="menu-03"><span>장소</span></a></li>
+					<li class="m"><a href="#section-04" class="menu-04"><span>데코</span></a></li>
+				</ul>
 			</div>
-			<div class="wrap section-02 scroll">
-				<p>TOXEDO</p>
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" />
-				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
-			</div>
-			<div class="wrap section-03 scroll">
-				<p>LOCATION</p>
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
-			</div>
-			<div class="wrap section-04 scroll">
-				<p>DECO</p>
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-				<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
-			</div>
-		</aside>
-		<section class="section-1 product">
-		
-			<div class="making"></div>
-			<button class="addBtn">My wedding 추가</button>
-
-		</section>
-
+			<aside class="select_area">
+				<div class="wrap scroll" id="section-01">
+					<p>DRESS</p>
+					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+				</div>
+				<div class="wrap scroll" id="section-02">
+					<p>TOXEDO</p>
+					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" />
+					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+				</div>
+				<div class="wrap scroll" id="section-03">
+					<p>LOCATION</p>
+					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+				</div>
+				<div class="wrap scroll" id="section-04">
+					<p>DECO</p>
+					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
+					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+				</div>
+			</aside>
+			<section class="section-1 product">
+			
+				<div class="making">
+				</div>
+				<div class="add">
+					<button class="addBtn">My wedding 저장</button>
+				</div>
+	
+			</section>
+	
+		</div>
 	</div>
 
 </body>

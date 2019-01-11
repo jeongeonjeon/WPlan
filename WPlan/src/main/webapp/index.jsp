@@ -13,7 +13,7 @@
 	<script	src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
 <script>
 $(document).ready(function(){
-		if($('.loginMenu').children('.login').length === 1 && document.cookie.split('=')[1] != ''){
+		if($('.loginMenu').children('.login').length === 1 && document.cookie.split('=')[1] != '' &&  document.cookie.split('=')[0] != 'remember_id'){
 			window.onload = function getCookie(name) {
 			    var cookieData = document.cookie;
 // 			    alert(cookieData);
