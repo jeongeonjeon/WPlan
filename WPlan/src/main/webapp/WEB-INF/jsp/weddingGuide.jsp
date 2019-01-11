@@ -37,7 +37,7 @@
 			var checked = 'input[name='+ val +']:checked';
 			console.log(checked);
 			if($(checked).length == 0){  
-			      alert("선택 안됨ㅁㄴㅇ");
+				alert("항목을 선택해주세요");
 			return false;
 			}
 		}
@@ -86,7 +86,7 @@
 								<form:radiobutton path="premeet"  value="true" label="네"/><br>
 								<form:radiobutton path="premeet"  value="false" label="아니요"/><br>
 								<form:radiobutton path="premeet"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="premeet"/>
+								<form:errors path="premeet"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn next" onclick="next('b','premeet');">다음</button>
@@ -101,7 +101,7 @@
 								<form:radiobutton path="studio"  value="true" label="네"/><br>
 								<form:radiobutton path="studio"  value="false" label="아니요"/><br>
 								<form:radiobutton path="studio"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="studio"/>
+								<form:errors path="studio"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre" onclick="next('a');">이전</button>
@@ -114,7 +114,7 @@
 								<form:radiobutton path="dress"  value="true" label="네"/><br>
 								<form:radiobutton path="dress"  value="false" label="아니요"/><br>
 								<form:radiobutton path="dress"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="dress"/>
+								<form:errors path="dress"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre" onclick="next('b');">이전</button>
@@ -127,7 +127,7 @@
 								<form:radiobutton path="tuxedo"  value="true" label="네"/><br>
 								<form:radiobutton path="tuxedo"  value="false" label="아니요"/><br>
 								<form:radiobutton path="tuxedo"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="tuxedo"/>
+								<form:errors path="tuxedo"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre"  onclick="next('c');">이전</button>
@@ -140,7 +140,7 @@
 								<form:radiobutton path="makeup"  value="true" label="네"/><br>
 								<form:radiobutton path="makeup"  value="false" label="아니요"/><br>
 								<form:radiobutton path="makeup"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="makeup"/>
+								<form:errors path="makeup"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre"  onclick="next('d');">이전</button>
@@ -153,7 +153,7 @@
 								<form:radiobutton path="bouquet"  value="true" label="네"/><br>
 								<form:radiobutton path="bouquet"  value="false" label="아니요"/><br>
 								<form:radiobutton path="bouquet"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="bouquet"/>
+								<form:errors path="bouquet"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre" onclick="next('e');">이전</button>
@@ -166,7 +166,7 @@
 								<form:radiobutton path="location"  value="true" label="네"/><br>
 								<form:radiobutton path="location"  value="false" label="아니요"/><br>
 								<form:radiobutton path="location"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="location"/>
+								<form:errors path="location"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre" onclick="next('f');">이전</button>
@@ -179,7 +179,7 @@
 								<form:radiobutton path="deco"  value="true" label="네"/><br>
 								<form:radiobutton path="deco"  value="false" label="아니요"/><br>
 								<form:radiobutton path="deco"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="deco"/>
+								<form:errors path="deco"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre" onclick="next('g');">이전</button>
@@ -192,7 +192,7 @@
 								<form:radiobutton path="food"  value="true" label="네"/><br>
 								<form:radiobutton path="food"  value="false" label="아니요"/><br>
 								<form:radiobutton path="food"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="food"/>
+								<form:errors path="food"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre" onclick="next('h');">이전</button>
@@ -205,7 +205,7 @@
 								<form:radiobutton path="letter"  value="true" label="네"/><br>
 								<form:radiobutton path="letter"  value="false" label="아니요"/><br>
 								<form:radiobutton path="letter"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="letter"/>
+								<form:errors path="letter"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre" onclick="next('i');">이전</button>
@@ -218,7 +218,7 @@
 								<form:radiobutton path="mc"  value="true" label="네"/><br>
 								<form:radiobutton path="mc"  value="false" label="아니요"/><br>
 								<form:radiobutton path="mc"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="mc"/>
+								<form:errors path="mc"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre" onclick="next('j');">이전</button>
@@ -231,7 +231,7 @@
 								<form:radiobutton path="present"  value="true" label="네"/><br>
 								<form:radiobutton path="present"  value="false" label="아니요"/><br>
 								<form:radiobutton path="present"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="present"/>
+								<form:errors path="present"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre" onclick="next('k');">이전</button>
@@ -244,7 +244,7 @@
 								<form:radiobutton path="honeymoon"  value="true" label="네"/><br>
 								<form:radiobutton path="honeymoon"  value="false" label="아니요"/><br>
 								<form:radiobutton path="honeymoon"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="honeymoon"/>
+								<form:errors path="honeymoon"/>
 							</div>
 						<div>
 							<button type="button" class="fBtn pre" onclick="next('l');">이전</button>
@@ -257,7 +257,7 @@
 								<form:radiobutton path="represent"  value="true" label="네"/><br>
 								<form:radiobutton path="represent"  value="false" label="아니요"/><br>
 								<form:radiobutton path="represent"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="represent"/>
+								<form:errors path="represent"/>
 							</div>
 						<div>
 							<button type="button" type="button" class="fBtn pre" onclick="next('m');">이전</button>
@@ -270,7 +270,7 @@
 								<form:radiobutton path="home"  value="true" label="네"/><br>
 								<form:radiobutton path="home"  value="false" label="아니요"/><br>
 								<form:radiobutton path="home"  value="noneed" label="필요없어요"/><br>
-								<form:errors pathe="home"/>
+								<form:errors path="home"/>
 							</div>
 						<div>
 							<button type="button" type="button" class="fBtn pre" onclick="next('n');">이전</button>

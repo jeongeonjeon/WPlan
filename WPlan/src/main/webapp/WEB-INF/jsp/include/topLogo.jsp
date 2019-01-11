@@ -1,11 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<style>
-	.loginMenu span {
-		color : black!important;
-	}
-</style>
 <script>
 
 	$(document).ready(function(){
@@ -25,9 +20,15 @@
 			    var id = jbSplit[0];
 			    var password = jbSplit[1];
 			    
-			    document.cookie = jbSplit[0] + '=' + ''+ ';expires=' + -1 + ';path=/';
-// 			    setcookie(jbSplit[0], "", 0 , 0);
-			    
+			    if(id != 'remember_id'){
+			    	var setCookie = function(name, value, exp) {
+					   var date = new Date();
+					   date.setTime(date.getTime() + exp*24*60*60*1000);
+					   document.cookie = id + '=' + password + ';expires=' + date.toUTCString() + ';path=/';
+					};
+
+					setCookie(id, password, 0); 
+			    }
 			location.href="${pageContext.request.contextPath}/logout";
 		});
 		
@@ -48,10 +49,14 @@
 			<div class="loginMenu">
 				<c:choose>
 					<c:when test="${empty userVO }">
-						<span class="login">로그인</span>
+						<a href="javascript:;">
+							<span class="login">로그인</span>
+						</a>
 					</c:when>
 					<c:otherwise>
-						<span class="logout" id="logout">로그아웃</span>
+						<a href="javascript:;">
+							<span class="logout" id="logout">로그아웃</span>
+						</a>
 					</c:otherwise> 
 				</c:choose>
 			</div>

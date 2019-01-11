@@ -2,23 +2,25 @@ package kr.co.mlec.addcom.vo;
 
 public class AddcomVO {
 
-	private int noise;
-	private String parking;
-	private String cloth;
-	private String photo;
-	private String prov;
-	private String meating;
-	private String meal;
-	private String sound;
-	private String drink;
-	private String smoking;
-	private String hotel;
-	private String valet;
-	private String parking_guide;
-	private String bus;
-	private String wifi;
-	private String chair_table;
-	private String history;
+	private int no;
+	private String id;
+	private boolean noise;
+	private boolean parking;
+	private boolean cloth;
+	private boolean photo;
+	private boolean prov;
+	private boolean meeting;
+	private boolean meal;
+	private boolean sound;
+	private boolean drink;
+	private boolean smoking;
+	private boolean hotel;
+	private boolean valet;
+	private boolean parking_guide;
+	private boolean bus;
+	private boolean wifi;
+	private boolean chair_table;
+	private boolean history;
 	private String sale;
 	private String pitting_time;
 	private String pitting_num;
@@ -30,195 +32,162 @@ public class AddcomVO {
 	private String addr_post;
 	private String addr_detail;
 	private String addr_extra;
-	private String reg_date;
+	private String regDate;
 	
 	public AddcomVO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public String toString() {
-		return "AddcomVO [noise=" + noise + ", parking=" + parking + ", cloth=" + cloth + ", photo=" + photo + ", prov="
-				+ prov + ", meating=" + meating + ", meal=" + meal + ", sound=" + sound + ", drink=" + drink
-				+ ", smoking=" + smoking + ", hotel=" + hotel + ", valet=" + valet + ", parking_guide=" + parking_guide
-				+ ", bus=" + bus + ", wifi=" + wifi + ", chair_table=" + chair_table + ", history=" + history
-				+ ", sale=" + sale + ", pitting_time=" + pitting_time + ", pitting_num=" + pitting_num + ", props="
-				+ props + ", type=" + type + ", use_time=" + use_time + ", recital=" + recital + ", addr=" + addr
-				+ ", addr_post=" + addr_post + ", addr_detail=" + addr_detail + ", addr_extra=" + addr_extra
-				+ ", reg_date=" + reg_date + "]";
+	public int getNo() {
+		return no;
 	}
 
-	public AddcomVO(int noise, String parking, String cloth, String photo, String prov, String meating, String meal,
-			String sound, String drink, String smoking, String hotel, String valet, String parking_guide, String bus,
-			String wifi, String chair_table, String history, String sale, String pitting_time, String pitting_num,
-			String props, String type, String use_time, String recital, String addr, String addr_post,
-			String addr_detail, String addr_extra, String reg_date) {
-		super();
-		this.noise = noise;
-		this.parking = parking;
-		this.cloth = cloth;
-		this.photo = photo;
-		this.prov = prov;
-		this.meating = meating;
-		this.meal = meal;
-		this.sound = sound;
-		this.drink = drink;
-		this.smoking = smoking;
-		this.hotel = hotel;
-		this.valet = valet;
-		this.parking_guide = parking_guide;
-		this.bus = bus;
-		this.wifi = wifi;
-		this.chair_table = chair_table;
-		this.history = history;
-		this.sale = sale;
-		this.pitting_time = pitting_time;
-		this.pitting_num = pitting_num;
-		this.props = props;
-		this.type = type;
-		this.use_time = use_time;
-		this.recital = recital;
-		this.addr = addr;
-		this.addr_post = addr_post;
-		this.addr_detail = addr_detail;
-		this.addr_extra = addr_extra;
-		this.reg_date = reg_date;
+	public void setNo(int no) {
+		this.no = no;
 	}
 
-	public int getNoise() {
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public boolean isNoise() {
 		return noise;
 	}
 
-	public void setNoise(int noise) {
+	public void setNoise(boolean noise) {
 		this.noise = noise;
 	}
 
-	public String getParking() {
+	public boolean isParking() {
 		return parking;
 	}
 
-	public void setParking(String parking) {
+	public void setParking(boolean parking) {
 		this.parking = parking;
 	}
 
-	public String getCloth() {
+	public boolean isCloth() {
 		return cloth;
 	}
 
-	public void setCloth(String cloth) {
+	public void setCloth(boolean cloth) {
 		this.cloth = cloth;
 	}
 
-	public String getPhoto() {
+	public boolean isPhoto() {
 		return photo;
 	}
 
-	public void setPhoto(String photo) {
+	public void setPhoto(boolean photo) {
 		this.photo = photo;
 	}
 
-	public String getProv() {
+	public boolean isProv() {
 		return prov;
 	}
 
-	public void setProv(String prov) {
+	public void setProv(boolean prov) {
 		this.prov = prov;
 	}
 
-	public String getMeating() {
-		return meating;
+	public boolean isMeeting() {
+		return meeting;
 	}
 
-	public void setMeating(String meating) {
-		this.meating = meating;
+	public void setMeeting(boolean meeting) {
+		this.meeting = meeting;
 	}
 
-	public String getMeal() {
+	public boolean isMeal() {
 		return meal;
 	}
 
-	public void setMeal(String meal) {
+	public void setMeal(boolean meal) {
 		this.meal = meal;
 	}
 
-	public String getSound() {
+	public boolean isSound() {
 		return sound;
 	}
 
-	public void setSound(String sound) {
+	public void setSound(boolean sound) {
 		this.sound = sound;
 	}
 
-	public String getDrink() {
+	public boolean isDrink() {
 		return drink;
 	}
 
-	public void setDrink(String drink) {
+	public void setDrink(boolean drink) {
 		this.drink = drink;
 	}
 
-	public String getSmoking() {
+	public boolean isSmoking() {
 		return smoking;
 	}
 
-	public void setSmoking(String smoking) {
+	public void setSmoking(boolean smoking) {
 		this.smoking = smoking;
 	}
 
-	public String getHotel() {
+	public boolean isHotel() {
 		return hotel;
 	}
 
-	public void setHotel(String hotel) {
+	public void setHotel(boolean hotel) {
 		this.hotel = hotel;
 	}
 
-	public String getValet() {
+	public boolean isValet() {
 		return valet;
 	}
 
-	public void setValet(String valet) {
+	public void setValet(boolean valet) {
 		this.valet = valet;
 	}
 
-	public String getParking_guide() {
+	public boolean isParking_guide() {
 		return parking_guide;
 	}
 
-	public void setParking_guide(String parking_guide) {
+	public void setParking_guide(boolean parking_guide) {
 		this.parking_guide = parking_guide;
 	}
 
-	public String getBus() {
+	public boolean isBus() {
 		return bus;
 	}
 
-	public void setBus(String bus) {
+	public void setBus(boolean bus) {
 		this.bus = bus;
 	}
 
-	public String getWifi() {
+	public boolean isWifi() {
 		return wifi;
 	}
 
-	public void setWifi(String wifi) {
+	public void setWifi(boolean wifi) {
 		this.wifi = wifi;
 	}
 
-	public String getChair_table() {
+	public boolean isChair_table() {
 		return chair_table;
 	}
 
-	public void setChair_table(String chair_table) {
+	public void setChair_table(boolean chair_table) {
 		this.chair_table = chair_table;
 	}
 
-	public String getHistory() {
+	public boolean isHistory() {
 		return history;
 	}
 
-	public void setHistory(String history) {
+	public void setHistory(boolean history) {
 		this.history = history;
 	}
 
@@ -310,15 +279,65 @@ public class AddcomVO {
 		this.addr_extra = addr_extra;
 	}
 
-	public String getReg_date() {
-		return reg_date;
+	public String getregDate() {
+		return regDate;
 	}
 
-	public void setReg_date(String reg_date) {
-		this.reg_date = reg_date;
+	public void setregDate(String regDate) {
+		this.regDate = regDate;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "AddcomVO [no=" + no + ", id=" + id + ", noise=" + noise + ", parking=" + parking + ", cloth=" + cloth
+				+ ", photo=" + photo + ", prov=" + prov + ", meeting=" + meeting + ", meal=" + meal + ", sound=" + sound
+				+ ", drink=" + drink + ", smoking=" + smoking + ", hotel=" + hotel + ", valet=" + valet
+				+ ", parking_guide=" + parking_guide + ", bus=" + bus + ", wifi=" + wifi + ", chair_table="
+				+ chair_table + ", history=" + history + ", sale=" + sale + ", pitting_time=" + pitting_time
+				+ ", pitting_num=" + pitting_num + ", props=" + props + ", type=" + type + ", use_time=" + use_time
+				+ ", recital=" + recital + ", addr=" + addr + ", addr_post=" + addr_post + ", addr_detail="
+				+ addr_detail + ", addr_extra=" + addr_extra + ", regDate=" + regDate + "]";
+	}
+
+	public AddcomVO(int no, String id, boolean noise, boolean parking, boolean cloth, boolean photo, boolean prov,
+			boolean meeting, boolean meal, boolean sound, boolean drink, boolean smoking, boolean hotel, boolean valet,
+			boolean parking_guide, boolean bus, boolean wifi, boolean chair_table, boolean history, String sale,
+			String pitting_time, String pitting_num, String props, String type, String use_time, String recital,
+			String addr, String addr_post, String addr_detail, String addr_extra, String regDate) {
+		super();
+		this.no = no;
+		this.id = id;
+		this.noise = noise;
+		this.parking = parking;
+		this.cloth = cloth;
+		this.photo = photo;
+		this.prov = prov;
+		this.meeting = meeting;
+		this.meal = meal;
+		this.sound = sound;
+		this.drink = drink;
+		this.smoking = smoking;
+		this.hotel = hotel;
+		this.valet = valet;
+		this.parking_guide = parking_guide;
+		this.bus = bus;
+		this.wifi = wifi;
+		this.chair_table = chair_table;
+		this.history = history;
+		this.sale = sale;
+		this.pitting_time = pitting_time;
+		this.pitting_num = pitting_num;
+		this.props = props;
+		this.type = type;
+		this.use_time = use_time;
+		this.recital = recital;
+		this.addr = addr;
+		this.addr_post = addr_post;
+		this.addr_detail = addr_detail;
+		this.addr_extra = addr_extra;
+		this.regDate = regDate;
+	}
+
 	
 	
 }

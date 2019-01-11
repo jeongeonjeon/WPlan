@@ -1,5 +1,8 @@
 package kr.co.mlec.umember.controller;
 
+import java.math.BigInteger;
+import java.security.SecureRandom;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -26,19 +29,17 @@ public class LoginController {
 	@Autowired
 	private LoginService loginService;
 	
-	/*@GetMapping("/login")
-	public String loginForm(Model model) {
-		
-		UmemberVO memberVO = new UmemberVO();
-		model.addAttribute("memberVO", memberVO);
-		
-		return "login/loginForm";
-	}
-	*/
 	
 	@GetMapping("/login")
 	public String loginForm() {
+				
 		return "login/loginForm"; 
+	}
+	
+	public String generateState()
+	{
+	    SecureRandom random = new SecureRandom();
+	    return new BigInteger(130, random).toString(32);
 	}
 	
 	@PostMapping("/login")
@@ -53,6 +54,7 @@ public class LoginController {
 		
 		if(userVO != null) {
 			session.setAttribute("userVO", userVO);
+			System.out.println(userVO);
 			return "login";
 		}else {
 			return "fail";

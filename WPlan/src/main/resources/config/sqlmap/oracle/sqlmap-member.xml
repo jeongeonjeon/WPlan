@@ -11,8 +11,8 @@
 	</select>
 	
 	<insert id="insert" parameterType="umemberVO" >
-		insert into w_umember (id, password, name, tel, email)
-		values (#{id}, #{password}, #{name}, #{tel}, #{email})
+		insert into w_umember (id, password, password_sec, name, tel, email)
+		values (#{id}, #{password}, #{password_sec}, #{name}, #{tel}, #{email})
 	</insert>
 
 	<select id="select" parameterType="umemberVO" resultType="umemberVO">

@@ -5,8 +5,7 @@ import java.util.List;
 import kr.co.mlec.product.vo.ProductVO;
 
 public interface ProductDAO {
-	
-	
+
 	/**
 	 * 카테고리의 모든 상품 리스트를 반환하는 메소드
 	 * @param category
@@ -15,12 +14,13 @@ public interface ProductDAO {
 	public List<ProductVO> selectAll(String category);
 	
 	/**
-	 * �Խñ� ����ȸ ����
-	 * @param no �Խñ۹�ȣ
+	 * 게시글 상세조회 서비스
+	 * @param no 게시글번호
 	 */
 
 	public ProductVO selectCategory(ProductVO product);
 	
+
 	/**
 	 * 상세페이지의 상품 정보를 반환하는 메소드
 	 * @param no 상품번호
@@ -29,12 +29,12 @@ public interface ProductDAO {
 	public ProductVO selectProductByNo(int no);
 	
 	/**
-	 * ���ī��Ʈ ���� ����
+	 * 댓글카운트 증가 서비스
 	 */
 //	public void increaseReplyCount(int no);
 	
 	/**
-	 * ���ī��Ʈ ���� ����
+	 * 댓글카운트 감소 서비스
 	 */
 //	public void reduceReplyCount(int no);
 }

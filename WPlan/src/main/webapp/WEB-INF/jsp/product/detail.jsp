@@ -348,6 +348,7 @@
 </script>
 <script>
 	$(document).ready(function() {
+		
 		$('.review.tab_content').css('display', 'none');
 		$('.q_a.tab_content').css('display', 'none');
 		$('.storeInfo.tab_content').css('display', 'block');
@@ -371,11 +372,31 @@
 
 		});
 		
-		$('.shop_btn.scrap').click(function(){
-			location.href="${ pageContext.request.contextPath }/wish";
+		
+		
+		$('#scrapeBtn').click(function(){
+			var id = '${userVO.id}';
+			var pNo = ${productVO.p_no};
+			/* alert( pNo);
+			alert(id); */
+			 $.ajax({
+				url : "${ pageContext.request.contextPath }/scrape";
+				type: "PUT",
+				data : {
+					id :id ,
+					pNo : pNo
+				},
+				success : function(result) {
+					console.log('로그인', result)
+				}
+			});  
 		});
 		
+		
+		
 	});
+	
+	
 	
 	
 </script>
@@ -655,39 +676,25 @@
 							</tr>
 						</tbody>
 						<tbody>
-							<c:forEach var="option" items="${optionList}">
+							<c:forEach var="optionName" items="${optionNameList}" varStatus="option">
 								<tr>
 								
-									<th>${option.pOptionName}</th>
-									 <c:forEach var="value" items="${option.pOptionName }">
+									<th>${optionName}</th>
 										<td><select>
-<%-- 											<option value="${value.pOptionValue }">${value.pOptionValue }</option> --%>
+										<option value="*">- [필수] 옵션을 선택해 주세요 -</option>
+										<option value="**">-------------------</option>
+										<c:forEach var="value" items="${options[option.index]}">
+											<option value="${value}">${value}</option> 
+										</c:forEach>
 										</select></td>
-									 </c:forEach>
 								</tr>
 								
 							</c:forEach>
-							<tr>
-								<th>구매/대여</th>
-								<td><select>
-										<option value="*">- [필수] 옵션을 선택해 주세요 -</option>
-										<option value="**">-------------------</option>
-										<option value="구매 (무료배송)">구매 (무료배송)</option>
-										<option value="대여 (+보증금 7만원 현금 별도 입금)">대여(+보증금 7만원
-											현금 별도 입금)</option>
-								</select></td>
-							</tr>
-							<tr>
-								<th>사이즈</th>
-								<td><select>
-										<option value="*">- [필수] 옵션을 선택해 주세요 -</option>
-										<option value="**">-------------------</option>
-								</select></td>
-							</tr>
+							
 						</tbody>
 					</table>
 					<div class="btn_area">
-						<button class="shop_btn scrap">스크랩북</button>
+						<button class="shop_btn scrap" id="scrapeBtn">스크랩북</button>
 						<button class="shop_btn reserve">예약</button>
 					</div>
 
@@ -804,19 +811,25 @@
 							
 						</div>
 					</div>
+					
+					<!-- 후기 -->
 					<div class="review tab_content">
 						<div class="reply_contents_wrap">
+							<c:forEach var="review" items="${reviewList }">
 							<div class="reply_content">
 								<p class="id">
-									kimmmme<span class="time"> </span>
+									<b>${review.id }</b><span class="time">${review.regDate} </span>
 								</p>
 								<p class="grade">
 									평점 <span> 3점 </span>
 								</p>
-								<p class="content">우왕</p>
+								<p class="content">${review.content}</p>
 							</div>
+							</c:forEach>
 						</div>
 					</div>
+					
+					<!-- Q&A -->
 					<div class="q_a tab_content">
 						<div>
 							<textarea class="input" placeholder="Q&A를 입력하세요."></textarea>

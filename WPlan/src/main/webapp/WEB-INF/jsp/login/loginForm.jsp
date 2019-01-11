@@ -14,7 +14,13 @@ $(document).ready(function(){
 	$('.loginMenu span.login').click(function(){
 		$('.login_area').css("display","block");
 	});
+// 		$('#remember_id').prop('checked', false);
 	
+	if(document.cookie.split('=')[0] === 'remember_id'){
+		$('#login_id').attr('value', document.cookie.split('=')[1]);
+		$('#remember_id').prop('checked', true);
+		
+	}
 
 });
 
@@ -50,6 +56,24 @@ function login() {
 					};
 
 					setCookie($('#login_id').val(), $('#login_pw').val(), 7); /* name=Ethan, 7일 뒤 만료됨 */
+				}
+				if($("input:checkbox[id='remember_id']").prop("checked") == true){
+					var setCookie = function(name, value, exp) {
+					   var date = new Date();
+					   date.setTime(date.getTime() + exp*24*60*60*1000);
+					   document.cookie = 'remember_id' + '=' + $('#login_id').val() + ';expires=' + date.toUTCString() + ';path=/';
+					};
+
+					setCookie('remember_id', $('#login_id').val(), 7); /* name=Ethan, 7일 뒤 만료됨 */
+				}else{
+					var setCookie = function(name, value, exp) {
+					   var date = new Date();
+					   date.setTime(date.getTime() + exp*24*60*60*1000);
+					   document.cookie = 'remember_id' + '=' + $('#login_id').val() + ';expires=' + date.toUTCString() + ';path=/';
+					};
+
+					setCookie('remember_id', $('#login_id').val(), 0); /* name=Ethan, 7일 뒤 만료됨 */
+					
 				}
 				$('#login_id').val('');
 				$('#login_pw').val('');
@@ -130,7 +154,7 @@ function login() {
 	                        <div class="section-line"></div>
 	                    </div>
 	                    <div class="ctnr_login_btn row">
-	                        <div class="col-xs-6 padding-right-5 btn_sns_naver" id="naver_id_login1" btn-type="4" btn-height="40"><a href="https://nid.naver.com/oauth2.0/authorize?response_type=token&amp;client_id=E0RXHTiWnz4g2rLUQFsx&amp;redirect_uri=https%3A%2F%2Fwedit.kr%2Fapp%2Fregistration%2Fnaver.html&amp;state=2d60fd01-edc7-4cd1-af96-c64348bbc405" onclick="window.open(this.href, 'naverloginpop', 'titlebar=1, resizable=1, scrollbars=yes, width=600, height=550'); return false" class="btn_sns sns_naver">네이버 로그인</a> </div>
+	                        <div class="col-xs-6 padding-right-5 btn_sns_naver" id="naver_id_login1" btn-type="4" btn-height="40"><a href="https://nid.naver.com/oauth2.0/authorize?client_id={QrxChDIT8KgIMiPDpPY_0}&response_type=code&redirect_uri={http://localhost:8888/WPlan/login}&state={상태 토큰}" onclick="window.open(this.href, 'naverloginpop', 'titlebar=1, resizable=1, scrollbars=yes, width=600, height=550'); return false" class="btn_sns sns_naver">네이버 로그인</a> </div>
 	                        <div class="col-xs-6 padding-left-5">
 	                            <a href="javascript:;" class="btn_sns sns_kakao btn_sns_kakao">카카오 로그인</a>
 	                        </div>
