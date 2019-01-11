@@ -3,7 +3,7 @@ package kr.co.mlec.productOption.vo;
 public class ProductOptionVO {
 	
 	private int no;
-	private int p_no;
+	private int pNo;
 	private String pOptionName;
 	private String pOptionValue;
 
@@ -15,12 +15,12 @@ public class ProductOptionVO {
 		this.no = no;
 	}
 
-	public int getP_no() {
-		return p_no;
+	public int getpNo() {
+		return pNo;
 	}
 
-	public void setP_no(int p_no) {
-		this.p_no = p_no;
+	public void setpNo(int pNo) {
+		this.pNo = pNo;
 	}
 
 	public String getpOptionName() {
@@ -41,12 +41,9 @@ public class ProductOptionVO {
 
 	@Override
 	public String toString() {
-		return "ProductOptionVO [no=" + no + ", p_no=" + p_no + ", pOptionName=" + pOptionName + ", pOptionValue="
+		return "ProductOptionVO [no=" + no + ", pNo=" + pNo + ", pOptionName=" + pOptionName + ", pOptionValue="
 				+ pOptionValue + "]";
 	}
-	
-	
-	
 	
 
 }

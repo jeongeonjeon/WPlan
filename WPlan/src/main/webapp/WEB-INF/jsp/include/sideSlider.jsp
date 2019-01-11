@@ -51,6 +51,7 @@
 <aside class="aside01">
 	<div class="arrow">
 		<div class="arrowBtn">
+			<img src="${ pageContext.request.contextPath }/resources/images/right_quick_open.png" />
 		</div>
 	</div>
 	<ul class="asideWrap">

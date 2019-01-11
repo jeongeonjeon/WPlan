@@ -4,10 +4,21 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.mlec.addcom">
 
-<insert id="insert" parameterType="addcomVO" >
-		insert into w_umember (no , noise, parking, cloth, photo, prov, meeting, meal, sound, drink, smoking, hotel, valet, parking_guide, bus, wifi, chair_table, history, sale, pitting_time, pitting_num, props, type, use_time, recital, addr, addr_detail, reg_date)
-		values (seq_t_reply_no.nextval , #{noise}, #{parking}, #{cloth}, #{photo}, #{prov}, #{meeting}, #{meal}, #{sound}, #{drink}, #{smoking}, #{hotel}, #{valet}, #{parking_guide}, #{bus}, #{wifi}, #{chair_table}, #{history}, #{sale}, #{pitting_time}, #{pitting_num}, #{props}, #{type}, #{use_time}, #{recital}, #{addr}, #{addr_detail}, to_char(reg_date, 'yyyy-mm-dd') as reg_date)
+	<insert id="insert" parameterType="addcomVO" >
+		insert into w_addcom (no ,c_id, noise, parking, cloth, photo, prov, meeting, meal, sound, drink, smoking, hotel, valet, parking_guide, bus, wifi, chair_table, history, sale, pitting_time, pitting_num, props, type, use_time, recital, addr, addr_post, addr_detail, addr_extra)
+		values (seq_t_reply_no.nextval, #{id}, #{noise}, #{parking}, #{cloth}, #{photo}, #{prov}, #{meeting}, #{meal}, #{sound}, #{drink}, #{smoking}, #{hotel}, #{valet}, #{parking_guide}, #{bus}, #{wifi}, #{chair_table}, #{history}, #{sale}, #{pitting_time}, #{pitting_num}, #{props}, #{type}, #{use_time}, #{recital}, #{addr}, #{addr_post}, #{addr_detail}, #{addr_extra})
 	</insert>
 	
+<!-- 	<insert id="fileinsert" parameterType="">
+	insert into w_picture ()
+	values()
+	
+	</insert> -->
+	
+	<select id="select" parameterType="string" resultType="addcomVO">
+		select c_id as id,  noise, parking, cloth, photo, prov, meeting, meal, sound, drink, smoking, hotel, valet, parking_guide, bus, wifi, chair_table, history, sale, pitting_time, pitting_num, props, type, use_time, recital, addr, addr_detail, reg_date
+		from w_addcom
+		where c_id = #{id}
+	</select>
 	
 </mapper>
