@@ -37,7 +37,7 @@
 	
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<!-- 최대 업로드 파일 사이즈 : 10MB -->
+		<!-- 최대 업로드 파일 사이즈 : 20MB -->
 		<property name="maxUploadSize" value="20971520" />
 	</bean>
 	<mvc:default-servlet-handler />
