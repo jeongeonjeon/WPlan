@@ -377,17 +377,16 @@
 		$('#scrapeBtn').click(function(){
 			var id = '${userVO.id}';
 			var pNo = ${productVO.p_no};
-			/* alert( pNo);
-			alert(id); */
+
 			 $.ajax({
-				url : "${ pageContext.request.contextPath }/scrape";
+				url : "${ pageContext.request.contextPath }/scrape",
 				type: "PUT",
 				data : {
-					id :id ,
+					id : id ,
 					pNo : pNo
 				},
-				success : function(result) {
-					console.log('로그인', result)
+				success : function() {
+					alert('!');
 				}
 			});  
 		});

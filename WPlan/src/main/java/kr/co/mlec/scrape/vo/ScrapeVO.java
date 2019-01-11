@@ -1,4 +1,4 @@
-package kr.co.mlec.scape.vo;
+package kr.co.mlec.scrape.vo;
 
 public class ScrapeVO {
 	private String id;
