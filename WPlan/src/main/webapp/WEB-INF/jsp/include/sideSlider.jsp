@@ -48,6 +48,13 @@
 	}
 	
 </style>
+<script>
+$(document).ready(function(){
+       $('#location_map').click(function(){
+    	   window.open("${ pageContext.request.contextPath }/maps_pop", "a", "width=800px, height=600px, left=100, top=50"); 
+       });
+})
+</script>
 <aside class="aside01">
 	<div class="arrow">
 		<div class="arrowBtn">
@@ -85,7 +92,7 @@
 		</li>
 		<li class="aside area">
 			<span>지역</span>
-			<input type="text" name="area" >
+			<input type="text" name="area" id="location_map">
 		</li>
 		
 	</ul>

@@ -15,6 +15,10 @@ public class FunctionController {
 	public String calendar() {
 		return "/calendar";
 	}
+	@GetMapping("/maps_pop")
+	public String maps_pop() {
+		return "/maps_pop";
+	}
 
 	
 }
