@@ -64,7 +64,7 @@
 			</a>
 		</li>
 		<li class="aside scrape">
-			<a href="${ pageContext.request.contextPath }/wish">
+			<a href="${ pageContext.request.contextPath }/scrape">
 				<img class="scrapeImg" src="${ pageContext.request.contextPath }/resources/images/scrape.png">
 				<span class="scrape">스크랩북</span>
 			</a>
