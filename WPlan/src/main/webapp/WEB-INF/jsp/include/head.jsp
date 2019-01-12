@@ -70,6 +70,7 @@
 	    
 		$(document).ready(function(){
 			var toggle = false;
+			$('.asideWrap').css('display','none');
 
 			$('.arrowBtn').click(function(){
 	
@@ -77,12 +78,14 @@
 		    		$('.aside01').css('width','0');
 		    		$('.aside01').css('min-width','0');
 		    		$('#wrapper').css('width','100%');
+		    		$('.asideWrap').css('display','none');
 		    		$('.arrowBtn>img').attr('src','${ pageContext.request.contextPath }/resources/images/right_quick_open.png');
 		    		toggle = false;
 		    	}else{
 		    		$('.aside01').css('width','14%');
 		    		$('.aside01').css('min-width','250px');
 		    		$('#wrapper').css('width','86%');
+		    		$('.asideWrap').css('display','block');
 		    		$('.arrowBtn>img').attr('src','${ pageContext.request.contextPath }/resources/images/right_quick_close.png');
 		    		toggle = true;
 		    	}
