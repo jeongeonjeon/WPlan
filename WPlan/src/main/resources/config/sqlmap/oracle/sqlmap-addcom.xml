@@ -9,10 +9,6 @@
 		values (seq_t_reply_no.nextval, #{id}, #{noise}, #{parking}, #{cloth}, #{photo}, #{prov}, #{meeting}, #{meal}, #{sound}, #{drink}, #{smoking}, #{hotel}, #{valet}, #{parking_guide}, #{bus}, #{wifi}, #{chair_table}, #{history}, #{sale}, #{pitting_time}, #{pitting_num}, #{props}, #{type}, #{use_time}, #{recital}, #{addr}, #{addr_post}, #{addr_detail}, #{addr_extra})
 	</insert>
 	
-	<!-- <insert id="fileinsert" parameterType="">
-	insert into w_picture (no, c_no, p_no, f_ori_name, f_save_name, f_size, type)
-	values(seq_t_reply_no.nextval, #{c_no}, #{p_no}, #{f_ori_name}, #{f_save_name}, #{f_size}, #{type})
-	</insert> -->
 	
 	<select id="select" parameterType="string" resultType="addcomVO">
 		select c_id as id,  noise, parking, cloth, photo, prov, meeting, meal, sound, drink, smoking, hotel, valet, parking_guide, bus, wifi, chair_table, history, sale, pitting_time, pitting_num, props, type, use_time, recital, addr, addr_detail, reg_date
