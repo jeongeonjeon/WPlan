@@ -28,7 +28,6 @@ public class MyPageController {
 	@PutMapping("/scrape")
 	@ResponseBody
 	public void scrape(ScrapeVO scrape, HttpSession session) {
-									//파라미터가 두개일 경우엔 ("")를 어노테이션 옆에 붙여주어야한다. 이름이 다를때에도 (고운)
 		
 		scrapeService.insertScrape(scrape);
 	}

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html lang="en">
 
@@ -372,25 +373,24 @@
 
 		});
 		
+		var id = ${userVO.id};
+		var pNo = ${productVO.p_no};
 		
-		
-		$('#scrapeBtn').click(function(){
-			var id = '${userVO.id}';
-			var pNo = ${productVO.p_no};
-
-			 $.ajax({
-				url : "${ pageContext.request.contextPath }/scrape",
-				type: "PUT",
+		$('#comment_btn').click(function(){
+			$.ajax({
+				url : "${pageContext.request.contextPath}/inputQnA",
+				type : "POST",
 				data : {
-					id : id ,
+					id : id,
+					content : $('#qnaContent').val(),
 					pNo : pNo
 				},
 				success : function() {
-					alert('!');
+					alert('댓글이 등록되었습니다.');
 				}
-			});  
-		});
-		
+				
+			});
+		})
 		
 		
 	});
@@ -815,27 +815,29 @@
 					<div class="review tab_content">
 						<div class="reply_contents_wrap">
 							<c:forEach var="review" items="${reviewList }">
-							<div class="reply_content">
-								<p class="id">
-									<b>${review.id }</b><span class="time">${review.regDate} </span>
-								</p>
-								<p class="grade">
-									평점 <span> 3점 </span>
-								</p>
-								<p class="content">${review.content}</p>
-							</div>
+								<div class="reply_content">
+									<p class="id">
+										<b>${review.id }</b><span class="time">${review.regDate} </span>
+									</p>
+									<p class="grade">
+										평점 <span> 3점 </span>
+									</p>
+									<p class="content">${review.content}</p>
+								</div>
 							</c:forEach>
 						</div>
 					</div>
 					
-					<!-- Q&A -->
+					<!-- Q&A 입력창-->
 					<div class="q_a tab_content">
+						<form>
 						<div>
-							<textarea class="input" placeholder="Q&A를 입력하세요."></textarea>
-							<input class="submit_btn basic_btn" type="button"
-								id="comment_btn" value="등록">
+							<textarea class="input" id="qnaContent" placeholder="Q&A를 입력하세요."></textarea>
+							<button class="submit_btn basic_btn" type="submit"
+								id="comment_btn" >등록</button>
 						</div>
-						<!-- QnA -->
+						</form>
+						<!-- QnA 댓글창-->
 						<div class="reply_contents_wrap">
 							<div class="reply_content">
 								<p class="id">
