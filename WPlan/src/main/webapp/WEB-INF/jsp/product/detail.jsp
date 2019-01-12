@@ -430,6 +430,7 @@
 	float: left;
 	width: 33.33%;
 	background-color: #474a48;
+	border-bottom: 3px solid #FFB9B2 ;
 }
 
 .detailMenu .tab.storeInfo {
@@ -438,7 +439,7 @@
 
 .detailMenu .tab p {
 	text-align: center;
-	margin: 8px 0;
+	margin: 8px 0 5px 0;
 	font-weight: bolder;
 	color: #FFF;
 }
@@ -700,13 +701,13 @@
 				</div>
 				<ul class="detailMenu">
 					<li class="storeInfo tab">
-						<p>상세정보</p>
+						<a href="javascript:;"><p>상세정보</p></a>
 					</li>
 					<li class="review tab">
-						<p>후기</p>
+						<a href="javascript:;"><p>후기</p></a>
 					</li>
 					<li class="qna tab">
-						<p>Q&A</p>
+						<a href="javascript:;"><p>Q&A</p></a>
 					</li>
 				</ul>
 				<div class="contentWrap">
