@@ -12,6 +12,7 @@
 		<typeAlias type="kr.co.mlec.addcom.vo.AddcomVO" alias="addcomVO"/>
 		<typeAlias type="kr.co.mlec.review.vo.ReviewVO" alias="reviewVO"/>
 		<typeAlias type="kr.co.mlec.file.vo.FileUploadVO" alias="fileuploadVO"/>
+		<typeAlias type="kr.co.mlec.scrape.vo.ScrapeVO" alias="scrapeVO"/>
 		
  	</typeAliases>
 </configuration>
