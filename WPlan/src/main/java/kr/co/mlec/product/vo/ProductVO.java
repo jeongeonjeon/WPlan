@@ -2,85 +2,85 @@ package kr.co.mlec.product.vo;
 
 public class ProductVO {
 
-	private int p_no;  
-    private String p_name;
-    private String c_name;
-    private String c_info;
+	private int pNo;  
+    private String pName;
+    private String cName;
+    private String cInfo;
     private String category;
-    private String reg_date;
-    private String p_price;
-    private String p_event;
-
-	public int getP_no() {
-		return p_no;
+    private String regDate;
+    private String pPrice;
+    private String pEvent;
+	public ProductVO() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
-
-	public void setP_no(int p_no) {
-		this.p_no = p_no;
+	public ProductVO(int pNo, String pName, String cName, String cInfo, String category, String regDate, String pPrice,
+			String pEvent) {
+		super();
+		this.pNo = pNo;
+		this.pName = pName;
+		this.cName = cName;
+		this.cInfo = cInfo;
+		this.category = category;
+		this.regDate = regDate;
+		this.pPrice = pPrice;
+		this.pEvent = pEvent;
 	}
-
-	public String getP_name() {
-		return p_name;
+	public int getpNo() {
+		return pNo;
 	}
-
-	public void setP_name(String p_name) {
-		this.p_name = p_name;
+	public void setpNo(int pNo) {
+		this.pNo = pNo;
 	}
-
-	public String getC_name() {
-		return c_name;
+	public String getpName() {
+		return pName;
 	}
-
-	public void setC_name(String c_name) {
-		this.c_name = c_name;
+	public void setpName(String pName) {
+		this.pName = pName;
 	}
-
-	public String getC_info() {
-		return c_info;
+	public String getcName() {
+		return cName;
 	}
-
-	public void setC_info(String c_info) {
-		this.c_info = c_info;
+	public void setcName(String cName) {
+		this.cName = cName;
 	}
-
+	public String getcInfo() {
+		return cInfo;
+	}
+	public void setcInfo(String cInfo) {
+		this.cInfo = cInfo;
+	}
 	public String getCategory() {
 		return category;
 	}
-
 	public void setCategory(String category) {
 		this.category = category;
 	}
-
-	public String getReg_date() {
-		return reg_date;
+	public String getRegDate() {
+		return regDate;
 	}
-
-	public void setReg_date(String reg_date) {
-		this.reg_date = reg_date;
+	public void setRegDate(String regDate) {
+		this.regDate = regDate;
 	}
-
-	public String getP_price() {
-		return p_price;
+	public String getpPrice() {
+		return pPrice;
 	}
-
-	public void setP_price(String p_price) {
-		this.p_price = p_price;
+	public void setpPrice(String pPrice) {
+		this.pPrice = pPrice;
 	}
-
-	public String getP_event() {
-		return p_event;
+	public String getpEvent() {
+		return pEvent;
 	}
-
-	public void setP_event(String p_event) {
-		this.p_event = p_event;
+	public void setpEvent(String pEvent) {
+		this.pEvent = pEvent;
 	}
-
 	@Override
 	public String toString() {
-		return "ProductVO [p_no=" + p_no + ", p_name=" + p_name + ", c_name=" + c_name + ", c_info=" + c_info
-				+ ", category=" + category + ", reg_date=" + reg_date + ", p_price=" + p_price + ", p_event=" + p_event
-				+ "]";
+		return "ProductVO [pNo=" + pNo + ", pName=" + pName + ", cName=" + cName + ", cInfo=" + cInfo + ", category="
+				+ category + ", regDate=" + regDate + ", pPrice=" + pPrice + ", pEvent=" + pEvent + "]";
 	}
+
+    
     
     
 }

@@ -5,14 +5,14 @@
 <html lang="en">
 
 <head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<title>more</title>
-<jsp:include page="/WEB-INF/jsp/include/head.jsp" />
-
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>more</title>
+	<jsp:include page="/WEB-INF/jsp/include/head.jsp" />
+	
 </head>
 <body>
 	<div id="wrapper">
@@ -28,9 +28,10 @@
 			<div class="jumbotron d-flex align-items-center">
 				<div class="gradient"></div>
 				<div class="container-fluid content">
-					<h1 data-aos="fade-right" data-aos-delay="300">LOCATION</h1>
+					<h1 data-aos="fade-right" data-aos-delay="300">${ category }</h1>
 					<h2 data-aos="fade-left" data-aos-delay="300">You can get everything you want</h2>
 				</div>
+				
 				<!--container-fluid end-->
 			</div>
 		</section>
@@ -39,18 +40,21 @@
 		<section class="section-2">
 			<div class="container">
 				<div class="row">
+				<c:forEach items="${ requestScope.productList }" var="product">
 					<div class="col-lg-4 col-sm-12 col-12 box-1">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-							<a href="${ pageContext.request.contextPath }/detail">
-							<img src="${ pageContext.request.contextPath }/resources/images/food1.jpg" class="figure-img img-fluid" alt="blog">
+							<a href="${ pageContext.request.contextPath }/product/detail/${ 1 }">
+								<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/detail">eon</a>
+									<a href="${ pageContext.request.contextPath }/product/detail/${ 1 }">${ product.getpName() }</a>
 								</h4>
 							</div>
 						</div>
 					</div>
+				</c:forEach>
+					
 				</div>
 			</div>
 		</section>
@@ -67,9 +71,7 @@
 					</ul>
 				</div>
 			</div>
-	
 		</section>
-	
 		<section class="section-7">
 			<!-- Footer -->
 			<footer class="page-footer font-small stylish-color-dark">
@@ -79,7 +81,5 @@
 		</section>
 	</div>
 	<%@ include file="/WEB-INF/jsp/include/sideSlider.jsp" %>
-
 </body>
-
 </html>

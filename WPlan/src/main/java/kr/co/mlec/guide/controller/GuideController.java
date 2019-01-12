@@ -51,6 +51,7 @@ public class GuideController {
 		return mav;
 	}
 	
+	
 	@GetMapping("/weddingTodo")
 	public String weddingTodo(Model model, HttpServletRequest request) {
 		HttpSession session = request.getSession();
@@ -77,5 +78,5 @@ public class GuideController {
 		System.out.println(guideVO);
 		return null;
 	}
-
+	
 }

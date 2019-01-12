@@ -43,21 +43,19 @@ public class ProductController {
 			return mav;
 		}
 		
-		System.out.println(category);
 		List<ProductVO> productList = productService.selectAllProduct(category);
 		System.out.println(productList);
+
+		category = category.toUpperCase();
+		System.out.println(category);
 		
 		//나중에 상품 대표 이미지도 리퀘스트 영역에 올려서 넘겨주기
-		
+		mav.addObject("category", category);
 		mav.addObject("productList", productList);
-		mav.setViewName("/product/" + category);
+		mav.setViewName("/product/category");
  	    
  	   return mav;
    }
-	
-	
-	
-	
 	
 
 	@GetMapping("/product/dress/{dressType}")
@@ -68,7 +66,7 @@ public class ProductController {
 
 	
 	//상세페이지 
-	@GetMapping("/detail/{no}")
+	@GetMapping("/product/detail/{no}")
 	public ModelAndView detail(ModelAndView mav , @PathVariable("no") int no) {
 		
 		//productVO 가져오기
@@ -102,8 +100,6 @@ public class ProductController {
 			if(i == optionList.size()-1) {
 				options.add(innerList);
 			}
-			
-			
 		}
 		
 		
@@ -135,6 +131,8 @@ public class ProductController {
 		return "/detail";
 	}
 	*/
+	
+	
 	
 
 	@GetMapping("/makeWedding")

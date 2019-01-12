@@ -3,7 +3,7 @@
 
   aside.rAside {
  	width : 20%;
- 	height : 800px;
+ 	min-height : 700px;
  	float : left;
  }
  

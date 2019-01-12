@@ -20,9 +20,43 @@
 <jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 
 <style type="text/css">
+
+#wrapper{
+	overflow: hidden;
+}
+
 .container.section-2 {
-	padding: 0;
-	
+	width:60%;
+	float : left;
+	padding-top :50px; 
+}
+.container.section-2 .todoForm{
+	margin : 0 20px;
+}
+.container.section-2 .todo{
+	max-width: 730px;
+	border : 2px solid rgba(0,0,0,.04);
+	border-radius : 15px; 
+	margin : 5px auto;
+	padding : 5px 15px;
+}
+
+.container.section-2 .title {
+	margin : 0 0 30px 0;
+}
+
+.section-2 .input-group .form-control {
+	width : unset;
+}
+
+label.btn.btn-outline-secondary {
+    margin: 0 0 2px 0;
+}
+label#label {
+    margin-bottom: unset;
+    margin: 2px 10px 1px 10px;
+    padding : 0 3%;
+    word-spacing: 2px;
 }
 .btn span.glyphicon {    			
 	opacity: 0;				
@@ -34,35 +68,38 @@ table {
   border-collapse: separate;
   border-spacing: 0 5px;
 }
-#text{
-	width:93%;
-	padding-left: 30px;
-}
 #check{
 	width:5%;
 	padding-left: 30px;
 }
-
-#label {
-	width :35%;
+#text{
+	width:93%;
+	padding-left: 30px;
 }
+
 hr{
 	width:65%;
 }
+
 @import url(https://fonts.googleapis.com/css?family=BenchNine:700);
+
+.todoBtn {
+	width: 100px;
+	margin : 40px auto 20px;
+}
 .snip1535 {
-  background-color: #17a2b8;
+  background-color: #FFB9B2;
   border: none;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: 'BenchNine', Arial, sans-serif;
-  font-size: 1em;
-  font-size: 22px;
+  font-size: 16px;
   line-height: 1em;
-  margin: 15px 40px;
+  margin:0 10px;
+  width:80px;
   outline: none;
-  padding: 12px 40px 10px;
+  padding: 10px 20px;
   position: relative;
   text-transform: uppercase;
   font-weight: 700;
@@ -80,7 +117,7 @@ hr{
   width: 24px;
 }
 .snip1535:before {
-  border-color: #0033FF;
+  border-color: #FFB9B2;
   border-right-width: 2px;
   border-top-width: 2px;
   right: -5px;
@@ -88,14 +125,15 @@ hr{
 }
 .snip1535:after {
   border-bottom-width: 2px;
-  border-color: #0033FF;
+  border-color: #FFB9B2;
   border-left-width: 2px;
   bottom: -5px;
   left: -5px;
 }
 .snip1535:hover,
 .snip1535.hover {
-  background-color: #0033FF;
+  background-color: #FFF;
+  color : #6c757d;
 }
 .snip1535:hover:before,
 .snip1535.hover:before,
@@ -109,7 +147,14 @@ hr{
 <script>
 $(document).ready(function(){
 	
-	$('.btn-info').click(function(){
+	$('.container.section-2 .todo').click(function(){
+		
+		if($('.container.section-2 .todo').children().length == 0){
+			$(this).remove();
+		}
+	})
+	
+	$('.btn-outline-secondary').click(function(){
 		var newColor = 'rgba(0,0,0,.05)';
 		if($(this).hasClass("active") === false){
 			$(this).addClass('active');
@@ -121,8 +166,6 @@ $(document).ready(function(){
 			$(this).children('input:hidden').removeAttr('checked');
 			$(this).closest('#check').siblings('#text').children('#label').css('background-color', '');
 		}
-		
-		
 	});
 	$(".hover").mouseleave(
 	  function() {
@@ -155,40 +198,29 @@ $(document).ready(function(){
 		</aside>
 			<section class="mSection box">
 			<div class="container section-2">			
-				<br>
-				<div style="padding-left:18%; margin-bottom: -1%;"><h3>결혼가이드</h3></div>
-<%-- 				${ todoList[0] } --%>
-				<br>
-					<div style="padding-left:18%;"><h1>TO DO LIST</h1></div>
-					<hr/>
-				
+				<h1 class = 'title'>TO DO LIST</h1>
 				<c:set var="i" value="0" />
-				<form:form method="post" commandName="guideVO">
+				<form:form method="post" class="todoForm" commandName="guideVO">
 					<c:forEach items="${ requestScope.todoList }" var="todo">
 						<c:set var="i" value="${i+1}" />
-						<div>
-						<table>
 							<c:choose>
 								<c:when test="${todo eq 'true'}">
-									<tr>
-										<td id="check"><label class="btn btn-info active"><form:hidden path="${ todoListEng[i] }" checked="true"/><span class="glyphicon glyphicon-ok"></span></label></td>
-										<td id="text"><label id="label" style="background-color: rgba(0,0,0,.05);">${todoListKor[i]}</label></td>
-									</tr>
+									<div class="todo">
+										<td id="check"><label class="btn btn-outline-secondary active"><form:hidden path="${ todoListEng[i] }" checked="true"/><span class="glyphicon glyphicon-ok"></span></label></td>
+										<td id="text"><label id="label">${todoListKor[i]} 준비</label></td>
+									</div>
 								</c:when>
 								<c:when test="${todo eq 'false'}">
-									<tr>
-										<td id="check"><label class="btn btn-info"><form:hidden path="${ todoListEng[i] }" /><span class="glyphicon glyphicon-ok"></span></label></td>
-										<td id="text"><label id="label">${todoListKor[i]}</label></td>
-									</tr>
-								</c:when>
-															
+									<div class="todo">
+										<td id="check"><label class="btn btn-outline-secondary"><form:hidden path="${ todoListEng[i] }" /><span class="glyphicon glyphicon-ok"></span></label></td>
+										<td id="text"><label id="label">${todoListKor[i]} 준비</label></td>
+									</div>
+								</c:when>								
 							</c:choose>
-						</table>
-						</div>
 					</c:forEach>
 				</form:form>
-				<div style="margin-top:3%;">
-				<button class="snip1535" style="margin-left:2%; width:15%;">저장</button>
+				<div class="todoBtn">
+				<button class="snip1535">저장</button>
 				</div>
 			</div>
 			
