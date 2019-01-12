@@ -350,7 +350,7 @@
 	$(document).ready(function() {
 		
 		$('.review.tab_content').css('display', 'none');
-		$('.q_a.tab_content').css('display', 'none');
+		$('.qna.tab_content').css('display', 'none');
 		$('.storeInfo.tab_content').css('display', 'block');
 		$('.detailMenu .tab').click(function() {
 			$('.detailMenu .tab').css("background-color", "#474a48");
@@ -358,16 +358,16 @@
 
 			if ($(this).hasClass('storeInfo')) {
 				$('.review.tab_content').css('display', 'none');
-				$('.q_a.tab_content').css('display', 'none');
+				$('.qna.tab_content').css('display', 'none');
 				$('.storeInfo.tab_content').css('display', 'block');
 			} else if ($(this).hasClass('review')) {
 				$('.storeInfo.tab_content').css('display', 'none');
-				$('.q_a.tab_content').css('display', 'none');
+				$('.qna.tab_content').css('display', 'none');
 				$('.review.tab_content').css('display', 'block');
-			} else if ($(this).hasClass('q_a')) {
+			} else if ($(this).hasClass('qna')) {
 				$('.storeInfo.tab_content').css('display', 'none');
 				$('.review.tab_content').css('display', 'none');
-				$('.q_a.tab_content').css('display', 'block');
+				$('.qna.tab_content').css('display', 'block');
 			}
 
 		});
@@ -376,7 +376,7 @@
 		
 		$('#scrapeBtn').click(function(){
 			var id = '${userVO.id}';
-			var pNo = ${productVO.p_no};
+			var pNo = ${productVO.pNo};
 
 			 $.ajax({
 				url : "${ pageContext.request.contextPath }/scrape",
@@ -430,6 +430,7 @@
 	float: left;
 	width: 33.33%;
 	background-color: #474a48;
+	border-bottom: 3px solid #FFB9B2 ;
 }
 
 .detailMenu .tab.storeInfo {
@@ -438,7 +439,7 @@
 
 .detailMenu .tab p {
 	text-align: center;
-	margin: 8px 0;
+	margin: 8px 0 5px 0;
 	font-weight: bolder;
 	color: #FFF;
 }
@@ -569,7 +570,7 @@
 		<div class="container detail section-2">
 			<div class="box">
 				<div class="shopInfo">
-					<h3>${productVO.c_name }</h3>
+					<h3>${productVO.cName }</h3>
 					<p>서울 강남구 역삼동</p>
 					
 				</div>
@@ -654,20 +655,20 @@
 							<tr class="">
 								<th scope="row">상품명</th>
 								<td>
-									<b>${productVO.p_name }</b>
+									<b>${productVO.pName }</b>
 								</td>
 							</tr>
 							<tr class="displaynone">
 								<th scope="row">상품가</th>
-								<td>${productVO.p_price }</td>
+								<td>${productVO.pPrice }</td>
 							</tr>
 							<tr class="">
 								<th scope="row">*</th>
-								<td>${productVO.p_event }</td>
+								<td>${productVO.pEvent }</td>
 							</tr>
 							<tr class="displaynone">
 								<th scope="row">공급사</th>
-								<td>${productVO.c_name }</td>
+								<td>${productVO.cName }</td>
 							</tr>
 							<tr class="">
 								<th scope="row">*</th>
@@ -700,13 +701,13 @@
 				</div>
 				<ul class="detailMenu">
 					<li class="storeInfo tab">
-						<p>상세정보</p>
+						<a href="javascript:;"><p>상세정보</p></a>
 					</li>
 					<li class="review tab">
-						<p>후기</p>
+						<a href="javascript:;"><p>후기</p></a>
 					</li>
-					<li class="q_a tab">
-						<p>Q&A</p>
+					<li class="qna tab">
+						<a href="javascript:;"><p>Q&A</p></a>
 					</li>
 				</ul>
 				<div class="contentWrap">
@@ -829,7 +830,7 @@
 					</div>
 					
 					<!-- Q&A -->
-					<div class="q_a tab_content">
+					<div class="qna tab_content">
 						<div>
 							<textarea class="input" placeholder="Q&A를 입력하세요."></textarea>
 							<input class="submit_btn basic_btn" type="button"

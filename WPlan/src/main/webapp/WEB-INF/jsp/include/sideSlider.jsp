@@ -4,17 +4,18 @@
 		position:relative;
 		margin:0;
 		padding:0;
+		font-size : 15px;
 	}
 
 	.asideWrap .aside{
 		width:100%;
-		height:50px;
-		line-height: 50px;
+		height:45px;
+		line-height: 45px;
 		padding : 0 20px;
 		border-bottom: 1px solid #FFF;
 	}
 	.asideWrap .aside.calander,.asideWrap .aside.area{
-		height: 100px;
+		height: 90px;
 	}
 	.asideWrap .aside span{
 		float: right;
@@ -30,13 +31,13 @@
 		height: 55%;
 	}
 	.asideWrap .aside input[type="text"]{
-		height: 40px;
+		height: 35px;
 		width:100%;
 		padding: 3px 10px;
 		font-size: 16px;
 	}
 	.asideWrap .subMenu{
-		height:60px;
+		height:50px;
 		padding : 0 20px;
 		background-color: #FFF
 	}
@@ -74,6 +75,11 @@ $(document).ready(function(){
 			<a href="${ pageContext.request.contextPath }/scrape">
 				<img class="scrapeImg" src="${ pageContext.request.contextPath }/resources/images/scrape.png">
 				<span class="scrape">스크랩북</span>
+			</a>
+		</li>
+		<li class="aside todoList">
+			<a href="${ pageContext.request.contextPath }/weddingTodo">
+				<span class="scrape">TO DO LIST</span>
 			</a>
 		</li>
 		<li class="aside make_wedding">
