@@ -16,6 +16,7 @@
 
 <jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 
+
 </head>
 <style>
 .section-22 {

@@ -26,6 +26,14 @@ public class ProductServiceImpl implements ProductService {
 		
 		return productList;
 	}
+	
+	@Override
+	public List<ProductVO> selectDressType(String dresstype) {
+		
+		List<ProductVO> productList = productDao.selectDressType(dresstype);
+	
+		return productList;
+	}
 
 	@Override
 	public ProductVO selectName(ProductVO product) {
@@ -43,5 +51,4 @@ public class ProductServiceImpl implements ProductService {
 		return product;
 	}
 
-	
 }

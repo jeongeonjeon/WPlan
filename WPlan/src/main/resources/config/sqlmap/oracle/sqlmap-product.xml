@@ -8,25 +8,34 @@
 		resultType="productVO">
 		select p_no as pNo, p_name as pName, c_name as cName,
 			   c_info as cInfo, category, to_char(reg_date, 'yyyy-mm-dd') as regDate,
-			   p_price as pPrice , p_event as pEvent
+			   p_price as pPrice , p_event as pEvent, dresstype
 		from w_product
 		where category = #{category}
+	</select>
+
+	<select id="selectDressType" parameterType="string"
+		resultType="productVO">
+		select p_no as pNo, p_name as pName, c_name as cName,
+			   c_info as cInfo, category, to_char(reg_date, 'yyyy-mm-dd') as regDate,
+			   p_price as pPrice , p_event as pEvent, dresstype
+		from w_product
+		where category = 'dress'
+		  and dresstype = #{dresstype}
 	</select>
 
 	<select id="selectCategory" parameterType="productVO"
 		resultType="productVO">
 		select p_no as pNo, p_name as pName, c_name as cName,
 			   c_info as cInfo, category, to_char(reg_date, 'yyyy-mm-dd') as regDate,
-			   p_price as pPrice , p_event as pEvent
+			   p_price as pPrice , p_event as pEvent, dresstype
 		from w_product
 	</select>
-
 
 	<select id="selectProductByNo" parameterType="int"
 		resultType="productVO">
 		select p_no as pNo, p_name as pName, c_name as cName,
 			   c_info as cInfo, category, to_char(reg_date, 'yyyy-mm-dd') as regDate,
-			   p_price as pPrice , p_event as pEvent
+			   p_price as pPrice , p_event as pEvent, dresstype
 		from w_product
 		where p_no = #{no}
 	</select>

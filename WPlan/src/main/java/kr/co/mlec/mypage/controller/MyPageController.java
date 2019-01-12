@@ -19,7 +19,8 @@ public class MyPageController {
 	private ScrapeService scrapeService;
 	
 	@GetMapping("/scrape")
-	public String wish() {		
+	public String scrape() {		
+		
 		
 		
 		return "/scrape";

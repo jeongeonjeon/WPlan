@@ -38,7 +38,6 @@ public class ProductController {
 		ModelAndView mav = new ModelAndView();
 		
 		if(category.equals("dress")) {
-			
 			mav.setViewName("/product/dressType");
 			return mav;
 		}
@@ -57,13 +56,30 @@ public class ProductController {
  	   return mav;
    }
 	
-
 	@GetMapping("/product/dress/{dressType}")
-	public String dress(@PathVariable("dressType") String dressType) {
+	public ModelAndView dress(@PathVariable("dressType") String type) {
+		ModelAndView mav = new ModelAndView();
+		
+		List<ProductVO> productList = productService.selectDressType(type);
+		System.out.println(productList);
+
+		String category = "DRESS";
+		System.out.println(category);
+		
+		//나중에 상품 대표 이미지도 리퀘스트 영역에 올려서 넘겨주기
+		mav.addObject("category", category);
+		mav.addObject("productList", productList);
+		mav.setViewName("/product/category");
+		
+		return mav;
+	}
+/*
+	@GetMapping("/product/dress/{dressType}")
+	public String dressType(@PathVariable("dressType") String dressType) {
 
 		return "/product/dress";
 	}
-
+*/
 	
 	//상세페이지 
 	@GetMapping("/product/detail/{no}")

@@ -17,9 +17,14 @@ public interface ProductDAO {
 	 * 게시글 상세조회 서비스
 	 * @param no 게시글번호
 	 */
-
 	public ProductVO selectCategory(ProductVO product);
 	
+	/**
+	 * 드레스 타입별로 조회 서비스
+	 * @param dresstype
+	 * @return
+	 */
+	public List<ProductVO> selectDressType(String dresstype);
 
 	/**
 	 * 상세페이지의 상품 정보를 반환하는 메소드

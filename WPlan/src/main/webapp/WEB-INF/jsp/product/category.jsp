@@ -12,7 +12,28 @@
 	
 	<title>more</title>
 	<jsp:include page="/WEB-INF/jsp/include/head.jsp" />
-	
+	<style type="text/css">
+		.section-2 .container{
+			min-height: 800px;
+		}
+		
+		@media(max-width:768px){
+			.col-lg-4{
+				max-width: 33.333%;
+			}
+			.section-2 img {
+			    height: 160px;
+			    width: 200px;
+			}
+			.section-2 .box {
+			    padding: 20px 10px 5px 10px;
+			}
+			.section-2 h4 {
+    			font-size: 14px;
+    		}
+		}
+
+	</style>
 </head>
 <body>
 	<div id="wrapper">
@@ -54,7 +75,6 @@
 						</div>
 					</div>
 				</c:forEach>
-					
 				</div>
 			</div>
 		</section>

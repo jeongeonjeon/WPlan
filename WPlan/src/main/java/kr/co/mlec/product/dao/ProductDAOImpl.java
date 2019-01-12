@@ -21,6 +21,12 @@ public class ProductDAOImpl implements ProductDAO {
 		
 		return productList;
 	}
+	@Override
+	public List<ProductVO> selectDressType(String dresstype) {
+		List<ProductVO> productList = sqlSession.selectList("kr.co.mlec.product.selectDressType", dresstype);
+		
+		return productList;
+	}
 
 	@Override
 	public ProductVO selectCategory(ProductVO product) {
