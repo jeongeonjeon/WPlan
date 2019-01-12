@@ -1,10 +1,7 @@
 package kr.co.mlec.product.controller;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -39,6 +36,9 @@ public class ProductController {
 		
 		if(category.equals("dress")) {
 			mav.setViewName("/product/dressType");
+			return mav;
+		} else if(category.equals("addProductForm")) {
+			mav.setViewName("product/addProductForm");
 			return mav;
 		}
 		

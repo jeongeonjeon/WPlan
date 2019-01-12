@@ -39,6 +39,11 @@
 		from w_product
 		where p_no = #{no}
 	</select>
+	 
+		<insert id="insertProduct" parameterType="productVO" >
+		insert into w_addcom (p_no, p_name, c_name, c_info, category, p_price, p_event, dresstype )
+		values (#{p_no}, #{p_name}, #{c_name}, #{c_info}, #{category}, #{p_price}, #{p_event}, #{dresstype})
+	</insert>
 
 </mapper>
   

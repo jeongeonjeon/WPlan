@@ -226,7 +226,6 @@ input[type=file] {
             xhr.send(data);
 
         }
-
 </script>
 <body>
 	<div id="wrapper">
@@ -255,13 +254,13 @@ input[type=file] {
 
 			<div class="box">
 
-				<h1>업체등록</h1>
+				<h1>제품 등록</h1>
 				<hr>
 				
 				<!-- 파일 업로드 시작 -->
 				
 				<div>
-					<p><b>매장 사진 등록</b></p>
+					<p><b>제품 사진 등록</b></p>
 				<div class="input_wrap">
 					<a href="javascript:" onclick="fileUploadAction();" class="my_button">업로드</a>
 					<input type="file" id="input_imgs" multiple/>
@@ -279,92 +278,37 @@ input[type=file] {
 			
 				<!-- 파일 업로드 끝 -->
 				
-				<form action="<%= request.getContextPath() %>/addcom/addcomForm" method="post">
-	
-					<hr>
-
-					<table>
-						<tr>
-							<td><input type="checkbox" name="noise">소음규제</td>
-							<td><input type="checkbox" name="parking">주차</td>
-							<td><input type="checkbox" name="cloth">재봉</td>
-							<td><input type="checkbox" name="photo">피팅사진촬영</td>
-							<td><input type="checkbox" name="prov">제공범위</td>
-							<td><input type="checkbox" name="meeting">사전미팅</td>
-
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="meal">식사</td>
-							<td><input type="checkbox" name="sound">음향</td>
-							<td><input type="checkbox" name="drink">주류</td>
-							<td><input type="checkbox" name="smoking">흡연</td>
-							<td><input type="checkbox" name="hotel">숙박</td>
-							<td><input type="checkbox" name="valet">발렛</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="parking_guide">주차안내</td>
-							<td><input type="checkbox" name="bus">버스진입</td>
-							<td><input type="checkbox" name="wifi">WIFI</td>
-							<td><input type="checkbox" name="chair_table">의자/테이블</td>
-							<td><input type="checkbox" name="history">웨딩진행이력</td>
-						</tr>
-					</table>
-
-					<table>
-						<tr>
-							<td>판매방식</td>
-							<td><input type="text" name="sale"></td>
-						</tr>
-						<tr>
-							<td>피팅시간</td>
-							<td><input type="text" name="pitting_time"></td>
-						</tr>
-						<tr>
-							<td>피팅 가능 개수</td>
-							<td><input type="text" name="pitting_num"></td>
-						</tr>
-						<tr>
-							<th>제공/대여소품</th>
-							<td><input type="text" name="props"></td>
-						</tr>
-						<tr>
-							<td>타입</td>
-							<td><input type="text" name="type"></td>
-						</tr>
-						<tr>
-							<td>이용시간</td>
-							<td><input type="text" name="use_time"></td>
-						</tr>
-						<tr>
-							<td>기타</td>
-							<td><input type="text" name="recital"></td>
-						</tr>
-					</table>
-
-
-
-					<div class="checkbox_wrap">
-						<table>
-							<tr>
-								<td>주소검색</td>
-							</tr>
-							<tr>
-								<td><input type="text" name="addr_post" id="sample6_postcode" placeholder="우편번호"></td>
-								<td><input type="button"
-									onclick="sample6_execDaumPostcode()" value="우편번호 찾기"> <br>
-								</td>
-							</tr>
-							<tr>
-								<td><input type="text" name="addr" id="sample6_address" placeholder="주소"> <br></td>
-								<td><input type="text" name="addr_detail" id="sample6_detailAddress" placeholder="상세주소"></td>
-								<td><input type="text" name="addr_extra" id="sample6_extraAddress" placeholder="참고항목"></td>
-							</tr>
-						</table>
-
+				<form action="<%= request.getContextPath() %>/addproduct/addProductForm" method="post">
+					<div>
+						<hr>
+						<div align="center">
+							<div style="float:left; size:200px;">
+							제품이름
+							</div>
+							<div>
+							<input type="text"  name="p_name">
+							</div>
+							<div style="float:left; size:200px;">
+							카테고리
+							</div>
+							<div>
+							<input type="text" name="category">
+							</div>
+							<div style="float:left; size:200px;">
+							가격
+							</div>
+							<div>
+							<input type="text" name="p_price">
+							</div>
+							<div style="float:left; size:200px;">
+							할인이벤트
+							</div>
+							<div>
+							<input type="text" name="p_event">
+							</div>
+						</div>
+						<hr>
 					</div>
-
-					<hr>
-
 					<button type="submit" style="width: 100px;">등록</button>
 
 					<a href="${ pageContext.request.contextPath }/member/myPage">

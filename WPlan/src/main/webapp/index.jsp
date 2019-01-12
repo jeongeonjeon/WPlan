@@ -83,7 +83,7 @@ $(document).ready(function(){
 			</a>
 			</div>
 		</section>
-		<section class="section-7">
+		<section class="section-7" >
 			<!-- Footer -->
 			<footer class="page-footer font-small stylish-color-dark">
 				<%@ include file="/WEB-INF/jsp/include/footer.jsp" %>
