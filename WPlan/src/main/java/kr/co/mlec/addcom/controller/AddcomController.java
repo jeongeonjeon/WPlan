@@ -23,6 +23,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 import kr.co.mlec.addcom.service.AddcomService;
 import kr.co.mlec.addcom.vo.AddcomVO;
+import kr.co.mlec.file.command.FileCommondMap;
 import kr.co.mlec.umember.vo.UmemberVO;
 
 
@@ -58,16 +59,16 @@ public class AddcomController {
 	System.out.println(mav);
 	return mav;
 	}
-/*	
+
 	@RequestMapping(value="/upload")
-	public ModelAndView fileUpload(CommandMap commandMap, HttpServletRequest request) throws Exception {
+	public ModelAndView fileUpload(FileCommondMap commandMap, HttpServletRequest request) throws Exception {
 		ModelAndView mav = new ModelAndView("redirect:/member/myPage");
 		
-//		addcomService.insertFile(commandMap.getMap(), request);
+		addcomService.insertFile(commandMap.getMap(), request);
 		
 		return mav;
 	}
-*/	
+	
 /*	@GetMapping("/addcom")
 	public String addcom(Model model, HttpServletRequest request) {
 		HttpSession session = request.getSession();
