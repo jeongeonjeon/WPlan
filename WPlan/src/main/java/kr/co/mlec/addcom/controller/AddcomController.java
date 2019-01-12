@@ -60,14 +60,14 @@ public class AddcomController {
 	return mav;
 	}
 
-	/*@RequestMapping(value="/upload")
+	@RequestMapping(value="/upload")
 	public ModelAndView fileUpload(FileCommondMap commandMap, HttpServletRequest request) throws Exception {
 		ModelAndView mav = new ModelAndView("redirect:/member/myPage");
 		
 		addcomService.insertFile(commandMap.getMap(), request);
 		
 		return mav;
-	}*/
+	}
 	
 /*	@GetMapping("/addcom")
 	public String addcom(Model model, HttpServletRequest request) {

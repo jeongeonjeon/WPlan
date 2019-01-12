@@ -1,7 +1,11 @@
 package kr.co.mlec.addcom.service;
 
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
 import kr.co.mlec.addcom.vo.AddcomVO;
-import kr.co.mlec.file.vo.FileUploadVO;
+
 
 
 public interface AddcomService {
@@ -10,6 +14,6 @@ public interface AddcomService {
 
 	public AddcomVO selectAddcom(String id);
 	
-	public void insertFile(FileUploadVO fileuploadVO);
+	public void insertFile(Map<String, Object> map, HttpServletRequest request) throws Exception ;
 
 }
