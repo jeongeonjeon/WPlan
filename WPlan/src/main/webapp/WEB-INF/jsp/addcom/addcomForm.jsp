@@ -227,6 +227,30 @@ input[type=file] {
 
         }
 
+        $(document).ready(function(){
+            $("#goMypage").on("click", function(e){ //목록으로 버튼
+                e.preventDefault();
+                openBoardList();
+            });
+             
+            $("#goInsert").on("click", function(e){ //작성하기 버튼
+                e.preventDefault();
+                insertBoard();
+            });
+        });
+         
+        function openMyPage(){
+            var comSubmit = new ComSubmit();
+            comSubmit.setUrl("<c:url value='/member/MyPage' />");
+            comSubmit.submit();
+        }
+         
+        function insertAddcom(){
+            var comSubmit = new ComSubmit("frm");
+            comSubmit.setUrl("<c:url value='/member/MyPage' />");
+            comSubmit.submit();
+        }
+
 </script>
 <body>
 	<div id="wrapper">
@@ -365,11 +389,12 @@ input[type=file] {
 
 					<hr>
 
-					<button type="submit" style="width: 100px;" onclick="submitAction();">등록</button>
+					<button type="submit" id="goInsert"style="width: 100px;" onclick="submitAction();">등록</button>
 
-					<a href="${ pageContext.request.contextPath }/member/myPage">
-						<button type="button" style="width: 100px; margin-left: 30px;">취소</button>
-					</a>
+<%-- 					<a href="${ pageContext.request.contextPath }/member/myPage">
+ --%>						
+ 					<button type="button" id="goMypage" style="width: 100px;  margin-left: 30px;">취소</button>
+					
 				</form>
 			</div>
 		</div>
