@@ -10,4 +10,5 @@ public interface AddcomDAO {
 	public AddcomVO selectAddcom(String id);
 	
 	public void insertFile(FileUploadVO fileuploadVO);
+	
 }
