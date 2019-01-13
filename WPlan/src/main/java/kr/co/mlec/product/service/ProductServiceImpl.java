@@ -9,6 +9,7 @@ import kr.co.mlec.product.dao.ProductDAO;
 import kr.co.mlec.product.vo.ProductVO;
 import kr.co.mlec.productOption.dao.ProductOptionDAO;
 import kr.co.mlec.productOption.vo.ProductOptionVO;
+import kr.co.mlec.umember.vo.UmemberVO;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -49,6 +50,11 @@ public class ProductServiceImpl implements ProductService {
 //		System.out.println("productService : " + product);
 		
 		return product;
+	}
+	
+	@Override
+	public void insertProduct(ProductVO productVO) {
+		productDao.insertProduct(productVO);
 	}
 
 }
