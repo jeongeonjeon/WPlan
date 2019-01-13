@@ -372,12 +372,10 @@
 
 		});
 		
-		
+		var id = '${userVO.id}';
+		var pNo = ${productVO.pNo};
 		
 		$('#scrapeBtn').click(function(){
-			var id = '${userVO.id}';
-			var pNo = ${productVO.pNo};
-
 			 $.ajax({
 				url : "${ pageContext.request.contextPath }/scrape",
 				type: "PUT",
@@ -389,6 +387,22 @@
 					alert('!');
 				}
 			});  
+		});
+		
+				$('#comment_btn').click(function(){
+			$.ajax({
+				url : "${pageContext.request.contextPath}/inputQnA",
+				type : "POST",
+				data : {
+					id : id,
+					content : $('#qnaContent').val(),
+					pNo : pNo
+				},
+				success : function() {
+					alert('댓글이 등록되었습니다.');
+				}
+				
+			});
 		});
 		
 		
@@ -829,14 +843,15 @@
 						</div>
 					</div>
 					
-					<!-- Q&A -->
+					<!-- Q&A 입력창-->
 					<div class="qna tab_content">
 						<div>
-							<textarea class="input" placeholder="Q&A를 입력하세요."></textarea>
-							<input class="submit_btn basic_btn" type="button"
-								id="comment_btn" value="등록">
+							<textarea class="input" id="qnaContent" placeholder="Q&A를 입력하세요."></textarea>
+							<button class="submit_btn basic_btn" type="submit"
+								id="comment_btn" >등록</button>
 						</div>
-						<!-- QnA -->
+						</form>
+						<!-- QnA 댓글창-->
 						<div class="reply_contents_wrap">
 							<div class="reply_content">
 								<p class="id">

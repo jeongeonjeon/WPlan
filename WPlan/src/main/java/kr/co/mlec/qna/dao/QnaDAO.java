@@ -4,7 +4,7 @@ import kr.co.mlec.qna.vo.QnaVO;
 
 public interface QnaDAO {
 
-//	public void insert(QnaVO qnaVO);
+	public void insertQnA(QnaVO qnaVO);
 //	
 //	public List<QnaVO> selectAll(int );
 }
