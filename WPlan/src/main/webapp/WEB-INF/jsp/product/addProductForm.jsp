@@ -256,7 +256,6 @@ input[type=file] {
 			<div class="box">
 
 				<h1>업체등록</h1>
-				<hr>
 				
 				<!-- 파일 업로드 시작 -->
 				
