@@ -1,15 +1,17 @@
 package kr.co.mlec.product.controller;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.co.mlec.product.service.ProductService;
@@ -18,6 +20,7 @@ import kr.co.mlec.productOption.service.ProductOptionService;
 import kr.co.mlec.productOption.vo.ProductOptionVO;
 import kr.co.mlec.review.service.ReviewService;
 import kr.co.mlec.review.vo.ReviewVO;
+import kr.co.mlec.umember.vo.UmemberVO;
 
 @Controller
 public class ProductController {
@@ -39,6 +42,9 @@ public class ProductController {
 		
 		if(category.equals("dress")) {
 			mav.setViewName("/product/dressType");
+			return mav;
+		} else if(category.equals("addProductForm")) {
+			mav.setViewName("product/addProductForm");
 			return mav;
 		}
 		
@@ -151,13 +157,31 @@ public class ProductController {
 		return "/detail";
 	}
 	*/
-	
-	
-	
 
-	@GetMapping("/makeWedding")
-	public String makeWedding() {
-		return "/makeWedding";
+	
+	@GetMapping("/product/addProductForm")
+	public String addProductForm(Model model) {
+		ProductVO productVO = new ProductVO();
+		model.addAttribute("productVO", productVO);
+		return "product/addProductForm";
+	}
+	
+	@PostMapping("/product/addProductForm") 
+	@ResponseBody
+	public ModelAndView productInsert(ProductVO productVO, HttpSession session) {
+		productService.insertProduct(productVO);
+		
+		ProductVO userVO = productService.selectName(productVO);
+		
+		ModelAndView mav = new ModelAndView();
+
+		if(userVO == null) {
+			mav.addObject("msg","등록되었습니다");
+			mav.setViewName("redirect:/");
+		} else {
+			mav.setViewName("redirect:/product/addProductForm");
+		}
+		return mav;
 	}
 
 }

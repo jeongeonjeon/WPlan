@@ -227,31 +227,7 @@ input[type=file] {
             xhr.send(data);
 
         }
-
-        $(document).ready(function(){
-            $("#goMypage").on("click", function(e){ //목록으로 버튼
-                e.preventDefault();
-                openBoardList();
-            });
-             
-            $("#goInsert").on("click", function(e){ //작성하기 버튼
-                e.preventDefault();
-                insertBoard();
-            });
-        });
-         
-        function openMyPage(){
-            var comSubmit = new ComSubmit();
-            comSubmit.setUrl("<c:url value='/member/MyPage' />");
-            comSubmit.submit();
-        }
-         
-        function insertAddcom(){
-            var comSubmit = new ComSubmit("frm");
-            comSubmit.setUrl("<c:url value='/member/MyPage' />");
-            comSubmit.submit();
-        }
-
+	
 </script>
 <body>
 	<div id="wrapper">
@@ -284,23 +260,24 @@ input[type=file] {
 				<hr>
 				
 				<!-- 파일 업로드 시작 -->
-				
-				<div>
-					<p><b>매장 사진 등록</b></p>
-				<div class="input_wrap">
-					<a href="javascript:" onclick="fileUploadAction();" class="my_button">업로드</a>
-					<input type="file" id="input_imgs" multiple/>
-				</div>
-				</div>
-				
-				<div>
-					<div class="imgs_wrap">
-					<img id="img" />
-				</div>
-				</div>
+				<form method="post" action="" enctype="multipart/form-data">
+					<div>
+						<p><b>사진 등록</b></p>
+					<div class="input_wrap">
+						<a href="javascript:" onclick="fileUploadAction();" class="my_button">업로드</a>
+						<input type="file" id="input_imgs" multiple/>
+					</div>
+					</div>
+					
+					<div>
+						<div class="imgs_wrap">
+						<img id="img" />
+					</div>
+					</div>
 			
 <!-- 				<a href="javascript:" class="my_button" onclick="submitAction();">업로드</a>
  -->			
+ 				</form>
 			
 				<!-- 파일 업로드 끝 -->
 				
@@ -390,12 +367,11 @@ input[type=file] {
 
 					<hr>
 
-					<button type="submit" id="goInsert"style="width: 100px;" onclick="submitAction();">등록</button>
+					<button type="submit" style="width: 100px;">등록</button>
 
-<%-- 					<a href="${ pageContext.request.contextPath }/member/myPage">
- --%>						
- 					<button type="button" id="goMypage" style="width: 100px;  margin-left: 30px;">취소</button>
-					
+ 					<a href="${ pageContext.request.contextPath }/member/myPage">
+ 					<button type="button" style="width: 100px;  margin-left: 30px;">취소</button>
+					</a>
 				</form>
 			</div>
 		</div>

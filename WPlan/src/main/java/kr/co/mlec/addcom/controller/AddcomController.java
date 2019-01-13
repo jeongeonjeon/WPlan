@@ -60,16 +60,18 @@ public class AddcomController {
 	}
 	
 /*	
-	@RequestMapping(value="/upload")
+ 	@RequestMapping(value="/upload")
 	public ModelAndView fileUpload(CommandMap commandMap, HttpServletRequest request) throws Exception {
 		ModelAndView mav = new ModelAndView("redirect:/member/myPage");
 		
-//		addcomService.insertFile(commandMap.getMap(), request);
+		addcomService.insertFile(commandMap.getMap(), request);
 		
 		return mav;
 	}
-*/	
-/*	@GetMapping("/addcom")
+	*/
+	
+/*	
+  	@GetMapping("/addcom")
 	public String addcom(Model model, HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		CmemberVO cuser = (CmemberVO)session.getAttribute("CuserVO");
@@ -80,5 +82,6 @@ public class AddcomController {
 		model.addAttribute("addcomVO", addcomVO);
 		  
 		return "addcom";
-	}*/
+	}
+	*/
 }

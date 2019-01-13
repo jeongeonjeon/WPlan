@@ -3,6 +3,7 @@ package kr.co.mlec.product.dao;
 import java.util.List;
 
 import kr.co.mlec.product.vo.ProductVO;
+import kr.co.mlec.umember.vo.UmemberVO;
 
 public interface ProductDAO {
 
@@ -42,4 +43,6 @@ public interface ProductDAO {
 	 * 댓글카운트 감소 서비스
 	 */
 //	public void reduceReplyCount(int no);
+	
+	public void insertProduct(ProductVO productVO);
 }
