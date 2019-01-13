@@ -273,38 +273,56 @@ input[type=file] {
 				</div>
 				</div>
 			
-				<a href="javascript:" class="my_button" onclick="submitAction();">업로드</a>
+<!-- 				<a href="javascript:" class="my_button" onclick="submitAction();">업로드</a> -->
 			
 			
 				<!-- 파일 업로드 끝 -->
 				
-				<form action="<%= request.getContextPath() %>/addproduct/addProductForm" method="post">
+				<form action="<%= request.getContextPath() %>/product/addProductForm" method="post">
 					<div>
-						<hr>
+						<hr> 
 						<div align="center">
-							<div style="float:left; size:200px;">
+							<div style="float:left; ">
 							제품이름
 							</div>
 							<div>
 							<input type="text"  name="p_name">
 							</div>
-							<div style="float:left; size:200px;">
+							<div style="float:left; ">
+							업체이름
+							</div>
+							<div>
+							<input type="text"  name="c_name">
+							</div>
+							<div style="float:left;">
+							업체정보
+							</div>
+							<div>
+							<input type="text"  name="c_info">
+							</div> 
+							<div style="float:left; ">
 							카테고리
 							</div>
 							<div>
 							<input type="text" name="category">
 							</div>
-							<div style="float:left; size:200px;">
+							<div style="float:left;">
 							가격
 							</div>
 							<div>
 							<input type="text" name="p_price">
 							</div>
-							<div style="float:left; size:200px;">
-							할인이벤트
+							<div style="float:left; ">
+							이벤트
 							</div>
 							<div>
 							<input type="text" name="p_event">
+							</div>
+							<div style="float:left;">
+							타입
+							</div>
+							<div>
+							<input type="text" name="dresstype">
 							</div>
 						</div>
 						<hr>

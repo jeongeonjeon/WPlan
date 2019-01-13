@@ -2,14 +2,14 @@ package kr.co.mlec.product.vo;
 
 public class ProductVO {
 
-	private int pNo;  
-    private String pName;
-    private String cName;
-    private String cInfo;
+	private int p_no;  
+    private String p_name;
+    private String c_name;
+    private String c_info;
     private String category;
-    private String regDate;
-    private String pPrice;
-    private String pEvent;
+    private String reg_date;
+    private String p_price;
+    private String p_event;
     private String dresstype;
     
 	public ProductVO() {
@@ -17,50 +17,43 @@ public class ProductVO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ProductVO(int pNo, String pName, String cName, String cInfo, String category, String regDate, String pPrice,
-			String pEvent, String dresstype) {
-		super();
-		this.pNo = pNo;
-		this.pName = pName;
-		this.cName = cName;
-		this.cInfo = cInfo;
-		this.category = category;
-		this.regDate = regDate;
-		this.pPrice = pPrice;
-		this.pEvent = pEvent;
-		this.dresstype = dresstype;
-	}
-	
-	public int getpNo() {
-		return pNo;
+	@Override
+	public String toString() {
+		return "ProductVO [p_no=" + p_no + ", p_name=" + p_name + ", c_name=" + c_name + ", c_info=" + c_info
+				+ ", category=" + category + ", reg_date=" + reg_date + ", p_price=" + p_price + ", p_event=" + p_event
+				+ ", dresstype=" + dresstype + "]";
 	}
 
-	public void setpNo(int pNo) {
-		this.pNo = pNo;
+	public int getP_no() {
+		return p_no;
 	}
 
-	public String getpName() {
-		return pName;
+	public void setP_no(int p_no) {
+		this.p_no = p_no;
 	}
 
-	public void setpName(String pName) {
-		this.pName = pName;
+	public String getP_name() {
+		return p_name;
 	}
 
-	public String getcName() {
-		return cName;
+	public void setP_name(String p_name) {
+		this.p_name = p_name;
 	}
 
-	public void setcName(String cName) {
-		this.cName = cName;
+	public String getC_name() {
+		return c_name;
 	}
 
-	public String getcInfo() {
-		return cInfo;
+	public void setC_name(String c_name) {
+		this.c_name = c_name;
 	}
 
-	public void setcInfo(String cInfo) {
-		this.cInfo = cInfo;
+	public String getC_info() {
+		return c_info;
+	}
+
+	public void setC_info(String c_info) {
+		this.c_info = c_info;
 	}
 
 	public String getCategory() {
@@ -71,28 +64,28 @@ public class ProductVO {
 		this.category = category;
 	}
 
-	public String getRegDate() {
-		return regDate;
+	public String getReg_date() {
+		return reg_date;
 	}
 
-	public void setRegDate(String regDate) {
-		this.regDate = regDate;
+	public void setReg_date(String reg_date) {
+		this.reg_date = reg_date;
 	}
 
-	public String getpPrice() {
-		return pPrice;
+	public String getP_price() {
+		return p_price;
 	}
 
-	public void setpPrice(String pPrice) {
-		this.pPrice = pPrice;
+	public void setP_price(String p_price) {
+		this.p_price = p_price;
 	}
 
-	public String getpEvent() {
-		return pEvent;
+	public String getP_event() {
+		return p_event;
 	}
 
-	public void setpEvent(String pEvent) {
-		this.pEvent = pEvent;
+	public void setP_event(String p_event) {
+		this.p_event = p_event;
 	}
 
 	public String getDresstype() {
@@ -103,15 +96,5 @@ public class ProductVO {
 		this.dresstype = dresstype;
 	}
 
-	@Override
-	public String toString() {
-		return "ProductVO [pNo=" + pNo + ", pName=" + pName + ", cName=" + cName + ", cInfo=" + cInfo + ", category="
-				+ category + ", regDate=" + regDate + ", pPrice=" + pPrice + ", pEvent=" + pEvent + ", dresstype="
-				+ dresstype + "]";
-	}
-	
-
-    
-    
     
 }

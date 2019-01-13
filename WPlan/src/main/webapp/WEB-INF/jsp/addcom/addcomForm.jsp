@@ -369,10 +369,9 @@ input[type=file] {
 
 					<button type="submit" style="width: 100px;">등록</button>
 
-<%-- 					<a href="${ pageContext.request.contextPath }/member/myPage">
- --%>						
+ 					<a href="${ pageContext.request.contextPath }/member/myPage">
  					<button type="button" style="width: 100px;  margin-left: 30px;">취소</button>
-					
+					</a>
 				</form>
 			</div>
 		</div>
