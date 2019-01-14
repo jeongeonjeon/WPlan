@@ -41,8 +41,11 @@
 	</select>
 	 
 		<insert id="insertProduct" parameterType="productVO" >
+			<selectKey keyProperty="pNo" resultType="int" order="BEFORE">
+				select seq_w_product_no.nextval from dual 
+			</selectKey>
 		insert into w_product (p_no, p_name, c_name, c_info, category, p_price, p_event, dresstype )
-		values (seq_w_product_no.nextval, #{pName}, #{cName}, #{cInfo}, #{category}, #{pPrice}, #{pEvent}, #{dresstype})
+		values (#{pNo}, #{pName}, #{cName}, #{cInfo}, #{category}, #{pPrice}, #{pEvent}, #{dresstype})
 	</insert>
 
 </mapper>
