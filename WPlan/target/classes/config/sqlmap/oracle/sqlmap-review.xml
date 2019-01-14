@@ -3,12 +3,12 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.mlec.review">
-	
+<!-- 	
 	<select id="selectAllReview" parameterType="int" resultType="reviewVO">
 		select no, id, content, to_char(reg_date, 'yyyy-mm-dd hh24:MI:ss') as regDate, p_no as pNo, r_no as rNo
 		from w_review
 		where p_no = #{no}
 	</select>
-	
+	 -->
 	
 </mapper>
