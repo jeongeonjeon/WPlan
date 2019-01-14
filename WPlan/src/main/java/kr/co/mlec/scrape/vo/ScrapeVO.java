@@ -5,6 +5,18 @@ public class ScrapeVO {
 	private String id;
 	private int pNo;
 	
+	public ScrapeVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ScrapeVO(int no, String id, int pNo) {
+		super();
+		this.no = no;
+		this.id = id;
+		this.pNo = pNo;
+	}
+
 	public int getNo() {
 		return no;
 	}

@@ -255,7 +255,10 @@ input[type=file] {
 			<div class="box">
 
 				<h1>제품 등록</h1>
+<<<<<<< HEAD
+=======
 				<hr>
+>>>>>>> branch 'eon' of https://github.com/jeongeonjeon/WPlan.git
 				
 				<!-- 파일 업로드 시작 -->
 				

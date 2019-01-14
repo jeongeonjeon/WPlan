@@ -3,7 +3,6 @@ package kr.co.mlec.cmember.dao;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import kr.co.mlec.cmember.vo.CmemberVO;
 

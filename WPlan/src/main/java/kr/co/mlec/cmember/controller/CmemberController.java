@@ -12,30 +12,16 @@ import org.springframework.web.servlet.ModelAndView;
 
 import kr.co.mlec.cmember.service.CmemberService;
 import kr.co.mlec.cmember.vo.CmemberVO;
-import kr.co.mlec.umember.service.UmemberService;
-import kr.co.mlec.umember.vo.UmemberVO;
+
 
 @Controller
 public class CmemberController {
+	
 	@Autowired
 	private CmemberService cmemberService;
 	
-	@GetMapping("/member/myPage")
-	public String mypage() {
-		return "member/myPage";
-	}
-	@GetMapping("/member/cmyPage")
-	public String cmypage() {
-		return "member/cmyPage";
-	}
-
 	@GetMapping("/member/cJoinForm")
-	public String cjoinform() {
-		return "member/cJoinForm";
-	}
-	
-	@GetMapping("/member/cJoinForm")
-	public String ujoinform(Model model) {
+	public String cjoinform(Model model) {
 		CmemberVO cmemberVO = new CmemberVO();
 		model.addAttribute("cmemberVO", cmemberVO);
 		return "member/cJoinForm";

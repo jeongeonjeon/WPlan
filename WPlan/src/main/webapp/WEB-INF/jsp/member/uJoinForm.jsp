@@ -6,7 +6,7 @@
 <html lang="en">
 
 <head>
-<!-- Required meta tags -->
+<!--   meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -115,35 +115,35 @@ function join() {
 								<label class="title">
 								<h4>아이디</h4>
 								</label> 
-								<form:input path="id" class="inputArea" name="id" id="join_id" />
+								<form:input path="id" class="inputArea" name="id" id="join_id" placeholder="아이디를 입력해주세요"     />
 								<form:errors path="id"/>
 								<button class="fBtn">중복확인</button>
 							</div>
 							<div class="row">
 								<label class="title"><h4>비밀번호</h4></label> 
-								<form:input path="password" class="inputArea" name="password" id="join_pw"/>
+								<form:input path="password" class="inputArea" name="password" id="join_pw"   />
 								<form:errors path="password"/>
 
 							</div>
 							<div class="row">
 								<label class="title"><h4>비밀번호 확인</h4></label> 
-								<form:input path="password_sec" class="inputArea" name="password_sec" id="join_pw2" placeholder="비밀번호를 확인해주세요"/>
+								<form:input path="password_sec" class="inputArea" name="password_sec" id="join_pw2" placeholder="비밀번호를 확인해주세요"   />
 								<form:errors path="password_sec" />
 
 							</div>
 							<div class="row">
 								<label class="title"><h4>이름</h4></label> 
-								<form:input path="name" class="inputArea" name="name" id="join_name"/>
+								<form:input path="name" class="inputArea" name="name" id="join_name"   />
 								<form:errors path="name"/>
 							</div>
 							<div class="row">
 								<label class="title"><h4>전화번호</h4></label> 
-								<form:input path="tel" class="inputArea" name="tel" id="join_tel" placeholder="010-xxxx-xxxx" />
+								<form:input path="tel" class="inputArea" name="tel" id="join_tel" placeholder="010-xxxx-xxxx"   />
 								<form:errors path="tel"/>
 							</div>
 							<div class="row">
 								<label class="title"><h4>이메일</h4></label> 
-								<form:input path="email" class="inputArea" name="email" id="join_email" placeholder="이메일형식으로 입력해주세요" />
+								<form:input path="email" class="inputArea" name="email" id="join_email" placeholder="이메일형식으로 입력해주세요"   />
 								<form:errors path="email"/>
 							</div>
 							 <a href="${ pageContext.request.contextPath }/">

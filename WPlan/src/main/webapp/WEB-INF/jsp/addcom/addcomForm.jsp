@@ -260,12 +260,12 @@ input[type=file] {
 				<hr>
 				
 				<!-- 파일 업로드 시작 -->
-				<form method="post" action="" enctype="multipart/form-data">
+				<form action="<%= request.getContextPath() %>/addcom/addcomForm"  method="post" enctype="multipart/form-data" >
 					<div>
 						<p><b>사진 등록</b></p>
 					<div class="input_wrap">
 						<a href="javascript:" onclick="fileUploadAction();" class="my_button">업로드</a>
-						<input type="file" id="input_imgs" multiple/>
+						<input type="file" id="input_imgs" name="imgs"/>
 					</div>
 					</div>
 					
@@ -277,11 +277,11 @@ input[type=file] {
 			
 <!-- 				<a href="javascript:" class="my_button" onclick="submitAction();">업로드</a>
  -->			
- 				</form>
+<%--  				</form> --%>
 			
 				<!-- 파일 업로드 끝 -->
 				
-				<form action="<%= request.getContextPath() %>/addcom/addcomForm" method="post">
+<%-- 				<form action="<%= request.getContextPath() %>/addcom/addcomForm" method="post"> --%>
 	
 					<hr>
 
@@ -370,7 +370,7 @@ input[type=file] {
 					<button type="submit" style="width: 100px;">등록</button>
 
  					<a href="${ pageContext.request.contextPath }/member/myPage">
- 					<button type="button" style="width: 100px;  margin-left: 30px;">취소</button>
+ 					<button type="reset" style="width: 100px;  margin-left: 30px;">취소</button>
 					</a>
 				</form>
 			</div>

@@ -91,6 +91,7 @@ public class ProductController {
 	@GetMapping("/product/detail/{no}")
 	public ModelAndView detail(ModelAndView mav , @PathVariable("no") int no) {
 		
+		
 		//productVO 가져오기
 		ProductVO productVO = productService.selectProductByNo(no);
 		//productOptionList 가져오기
@@ -101,29 +102,32 @@ public class ProductController {
 		// 위 Array에서 List로 변경, DB연결하여 확인 할 것
 		List<ArrayList<String>> options = new ArrayList<ArrayList<String>>(); //value 배열들의 배열
 		
+
 		String name = "";  //optionName 초기화
-		name = optionList.get(0).getpOptionName(); //0번지 name값으로 name 초기화 
 		ArrayList<String> innerList = new ArrayList<>();   //하나의 옵션 name에 대한 value 배열
-		for(int i=0; i< optionList.size(); i++) {
-			
-			//name이 다를때 
-			if(!name.equals(optionList.get(i).getpOptionName()) ) {
-				options.add(innerList);
-				innerList=new ArrayList<>();
-				innerList.add(optionList.get(i).getpOptionValue());
-				name = optionList.get(i).getpOptionName();
+		if(!optionList.isEmpty()) {
+			name = optionList.get(0).getpOptionName(); //0번지 name값으로 name 초기화 
+			for(int i=0; i< optionList.size(); i++) {
 				
-			}else {  //name이 같을 때
+				//name이 다를때 
+				if(!name.equals(optionList.get(i).getpOptionName()) ) {
+					options.add(innerList);
+					innerList=new ArrayList<>();
+					innerList.add(optionList.get(i).getpOptionValue());
+					name = optionList.get(i).getpOptionName();
+					
+				}else {  //name이 같을 때
+					
+					innerList.add(optionList.get(i).getpOptionValue());
+					name = optionList.get(i).getpOptionName();
+				}
 				
-				innerList.add(optionList.get(i).getpOptionValue());
-				name = optionList.get(i).getpOptionName();
-			}
-			
-			if(i == optionList.size()-1) {
-				options.add(innerList);
+				if(i == optionList.size()-1) {
+					options.add(innerList);
+				}
 			}
 		}
-		
+	
 		
 		name = "";  //name 초기화
 		//옵션의 name만 모아놓은 리스트
@@ -138,7 +142,7 @@ public class ProductController {
 		
 		mav.addObject("productVO", productVO);
 		mav.addObject("options", options);  //옵션 배열의 배열
-		mav.addObject("optionNameList", optionNameList); //옵션 네임의 배열
+		mav.addObject("optionNameList", optionNameList); //옵션 네임의 List
 		mav.setViewName("product/detail");
 		mav.addObject("reviewList", reviewList);
 		

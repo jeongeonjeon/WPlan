@@ -11,8 +11,8 @@
 	</select>
 	
 	<insert id="insert" parameterType="cmemberVO" >
-		insert into w_cmember (id, name, password, password_sec, name, tel, email)
-		values (#{id}, #{password}, #{password_sec}, #{name}, #{tel}, #{email})
+		insert into w_cmember (id, name, password, password_sec, tel, email, cname, c_No, c_Address)
+		values (#{id}, #{name}, #{password}, #{passwordSec}, #{tel}, #{email}, #{cName}, #{cNO}, #{cAddress})
 	</insert>
 
 	<select id="select" parameterType="cmemberVO" resultType="cmemberVO">

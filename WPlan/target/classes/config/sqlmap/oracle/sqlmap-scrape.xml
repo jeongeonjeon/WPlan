@@ -8,5 +8,10 @@
   		insert into w_scrape (no, p_no, id)
   		values (w_scrape_no_seq.nextval, #{pNo}, #{id})
   	</insert>
+  	
+<!--   	<select id="selectScrape" parameterType="scrapeVO">
+  		
+  	
+  	</select> -->
   </mapper>
   
