@@ -6,6 +6,7 @@
  	<typeAliases>
 
  		<typeAlias type="kr.co.mlec.umember.vo.UmemberVO" alias="umemberVO"/>
+ 		<typeAlias type="kr.co.mlec.cmember.vo.CmemberVO" alias="cmemberVO"/>
 		<typeAlias type="kr.co.mlec.guide.vo.GuideVO" alias="guideVO"/>
 		<typeAlias type="kr.co.mlec.product.vo.ProductVO" alias="productVO"/>
 		<typeAlias type="kr.co.mlec.productOption.vo.ProductOptionVO" alias="productOptionVO"/>

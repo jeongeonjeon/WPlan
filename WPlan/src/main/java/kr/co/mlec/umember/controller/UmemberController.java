@@ -28,11 +28,6 @@ public class UmemberController {
 		return "member/cmyPage";
 	}
 
-	@GetMapping("/member/cJoinForm")
-	public String cjoinform() {
-		return "member/cJoinForm";
-	}
-	
 	@GetMapping("/member/uJoinForm")
 	public String ujoinform(Model model) {
 		UmemberVO umemberVO = new UmemberVO();
