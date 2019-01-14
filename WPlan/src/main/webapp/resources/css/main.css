@@ -25,7 +25,7 @@ h6 {
 }
 
 a {
-    color: #000;
+    color: #545454;
 }
 
 a:hover {
@@ -270,7 +270,7 @@ header .fa {
 
 .section-2 h4 {
 	
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
     margin-top: -10px;
     font-weight: 600;
@@ -437,7 +437,6 @@ header .fa {
     height: auto;
     padding-top: 75px;
     padding-bottom: 100px;
-    border-bottom: 1px solid #e5e5e5;
 }
 
 .section-4 h3 {
@@ -1381,14 +1380,13 @@ textarea.form-control {
 
 .portfolio .wrap {
 	width: 85%;
-	height: 40%;
-	white-space: nowrap;
-	overflow-x: scroll;
-	margin: 0 auto;
+    white-space: nowrap;
+    overflow-x: scroll;
+    margin: 0 auto;
 }
 
 .portfolio .wrap img {
-	width: 33.3%;
+	width: 25%;
 	height: 100%;
 }
 
@@ -2010,7 +2008,7 @@ textarea.form-control {
         padding: 30px 0;
     }
     .col-sm-4.align-self-center.text-right{
-    	top : -48px;
+    	top : -43px;
     }
     .navbar-dark .navbar-nav .nav-item{
     	margin : 0 5%;
@@ -2257,7 +2255,7 @@ textarea.form-control {
         height: 250px;
     }
     .portfolio .wrap img{
-		width: 50%;
+		width: 33.3%;
 	}
     .blog h3 {
         font-size: 32px;
@@ -2770,7 +2768,7 @@ textarea.form-control {
         padding: 5px 15px;
 	}
 	.portfolio .wrap img {
-		width: 100%;
+		width: 50%;
 	}
 	.section-4 h3 {
         font-size: 21px;

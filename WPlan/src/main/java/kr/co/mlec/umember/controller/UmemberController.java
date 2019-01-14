@@ -32,6 +32,7 @@ public class UmemberController {
 	public String cjoinform() {
 		return "member/cJoinForm";
 	}
+	
 	@GetMapping("/member/uJoinForm")
 	public String ujoinform(Model model) {
 		UmemberVO umemberVO = new UmemberVO();
@@ -49,7 +50,7 @@ public class UmemberController {
 		ModelAndView mav = new ModelAndView();
 
 		if(userVO == null) {
-			mav.addObject("msg","����ִ� �׸��� ä���ּ���");
+//			mav.addObject("msg","����ִ� �׸��� ä���ּ���");
 			mav.setViewName("redirect:/uJoinForm");
 		} else {
 			mav.setViewName("redirect:/");

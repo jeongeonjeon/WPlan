@@ -77,13 +77,13 @@ $(document).ready(function(){
 				</div>
 		
 		<div class="container main" id="dress">
-			<a href="${ pageContext.request.contextPath }/product/dressType">
+			<a href="${ pageContext.request.contextPath }/product/dress">
 			<img class="mainDress" src="${ pageContext.request.contextPath }/resources/images/main-dress.png" >
 				<h4>드레스 타입별 카테고리로 당신의 드레스를 쉽게 골라보세요</h4>
 			</a>
 			</div>
 		</section>
-		<section class="section-7">
+		<section class="section-7" >
 			<!-- Footer -->
 			<footer class="page-footer font-small stylish-color-dark">
 				<%@ include file="/WEB-INF/jsp/include/footer.jsp" %>

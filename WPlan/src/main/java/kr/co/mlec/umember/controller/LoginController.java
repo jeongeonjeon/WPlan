@@ -45,12 +45,12 @@ public class LoginController {
 	@PostMapping("/login")
 	@ResponseBody
 	public String login(@RequestParam String id , @RequestParam String password, HttpSession session) {
-		System.out.println("login");
+//		System.out.println("login");
 		UmemberVO user = new UmemberVO();
 		user.setId(id);
 		user.setPassword(password);
 		UmemberVO userVO = loginService.login(user);
-		System.out.println(userVO);
+//		System.out.println(userVO);
 		
 		if(userVO != null) {
 			session.setAttribute("userVO", userVO);
@@ -60,6 +60,10 @@ public class LoginController {
 			return "fail";
 		}
 	}
+	
+	
+	//HttpSession을 하든 HttpServletRequest request에서 getSession을 하든 상관없다 둘다 차이가 없다! (고운)
+	
 	
 	@GetMapping("/logout")
 	public String logout(HttpServletRequest request) {

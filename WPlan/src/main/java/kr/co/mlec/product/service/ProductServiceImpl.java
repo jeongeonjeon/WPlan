@@ -9,6 +9,7 @@ import kr.co.mlec.product.dao.ProductDAO;
 import kr.co.mlec.product.vo.ProductVO;
 import kr.co.mlec.productOption.dao.ProductOptionDAO;
 import kr.co.mlec.productOption.vo.ProductOptionVO;
+import kr.co.mlec.umember.vo.UmemberVO;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -24,6 +25,14 @@ public class ProductServiceImpl implements ProductService {
 
 		List<ProductVO> productList = productDao.selectAll(category);
 		
+		return productList;
+	}
+	
+	@Override
+	public List<ProductVO> selectDressType(String dresstype) {
+		
+		List<ProductVO> productList = productDao.selectDressType(dresstype);
+	
 		return productList;
 	}
 
@@ -42,6 +51,10 @@ public class ProductServiceImpl implements ProductService {
 		
 		return product;
 	}
-
 	
+	@Override
+	public void insertProduct(ProductVO productVO) {
+		productDao.insertProduct(productVO);
+	}
+
 }

@@ -16,6 +16,7 @@
 
 <jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 
+
 </head>
 <style>
 .section-22 {
@@ -226,7 +227,7 @@ input[type=file] {
             xhr.send(data);
 
         }
-
+	
 </script>
 <body>
 	<div id="wrapper">
@@ -259,27 +260,28 @@ input[type=file] {
 				<hr>
 				
 				<!-- 파일 업로드 시작 -->
-				
-				<div>
-					<p><b>매장 사진 등록</b></p>
-				<div class="input_wrap">
-					<a href="javascript:" onclick="fileUploadAction();" class="my_button">업로드</a>
-					<input type="file" id="input_imgs" multiple/>
-				</div>
-				</div>
-				
-				<div>
-					<div class="imgs_wrap">
-					<img id="img" />
-				</div>
-				</div>
+				<form action="<%= request.getContextPath() %>/addcom/addcomForm"  method="post" enctype="multipart/form-data" >
+					<div>
+						<p><b>사진 등록</b></p>
+					<div class="input_wrap">
+						<a href="javascript:" onclick="fileUploadAction();" class="my_button">업로드</a>
+						<input type="file" id="input_imgs" name="imgs"/>
+					</div>
+					</div>
+					
+					<div>
+						<div class="imgs_wrap">
+						<img id="img" />
+					</div>
+					</div>
 			
 <!-- 				<a href="javascript:" class="my_button" onclick="submitAction();">업로드</a>
  -->			
+<%--  				</form> --%>
 			
 				<!-- 파일 업로드 끝 -->
 				
-				<form action="<%= request.getContextPath() %>/addcom/addcomForm" method="post">
+<%-- 				<form action="<%= request.getContextPath() %>/addcom/addcomForm" method="post"> --%>
 	
 					<hr>
 
@@ -365,10 +367,10 @@ input[type=file] {
 
 					<hr>
 
-					<button type="submit" style="width: 100px;" onclick="submitAction();">등록</button>
+					<button type="submit" style="width: 100px;">등록</button>
 
-					<a href="${ pageContext.request.contextPath }/member/myPage">
-						<button type="button" style="width: 100px; margin-left: 30px;">취소</button>
+ 					<a href="${ pageContext.request.contextPath }/member/myPage">
+ 					<button type="reset" style="width: 100px;  margin-left: 30px;">취소</button>
 					</a>
 				</form>
 			</div>

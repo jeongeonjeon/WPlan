@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="kr.co.mlec.scrape">
+  	
+  	<insert id="insertScrape" parameterType="scrapeVO">
+  		insert into w_scrape (no, p_no, id)
+  		values (w_scrape_no_seq.nextval, #{pNo}, #{id})
+  	</insert>
+  	
+<!--   	<select id="selectScrape" parameterType="scrapeVO">
+  		
+  	
+  	</select> -->
+  </mapper>
+  
