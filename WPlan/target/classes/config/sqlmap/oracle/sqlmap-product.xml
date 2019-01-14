@@ -42,7 +42,7 @@
 	 
 		<insert id="insertProduct" parameterType="productVO" >
 		insert into w_product (p_no, p_name, c_name, c_info, category, p_price, p_event, dresstype )
-		values (seq_t_reply_no.nextval, #{p_name}, #{c_name}, #{c_info}, #{category}, #{p_price}, #{p_event}, #{dresstype})
+		values (seq_w_product_no.nextval, #{p_name}, #{c_name}, #{c_info}, #{category}, #{p_price}, #{p_event}, #{dresstype})
 	</insert>
 
 </mapper>

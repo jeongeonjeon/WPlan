@@ -64,12 +64,12 @@
 				<c:forEach items="${ requestScope.productList }" var="product">
 					<div class="col-lg-4 col-sm-12 col-12 box-1">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
-							<a href="${ pageContext.request.contextPath }/product/detail/${ 1 }">
+							<a href="${ pageContext.request.contextPath }/product/detail/${ product.getpNo() }">
 								<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>
-									<a href="${ pageContext.request.contextPath }/product/detail/${ 1 }">${ product.getpName() }</a>
+									<a href="${ pageContext.request.contextPath }/product/detail/${ product.getpNo() }">${ product.getpName() }</a>
 								</h4>
 							</div>
 						</div>

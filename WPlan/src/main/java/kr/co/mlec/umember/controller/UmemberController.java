@@ -50,7 +50,7 @@ public class UmemberController {
 		ModelAndView mav = new ModelAndView();
 
 		if(userVO == null) {
-			mav.addObject("msg","����ִ� �׸��� ä���ּ���");
+//			mav.addObject("msg","����ִ� �׸��� ä���ּ���");
 			mav.setViewName("redirect:/uJoinForm");
 		} else {
 			mav.setViewName("redirect:/");
