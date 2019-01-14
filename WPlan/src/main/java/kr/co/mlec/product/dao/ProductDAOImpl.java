@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import kr.co.mlec.file.vo.FileUploadVO;
 import kr.co.mlec.product.vo.ProductVO;
 import kr.co.mlec.productOption.vo.ProductOptionVO;
 import kr.co.mlec.umember.vo.UmemberVO;
@@ -64,4 +65,9 @@ public class ProductDAOImpl implements ProductDAO {
 	public void insertProduct(ProductVO productVO) {
 		sqlSession.insert("kr.co.mlec.product.insertProduct", productVO);
 	}
+	@Override
+	public void insertFile(FileUploadVO fileuploadVO) {
+		sqlSession.insert("kr.co.mlec.file.fileinsert", fileuploadVO);
+	}
+	
 }
