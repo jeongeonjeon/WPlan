@@ -15,6 +15,6 @@
 		<typeAlias type="kr.co.mlec.file.vo.FileUploadVO" alias="fileuploadVO"/>
 		<typeAlias type="kr.co.mlec.scrape.vo.ScrapeVO" alias="scrapeVO"/>
 		<typeAlias type="kr.co.mlec.qna.vo.QnaVO" alias="qnaVO"/>
-		
+		<typeAlias type="kr.co.mlec.scrape.vo.ScrapePictureVO" alias="scrapePictureVO"/>
  	</typeAliases>
 </configuration>

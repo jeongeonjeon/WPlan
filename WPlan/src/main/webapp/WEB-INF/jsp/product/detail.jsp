@@ -389,7 +389,7 @@
 				type: "post",
 				data : scrape,
 				success : function() {
-					alert('!');
+					alert('스크랩북에 저장하였습니다!');
 				}
 			});  
 		});

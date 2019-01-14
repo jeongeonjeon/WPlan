@@ -79,4 +79,10 @@ public class GuideController {
 		return null;
 	}
 	
+	@GetMapping("/makeWedding")
+	public String weddingTodo() {
+	
+		return "makeWedding";
+	}
+	
 }
