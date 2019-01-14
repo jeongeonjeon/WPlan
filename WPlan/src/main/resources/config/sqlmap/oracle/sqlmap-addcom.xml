@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.mlec.addcom">
+
+	<insert id="insert" parameterType="addcomVO" >
+		<selectKey keyProperty="no" resultType="int" order="BEFORE">
+			select seq_w_addcom_no.nextval from dual 
+		</selectKey>
+		insert into w_addcom (no ,c_id, noise, parking, cloth, photo, prov, meeting, meal, sound, drink, smoking, hotel, valet, parking_guide, bus, wifi, chair_table, history, sale, pitting_time, pitting_num, props, type, use_time, recital, addr, addr_post, addr_detail, addr_extra)
+		values (#{no}, #{id}, #{noise}, #{parking}, #{cloth}, #{photo}, #{prov}, #{meeting}, #{meal}, #{sound}, #{drink}, #{smoking}, #{hotel}, #{valet}, #{parking_guide}, #{bus}, #{wifi}, #{chair_table}, #{history}, #{sale}, #{pitting_time}, #{pitting_num}, #{props}, #{type}, #{use_time}, #{recital}, #{addr}, #{addr_post}, #{addr_detail}, #{addr_extra})
+	</insert>
+	
+	
+	<select id="select" parameterType="string" resultType="addcomVO">
+		select c_id as id,  noise, parking, cloth, photo, prov, meeting, meal, sound, drink, smoking, hotel, valet, parking_guide, bus, wifi, chair_table, history, sale, pitting_time, pitting_num, props, type, use_time, recital, addr, addr_detail, reg_date
+		from w_addcom
+		where c_id = #{id}
+	</select>
+</mapper>
