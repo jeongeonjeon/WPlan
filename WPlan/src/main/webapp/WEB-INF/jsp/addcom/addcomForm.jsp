@@ -10,10 +10,10 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <title>more</title>
-
+<link rel="stylesheet"
+	href="${ pageContext.request.contextPath }/resources/css/member.css">
 <jsp:include page="/WEB-INF/jsp/include/head.jsp" />
 
 
@@ -29,6 +29,7 @@
 .section-22 .box {
 	padding: 10px calc(( 100% - 1000px)/2+ 10px);
 	box-shadow: 0 0 25px rgba(0, 0, 0, .15) !important;
+	padding: 2%;
 }
 </style>
 
@@ -89,7 +90,6 @@ input[type=file] {
 
 
 </style>
-<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
 <script>
  function sample6_execDaumPostcode() {
