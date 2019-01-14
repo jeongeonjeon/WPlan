@@ -60,7 +60,7 @@
 			<div>
 				<ul class="rMenu">
 					<li class="calendar"><a href="${ pageContext.request.contextPath }/calendar">캘린더</a></li>
-					<li class="rList"><a href="#">예약리스트</a></li>
+<!-- 					<li class="rList"><a href="#">예약리스트</a></li> -->
 					<li class="myInfo"><a href="${ pageContext.request.contextPath }/member/cmyPage">내 정보</a></li>
 					<li class="myInfo"><a href="${ pageContext.request.contextPath }/addcom">업체등록</a></li>
 				</ul>
