@@ -1,0 +1,22 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="kr.co.mlec.scrape">
+  	
+  	<insert id="insertScrape" parameterType="scrapeVO">
+  		insert into w_scrape (no, p_no, id)
+  		values (w_scrape_no_seq.nextval, #{pNo}, #{id})
+  	</insert>
+  	
+  	<select id="selectScrape" parameterType="string" resultType="scrapePictureVO">
+  		select s.no as no, s.p_no as pNo, s.id as id, p.f_save_name as fSaveName, p.main as main, pr.p_name as pName, pr.category as category
+		from w_scrape s, w_picture p, w_product pr
+		where id = #{ id}
+		  and s.p_no = p.p_no
+		  and s.p_no = pr.p_no
+		  and p.main = '1'
+  	
+  	</select>
+  </mapper>
