@@ -2,22 +2,22 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="kr.co.mlec.umember">
+<mapper namespace="kr.co.mlec.cmember">
 	
-	<select id="login" parameterType="umemberVO" resultType="umemberVO">
+	<select id="login" parameterType="cmemberVO" resultType="cmemberVO">
 		select id, password, name, type
-		  from w_umember
+		  from w_cmember
 		 where id = #{id} and password = #{password}
 	</select>
 	
-	<insert id="insert" parameterType="umemberVO" >
-		insert into w_umember (id, password, password_sec, name, tel, email)
+	<insert id="insert" parameterType="cmemberVO" >
+		insert into w_cmember (id, name, password, password_sec, name, tel, email)
 		values (#{id}, #{password}, #{password_sec}, #{name}, #{tel}, #{email})
 	</insert>
 
-	<select id="select" parameterType="umemberVO" resultType="umemberVO">
+	<select id="select" parameterType="cmemberVO" resultType="cmemberVO">
 		select id, password, name, type
-		  from w_umember
+		  from w_cmember
 		 where id = #{id} and password = #{password}
 	</select>
 	
