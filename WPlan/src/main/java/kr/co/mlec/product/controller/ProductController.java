@@ -45,7 +45,7 @@ public class ProductController {
 	private ProductOptionService optionService;
 
 	@Autowired
-	private ReviewService reviewService;
+//	private ReviewService reviewService;
 
 	@GetMapping("/product/{category}")
 	public ModelAndView category(@PathVariable("category") String category) {
@@ -106,7 +106,7 @@ public class ProductController {
 		// productOptionList 가져오기
 		List<ProductOptionVO> optionList = optionService.selectOption(no);
 		// 후기리스트 가져오기
-		List<ReviewVO> reviewList = reviewService.selectAllReview(no);
+//		List<ReviewVO> reviewList = reviewService.selectAllReview(no);
 
 		// 위 Array에서 List로 변경, DB연결하여 확인 할 것
 		List<ArrayList<String>> options = new ArrayList<ArrayList<String>>(); // value 배열들의 배열
@@ -150,7 +150,7 @@ public class ProductController {
 		mav.addObject("options", options); // 옵션 배열의 배열
 		mav.addObject("optionNameList", optionNameList); // 옵션 네임의 List
 		mav.setViewName("product/detail");
-		mav.addObject("reviewList", reviewList);
+//		mav.addObject("reviewList", reviewList);
 
 		return mav;
 	}
