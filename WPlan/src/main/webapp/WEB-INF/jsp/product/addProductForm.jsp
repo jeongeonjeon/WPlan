@@ -258,12 +258,13 @@ input[type=file] {
 				<hr>
 				
 				<!-- 파일 업로드 시작 -->
+				<form action="<%= request.getContextPath() %>/product/addProductForm" method="post"  enctype="multipart/form-data">
 				
 				<div>
 					<p><b>제품 사진 등록</b></p>
 				<div class="input_wrap">
 					<a href="javascript:" onclick="fileUploadAction();" class="my_button">업로드</a>
-					<input type="file" id="input_imgs" multiple/>
+					<input type="file" id="input_imgs" name="imgs" multiple/>
 				</div>
 				</div>
 				
@@ -278,7 +279,6 @@ input[type=file] {
 			
 				<!-- 파일 업로드 끝 -->
 				
-				<form action="<%= request.getContextPath() %>/product/addProductForm" method="post">
 					<div>
 						<hr> 
 						<div align="center">
@@ -286,19 +286,19 @@ input[type=file] {
 							제품이름
 							</div>
 							<div>
-							<input type="text"  name="p_name">
+							<input type="text"  name="pName">
 							</div>
 							<div style="float:left; ">
 							업체이름
 							</div>
 							<div>
-							<input type="text"  name="c_name">
+							<input type="text"  name="cName">
 							</div>
 							<div style="float:left;">
 							업체정보
 							</div>
 							<div>
-							<input type="text"  name="c_info">
+							<input type="text"  name="cInfo">
 							</div> 
 							<div style="float:left; ">
 							카테고리
@@ -310,13 +310,13 @@ input[type=file] {
 							가격
 							</div>
 							<div>
-							<input type="text" name="p_price">
+							<input type="text" name="pPrice">
 							</div>
 							<div style="float:left; ">
 							이벤트
 							</div>
 							<div>
-							<input type="text" name="p_event">
+							<input type="text" name="pEvent">
 							</div>
 							<div style="float:left;">
 							타입
