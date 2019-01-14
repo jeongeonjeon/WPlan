@@ -8,7 +8,5 @@ public interface AddcomDAO {
 	public void insertAddcom(AddcomVO addcomVO);
 	
 	public AddcomVO selectAddcom(String id);
-	
-	public void insertFile(FileUploadVO fileuploadVO);
-	
+	void insertFile(FileUploadVO fileuploadVO);
 }

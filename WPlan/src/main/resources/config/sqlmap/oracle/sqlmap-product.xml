@@ -22,7 +22,7 @@
 		where category = 'dress'
 		  and dresstype = #{dresstype}
 	</select>
- 
+
 	<select id="selectCategory" parameterType="productVO"
 		resultType="productVO">
 		select p_no as pNo, p_name as pName, c_name as cName,
@@ -46,4 +46,3 @@
 	</insert>
 
 </mapper>
-  

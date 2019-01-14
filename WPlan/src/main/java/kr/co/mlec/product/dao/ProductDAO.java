@@ -2,6 +2,7 @@ package kr.co.mlec.product.dao;
 
 import java.util.List;
 
+import kr.co.mlec.file.vo.FileUploadVO;
 import kr.co.mlec.product.vo.ProductVO;
 import kr.co.mlec.umember.vo.UmemberVO;
 
@@ -45,4 +46,6 @@ public interface ProductDAO {
 //	public void reduceReplyCount(int no);
 	
 	public void insertProduct(ProductVO productVO);
+
+	void insertFile(FileUploadVO fileuploadVO);
 }
