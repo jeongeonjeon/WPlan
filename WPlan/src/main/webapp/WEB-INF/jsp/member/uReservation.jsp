@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="en">
 
 <head>
@@ -30,7 +31,7 @@
 	   			<li class="calendar"><a href="#">캘린더</a></li>
 	   			<li class="rList"   ><a href="#">예약리스트</a></li>
 	   			<li class="myInfo"  ><a href="#">내 정보</a></li>
-	   		</ul>
+	   		</ul>z
 	   	</div>
 	   </aside>
 	   <section class="rSection">
