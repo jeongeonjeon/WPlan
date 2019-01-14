@@ -212,7 +212,7 @@ public class ProductController {
 		
 		UUID uid = UUID.randomUUID();
 		
-		String savedName = "wplan_" +  uid.toString()+".jsp";
+		String savedName = "wplan_" +  uid.toString()+".jpg";
 		File target = new File(uploadPath, savedName);
 		
 		//org.springframework.util 패키지의 FileCopyUtils는 파일 데이터를 파일로 처리하거나, 복사하는 등의 기능이 있다.
