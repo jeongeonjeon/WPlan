@@ -51,7 +51,7 @@
     </bean>
     
     <bean id="uploadPath" class="java.lang.String">
-    	<constructor-arg value= "C:\wplan\upload"></constructor-arg>
+    	<constructor-arg value= "D:/Acorn/Lecture/wtpwebapps/WPlan/resources/upload"></constructor-arg>
     </bean>
 
 	<mvc:default-servlet-handler />

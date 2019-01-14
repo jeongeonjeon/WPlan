@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import kr.co.mlec.file.vo.FileUploadVO;
 import kr.co.mlec.product.dao.ProductDAO;
 import kr.co.mlec.product.vo.ProductVO;
 import kr.co.mlec.productOption.dao.ProductOptionDAO;
@@ -55,6 +56,11 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public void insertProduct(ProductVO productVO) {
 		productDao.insertProduct(productVO);
+	}
+	
+	@Override
+	public void insertFile(FileUploadVO fileuploadVO) {
+		productDao.insertFile(fileuploadVO);
 	}
 
 }
