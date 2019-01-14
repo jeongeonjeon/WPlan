@@ -5,8 +5,11 @@
 <mapper namespace="kr.co.mlec.addcom">
 
 	<insert id="insert" parameterType="addcomVO" >
+		<selectKey keyProperty="no" resultType="int" order="BEFORE">
+			select seq_w_addcom_no.nextval from dual 
+		</selectKey>
 		insert into w_addcom (no ,c_id, noise, parking, cloth, photo, prov, meeting, meal, sound, drink, smoking, hotel, valet, parking_guide, bus, wifi, chair_table, history, sale, pitting_time, pitting_num, props, type, use_time, recital, addr, addr_post, addr_detail, addr_extra)
-		values (seq_t_reply_no.nextval, #{id}, #{noise}, #{parking}, #{cloth}, #{photo}, #{prov}, #{meeting}, #{meal}, #{sound}, #{drink}, #{smoking}, #{hotel}, #{valet}, #{parking_guide}, #{bus}, #{wifi}, #{chair_table}, #{history}, #{sale}, #{pitting_time}, #{pitting_num}, #{props}, #{type}, #{use_time}, #{recital}, #{addr}, #{addr_post}, #{addr_detail}, #{addr_extra})
+		values (#{no}, #{id}, #{noise}, #{parking}, #{cloth}, #{photo}, #{prov}, #{meeting}, #{meal}, #{sound}, #{drink}, #{smoking}, #{hotel}, #{valet}, #{parking_guide}, #{bus}, #{wifi}, #{chair_table}, #{history}, #{sale}, #{pitting_time}, #{pitting_num}, #{props}, #{type}, #{use_time}, #{recital}, #{addr}, #{addr_post}, #{addr_detail}, #{addr_extra})
 	</insert>
 	
 	

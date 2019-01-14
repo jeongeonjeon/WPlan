@@ -372,17 +372,22 @@
 
 		});
 		
-		var id = '${userVO.id}';
-		var pNo = ${productVO.pNo};
+		
 		
 		$('#scrapeBtn').click(function(){
+			
+			var id = '${userVO.id}';
+			var pNo = '${productVO.pNo}';
+			console.log(pNo);
+			
+			var scrape = { "id" : id,
+						   "pNo" : pNo
+			};
+
 			 $.ajax({
 				url : "${ pageContext.request.contextPath }/scrape",
-				type: "PUT",
-				data : {
-					id : id ,
-					pNo : pNo
-				},
+				type: "post",
+				data : scrape,
 				success : function() {
 					alert('!');
 				}
