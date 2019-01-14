@@ -316,11 +316,11 @@ textarea{
 								<td>
 									<select name="category">
 										<option>선택</option>
-										<option>드레스</option>
-										<option>턱시도</option>
-										<option>장소</option>
-										<option>음식</option>
-										<option>데코</option>
+										<option>dress</option>
+										<option>tuxedo</option>
+										<option>location</option>
+										<option>food</option>
+										<option>deco</option>
 									</select>
 								</td>
 							</tr>
