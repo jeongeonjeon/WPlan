@@ -6,8 +6,13 @@
 	
 	<insert id="insertQna" parameterType="qnaVO">
 		insert into w_qna (no, id, content, p_no)
-		values (w_qna_seq_no.nextval, #{id} , #{content}, #{pNo} )
+		values (w_qna_seq.nextval, #{id} , #{content}, #{pNo} )
 	</insert>
 	
-	
+	<select id="selectAll" parameterType="int" resultType="qnaVO">
+		select id, content, to_char(reg_date, 'yyyy-mm-dd') as regDate, p_no as pNo, q_no as qNo
+		from w_qna 
+		where p_no = #{pNo}
+		order by reg_date desc 
+	</select>
 </mapper>

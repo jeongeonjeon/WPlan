@@ -4,6 +4,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import kr.co.mlec.cmember.vo.CmemberVO;
 import kr.co.mlec.umember.vo.UmemberVO;
 
 @Repository
@@ -19,6 +20,12 @@ public class LoginDAOImpl implements LoginDAO {
 		UmemberVO userVO = sqlSession.selectOne("kr.co.mlec.umember.login", member);
 //		System.out.println(userVO);
 		return userVO;
+	}
+	
+	@Override
+	public CmemberVO clogin(CmemberVO member) {
+		CmemberVO cuserVO = sqlSession.selectOne("kr.co.mlec.umember.clogin", member);
+		return cuserVO;
 	}
 		
 

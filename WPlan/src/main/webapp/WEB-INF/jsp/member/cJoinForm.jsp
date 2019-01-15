@@ -62,11 +62,11 @@
 							</div>
 							<div class="row">
 								<label class="title"><h4>비밀번호</h4></label> 
-								<form:input path="password" class="inputArea" placeholder="비밀번호를 입력해주세요"  />
+								<form:password path="password" class="inputArea" placeholder="비밀번호를 입력해주세요"  />
 								<form:errors path="password"/>
 							</div>
 							<div class="row">
-								<form:input path="passwordSec" name="passworSec" id="join_pw2"  class="inputArea pws" placeholder="비밀번호를 확인해주세요"  />
+								<form:password path="passwordSec" name="passworSec" id="join_pw2"  class="inputArea pws" placeholder="비밀번호를 확인해주세요"  />
 								<form:errors path="passwordSec"/>
 							</div>
 							<div class="row">
