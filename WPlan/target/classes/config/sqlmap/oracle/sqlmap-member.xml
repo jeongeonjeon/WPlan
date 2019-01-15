@@ -5,13 +5,13 @@
 <mapper namespace="kr.co.mlec.umember">
 	
 	<select id="login" parameterType="umemberVO" resultType="umemberVO">
-		select id, password, name, type
+		select id, password, type
 		  from w_umember
 		 where id = #{id} and password = #{password}
 	</select>
 	
 	<select id="clogin" parameterType="cmemberVO" resultType="cmemberVO">
-		select id, name, password, type
+		select id, name, password, password_sec, tel, email, cname, c_no, c_address, type, reg_date, to_char(reg_date, 'yyyy-mm-dd') as regDate
 		  from w_cmember
 		 where id = #{id} and password = #{password}
 	</select>

@@ -282,6 +282,7 @@ textarea{
 						<div class="input_wrap">
 							<a href="javascript:" onclick="fileUploadAction();"
 								class="my_button">업로드</a> <input type="file" id="input_imgs"
+					
 								name="imgs" multiple />
 						</div>
 					</div>
@@ -305,7 +306,7 @@ textarea{
 							</tr>
 							<tr>
 								<th>업체이름</th>
-								<td><input type="text" name="cName"></td>
+								<td><input type="hidden" name="cName">${ userVO.cName }</td>
 							</tr>
 							<tr>
 								<th>업체정보</th>

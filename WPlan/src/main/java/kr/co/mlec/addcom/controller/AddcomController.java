@@ -28,6 +28,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 import kr.co.mlec.addcom.service.AddcomService;
 import kr.co.mlec.addcom.vo.AddcomVO;
+import kr.co.mlec.cmember.vo.CmemberVO;
 import kr.co.mlec.file.vo.FileUploadVO;
 import kr.co.mlec.umember.vo.UmemberVO;
 
@@ -46,6 +47,7 @@ public class AddcomController {
 	public String ujoinform(Model model) {
 		AddcomVO addcomVO = new AddcomVO();
 		model.addAttribute("addcomVO", addcomVO);
+		
 		return "addcom/addcomForm";
 	}
 	
@@ -62,7 +64,7 @@ public class AddcomController {
 		System.out.println(file);
 		
 		HttpSession session = request.getSession();
-		UmemberVO user = (UmemberVO)session.getAttribute("userVO");
+		CmemberVO user = (CmemberVO)session.getAttribute("userVO");
 		
 		System.out.println(file.getOriginalFilename());
 		System.out.println(file.getSize());

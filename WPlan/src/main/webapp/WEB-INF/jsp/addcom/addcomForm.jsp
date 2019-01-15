@@ -258,7 +258,10 @@ input[type=file] {
 
 				<h1>업체등록</h1>
 				<hr>
-				
+				<div>
+				업체명
+				 <h3>${ userVO.cName }</h3>
+				</div>
 				<!-- 파일 업로드 시작 -->
 				<form action="<%= request.getContextPath() %>/addcom/addcomForm"  method="post" enctype="multipart/form-data" >
 					<div>
