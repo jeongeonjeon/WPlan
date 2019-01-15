@@ -16,6 +16,5 @@ public class PythonMain {
 		itp.exec("img = WPlanImage3(hall,dress,tuxedo)");
 		itp.exec("print(img)");
 	}
-
 }
 */
