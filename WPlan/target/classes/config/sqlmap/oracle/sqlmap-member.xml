@@ -21,4 +21,9 @@
 		 where id = #{id} and password = #{password}
 	</select>
 	
+	<!-- <select id="myPage" parameterType="string" resultType="umemberVO">
+	
+	
+	</select> -->
+	
 </mapper>

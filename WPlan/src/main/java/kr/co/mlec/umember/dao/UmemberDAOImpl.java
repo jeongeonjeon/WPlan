@@ -23,4 +23,10 @@ public class UmemberDAOImpl implements UmemberDAO {
 		return userVO;
 	}
 
+	@Override
+	public UmemberVO myPage(String id) {
+		UmemberVO userVO = sqlSession.selectOne("kr.co.mlec.umember.myPage", id);
+		return userVO;
+	}
+
 }

@@ -22,4 +22,10 @@ public class UmemberServiceImpI implements UmemberService {
 		UmemberVO userVO = umemberDao.selectUmember(umemberVO);
 		return userVO;
 	}
+
+	@Override
+	public UmemberVO myPage(String id) {
+		UmemberVO userVO = umemberDao.myPage(id);
+		return userVO;
+	}
 }

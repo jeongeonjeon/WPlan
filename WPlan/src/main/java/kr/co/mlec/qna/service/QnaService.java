@@ -7,5 +7,5 @@ import kr.co.mlec.qna.vo.QnaVO;
 public interface QnaService {
  
 	void insertQnA(QnaVO qnaVO);
-//	List<QnaVO> selectAllByBoardNo
+	List<QnaVO> selectAll(int pNo);
 }

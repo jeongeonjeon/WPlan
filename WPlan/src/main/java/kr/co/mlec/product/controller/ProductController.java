@@ -28,6 +28,7 @@ import kr.co.mlec.product.service.ProductService;
 import kr.co.mlec.product.vo.ProductVO;
 import kr.co.mlec.productOption.service.ProductOptionService;
 import kr.co.mlec.productOption.vo.ProductOptionVO;
+import kr.co.mlec.qna.vo.QnaVO;
 import kr.co.mlec.review.service.ReviewService;
 import kr.co.mlec.review.vo.ReviewVO;
 import kr.co.mlec.umember.vo.UmemberVO;
@@ -221,5 +222,7 @@ public class ProductController {
 		return savedName;
 		
 	}
+	
+	
 
 }
