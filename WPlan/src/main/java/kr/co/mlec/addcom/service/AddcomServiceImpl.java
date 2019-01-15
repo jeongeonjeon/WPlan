@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import kr.co.mlec.addcom.dao.AddcomDAO;
 import kr.co.mlec.addcom.vo.AddcomVO;
+import kr.co.mlec.file.vo.FileUploadVO;
 
 
 @Service
@@ -23,4 +24,11 @@ public class AddcomServiceImpl implements AddcomService {
 		AddcomVO addcomVO = addcomDao.selectAddcom(id);
 		return addcomVO;
 	}
+	
+	@Override
+	public void insertFile(FileUploadVO fileuploadVO) {
+		addcomDao.insertFile(fileuploadVO);
+	}
+
+	
 }

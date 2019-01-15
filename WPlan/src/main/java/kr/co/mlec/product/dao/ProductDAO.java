@@ -2,7 +2,9 @@ package kr.co.mlec.product.dao;
 
 import java.util.List;
 
+import kr.co.mlec.file.vo.FileUploadVO;
 import kr.co.mlec.product.vo.ProductVO;
+import kr.co.mlec.umember.vo.UmemberVO;
 
 public interface ProductDAO {
 
@@ -17,9 +19,14 @@ public interface ProductDAO {
 	 * 게시글 상세조회 서비스
 	 * @param no 게시글번호
 	 */
-
 	public ProductVO selectCategory(ProductVO product);
 	
+	/**
+	 * 드레스 타입별로 조회 서비스
+	 * @param dresstype
+	 * @return
+	 */
+	public List<ProductVO> selectDressType(String dresstype);
 
 	/**
 	 * 상세페이지의 상품 정보를 반환하는 메소드
@@ -37,4 +44,8 @@ public interface ProductDAO {
 	 * 댓글카운트 감소 서비스
 	 */
 //	public void reduceReplyCount(int no);
+	
+	public void insertProduct(ProductVO productVO);
+
+	void insertFile(FileUploadVO fileuploadVO);
 }

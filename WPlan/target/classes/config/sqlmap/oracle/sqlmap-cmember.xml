@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.mlec.cmember">
+	
+	<select id="login" parameterType="cmemberVO" resultType="cmemberVO">
+		select id, password, name, type
+		  from w_cmember
+		 where id = #{id} and password = #{password}
+	</select>
+	
+	<insert id="insert" parameterType="cmemberVO" >
+		insert into w_cmember (id, name, password, password_sec, tel, email, cname, c_No, c_Address)
+		values (#{id}, #{name}, #{password}, #{passwordSec}, #{tel}, #{email}, #{cName}, #{cNO}, #{cAddress})
+	</insert>
+
+	<select id="select" parameterType="cmemberVO" resultType="cmemberVO">
+		select id, password, name, type
+		  from w_cmember
+		 where id = #{id} and password = #{password}
+	</select>
+	
+</mapper>

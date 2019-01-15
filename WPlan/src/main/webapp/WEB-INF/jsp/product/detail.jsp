@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!doctype html>
 <html lang="en">
 
@@ -349,9 +348,9 @@
 </script>
 <script>
 	$(document).ready(function() {
-		
+		commentList();//페이지 로딩시 댓글 목록 출력
 		$('.review.tab_content').css('display', 'none');
-		$('.q_a.tab_content').css('display', 'none');
+		$('.qna.tab_content').css('display', 'none');
 		$('.storeInfo.tab_content').css('display', 'block');
 		$('.detailMenu .tab').click(function() {
 			$('.detailMenu .tab').css("background-color", "#474a48");
@@ -359,45 +358,44 @@
 
 			if ($(this).hasClass('storeInfo')) {
 				$('.review.tab_content').css('display', 'none');
-				$('.q_a.tab_content').css('display', 'none');
+				$('.qna.tab_content').css('display', 'none');
 				$('.storeInfo.tab_content').css('display', 'block');
 			} else if ($(this).hasClass('review')) {
 				$('.storeInfo.tab_content').css('display', 'none');
-				$('.q_a.tab_content').css('display', 'none');
+				$('.qna.tab_content').css('display', 'none');
 				$('.review.tab_content').css('display', 'block');
-			} else if ($(this).hasClass('q_a')) {
+			} else if ($(this).hasClass('qna')) {
 				$('.storeInfo.tab_content').css('display', 'none');
 				$('.review.tab_content').css('display', 'none');
-				$('.q_a.tab_content').css('display', 'block');
+				$('.qna.tab_content').css('display', 'block');
 			}
 
 		});
 		
-		var id = ${userVO.id};
-		var pNo = ${productVO.p_no};
 		
-		$('#comment_btn').click(function(){
-			$.ajax({
-				url : "${pageContext.request.contextPath}/inputQnA",
-				type : "POST",
-				data : {
-					id : id,
-					content : $('#qnaContent').val(),
-					pNo : pNo
-				},
+		
+		$('#scrapeBtn').click(function(){
+			
+			var id = '${userVO.id}';
+			var pNo = '${productVO.pNo}';
+			console.log(pNo);
+			
+			var scrape = { "id" : id,
+						   "pNo" : pNo
+			};
+
+			 $.ajax({
+				url : "${ pageContext.request.contextPath }/scrape",
+				type: "post",
+				data : scrape,
 				success : function() {
-					alert('댓글이 등록되었습니다.');
+					alert('스크랩북에 저장하였습니다!');
 				}
-				
-			});
+			});  
 		});
 		
 		
 	});
-	
-	
-	
-	
 </script>
 <style>
 .detail .jssort101 .t {
@@ -430,6 +428,7 @@
 	float: left;
 	width: 33.33%;
 	background-color: #474a48;
+	border-bottom: 3px solid #FFB9B2 ;
 }
 
 .detailMenu .tab.storeInfo {
@@ -438,7 +437,7 @@
 
 .detailMenu .tab p {
 	text-align: center;
-	margin: 8px 0;
+	margin: 8px 0 5px 0;
 	font-weight: bolder;
 	color: #FFF;
 }
@@ -569,7 +568,7 @@
 		<div class="container detail section-2">
 			<div class="box">
 				<div class="shopInfo">
-					<h3>${productVO.c_name }</h3>
+					<h3>${productVO.cName }</h3>
 					<p>서울 강남구 역삼동</p>
 					
 				</div>
@@ -654,20 +653,20 @@
 							<tr class="">
 								<th scope="row">상품명</th>
 								<td>
-									<b>${productVO.p_name }</b>
+									<b>${productVO.pName }</b>
 								</td>
 							</tr>
 							<tr class="displaynone">
 								<th scope="row">상품가</th>
-								<td>${productVO.p_price }</td>
+								<td>${productVO.pPrice }</td>
 							</tr>
 							<tr class="">
 								<th scope="row">*</th>
-								<td>${productVO.p_event }</td>
+								<td>${productVO.pEvent }</td>
 							</tr>
 							<tr class="displaynone">
 								<th scope="row">공급사</th>
-								<td>${productVO.c_name }</td>
+								<td>${productVO.cName }</td>
 							</tr>
 							<tr class="">
 								<th scope="row">*</th>
@@ -700,13 +699,13 @@
 				</div>
 				<ul class="detailMenu">
 					<li class="storeInfo tab">
-						<p>상세정보</p>
+						<a href="javascript:;"><p>상세정보</p></a>
 					</li>
 					<li class="review tab">
-						<p>후기</p>
+						<a href="javascript:;"><p>후기</p></a>
 					</li>
-					<li class="q_a tab">
-						<p>Q&A</p>
+					<li class="qna tab">
+						<a href="javascript:;"><p>Q&A</p></a>
 					</li>
 				</ul>
 				<div class="contentWrap">
@@ -815,22 +814,21 @@
 					<div class="review tab_content">
 						<div class="reply_contents_wrap">
 							<c:forEach var="review" items="${reviewList }">
-								<div class="reply_content">
-									<p class="id">
-										<b>${review.id }</b><span class="time">${review.regDate} </span>
-									</p>
-									<p class="grade">
-										평점 <span> 3점 </span>
-									</p>
-									<p class="content">${review.content}</p>
-								</div>
+							<div class="reply_content">
+								<p class="id">
+									<b>${review.id }</b><span class="time">${review.regDate} </span>
+								</p>
+								<p class="grade">
+									평점 <span> 3점 </span>
+								</p>
+								<p class="content">${review.content}</p>
+							</div>
 							</c:forEach>
 						</div>
 					</div>
 					
 					<!-- Q&A 입력창-->
-					<div class="q_a tab_content">
-						<form>
+					<div class="qna tab_content">
 						<div>
 							<textarea class="input" id="qnaContent" placeholder="Q&A를 입력하세요."></textarea>
 							<button class="submit_btn basic_btn" type="submit"
@@ -839,11 +837,11 @@
 						</form>
 						<!-- QnA 댓글창-->
 						<div class="reply_contents_wrap">
-							<div class="reply_content">
+							<div class="reply_content" id="qnaList">
 								<p class="id">
-									아이디 <span class="time"> ${ review.writeDate } </span>
+									아이디 <span class="time"> </span>
 								</p>
-								<p class="content">질문있습니다.</p>
+								<p class="content"></p>
 							</div>
 						</div>
 						
@@ -861,6 +859,7 @@
 		</section>
 	</div>
 	<%@ include file="/WEB-INF/jsp/include/sideSlider.jsp"%>
+	<%@ include file="/WEB-INF/jsp/include/comment.jsp" %>
 </body>
 
 </html>

@@ -6,8 +6,10 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import kr.co.mlec.file.vo.FileUploadVO;
 import kr.co.mlec.product.vo.ProductVO;
 import kr.co.mlec.productOption.vo.ProductOptionVO;
+import kr.co.mlec.umember.vo.UmemberVO;
 
 @Repository
 public class ProductDAOImpl implements ProductDAO {
@@ -18,6 +20,12 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public List<ProductVO> selectAll(String category) {
 		List<ProductVO> productList = sqlSession.selectList("kr.co.mlec.product.selectAll", category);
+		
+		return productList;
+	}
+	@Override
+	public List<ProductVO> selectDressType(String dresstype) {
+		List<ProductVO> productList = sqlSession.selectList("kr.co.mlec.product.selectDressType", dresstype);
 		
 		return productList;
 	}
@@ -52,5 +60,14 @@ public class ProductDAOImpl implements ProductDAO {
 //	public void reduceReplyCount(int no) {
 //		sqlSession.update("kr.co.mlec.board.decrementReplyCnt", no);
 //	}
+	
+	@Override
+	public void insertProduct(ProductVO productVO) {
+		sqlSession.insert("kr.co.mlec.product.insertProduct", productVO);
+	}
+	@Override
+	public void insertFile(FileUploadVO fileuploadVO) {
+		sqlSession.insert("kr.co.mlec.file.fileinsert", fileuploadVO);
+	}
 	
 }

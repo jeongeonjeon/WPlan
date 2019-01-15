@@ -1,3 +1,5 @@
+<%@page import="java.net.URLEncoder"%>
+<%@page import="java.net.URLDecoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -5,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <style>
    .map_wrap {position:relative;width:100%;height:350px;}
    .title {font-weight:bold;display:block;}
@@ -13,6 +16,22 @@
    .bAddr {padding:5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
 </style>
 </head>
+<script>
+function select_location(){
+	opener.document.getElementById("location_map").value = document.getElementById("sss").value;
+	
+	
+// 	var setCookie = function(name, value, exp) {
+// 	   var date = new Date();
+// 	   date.setTime(date.getTime() + exp*24*60*60*1000);
+// 	   document.cookie = 'location' + '=' + $('#sss').val() + ';expires=' + date.toUTCString() + ';path=/';
+// 	};
+// 	var set = setCookie('location', $('#sss').val(), 7);
+// 	set;
+	
+	window.close();
+}
+</script>
 <body>
 <div class="map_wrap">
     <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
@@ -47,7 +66,6 @@ daum.maps.event.addListener(map, 'click', function(mouseEvent) {
         if (status === daum.maps.services.Status.OK) {
             var detailAddr = !!result[0].road_address ? '<div>도로명주소 : ' + result[0].road_address.address_name + '</div>' : '';
             detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
-            
             var content = '<div class="bAddr">' +
                             detailAddr + 
                         '</div>';
@@ -59,8 +77,13 @@ daum.maps.event.addListener(map, 'click', function(mouseEvent) {
             // 인포윈도우에 클릭한 위치에 대한 법정동 상세 주소정보를 표시합니다
             infowindow.setContent(content);
             infowindow.open(map, marker);
+            var val = $('#hhh').val(detailAddr);
+//             console.log('val>>>', val);
+            var ttt = $('#hhh').val().split('지번 주소 : ')[1].replace('</div>','');
+//             console.log('111', ttt);
+            $('#sss').val(ttt);
         }   
-    });
+    });	
 });
 
 // 중심 좌표나 확대 수준이 변경됐을 때 지도 중심 좌표에 대한 주소 정보를 표시하도록 이벤트를 등록합니다
@@ -93,6 +116,8 @@ function displayCenterInfo(result, status) {
     }    
 }
 </script>
+<input type="hidden" id="hhh">
+<input type="text" id="sss">
 <hr>
-<input type="button" value="확인"></body>
+<input type="button" value="확인" onclick="select_location();"></body>
 </html>
