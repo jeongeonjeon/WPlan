@@ -1,9 +1,11 @@
 package kr.co.mlec.umember.controller;
 
+import java.io.IOException;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -14,9 +16,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.co.mlec.cmember.vo.CmemberVO;
 import kr.co.mlec.umember.service.LoginService;
@@ -82,6 +85,8 @@ public class LoginController {
 		return "redirect:/";
 	}
 	
+	
+
 	/*public String login(@Valid @ModelAttribute("memberVO") UmemberVO memberVO,Model model, HttpSession session) {
 
 		UmemberVO userVO = loginService.login(memberVO);

@@ -3,8 +3,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 
-
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
 <script src="${ pageContext.request.contextPath }/resources/js/checkForm.js"></script>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>
 $(document).ready(function(){
 
@@ -93,6 +94,8 @@ function login() {
 	});
 	
 }
+
+
 </script>
 <div class="login_area">
 	<div class="login_background"></div>
@@ -155,8 +158,24 @@ function login() {
 	                    </div>
 	                    <div class="ctnr_login_btn row">
 	                        <div class="col-xs-6 padding-right-5 btn_sns_naver" id="naver_id_login1" btn-type="4" btn-height="40"><a href="https://nid.naver.com/oauth2.0/authorize?client_id={QrxChDIT8KgIMiPDpPY_0}&response_type=code&redirect_uri={http://localhost:8888/WPlan/login}&state={상태 토큰}" onclick="window.open(this.href, 'naverloginpop', 'titlebar=1, resizable=1, scrollbars=yes, width=600, height=550'); return false" class="btn_sns sns_naver">네이버 로그인</a> </div>
+	                        <!--  카카오로그인 -->
 	                        <div class="col-xs-6 padding-left-5">
-	                            <a href="javascript:;" class="btn_sns sns_kakao btn_sns_kakao">카카오 로그인</a>
+	                            <a id="kakao-login-btn" href="javascript:loginWithKakao()"></a>
+	                            	<script type='text/javascript'>
+									    // 사용할 앱의 JavaScript 키를 설정해 주세요.
+									    Kakao.init('d6b5849297b66eb073f197fef410d84a');
+									    // 카카오 로그인 버튼을 생성합니다.
+									    Kakao.Auth.createLoginButton({
+									      container: '#kakao-login-btn',
+									      success: function(authObj) {
+									        alert(JSON.stringify(authObj));
+									      },
+									      fail: function(err) {
+									         alert(JSON.stringify(err));
+									      }
+									    });
+									
+									</script>
 	                        </div>
 	                        <div class="clearfix"></div>
 	                    </div>
