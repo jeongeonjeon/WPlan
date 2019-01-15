@@ -4,23 +4,26 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.mlec.product">
 
-	<select id="selectAll" parameterType="string"
-		resultType="productVO">
-		select p_no as pNo, p_name as pName, c_name as cName,
-			   c_info as cInfo, category, to_char(reg_date, 'yyyy-mm-dd') as regDate,
-			   p_price as pPrice , p_event as pEvent, dresstype
-		from w_product
-		where category = #{category}
+	<select id="selectAll" parameterType="string" resultType="productPicVO">
+		select pro.p_no as pNo, pro.p_name as pName, pro.c_name as cName,
+			   pro.c_info as cInfo, pro.category, to_char(pro.reg_date, 'yyyy-mm-dd') as regDate,
+			   pro.p_price as pPrice , pro.p_event as pEvent, dresstype , f_save_name as fSaveName
+		  from w_product pro, w_picture pic
+		 where pro.p_no = pic.p_no
+	   	   and category = #{category}
+	   	   and main = '1'
 	</select>
 
 	<select id="selectDressType" parameterType="string"
-		resultType="productVO">
-		select p_no as pNo, p_name as pName, c_name as cName,
-			   c_info as cInfo, category, to_char(reg_date, 'yyyy-mm-dd') as regDate,
-			   p_price as pPrice , p_event as pEvent, dresstype
-		from w_product
+		resultType="productPicVO">
+		select pro.p_no as pNo, pro.p_name as pName, pro.c_name as cName,
+			   pro.c_info as cInfo, pro.category, to_char(pro.reg_date, 'yyyy-mm-dd') as regDate,
+			   pro.p_price as pPrice , pro.p_event as pEvent, dresstype , f_save_name as fSaveName
+		from w_product pro, w_picture pic
 		where category = 'dress'
 		  and dresstype = #{dresstype}
+		  and pro.p_no = pic.p_no
+		  and main ='1'
 	</select>
 
 	<select id="selectCategory" parameterType="productVO"
@@ -40,10 +43,10 @@
 		where p_no = #{no}
 	</select>
 	 
-		<insert id="insertProduct" parameterType="productVO" >
-			<selectKey keyProperty="pNo" resultType="int" order="BEFORE">
-				select seq_w_product_no.nextval from dual 
-			</selectKey>
+	<insert id="insertProduct" parameterType="productVO" >
+		<selectKey keyProperty="pNo" resultType="int" order="BEFORE">
+			select seq_w_product_no.nextval from dual 
+		</selectKey>
 		insert into w_product (p_no, p_name, c_name, c_info, category, p_price, p_event, dresstype )
 		values (#{pNo}, #{pName}, #{cName}, #{cInfo}, #{category}, #{pPrice}, #{pEvent}, #{dresstype})
 	</insert>

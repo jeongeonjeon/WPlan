@@ -337,10 +337,10 @@ textarea{
 								<td>
 									<select name="dresstype">
 										<option>선택</option>
-										<option>MERMAID</option>
-										<option>BELL LINE</option>
-										<option>SHORT</option>
-										<option>EMPIRE LINE</option>
+										<option>mermaid</option>
+										<option>bell</option>
+										<option>short</option>
+										<option>empire</option>
 									</select>
 								</td>
 							</tr>

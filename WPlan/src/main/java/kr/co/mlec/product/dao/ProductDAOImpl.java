@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kr.co.mlec.file.vo.FileUploadVO;
+import kr.co.mlec.product.vo.ProductPicVO;
 import kr.co.mlec.product.vo.ProductVO;
 import kr.co.mlec.productOption.vo.ProductOptionVO;
 import kr.co.mlec.umember.vo.UmemberVO;
@@ -18,14 +19,14 @@ public class ProductDAOImpl implements ProductDAO {
 	private SqlSessionTemplate sqlSession;
 	
 	@Override
-	public List<ProductVO> selectAll(String category) {
-		List<ProductVO> productList = sqlSession.selectList("kr.co.mlec.product.selectAll", category);
+	public List<ProductPicVO> selectAll(String category) {
+		List<ProductPicVO> productList = sqlSession.selectList("kr.co.mlec.product.selectAll", category);
 		
 		return productList;
 	}
 	@Override
-	public List<ProductVO> selectDressType(String dresstype) {
-		List<ProductVO> productList = sqlSession.selectList("kr.co.mlec.product.selectDressType", dresstype);
+	public List<ProductPicVO> selectDressType(String dresstype) {
+		List<ProductPicVO> productList = sqlSession.selectList("kr.co.mlec.product.selectDressType", dresstype);
 		
 		return productList;
 	}
@@ -68,6 +69,12 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public void insertFile(FileUploadVO fileuploadVO) {
 		sqlSession.insert("kr.co.mlec.file.fileinsert", fileuploadVO);
+	}
+	@Override
+	public List<FileUploadVO> FileSelectNo(int pNo) {
+		List<FileUploadVO> fileList = sqlSession.selectList("kr.co.mlec.file.fileSelectNo", pNo);
+		System.out.println("DAO : "+ fileList);
+		return fileList;
 	}
 	
 }

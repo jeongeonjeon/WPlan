@@ -10,6 +10,5 @@ public class FunctionController {
 	public String maps_pop() {
 		return "/maps_pop";
 	}
-
 	
 }

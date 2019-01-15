@@ -9,6 +9,7 @@
  		<typeAlias type="kr.co.mlec.cmember.vo.CmemberVO" alias="cmemberVO"/>
 		<typeAlias type="kr.co.mlec.guide.vo.GuideVO" alias="guideVO"/>
 		<typeAlias type="kr.co.mlec.product.vo.ProductVO" alias="productVO"/>
+		<typeAlias type="kr.co.mlec.product.vo.ProductPicVO" alias="productPicVO"/>
 		<typeAlias type="kr.co.mlec.productOption.vo.ProductOptionVO" alias="productOptionVO"/>
 		<typeAlias type="kr.co.mlec.addcom.vo.AddcomVO" alias="addcomVO"/>
 <!-- 		<typeAlias type="kr.co.mlec.review.vo.ReviewVO" alias="reviewVO"/> -->
@@ -16,6 +17,7 @@
 		<typeAlias type="kr.co.mlec.scrape.vo.ScrapeVO" alias="scrapeVO"/>
 		<typeAlias type="kr.co.mlec.scrape.vo.ScrapePictureVO" alias="scrapePictureVO"/>
 		<typeAlias type="kr.co.mlec.qna.vo.QnaVO" alias="qnaVO"/>
+		<typeAlias type="kr.co.mlec.simulation.vo.SimulationVO" alias="simulationVO"/>
 		
  	</typeAliases>
 </configuration>

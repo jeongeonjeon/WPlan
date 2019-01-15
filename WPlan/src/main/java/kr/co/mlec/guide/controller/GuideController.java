@@ -1,5 +1,9 @@
 package kr.co.mlec.guide.controller;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -12,11 +16,16 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.co.mlec.guide.service.GuideService;
 import kr.co.mlec.guide.vo.GuideVO;
+import kr.co.mlec.scrape.service.ScrapeService;
+import kr.co.mlec.scrape.vo.ScrapePictureVO;
+import kr.co.mlec.scrape.vo.ScrapeVO;
+import kr.co.mlec.simulation.vo.SimulationVO;
 import kr.co.mlec.umember.vo.UmemberVO;
 
 @Controller
@@ -24,6 +33,8 @@ public class GuideController {
 	
 	@Autowired
 	private GuideService guideService;
+	@Autowired
+	private ScrapeService scrapeService;
 	
 	/**
 	 * 웨딩가이드 게시판 이동 
@@ -80,9 +91,40 @@ public class GuideController {
 	}
 	
 	@GetMapping("/makeWedding")
-	public String weddingTodo() {
+	public ModelAndView makeWedding(HttpServletRequest request) {
+		ModelAndView mav = new ModelAndView();
+		
+		HttpSession session = request.getSession();
+		UmemberVO user = (UmemberVO)session.getAttribute("userVO");
+		
+		List<ScrapePictureVO> scrapeList = scrapeService.selectAll(user.getId());
+		
+		System.out.println(scrapeList);
+		mav.addObject("scrapeList", scrapeList);
+		mav.setViewName("/makeWedding");
+		
+		return mav;
 	
-		return "makeWedding";
 	}
+	
+	@PostMapping("/makeWedding")
+	@ResponseBody
+	public String simulationInsert(@RequestParam("imgArr") String[] imgArr, HttpServletRequest request) {
+		
+		for(int i=0; i<imgArr.length;i++) {
+			System.out.println(imgArr[i]);
+		}
+		
+		try{
+			   
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return "";
+	}
+
+	
+	
 	
 }

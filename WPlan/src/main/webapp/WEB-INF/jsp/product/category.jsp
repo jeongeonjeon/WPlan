@@ -65,7 +65,7 @@
 					<div class="col-lg-4 col-sm-12 col-12 box-1">
 						<div class="row box" data-aos="fade-left" data-aos-delay="300">
 							<a href="${ pageContext.request.contextPath }/product/detail/${ product.getpNo() }">
-								<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" class="figure-img img-fluid" alt="blog">
+								<img src="/WPlan/resources/upload/${product.getfSaveName()}" class="figure-img img-fluid" alt="blog">
 							</a>
 							<div class="col-lg-10 col-sm-12">
 								<h4>

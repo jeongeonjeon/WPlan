@@ -8,7 +8,12 @@
 <!-- 		<selectKey keyProperty="no" resultType="int" order="AFTER">
 			select LAST_INSERT_ID()
 		</selectKey> -->
-		insert into w_picture (no, c_no, p_no,  f_ori_name, f_save_name, f_size, type)
-		values(seq_w_picture_no.nextval, #{cNo}, #{pNo}, #{fOriName}, #{fSaveName}, #{fSize}, #{type})
+		insert into w_picture (no, c_no, p_no,  f_ori_name, f_save_name, f_size, type, main)
+		values(seq_w_picture_no.nextval, #{cNo}, #{pNo}, #{fOriName}, #{fSaveName}, #{fSize}, #{type}, #{main})
 	</insert> 
+	<select id="fileSelectNo" parameterType="int" resultType="fileuploadVO">
+			select no, c_no as cNo, p_no as pNo, f_ori_name as fOriName, f_save_name as fSaveName, f_size as fSize, type, main
+	 		  from w_picture
+			 where p_no = #{no}
+	</select>
 </mapper>

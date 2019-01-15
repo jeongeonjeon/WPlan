@@ -25,12 +25,13 @@ public class FileUploadVO {
 	private String fSaveName;
 	private	int fSize;
 	private String type;
-	
+	private String main;
 	public FileUploadVO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public FileUploadVO(int no, int cNo, int pNo, String fOriName, String fSaveName, int fSize, String type) {
+	public FileUploadVO(int no, int cNo, int pNo, String fOriName, String fSaveName, int fSize, String type,
+			String main) {
 		super();
 		this.no = no;
 		this.cNo = cNo;
@@ -39,6 +40,7 @@ public class FileUploadVO {
 		this.fSaveName = fSaveName;
 		this.fSize = fSize;
 		this.type = type;
+		this.main = main;
 	}
 	public int getNo() {
 		return no;
@@ -82,12 +84,18 @@ public class FileUploadVO {
 	public void setType(String type) {
 		this.type = type;
 	}
-	
+	public String getMain() {
+		return main;
+	}
+	public void setMain(String main) {
+		this.main = main;
+	}
 	@Override
 	public String toString() {
 		return "FileUploadVO [no=" + no + ", cNo=" + cNo + ", pNo=" + pNo + ", fOriName=" + fOriName + ", fSaveName="
-				+ fSaveName + ", fSize=" + fSize + ", type=" + type + "]";
+				+ fSaveName + ", fSize=" + fSize + ", type=" + type + ", main=" + main + "]";
 	}
+
 	
 	
 }

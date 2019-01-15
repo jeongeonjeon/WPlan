@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 
@@ -76,6 +76,10 @@ p,ul,li{
 	writing-mode:tb-rl;
 }
 
+.floating-menu span {
+	color :#6d6d6d;
+	font-weight: bold;
+}
 
 .floating-menu li.on a {
 	background-color: #333;
@@ -123,7 +127,19 @@ p,ul,li{
 	width: calc(95% - 350px);
 	overflow: hidden;
 	float: right;
-	margin: 7% 5% 7% 0;
+	margin: 1% 5% 3% 0;
+}
+.product .imgs {
+	border: 3px solid #eee;
+	width: 720px;
+	height: 140px;
+	position: relative;
+	margin : 20px auto 5px;
+	padding : 0 10px;
+}
+.product .imgs img{
+	height : 130px;
+	margin : 2px 4px;
 }
 
 .product .making {
@@ -134,14 +150,23 @@ p,ul,li{
 	margin : 0 auto;
 }
 
-.product .making img {
-	max-width: 100%;
-	max-height: 100%;
-	margin: auto;
-}
-.section-1.product .addBtn{
+.section-1.product button{
+	width : 110px;
+	height: 35px;
 	float : right;
 	margin: 20px 0;
+	border : 2px solid #FFB9B2;
+	font-weight: bold;
+	color: #fff;
+	background-color: #FFB9B2;
+	border-radius: 3px;
+
+}
+	
+.section-1.product .simulBtn{
+	margin : 20px 10px;
+	color :#6d6d6d;
+	background-color: #FFF; 
 }
 .section-1 .add{
 	overflow: hidden;
@@ -206,11 +231,23 @@ p,ul,li{
 	
 	}(window, window.jQuery));
 	$(document).ready(function() {
+		jQuery.ajaxSettings.traditional = true;
+
+		var imgArr = new Array();
+		
 		$('.select_area img').dblclick(function() {
 			var src = $(this).attr('src');
-			var html = "<img src='"+src+"'>";
+			var category = $(this).attr('name');
+			if(category == "location"){
+				imgArr[0] = src;
+			}else if(category == "dress") {
+				imgArr[1] = src;
+			}else if(category == "tuxedo") {
+				imgArr[2] = src;
+			}
+			var html = "<img src='"+src+"' name='"+category+"'>";
 
-			$('.making').append(html);
+			$('.imgs').append(html);
 
 		});
 		
@@ -221,7 +258,26 @@ p,ul,li{
 				location.href = "${ pageContext.request.contextPath }";
 			}
 		});
+
+		$('.simulBtn').click(function(){
+			
+			console.log(imgArr);
+			
+			var simul = {
+					"imgArr" : imgArr
+			};
+	
+			 $.ajax({
+				url : "${ pageContext.request.contextPath }/makeWedding",
+				type: "post",
+				data : simul,
+				success : function() {
+					alert('시뮬레이션 성공!');
+				}
+			});  
+		});
 	});
+	
 </script>
 </head>
 <body>
@@ -243,43 +299,46 @@ p,ul,li{
 			<aside class="select_area">
 				<div class="wrap scroll" id="section-01">
 					<p>DRESS</p>
-					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+		        	<c:forEach items="${requestScope.scrapeList}" var="scrape">
+						<c:if test="${ scrape.getCategory() eq 'dress' }">
+							<img src="/WPlan/resources/upload/${scrape.getfSaveName()}" name="${ scrape.getCategory() }"/>
+						</c:if>
+					</c:forEach>
 				</div>
 				<div class="wrap scroll" id="section-02">
 					<p>TOXEDO</p>
-					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" />
-					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+		        	<c:forEach items="${requestScope.scrapeList}" var="scrape">
+						<c:if test="${ scrape.getCategory() eq 'tuxedo' }">
+							<img src="/WPlan/resources/upload/${scrape.getfSaveName()}" name="${ scrape.getCategory() }"/>
+						</c:if>
+					</c:forEach>
 				</div>
 				<div class="wrap scroll" id="section-03">
 					<p>LOCATION</p>
-					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+		        	<c:forEach items="${requestScope.scrapeList}" var="scrape">
+						<c:if test="${ scrape.getCategory() eq 'location' }">
+							<img src="/WPlan/resources/upload/${scrape.getfSaveName()}"  name="${ scrape.getCategory() }"/>
+						</c:if>
+					</c:forEach>
 				</div>
 				<div class="wrap scroll" id="section-04">
 					<p>DECO</p>
-					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress3.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress1.jpg" /> 
-					<img src="${ pageContext.request.contextPath }/resources/images/dress2.jpg" />
+		        	<c:forEach items="${requestScope.scrapeList}" var="scrape">
+						<c:if test="${ scrape.getCategory() eq 'deco' }">
+							<img src="/WPlan/resources/upload/${scrape.getfSaveName()}"  name="${ scrape.getCategory() }"/>
+						</c:if>
+					</c:forEach>
 				</div>
 			</aside>
 			<section class="section-1 product">
 			
+				<div class="imgs">
+				</div>
 				<div class="making">
 				</div>
 				<div class="add">
-					<button class="addBtn">My wedding 저장</button>
+					<button class="addBtn">이미지 저장</button>
+					<button class="simulBtn">시뮬레이션</button>
 				</div>
 	
 			</section>

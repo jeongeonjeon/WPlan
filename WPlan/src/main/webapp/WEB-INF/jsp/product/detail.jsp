@@ -604,44 +604,15 @@
 								style="margin-top: -19px; position: relative; top: 50%; width: 38px; height: 38px;"
 								src="${ pageContext.request.contextPath }/resources/images/spin.svg" />
 						</div>
-						<div data-u="slides"
-							style="cursor: default; position: relative; top: 0px; left: 0px; width: 950px; height: 430px; overflow: hidden;">
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/deco1.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/deco1.jpg">
-							</div>
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/deco2.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/deco2.jpg" />
-							</div>
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/deco3.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/deco3.jpg" />
-							</div>
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/deco4.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/deco4.jpg" />
-							</div>
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/food1.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/food1.jpg" />
-							</div>
-							<div>
-								<img data-u="image"
-									src="${ pageContext.request.contextPath }/resources/images/food2.jpg" />
-								<img data-u="thumb"
-									src="${ pageContext.request.contextPath }/resources/images/food2.jpg" />
-							</div>
+						<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 950px; height: 430px; overflow: hidden;">
+							<c:forEach items="${requestScope.fileList }" var="file">
+								<div>
+									<img data-u="image"
+										src="/WPlan/resources/upload/${file.getfSaveName()}" />
+									<img data-u="thumb"
+										src="/WPlan/resources/upload/${file.getfSaveName()}" />
+								</div>
+							</c:forEach>
 						</div>
 						<!-- Thumbnail Navigator -->
 						<div data-u="thumbnavigator" class="jssort101"

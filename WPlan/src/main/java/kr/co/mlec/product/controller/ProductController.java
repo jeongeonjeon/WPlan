@@ -25,6 +25,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import kr.co.mlec.file.vo.FileUploadVO;
 import kr.co.mlec.product.service.ProductService;
+import kr.co.mlec.product.vo.ProductPicVO;
 import kr.co.mlec.product.vo.ProductVO;
 import kr.co.mlec.productOption.service.ProductOptionService;
 import kr.co.mlec.productOption.vo.ProductOptionVO;
@@ -59,7 +60,7 @@ public class ProductController {
 			return mav;
 		}
 
-		List<ProductVO> productList = productService.selectAllProduct(category);
+		List<ProductPicVO> productList = productService.selectAllProduct(category);
 		System.out.println(productList);
 
 		category = category.toUpperCase();
@@ -77,7 +78,7 @@ public class ProductController {
 	public ModelAndView dress(@PathVariable("dressType") String type) {
 		ModelAndView mav = new ModelAndView();
 
-		List<ProductVO> productList = productService.selectDressType(type);
+		List<ProductPicVO> productList = productService.selectDressType(type);
 		System.out.println(productList);
 
 		String category = "DRESS";
@@ -105,6 +106,11 @@ public class ProductController {
 		ProductVO productVO = productService.selectProductByNo(no);
 		// productOptionList 가져오기
 		List<ProductOptionVO> optionList = optionService.selectOption(no);
+		
+		
+		List<FileUploadVO> fileList = productService.fileSelectNo(no);
+		
+		System.out.println(fileList);
 		// 후기리스트 가져오기
 //		List<ReviewVO> reviewList = reviewService.selectAllReview(no);
 
@@ -145,10 +151,12 @@ public class ProductController {
 				optionNameList.add(name);
 			}
 		}
+		
 
 		mav.addObject("productVO", productVO);
 		mav.addObject("options", options); // 옵션 배열의 배열
 		mav.addObject("optionNameList", optionNameList); // 옵션 네임의 List
+		mav.addObject("fileList", fileList); // 옵션 네임의 List
 		mav.setViewName("product/detail");
 //		mav.addObject("reviewList", reviewList);
 
@@ -183,9 +191,19 @@ public class ProductController {
 		FileUploadVO fileuploadVO;
 		String savedName;
 		
+		int i=0;
+		
 		for(MultipartFile file : fileList) {
+			
 			fileuploadVO = new FileUploadVO();
 			savedName =  uploadFile(file.getOriginalFilename(), file.getBytes());
+			
+			if(i == 0) {
+				fileuploadVO.setMain("1");
+				i++;
+			}else {
+				fileuploadVO.setMain("0");
+			}
 			
 			fileuploadVO.setpNo(productVO.getpNo());
 			fileuploadVO.setfOriName(file.getOriginalFilename());

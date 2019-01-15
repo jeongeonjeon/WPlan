@@ -19,8 +19,7 @@
     http://www.springframework.org/schema/beans 
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
     http://www.springframework.org/schema/cache 
-    http://www.springframework.org/schema/cache/spring-cache.xsd
-	">
+    http://www.springframework.org/schema/cache/spring-cache.xsd">
 
 	<context:component-scan base-package="kr.co.mlec" />
 	<mvc:default-servlet-handler />
@@ -51,7 +50,7 @@
     </bean>
     
     <bean id="uploadPath" class="java.lang.String">
-    	<constructor-arg value= "C:\wplan\upload"></constructor-arg>
+    	<constructor-arg value= "D:/Acorn/Lecture/wtpwebapps/WPlan/resources/\upload"></constructor-arg>
     </bean>
 
 	<mvc:default-servlet-handler />

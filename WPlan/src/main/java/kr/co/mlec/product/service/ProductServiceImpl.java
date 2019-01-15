@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import kr.co.mlec.file.vo.FileUploadVO;
 import kr.co.mlec.product.dao.ProductDAO;
+import kr.co.mlec.product.vo.ProductPicVO;
 import kr.co.mlec.product.vo.ProductVO;
 import kr.co.mlec.productOption.dao.ProductOptionDAO;
 import kr.co.mlec.productOption.vo.ProductOptionVO;
@@ -22,17 +23,17 @@ public class ProductServiceImpl implements ProductService {
 	private ProductOptionDAO optionDao;
 
 	@Override
-	public List<ProductVO> selectAllProduct(String category) {
+	public List<ProductPicVO> selectAllProduct(String category) {
 
-		List<ProductVO> productList = productDao.selectAll(category);
+		List<ProductPicVO> productList = productDao.selectAll(category);
 		
 		return productList;
 	}
 	
 	@Override
-	public List<ProductVO> selectDressType(String dresstype) {
+	public List<ProductPicVO> selectDressType(String dresstype) {
 		
-		List<ProductVO> productList = productDao.selectDressType(dresstype);
+		List<ProductPicVO> productList = productDao.selectDressType(dresstype);
 	
 		return productList;
 	}
@@ -61,6 +62,13 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public void insertFile(FileUploadVO fileuploadVO) {
 		productDao.insertFile(fileuploadVO);
+	}
+	
+	@Override
+	public List<FileUploadVO> fileSelectNo(int pNo) {
+		List<FileUploadVO> fileList =  productDao.FileSelectNo(pNo);
+		
+		return fileList;
 	}
 
 }
