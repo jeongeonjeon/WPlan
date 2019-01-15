@@ -5,8 +5,14 @@
 <mapper namespace="kr.co.mlec.umember">
 	
 	<select id="login" parameterType="umemberVO" resultType="umemberVO">
-		select id, password, type
+		select id, password, name, type
 		  from w_umember
+		 where id = #{id} and password = #{password}
+	</select>
+	
+	<select id="clogin" parameterType="cmemberVO" resultType="cmemberVO">
+		select id, name, password, type
+		  from w_cmember
 		 where id = #{id} and password = #{password}
 	</select>
 	
