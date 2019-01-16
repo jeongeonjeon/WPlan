@@ -306,10 +306,10 @@ textarea{
 							</tr>
 							<tr>
 								<th>업체이름</th>
-								<td><input type="hidden" name="cName">${ userVO.cName }</td>
+								<td><input type="hidden" name="cName">${ cuserVO.cName }</td>
 							</tr>
 							<tr>
-								<th>업체정보</th>
+								<th>제품정보</th>
 								<td><textarea cols="30" rows="5" name="cInfo"></textarea></td>
 							</tr>
 							<tr>

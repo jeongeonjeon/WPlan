@@ -65,6 +65,7 @@ public class LoginController {
 			return "login";
 		} else if(cuserVO != null) {
 			session.setAttribute("userVO", cuserVO);
+			session.setAttribute("cuserVO", cuserVO);
 			System.out.println(cuserVO);
 			model.addAttribute("userVO", cuserVO);
 			return "login";

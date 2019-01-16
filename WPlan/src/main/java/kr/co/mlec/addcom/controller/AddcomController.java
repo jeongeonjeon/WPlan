@@ -47,7 +47,6 @@ public class AddcomController {
 	public String ujoinform(Model model) {
 		AddcomVO addcomVO = new AddcomVO();
 		model.addAttribute("addcomVO", addcomVO);
-		
 		return "addcom/addcomForm";
 	}
 	
