@@ -16,9 +16,15 @@
 	</insert>
 
 	<select id="select" parameterType="cmemberVO" resultType="cmemberVO">
-		select id, password, name, type
+		select id, name, password, tel, email, cname as cName, c_no as cNo, c_address as cAddress, type, reg_date as regDate
 		  from w_cmember
 		 where id = #{id} and password = #{password}
+	</select>
+
+	<select id="selectId" parameterType="string" resultType="cmemberVO">
+		select id, name, password, tel, email, cname as cName, c_no as cNo, c_address as cAddress, type, reg_date as regDate
+		  from w_cmember
+		 where id = #{id}
 	</select>
 	
 </mapper>
