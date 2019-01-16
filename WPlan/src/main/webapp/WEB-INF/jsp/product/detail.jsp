@@ -348,7 +348,7 @@
 </script>
 <script>
 	$(document).ready(function() {
-		
+		commentList();//페이지 로딩시 댓글 목록 출력
 		$('.review.tab_content').css('display', 'none');
 		$('.qna.tab_content').css('display', 'none');
 		$('.storeInfo.tab_content').css('display', 'block');
@@ -394,29 +394,8 @@
 			});  
 		});
 		
-				$('#comment_btn').click(function(){
-			$.ajax({
-				url : "${pageContext.request.contextPath}/inputQnA",
-				type : "POST",
-				data : {
-					id : id,
-					content : $('#qnaContent').val(),
-					pNo : pNo
-				},
-				success : function() {
-					alert('댓글이 등록되었습니다.');
-				}
-				
-			});
-		});
-		
-		
 		
 	});
-	
-	
-	
-	
 </script>
 <style>
 .detail .jssort101 .t {
@@ -829,11 +808,11 @@
 						</form>
 						<!-- QnA 댓글창-->
 						<div class="reply_contents_wrap">
-							<div class="reply_content">
+							<div class="reply_content" id="qnaList">
 								<p class="id">
-									아이디 <span class="time"> ${ review.writeDate } </span>
+									아이디 <span class="time"> </span>
 								</p>
-								<p class="content">질문있습니다.</p>
+								<p class="content"></p>
 							</div>
 						</div>
 						
@@ -851,6 +830,7 @@
 		</section>
 	</div>
 	<%@ include file="/WEB-INF/jsp/include/sideSlider.jsp"%>
+	<%@ include file="/WEB-INF/jsp/include/comment.jsp" %>
 </body>
 
 </html>

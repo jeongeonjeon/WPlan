@@ -42,13 +42,32 @@
 	    width:15%;
 	    padding: 2%;
 	}
+	.todo{
+		max-width: 730px;
+	    border: 2px solid rgba(0,0,0,.04);
+	    border-radius: 15px;
+	    margin: 5px auto;
+	    padding: 5px 15px;
+    }
+    .ttt{
+    font-weight: bold ;
+    font-style: italic;
+    }
+    
+    .sub{
+    	@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 	
+font-family: 'Nanum Pen Script', serif;
+    }
+	
+
+
 </style>
 </head>
 
 <body>
 	<div id="wrapper">
-		<c:import url="/login" />
+		<c:import url="/loginForm" />
 		<header class="header bg">
 			<jsp:include page="/WEB-INF/jsp/include/topLogo.jsp" />
 		</header>
@@ -72,17 +91,17 @@
 				<br>
 				<h4>내 정보</h4>
 				<br>
-				<div class="myInfoName">
-					<span class="title">이름 </span><span class="sub">홍길동</span>
+				<div class="myInfoName todo">
+					<span class="title ttt">이름 </span><span class="sub">홍길동</span>
 				</div>
-				<div class="myInfoID">
-					<span class="title">아이디 </span><span class="sub">GDong</span>
+				<div class="myInfoID todo">
+					<span class="title ttt">아이디 </span><span class="sub">GDong</span>
 				</div>
-				<div class="myInfoEmail">
-					<span class="title">이메일 </span><span class="sub">GDhong@gmail.com</span>
+				<div class="myInfoEmail todo">
+					<span class="title ttt">이메일 </span><span class="sub">GDhong@gmail.com</span>
 				</div>
-				<div class="myInfoTel">
-					<span class="title">전화번호</span><span class="sub">010-1111-2222</span>
+				<div class="myInfoTel todo">
+					<span class="title ttt">전화번호</span><span class="sub">010-1111-2222</span>
 				</div>
 				<div class="mBtn" style="padding-left:15px; margin-top: 40px;">
 					<button class="fBtn myInfo" id="update" style="width:20%;">수정</button>

@@ -1,5 +1,7 @@
 package kr.co.mlec.qna.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,12 @@ public class QnaServiceImpl implements QnaService {
 	public void insertQnA(QnaVO qnaVO) {
 		qDao.insertQnA(qnaVO);
 		
+	}
+
+	@Override
+	public List<QnaVO> selectAll(int pNo) {
+		List<QnaVO> list = qDao.selectAll(pNo);
+		return list;
 	}
 
 }
