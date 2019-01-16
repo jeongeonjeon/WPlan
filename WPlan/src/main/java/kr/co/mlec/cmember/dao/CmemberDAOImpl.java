@@ -24,4 +24,16 @@ public class CmemberDAOImpl implements CmemberDAO {
 		CmemberVO userVO = sqlSession.selectOne("kr.co.mlec.cmember.select", cmemberVO);
 		return userVO;
 	}
+
+	@Override
+	public CmemberVO myPage(String id) {
+		CmemberVO userVO = sqlSession.selectOne("kr.co.mlec.cmember.mypage", id);
+		return userVO;
+	}
+
+	@Override
+	public void deleteC(String id) {
+		sqlSession.delete("kr.co.mlec.cmember.delete", id);
+		
+	}
 }

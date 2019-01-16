@@ -29,4 +29,9 @@ public class UmemberDAOImpl implements UmemberDAO {
 		return userVO;
 	}
 
+	@Override
+	public void deleteU(String id) {
+		sqlSession.delete("kr.co.mlec.umember.delete", id);
+	}
+
 }

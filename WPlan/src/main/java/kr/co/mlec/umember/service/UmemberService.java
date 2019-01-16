@@ -19,5 +19,12 @@ public interface UmemberService {
 	 * @return 일반회원의 정보
 	 */
 	UmemberVO myPage(String id);
+	
+	
+	/**
+	 * 회원탈퇴하는 메소드
+	 * @param id
+	 */
+	public void deleteU(String id);
 
 }

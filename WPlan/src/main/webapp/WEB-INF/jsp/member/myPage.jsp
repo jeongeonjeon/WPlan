@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 
@@ -63,6 +64,30 @@ font-family: 'Nanum Pen Script', serif;
 
 
 </style>
+<script>
+
+$(document).ready(function(){
+	$('#deleteBtn').click(function(){
+		
+		if(confirm('정말로 탈퇴하시겠습니까?')){
+			var id = '${member.id}';
+			var type = '${member.type}';
+			
+				$.ajax({
+					url : "${ pageContext.request.contextPath }/"+id+"/"+type,
+					type : 'Delete',
+					success : function(){
+						alert('탈퇴되셨습니다.')
+						location.href="${ pageContext.request.contextPath }/";
+					}
+				});
+		
+		}
+		
+	});
+});
+
+</script>
 </head>
 
 <body>
@@ -92,20 +117,37 @@ font-family: 'Nanum Pen Script', serif;
 				<h4>내 정보</h4>
 				<br>
 				<div class="myInfoName todo">
-					<span class="title ttt">이름 </span><span class="sub">홍길동</span>
+					<span class="title ttt">이름 </span><span class="sub">${member.name }</span>
 				</div>
 				<div class="myInfoID todo">
-					<span class="title ttt">아이디 </span><span class="sub">GDong</span>
+					<span class="title ttt">아이디 </span><span class="sub">${member.id }</span>
 				</div>
 				<div class="myInfoEmail todo">
-					<span class="title ttt">이메일 </span><span class="sub">GDhong@gmail.com</span>
+					<span class="title ttt">이메일 </span><span class="sub">${member.email }</span>
 				</div>
 				<div class="myInfoTel todo">
-					<span class="title ttt">전화번호</span><span class="sub">010-1111-2222</span>
+					<span class="title ttt">전화번호</span><span class="sub">${member.tel }</span>
 				</div>
+				
+				<c:if test="${cuserVO != null}">
+					<div class="myInfoCname todo">
+						<span class="title ttt">업체명</span><span class="sub">${member.cName }</span>
+					</div>
+					<div class="myInfoCno todo">
+						<span class="title ttt">사업자번호</span><span class="sub">${member.cNO}</span>
+					</div>
+					<div class="myInfoCaddress todo">
+						<span class="title ttt">주소</span><span class="sub">${member.cAddress }</span>
+					</div>
+				
+				</c:if>
+					<div class="myInfoRegDate todo">
+						<span class="title ttt">가입날짜</span><span class="sub">${member.regDate }</span>
+					</div>
+				
 				<div class="mBtn" style="padding-left:15px; margin-top: 40px;">
-					<button class="fBtn myInfo" id="update" style="width:20%;">수정</button>
-					<button class="fBtn myInfo" id="update" style="margin-left:20px; width:20%;">회원탈퇴</button>
+					<button class="fBtn myInfo" id="updateBtn" style="width:20%;" >수정</button>
+					<button class="fBtn myInfo" id="deleteBtn" style="margin-left:20px; width:20%;">회원탈퇴</button>
 				</div>
 			</section>
 			<section class="section-7">

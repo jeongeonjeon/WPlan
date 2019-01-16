@@ -27,9 +27,15 @@
 		 where id = #{id} and password = #{password}
 	</select>
 	
-	<!-- <select id="myPage" parameterType="string" resultType="umemberVO">
+	<select id="myPage" parameterType="string" resultType="umemberVO">
+		select id, password, name, tel, email, to_char(reg_date, 'yyyy-mm-dd') as regDate, type
+		from w_umember
+		where id= #{id}
+	</select> 
 	
-	
-	</select> -->
+	<delete id="delete" parameterType="string">
+		delete from w_umember
+		where id = #{id}
+	</delete>
 	
 </mapper>
