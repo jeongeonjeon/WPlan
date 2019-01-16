@@ -65,6 +65,7 @@ public class LoginController {
 			System.out.println(userVO);
 			return "login";
 		} else if(cuserVO != null) {
+			session.setAttribute("cuserVO", cuserVO);
 			session.setAttribute("userVO", cuserVO);
 			System.out.println(cuserVO);
 			return "login";

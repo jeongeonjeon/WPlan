@@ -21,4 +21,10 @@
 		 where id = #{id} and password = #{password}
 	</select>
 	
+	<select id="mypage" parameterType="string" resultType="cmemberVO">
+		select id, password, name, tel, email, cname, c_no as cNo, c_address as cAddress, to_char(reg_date, 'yyyy-mm-dd') as regDate, type
+		from w_cmember
+		where id = #{id}
+	</select>
+	
 </mapper>

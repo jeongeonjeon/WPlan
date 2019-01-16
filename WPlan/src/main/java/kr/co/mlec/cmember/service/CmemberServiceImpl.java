@@ -23,4 +23,10 @@ public class CmemberServiceImpl implements CmemberService {
 		CmemberVO userVO = cmemberDao.selectCmember(cmemberVO);
 		return userVO;
 	}
+
+	@Override
+	public CmemberVO myPage(String id) {
+		CmemberVO userVO = cmemberDao.myPage(id);
+		return userVO;
+	}
 }

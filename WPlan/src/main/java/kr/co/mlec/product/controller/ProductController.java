@@ -45,7 +45,7 @@ public class ProductController {
 	@Autowired
 	private ProductOptionService optionService;
 
-	@Autowired
+//	@Autowired
 //	private ReviewService reviewService;
 
 	@GetMapping("/product/{category}")

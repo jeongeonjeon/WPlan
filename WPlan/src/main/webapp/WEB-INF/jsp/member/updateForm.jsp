@@ -67,14 +67,8 @@ font-family: 'Nanum Pen Script', serif;
 <script>
 
 $(document).ready(function(){
-	$('#deleteBtn').click(function(){
-		
-		
-		$.ajax({
-			url : "${ pageContext.request.contextPath }/deleteM",
-			type : 'post',
-			data :
-		});
+	$('#updateBtn').click(function(){
+		location.href="${ pageContext.request.contextPath }/member/update";
 	});
 });
 
