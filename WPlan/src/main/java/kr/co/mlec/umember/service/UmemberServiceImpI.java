@@ -28,4 +28,10 @@ public class UmemberServiceImpI implements UmemberService {
 		UmemberVO userVO = umemberDao.myPage(id);
 		return userVO;
 	}
+
+	@Override
+	public void deleteU(String id) {
+		umemberDao.deleteU(id);
+		
+	}
 }

@@ -69,12 +69,21 @@ font-family: 'Nanum Pen Script', serif;
 $(document).ready(function(){
 	$('#deleteBtn').click(function(){
 		
+		if(confirm('정말로 탈퇴하시겠습니까?')){
+			var id = '${member.id}';
+			var type = '${member.type}';
+			
+				$.ajax({
+					url : "${ pageContext.request.contextPath }/"+id+"/"+type,
+					type : 'Delete',
+					success : function(){
+						alert('탈퇴되셨습니다.')
+						location.href="${ pageContext.request.contextPath }/";
+					}
+				});
 		
-		$.ajax({
-			url : "${ pageContext.request.contextPath }/deleteM",
-			type : 'post',
-			data :
-		});
+		}
+		
 	});
 });
 

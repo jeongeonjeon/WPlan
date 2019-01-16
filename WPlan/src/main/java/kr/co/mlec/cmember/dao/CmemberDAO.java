@@ -10,4 +10,6 @@ public interface CmemberDAO {
 	public CmemberVO selectCmember(CmemberVO cmemberVO);
 	
 	public CmemberVO myPage(String id);
+	
+	public void deleteC(String id);
 }

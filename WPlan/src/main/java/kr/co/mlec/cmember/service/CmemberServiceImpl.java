@@ -29,4 +29,10 @@ public class CmemberServiceImpl implements CmemberService {
 		CmemberVO userVO = cmemberDao.myPage(id);
 		return userVO;
 	}
+
+	@Override
+	public void deleteC(String id) {
+		cmemberDao.deleteC(id);
+		
+	}
 }

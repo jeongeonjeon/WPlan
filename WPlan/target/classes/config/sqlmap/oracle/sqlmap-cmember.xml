@@ -27,4 +27,8 @@
 		where id = #{id}
 	</select>
 	
+	<delete id="delete" parameterType="string">
+		delete from w_cmember
+		where id= #{id}
+	</delete>
 </mapper>

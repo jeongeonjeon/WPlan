@@ -9,5 +9,7 @@ public interface UmemberDAO {
 	public UmemberVO selectUmember(UmemberVO umemberVO);
 	
 	public UmemberVO myPage(String id);
+	
+	public void deleteU(String id);
 
 }
